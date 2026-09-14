@@ -1,9 +1,30 @@
 {
+  "frames": 1437,
+  "duration": 47.9,
   "openingFrames": 90,
   "closingFrames": 90,
   "identicalDecodedFrames": true,
+  "passed": true,
+  "camera": {
+    "azimuthDegrees": 45,
+    "elevationDegrees": 43
+  },
+  "retakeReport": "qa/pot-diagonal/level-2.json",
   "audioLevels": [
     "mean_volume: -18.5 dB",
     "max_volume: -1.8 dB"
-  ]
+  ],
+  "changedSourceShots": [
+    {
+      "start": 20.3,
+      "old": "source/level-2-cooking.webm",
+      "new": "source/level-2-cooking-diagonal.webm"
+    },
+    {
+      "start": 29.9,
+      "old": "source/level-2-fire-and-rescue.webm",
+      "new": "source/level-2-fire-and-rescue-diagonal.webm"
+    }
+  ],
+  "unchangedShotPlanVerified": true
 }

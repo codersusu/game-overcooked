@@ -90,13 +90,13 @@
     {
       "start": 20.3,
       "duration": 4.3,
-      "file": "source/level-2-cooking.webm",
+      "file": "source/level-2-cooking-diagonal.webm",
       "sourceStart": 0,
       "crop": [
-        435,
-        255,
-        960,
-        540
+        480,
+        300,
+        864,
+        486
       ],
       "caption": "From fresh ingredients to warm soup"
     },
@@ -142,13 +142,13 @@
     {
       "start": 29.9,
       "duration": 9,
-      "file": "source/level-2-fire-and-rescue.webm",
+      "file": "source/level-2-fire-and-rescue-diagonal.webm",
       "sourceStart": 0,
       "crop": [
-        440,
-        285,
-        960,
-        540
+        480,
+        300,
+        864,
+        486
       ],
       "caption": "A little kitchen chaos"
     },

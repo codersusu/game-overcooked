@@ -2,6 +2,11 @@
 
 This is a reconstructed development history from the conversation and saved artifacts. Earlier stages predate this repository's first commit; they are not invented Git revisions. Dates are calendar milestones, not continuous labor estimates.
 
+## Trailer camera revision · 14 September 2026
+
+- Recaptured soup cooking and fire suppression with a 45° diagonal camera so the chef does not cover the pot. Tightened the framing around the station and checked the warning, flame, spray and extinguished states.
+- Kept the 47.9-second edit and matching three-second title sequences. Updated the trailer sources and the existing release video; the playable game builds are unchanged.
+
 ## 0.1.0 — review and repository handoff · 14 September 2026
 
 - Completed real keyboard full-round playthroughs of all four kitchens: multiple deliveries, dish reuse, order expiry, natural round completion, results and retry. Levels 2–4 cover dash; 3–4 cover barrier throws. Level 2 covers warning, fire, suppression and clearing. All passed without browser runtime errors.

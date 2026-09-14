@@ -49,3 +49,7 @@ Allow the player to choose an angled or nearly overhead view by scrolling, and t
 Playtest every level. Create a roughly 30–60-second Steam-style trailer using key aspects of the game. Start with three seconds of dark background, enlarged title/icon framing, and end with the same scene. Create a matching cute game icon.
 
 Push code, assets and trailers to `codersusu/game-overcooked` so development can continue there. Clean up the documents into an overview/README, game design, implementation, changelog and this prompt summary. Include screenshots, asset/trailer/download links, development duration and measured input/output/cache token usage; distinguish recorded usage from unavailable billing totals.
+
+## Trailer review feedback
+
+The overall trailer was accepted. In the soup-cooking and fire-fighting shots, the chef obscured the stove from the straight-on camera. Recapture those two scenes at a roughly 45° diagonal angle so the pot and the action remain visible.

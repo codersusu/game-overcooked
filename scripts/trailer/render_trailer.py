@@ -15,11 +15,11 @@ shots=[
  ('level-1-delivery',0,2.8,(500,195,1120,630),'Serve'),
  ('level-1-customers',0,3.8,(470,510,960,540),'Make their day'),
  ('level-1-washing',0,3,(300,330,960,540),'Keep the kitchen flowing'),
- ('level-2-cooking',0,4.3,(435,255,960,540),'From fresh ingredients to warm soup'),
+ ('level-2-cooking-diagonal',0,4.3,(480,300,864,486),'From fresh ingredients to warm soup'),
  ('level-2-dashing',0,1.3,(440,165,1040,585),'Dash'),
  ('level-3-throwing',0,2,(435,230,1040,585),'Find a shortcut'),
  ('level-4-throwing',0,2,(360,170,1040,585),None),
- ('level-2-fire-and-rescue',0,9,(440,285,960,540),'A little kitchen chaos'),
+ ('level-2-fire-and-rescue-diagonal',0,9,(480,300,864,486),'A little kitchen chaos'),
  ('level-4-delivery',0,3,None,'Four kitchens. Your rhythm.'),
  ('level-4-customers',0,3,(360,455,1200,675),'Little paws. Big appetites.'),
 ]

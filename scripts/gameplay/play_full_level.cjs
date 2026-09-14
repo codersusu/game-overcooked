@@ -1,10 +1,10 @@
 // Real keyboard playthrough plus short, unmodified Unity canvas captures.
-const fs=require('fs'),path=require('path'),{createRequire}=require('module');
+const fs=require('fs'),path=require('path');
 const deps=require('../browser-deps.cjs');
 const {chromium}=deps('playwright');
-const level=Number(process.argv[2]||1),capture=process.env.BARA_CAPTURE!=='0';
+const level=Number(process.argv[2]||1),capture=process.env.BARA_CAPTURE!=='0',potRetake=process.env.BARA_TRAILER_POT_RETAKE==='1';
 const layout=JSON.parse(fs.readFileSync('art/concepts/levels-round-02/levels.json'))[level-1],moduleSize=.92;
-const qa=path.resolve('art/production/gameplay-round-01/qa/full-playthrough'),raw=path.resolve('.local/trailer-capture');
+const qa=path.resolve(potRetake?'art/trailers/round-01/qa/pot-diagonal':'art/production/gameplay-round-01/qa/full-playthrough'),raw=path.resolve('.local/trailer-capture');
 fs.mkdirSync(qa,{recursive:true});fs.mkdirSync(raw,{recursive:true});
 const checks=[],clips=[],snapshots={},errors=[];let browser,page,blocked;
 const state=()=>page.evaluate(()=>window.baraState);
@@ -37,12 +37,46 @@ async function soup(film=false,burn=false){await use('dishes');await use(assembl
 async function serve(film=false){const before=(await state()).served;const action=async()=>{await go('serve');await press('e');for(let i=0;i<20&&(await state()).held;i++){await sleep(1000);await press('e')}await sleep(800)};if(film)await shot('delivery',action);else await action();check((await state()).served===before+1,'Correct dish served and scored');if(before===0)check(!(await state()).training,'First delivery starts round clock');snapshots['delivery-'+(before+1)]=await state();await screenshot('served-'+(before+1))}
 async function wash(film=false){await page.waitForFunction(()=>window.baraState.dirty>0,{},{timeout:12000});await use('return');await use('sink');const action=async()=>{await sleep(250);await press('Space');await page.waitForFunction(()=>window.baraState.held==='Clean dish',{},{timeout:12000});await sleep(500)};if(film)await shot('washing',action);else await action();check((await state()).held==='Clean dish','One-tap washing returns a reusable clean dish');await use('dishes')}
 async function dash(){const origin=level===2?{x:4,y:1}:level===3?{x:4,y:2}:{x:7,y:1};await goCell(origin);await face(world(origin.x+1,origin.y));const before=await state();await shot('dashing',async()=>{await sleep(300);await page.keyboard.down('d');await page.keyboard.press('Shift');await sleep(230);await page.keyboard.up('d');await sleep(800)});check(Math.hypot((await state()).x-before.x,(await state()).z-before.z)>.9,'Unlocked dash moves quickly through open floor')}
+// Trailer-only recapture through the same public controls; no scene or simulation mutation.
+async function orbit(yaw){
+ const before=await state();await page.mouse.move(960,510);await page.mouse.down();await sleep(80);
+ await page.mouse.move(960+(before.cameraTargetYaw-yaw)/180*1920,510,{steps:20});await sleep(100);await page.mouse.up();await sleep(750);
+ const after=await state();check(Math.abs(after.cameraYaw-yaw)<.8,'Capture camera reaches '+yaw+' degree azimuth');
+ check(Math.hypot(after.x-before.x,after.z-before.z)<.02,'Camera adjustment preserves chef position');
+}
+async function loadSoupForRetake(){
+ await use('dishes');await use(assembly);await chop('carrot');await use(assembly);await chop('mushroom');await use(assembly);
+ await use(assembly);await use('pot');check((await state()).stations.find(s=>s.id==='pot').heat==='Cooking','Retake uses a genuinely cooking soup batch');
+}
+async function recapturePotAngles(){
+ check(level===2,'Pot retakes use the island kitchen');
+ await loadSoupForRetake();await orbit(45);await screenshot('cooking-angle');
+ snapshots.cooking=await state();await shot('cooking-diagonal',async()=>{await sleep(4700)});
+ await page.waitForFunction(()=>window.baraState.stations.find(s=>s.id==='pot').heat==='Ready',{},{timeout:18000});await press('e');
+ check((await state()).held==='Woodland soup','Diagonal soup shot ends in a collectible dish');
+ await orbit(0);await serve();await wash();
+ await loadSoupForRetake();await use(assembly);await use('extinguisher');await go('pot');await orbit(45);
+ await page.waitForFunction(()=>window.baraState.stations.find(s=>s.id==='pot').heat==='Warning',{},{timeout:20000});
+ await sleep(2700);await screenshot('warning-angle');snapshots.warning=await state();
+ await shot('fire-and-rescue-diagonal',async()=>{
+  const start=Date.now();await page.waitForFunction(()=>window.baraState.stations.find(s=>s.id==='pot').heat==='Burning',{},{timeout:12000});
+  snapshots.ignition={seconds:(Date.now()-start)/1000,state:await state()};await screenshot('fire-angle');await sleep(1200);
+  await press('Space');await sleep(450);await screenshot('spray-angle');snapshots.spray={seconds:(Date.now()-start)/1000,state:await state()};
+  await page.waitForFunction(()=>window.baraState.stations.find(s=>s.id==='pot').heat==='Extinguished',{},{timeout:12000});
+  snapshots.extinguished={seconds:(Date.now()-start)/1000,state:await state()};await screenshot('extinguished-angle');await sleep(1200);
+ });
+ check((await state()).stations.find(s=>s.id==='pot').heat==='Extinguished','Diagonal fire shot includes completed suppression');
+ check(errors.length===0,'No browser errors during retakes');
+ fs.writeFileSync(path.join(qa,'level-2.json'),JSON.stringify({passed:true,level,checks,snapshots,clips,errors},null,2));
+ console.log('BARA_POT_RETAKE_OK');
+}
 (async()=>{try{
  browser=await chromium.launch({...(process.env.BARA_CHROME?{executablePath:process.env.BARA_CHROME}:{}),headless:true,args:['--enable-unsafe-swiftshader']});page=await browser.newPage({viewport:{width:1920,height:1080}});page.on('pageerror',e=>errors.push(e.message));await page.goto('http://127.0.0.1:54114/production/gameplay-round-01/?v=camera-orbit-01');await page.waitForFunction(()=>window.baraState?.phase==='Menu',{},{timeout:90000});
  await click('Choose your chef');await click('',[1,2,4,0][level-1]);await click('Done');await click('Choose kitchen');await click('Enter kitchen',level-1);await screenshot('guide');await click('Open the cafe');await sleep(900);
  // Precisely set a front-facing capture angle via the same mouse controls available to the player.
  let s=await state();await page.mouse.move(960,510);await page.mouse.down();await sleep(100);await page.mouse.move(960+s.cameraTargetYaw/180*1920,510,{steps:16});await sleep(200);await page.mouse.up();await sleep(1100);s=await state();await page.keyboard.down('[');await sleep((s.cameraTargetTilt-43)/28*1000);await page.keyboard.up('[');await sleep(1000);
  blocked=new Set((await state()).stations.map(s=>key(cell(s))));for(const b of layout.barriers||[])for(const [x,y] of b.cells||[])blocked.add(x+','+y);
+ if(potRetake){await recapturePotAngles();return;}
  check((await state()).level===level,'Correct kitchen loaded');await shot('welcome',async()=>{await sleep(5000)});await screenshot('service');
  if(level===2)await soup(true);else await salad(true);await serve(true);await shot('customers',async()=>{await sleep(4000)});await wash(level===1||level===3);
  if(level>=2)await dash();
