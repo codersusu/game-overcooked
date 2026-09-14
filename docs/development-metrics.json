@@ -21,5 +21,38 @@
   "currencyCost": null,
   "currencyCostReason": "No authoritative per-model invoice/rate or complete service billing record available.",
   "knownMeshyProductionCredits": 385,
-  "meshProductionCreditsScope": "Twelve textured character models and five successful rigs; excludes initial pipeline experiments."
+  "meshProductionCreditsScope": "Twelve textured character models and five successful rigs; excludes initial pipeline experiments.",
+  "developmentTime": {
+    "throughCommit": "949aea3",
+    "start": "2026-09-08T10:50:06.097Z",
+    "end": "2026-09-14T13:07:00.339Z",
+    "elapsedMilliseconds": 526614242,
+    "activeMilliseconds": 26616969,
+    "completedTurns": 37,
+    "activeDates": 3,
+    "reportingTimezone": "Europe/Berlin",
+    "daily": [
+      {
+        "date": "2026-09-08",
+        "completedTurns": 21,
+        "activeMilliseconds": 4675842
+      },
+      {
+        "date": "2026-09-13",
+        "completedTurns": 8,
+        "activeMilliseconds": 10762172
+      },
+      {
+        "date": "2026-09-14",
+        "completedTurns": 8,
+        "activeMilliseconds": 11178955
+      }
+    ],
+    "summedTurnWallMilliseconds": 26887131,
+    "turnWallMinusReportedActiveMilliseconds": 270162,
+    "method": "Elapsed = first task_started timestamp to final task_complete timestamp. Active = sum of duration_ms for unique completed turn IDs, as reported by the session runtime; not a gap-threshold estimate.",
+    "scope": "All completed work in this game conversation: design/research and learning discussion, art generation, implementation, testing, builds, documentation, trailers and uploads. Includes tool execution and waits within active turns. Excludes gaps between turns, the current timing audit, and unrecorded/offline human work. This is assistant runtime, not human labor or pure CPU/GPU/model inference time.",
+    "clockCaveat": "The runtime reports durations separately from start/end timestamps. The difference is recorded above; its cause is not identified in the log. Use reported duration_ms without inventing an allocation.",
+    "evidenceFile": "development-time-turns.json"
+  }
 }

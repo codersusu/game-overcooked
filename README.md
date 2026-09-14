@@ -74,7 +74,23 @@ HTML galleries need the local server; GitHub displays their source. The trailer 
 
 ## Development record and usage
 
-Developed collaboratively with the user from **8–14 September 2026**, roughly **six elapsed calendar days**. This includes discussion, art review and multiple interactive work sessions; it is not a claim of six continuous days or a measured number of labor hours. Historical milestones are reconstructed in the [changelog](docs/CHANGELOG.md); this repository begins with the consolidated handoff.
+Measured through the completed **v0.1.1** cleanup update (commit `949aea3`), excluding this timing audit:
+
+| Time measure | Recorded result |
+|---|---:|
+| Overall elapsed creation time | **6 days, 2 hours, 16 minutes, 54 seconds** |
+| Active development — recorded assistant runtime | **7 hours, 23 minutes, 37 seconds** (7.39 hours) |
+| Completed work turns / dates with recorded work | **37 turns / 3 dates** |
+
+The period runs from **8 September 2026, 12:50:06 CEST** to **14 September 2026, 15:07:00 CEST**. Active time is the sum of completed-turn durations recorded by the session runtime, excluding gaps between turns. It includes game design/research, learning discussion, art generation, coding, tests, builds, documentation, trailers, uploads and tool waits within those turns. It is not a measure of human labor or pure model/CPU/GPU processing time; offline user work is not recorded.
+
+| Work date (Europe/Berlin) | Completed turns | Active time |
+|---|---:|---:|
+| 8 September | 21 | 1h 17m 56s |
+| 13 September | 8 | 2h 59m 22s |
+| 14 September | 8 | 3h 06m 19s |
+
+[Timing totals and method](docs/development-metrics.json) · [Sanitized per-turn evidence](docs/development-time-turns.json). Durations above are rounded to the nearest second. Git history starts with the consolidated handoff, so the first commit alone does not establish the development start; earlier milestones are in the [changelog](docs/CHANGELOG.md).
 
 The available conversation usage checkpoint is **2026-09-14T11:46:40.807Z**. Model recorded: **gpt-6-astra**.
 

@@ -2,6 +2,11 @@
 
 This is a reconstructed development history from the conversation and saved artifacts. Earlier stages predate this repository's first commit; they are not invented Git revisions. Dates are calendar milestones, not continuous labor estimates.
 
+## Development time audit · 14 September 2026
+
+- Replaced the approximate calendar-only estimate with measured totals through v0.1.1: 6d 2h 16m 54s elapsed and 7h 23m 37s recorded active assistant runtime, across 37 completed turns on three dates.
+- Added daily totals, a sanitized timing ledger and a reproducible local extraction script. Documented the scope, tool waits, separate token checkpoint and the difference between runtime durations and timestamp spans. The audit itself and unrecorded human work are excluded.
+
 ## 0.1.1 — burnt-pot cleanup · 14 September 2026
 
 - Extinguishing now leaves the burnt batch in a reusable, carryable pot. Empty paws pick it up; E at the bin discards the burnt food and retains the pot. Return the empty pot before cooking again.

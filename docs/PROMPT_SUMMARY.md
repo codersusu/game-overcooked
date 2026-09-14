@@ -57,3 +57,7 @@ The overall trailer was accepted. In the soup-cooking and fire-fighting shots, t
 ## Burnt-food cleanup feedback
 
 Submit all completed work to Git. After the fire is extinguished, burnt food must remain in the pot and be taken to the trash before the pot can cook again. The implementation carries the original pot to the bin, discards its contents, and returns the empty pot to the stove.
+
+## Development time request
+
+Check the total elapsed creation period and actual active development time, and update the repository with both figures and their measurement basis.

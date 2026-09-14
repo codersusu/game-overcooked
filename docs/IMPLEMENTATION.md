@@ -125,3 +125,11 @@ Lilita One and Varela Round font license files are retained beside the fonts in 
 ## Handoff limits and next work
 
 The demo has English UI, desktop keyboard/mouse controls, local saves, approximate shared character skinning and a large Web download. There is no installer, notarization, Windows native build, Steam integration, backend, multiplayer or runtime AI. Keep the approved art direction and floor plans as baselines while tuning; see [prompt summary](PROMPT_SUMMARY.md) for the decisions behind them. Save-format migrations and separate Calm scores should be preserved when extending settings. Re-run a full service loop after changes to item ownership, customer return or action cancellation.
+
+## Development time accounting
+
+`docs/development-metrics.json` separates elapsed project time from recorded active assistant time. Its `developmentTime` section covers the 37 completed turns through v0.1.1, ending at `2026-09-14T13:07:00.339Z`; the timing audit itself is excluded. The token checkpoint is separate and remains at its previously documented timestamp.
+
+Active time sums the runtime's `task_complete.duration_ms` once per unique completed turn ID. Elapsed time uses the first matching `task_started` timestamp and final completion timestamp. The sanitized [timing ledger](development-time-turns.json) publishes only timestamps and durations. This totals 26,616,969 ms active over 526,614,242 ms elapsed. The sum of raw turn start/end intervals is 270,162 ms longer than the reported active durations; the records do not explain this discrepancy, so no cause is invented. Reported durations, not a heuristic that caps gaps between messages, define the active total.
+
+Recompute from the private local session log with `python3 scripts/update_development_time.py /path/to/session.jsonl --through 2026-09-14T13:07:00.339Z --commit 949aea3`. An explicit completed-turn cutoff prevents the current audit from counting itself. The script checks matching boundaries, duplicate records, overlap and daily attribution. Raw session logs, prompts, tool outputs and credentials are not published.
