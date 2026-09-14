@@ -2,22 +2,22 @@
   "project": "Bara Kitchen",
   "firstRecordedSession": "2026-09-08T10:50:06.097Z",
   "checkpoint": {
-    "timestamp": "2026-09-14T11:31:41.730Z",
+    "timestamp": "2026-09-14T11:46:40.807Z",
     "usage": {
-      "input_tokens": 71211144,
-      "cached_input_tokens": 68914944,
+      "input_tokens": 74939314,
+      "cached_input_tokens": 72617472,
       "cache_write_input_tokens": 0,
-      "output_tokens": 528848,
-      "reasoning_output_tokens": 186867,
-      "total_tokens": 71739992
+      "output_tokens": 545024,
+      "reasoning_output_tokens": 198763,
+      "total_tokens": 75484338
     }
   },
   "models": [
     "gpt-6-astra"
   ],
-  "counterEvents": 779,
+  "counterEvents": 803,
   "counterDecreases": 3,
-  "scope": "Available cumulative counters for this development conversation through the checkpoint. Later/unrecorded work and separate service credits are excluded. Cached input is part of input; reasoning output is part of output. These are token counts, not a bill. The provider counter history contains 3 downward revisions; this report uses the latest reported cumulative checkpoint, rather than summing cumulative snapshots.",
+  "scope": "Available cumulative counters for this development conversation through the checkpoint. Later/unrecorded work and separate service credits are excluded. Cached input is part of input; reasoning output is part of output. These are token counts, not a bill. The provider counter history contains 3 downward revisions; this report uses the latest reported cumulative checkpoint rather than summing cumulative snapshots.",
   "currencyCost": null,
   "currencyCostReason": "No authoritative per-model invoice/rate or complete service billing record available.",
   "knownMeshyProductionCredits": 385,

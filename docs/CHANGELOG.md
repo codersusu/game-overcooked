@@ -9,7 +9,7 @@ This is a reconstructed development history from the conversation and saved arti
 - Added the capybara game icon, a 47.9-second trailer from actual gameplay, identical three-second opening/closing title sequences, captured source clips and a reproducible edit script.
 - Exported an Apple silicon Mac demo and packaged the tested desktop Web build. Mac received a launch smoke test; full rounds were tested in Web.
 - Consolidated project prose into README, game design, implementation, changelog and prompt summary. Preserved attribution, approved references and usage counters; removed superseded prose from the tracked working tree while keeping a local archive.
-- Prepared the source, assets, large-file tracking, downloadable ZIPs and trailer for the GitHub handoff. No historical commits are fabricated.
+- Published the source, assets, large-file tracking, downloadable ZIPs and trailer to the GitHub repository. No historical commits are fabricated.
 
 ## Playable systems and polish · 14 September 2026
 

@@ -68,23 +68,22 @@ Open `http://localhost:54114/production/gameplay-round-01/`. Detailed build and 
 
 HTML galleries need the local server; GitHub displays their source. The trailer folder retains the captured clips, title composition and edit timeline for future recuts.
 
-
 **Validation:** all four full-round keyboard playthroughs passed, serving 10 meals in total and checking dish reuse, expiry, results and retry. The native suite passed 536 assertions. [Saved validation](art/production/gameplay-round-01/release-validation.json).
 
 ## Development record and usage
 
 Developed collaboratively with the user from **8–14 September 2026**, roughly **six elapsed calendar days**. This includes discussion, art review and multiple interactive work sessions; it is not a claim of six continuous days or a measured number of labor hours. Historical milestones are reconstructed in the [changelog](docs/CHANGELOG.md); this repository begins with the consolidated handoff.
 
-The available conversation usage checkpoint is **2026-09-14T11:31:41.730Z**. Model recorded: **gpt-6-astra**.
+The available conversation usage checkpoint is **2026-09-14T11:46:40.807Z**. Model recorded: **gpt-6-astra**.
 
 | Recorded category | Tokens |
 |---|---:|
-| Input, including cached input | 71,211,144 |
-| Cached input, included above | 68,914,944 |
-| Uncached input, calculated difference | 2,296,200 |
-| Output, including reasoning output | 528,848 |
-| Reasoning output, included above | 186,867 |
+| Input, including cached input | 74,939,314 |
+| Cached input, included above | 72,617,472 |
+| Uncached input, calculated difference | 2,321,842 |
+| Output, including reasoning output | 545,024 |
+| Reasoning output, included above | 198,763 |
 | Cache-write input | 0 |
-| Total input + output | 71,739,992 |
+| Total input + output | 75,484,338 |
 
 Input totals count repeated conversation context across requests. Do not add cached input or reasoning output again. These counters cover the recorded checkpoint, **not all later work on the release**. [Machine-readable record](docs/development-metrics.json). Currency cost cannot be stated reliably without the account's billing/rate records. The documented main Meshy production batch used **385 credits**; initial experiments and ElevenLabs/image-generation charges are not fully reconciled, so no combined cost is invented.
