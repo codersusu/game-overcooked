@@ -3,7 +3,8 @@ using System.Collections.Generic;
 namespace BaraKitchen.Gameplay {
     public sealed class KitchenStation : MonoBehaviour {
         public string id,kind; public readonly List<KitchenItem> items=new List<KitchenItem>(); public KitchenItem item {get=>items.Count>0?items[items.Count-1]:null;set{items.Clear();if(value)items.Add(value);}} public Vector3 slotOffset=new Vector3(0,.47f,0); public bool reserved;
-        public CookingHazard hazard; public VisualState pot; public int potContents; public float washing; public GameObject highlight;
+        public CookingHazard hazard; public VisualState pot; public KitchenItem potItem;
+        public bool PotDocked=>potItem&&potItem.transform.parent==transform; public int potContents; public float washing; public GameObject highlight;
         public Vector3 Slot=>transform.TransformPoint(slotOffset);
         public string Label=>kind=="counter"?"Worktop":kind=="prep"?"Chopping board":kind=="pot"?"Soup pot":kind=="dishes"?"Clean dishes":kind=="sink"?"Wash station":kind=="return"?"Dish return":kind=="serve"?"Service hatch":kind=="bin"?"Food bin":kind=="extinguisher"?"Extinguisher stand":kind+" crate";
         public bool IsSurface=>kind=="counter"||kind=="prep"||kind=="sink"||kind=="extinguisher";

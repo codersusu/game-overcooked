@@ -17,7 +17,7 @@ public static partial class ArtProductionBuilder {
         PlayerSettings.SetIcons(NamedBuildTarget.Unknown, new[] { AssetDatabase.LoadAssetAtPath<Texture2D>(iconPath) }, IconKind.Any);
         PlayerSettings.companyName = "Bara Kitchen";
         PlayerSettings.productName = "Bara Kitchen";
-        PlayerSettings.bundleVersion = "0.1.0";
+        PlayerSettings.bundleVersion = "0.1.1";
         AssetDatabase.SaveAssets();
     }
 

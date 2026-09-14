@@ -1,7 +1,7 @@
 {
   "native": {
     "passed": true,
-    "checks": 536
+    "checks": 785
   },
   "fullRounds": [
     {
@@ -45,6 +45,17 @@
     "architecture": "arm64",
     "buildSucceeded": true,
     "launchSmokePassed": true,
-    "completeRoundsTested": false
+    "completeRoundsTested": false,
+    "version": "0.1.1"
+  },
+  "version": "0.1.1",
+  "fullRoundsVersion": "0.1.0",
+  "burntPot": {
+    "passed": true,
+    "level": 2,
+    "checks": 53,
+    "served": 2,
+    "errors": [],
+    "report": "qa/burnt-pot/level-2.json"
   }
 }

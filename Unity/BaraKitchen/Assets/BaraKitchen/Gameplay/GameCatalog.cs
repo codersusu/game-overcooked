@@ -15,7 +15,7 @@ namespace BaraKitchen.Gameplay {
         public Texture2D Icon(string id)=>Find(id)?.icon;
     }
     public enum SessionPhase { Menu, Briefing, Service, Paused, Results }
-    public enum ItemKind { Ingredient, Dish, Extinguisher }
+    public enum ItemKind { Ingredient, Dish, Extinguisher, Pot }
     public enum GuestPhase { Arriving, Waiting, Eating, Leaving }
     public static class Recipes {
         public const int Tomato=1,Cucumber=2,Carrot=4,Mushroom=8,Salad=3,Soup=16;

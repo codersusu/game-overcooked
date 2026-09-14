@@ -2,6 +2,13 @@
 
 This is a reconstructed development history from the conversation and saved artifacts. Earlier stages predate this repository's first commit; they are not invented Git revisions. Dates are calendar milestones, not continuous labor estimates.
 
+## 0.1.1 — burnt-pot cleanup · 14 September 2026
+
+- Extinguishing now leaves the burnt batch in a reusable, carryable pot. Empty paws pick it up; E at the bin discards the burnt food and retains the pot. Return the empty pot before cooking again.
+- Pots retain their contents and scale on counters and in the chef's paws. Missing or still-burnt pots block new ingredients; cookware cannot be served, thrown or deleted at the bin.
+- Verified 785 native assertions, the real-keyboard burn/empty/recook/serve/restart flow, Mac launch, and both downloadable ZIPs.
+- Added burnt/empty pot inventory icons and a small bin symbol over extinguished pots. The marker follows the pot when carried.
+
 ## Trailer camera revision · 14 September 2026
 
 - Recaptured soup cooking and fire suppression with a 45° diagonal camera so the chef does not cover the pot. Tightened the framing around the station and checked the warning, flame, spray and extinguished states.

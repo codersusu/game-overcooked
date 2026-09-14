@@ -3,7 +3,7 @@ using UnityEngine.UIElements;
 namespace BaraKitchen.Gameplay {
     // Small resolution-independent illustrations drawn in the native game UI.
     public sealed class KitchenMotif : VisualElement {
-        public enum Shape { Wood, Leaves, Clip, Coin, Clock, Star, Paw, Arrow, Check, Flame, Ticket, Move, Dash, Throw }
+        public enum Shape { Wood, Leaves, Clip, Coin, Clock, Star, Paw, Arrow, Check, Flame, Ticket, Move, Dash, Throw, Bin }
         public Shape symbol; Shape shape=>symbol; public float amount=1;
         static readonly Color Bark=new Color(.38f,.25f,.16f), Honey=new Color(.78f,.55f,.30f), Cream=new Color(1,.96f,.81f), Green=new Color(.32f,.49f,.35f);
         public KitchenMotif(Shape value){symbol=value;pickingMode=PickingMode.Ignore;generateVisualContent+=Draw;}
@@ -13,6 +13,7 @@ namespace BaraKitchen.Gameplay {
         void Draw(MeshGenerationContext ctx){var p=ctx.painter2D;float w=contentRect.width,h=contentRect.height;if(w<1||h<1)return;var c=new Vector2(w/2,h/2);float r=Mathf.Min(w,h)/2-4;
             if(shape==Shape.Arrow){Line(p,new Vector2(4,c.y),new Vector2(w-5,c.y),Green,3);Line(p,new Vector2(w-12,c.y-6),new Vector2(w-5,c.y),Green,3);Line(p,new Vector2(w-12,c.y+6),new Vector2(w-5,c.y),Green,3);}
             else if(shape==Shape.Check){Line(p,new Vector2(w*.15f,h*.52f),new Vector2(w*.40f,h*.78f),Green,3);Line(p,new Vector2(w*.40f,h*.78f),new Vector2(w*.88f,h*.20f),Green,3);}
+            else if(shape==Shape.Bin){Line(p,new Vector2(w*.2f,h*.25f),new Vector2(w*.8f,h*.25f),Bark,3);Line(p,new Vector2(w*.4f,h*.1f),new Vector2(w*.6f,h*.1f),Bark,3);p.strokeColor=Bark;p.lineWidth=3;p.BeginPath();p.MoveTo(new Vector2(w*.25f,h*.3f));p.LineTo(new Vector2(w*.3f,h*.9f));p.LineTo(new Vector2(w*.7f,h*.9f));p.LineTo(new Vector2(w*.75f,h*.3f));p.Stroke();Line(p,new Vector2(w*.43f,h*.4f),new Vector2(w*.43f,h*.78f),Bark,2);Line(p,new Vector2(w*.57f,h*.4f),new Vector2(w*.57f,h*.78f),Bark,2);}
             else if(shape==Shape.Flame){p.fillColor=new Color(.94f,.43f,.16f);p.BeginPath();p.MoveTo(new Vector2(w*.5f,1));p.BezierCurveTo(new Vector2(w*.35f,h*.48f),new Vector2(w*.12f,h*.34f),new Vector2(w*.13f,h*.66f));p.BezierCurveTo(new Vector2(w*.1f,h),new Vector2(w*.88f,h),new Vector2(w*.88f,h*.6f));p.BezierCurveTo(new Vector2(w*.82f,h*.3f),new Vector2(w*.64f,h*.42f),new Vector2(w*.5f,1));p.Fill();}
             else if(shape==Shape.Ticket){p.fillColor=Cream;p.strokeColor=Honey;p.lineWidth=3;p.BeginPath();p.MoveTo(new Vector2(5,5));p.LineTo(new Vector2(w-5,5));p.LineTo(new Vector2(w-5,h-5));p.LineTo(new Vector2(5,h-5));p.ClosePath();p.Fill();p.Stroke();Paw(p,new Vector2(c.x,h*.36f),w*.35f,Green);Line(p,new Vector2(12,h*.70f),new Vector2(w-12,h*.70f),Green,5);}
             else if(shape==Shape.Move){Paw(p,c,r*.55f,Green);foreach(var d in new[]{Vector2.up,Vector2.down,Vector2.left,Vector2.right}){var tip=c+d*r;Line(p,c+d*r*.62f,tip,Green,3);var n=new Vector2(-d.y,d.x);Line(p,tip,tip-d*5+n*4,Green,2);Line(p,tip,tip-d*5-n*4,Green,2);}}

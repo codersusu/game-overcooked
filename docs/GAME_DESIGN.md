@@ -1,6 +1,6 @@
 # Bara Kitchen — game design
 
-Version 0.1.0 · 14 September 2026 · Current four-kitchen demo
+Version 0.1.1 · 14 September 2026 · Current four-kitchen demo
 
 ## Intent
 
@@ -21,7 +21,7 @@ Raw or prepared ingredients can be placed on plates and counters, up to six port
 
 The chef carries one object, interacts only when facing a station within reach, and aligns to the work surface during preparation. Tap Space once to chop, wash or extinguish; work continues until completion or movement cancellation. Partial chopping/washing progress is retained. Invalid interactions quietly preserve items. Plates keep a consistent world size when picked up or put down. The bin clears food, not the finite plate supply.
 
-Cooking takes **12 seconds**, followed by **5 seconds ready**, then an **8-second warning** with increasing urgency in the final three seconds. Fire follows if ignored. A reusable extinguisher suppresses it; clear the burnt batch before recooking. The first practice meal cannot burn while waiting to be collected. These are prototype parameters, not claimed Overcooked timings. Fire does not spread between stations.
+Cooking takes **12 seconds**, followed by **5 seconds ready**, then an **8-second warning** with increasing urgency in the final three seconds. Fire follows if ignored. A reusable extinguisher suppresses it, leaving blackened food in the pot. Put down the extinguisher, pick up the burnt pot with E, carry it to the bin and press E to discard only its contents. Return the same empty pot to the stove before cooking again. The pot can be staged on a free counter; returning it while still burnt does not clear it. Pots cannot be served or thrown. The first practice meal cannot burn while waiting to be collected. These are prototype parameters, not claimed Overcooked timings. Fire does not spread between stations.
 
 ## Four distinct kitchens
 

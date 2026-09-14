@@ -1,12 +1,12 @@
 [
   {
-    "file": "Bara-Kitchen-v0.1.0-macOS-AppleSilicon.zip",
-    "bytes": 165317489,
-    "sha256": "573628d1d1f2bd61f51804b09b750e71f55a52159e52327014d898b03519cb4a"
+    "file": "Bara-Kitchen-v0.1.1-macOS-AppleSilicon.zip",
+    "bytes": 165384204,
+    "sha256": "8b2030345c5ee7df20639bac5cda3e6ed6b043bfdca4287d5d427555db317b72"
   },
   {
-    "file": "Bara-Kitchen-v0.1.0-Web.zip",
-    "bytes": 156018250,
-    "sha256": "79f243dfd6f89a69daeb720baa65cab84cf1821d7f1b9b3d8287d7bf2326ae59"
+    "file": "Bara-Kitchen-v0.1.1-Web.zip",
+    "bytes": 156078859,
+    "sha256": "6c404a218413c2001d656a81bad58f27c7f5c1277ab642d5b1738ca74babccff"
   }
 ]

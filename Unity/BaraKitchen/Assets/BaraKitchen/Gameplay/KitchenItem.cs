@@ -6,6 +6,9 @@ namespace BaraKitchen.Gameplay {
         public const int PlateCapacity=6;
         public ItemKind kind; public string ingredient; public bool chopped,dirty; public int contents; public float prep;
         public VisualState visual; public bool flying; public bool soup;
+        // A carried pot retains its stove, contents, hazard state and original mesh root.
+        public KitchenStation potStation;
+        public bool BurntPot=>kind==ItemKind.Pot&&potStation&&potStation.hazard.state==HeatState.Extinguished;
         // Actual ingredients remain owned by the plate, retaining preparation progress.
         public readonly List<KitchenItem> portions=new List<KitchenItem>();
         public Vector3 worldScale=Vector3.one; float displayScale=1;
@@ -16,9 +19,9 @@ namespace BaraKitchen.Gameplay {
             get {if(kind!=ItemKind.Dish||dirty)return null;if(soup)return portions.Count==0?"soup":null;
                 return portions.Count==2&&portions.All(p=>p.chopped)&&portions.Count(p=>p.ingredient=="tomato")==1&&portions.Count(p=>p.ingredient=="cucumber")==1?"salad":null;}
         }
-        public string Label=>kind==ItemKind.Extinguisher?"Fire extinguisher":kind==ItemKind.Ingredient?(chopped?"Chopped ":"")+ingredient:dirty?"Dirty dish":Recipe!=null?Recipes.Name(Recipe):IsEmpty?"Clean dish":"Ingredients on dish";
+        public string Label=>kind==ItemKind.Pot?(BurntPot?"Burnt pot":"Empty pot"):kind==ItemKind.Extinguisher?"Fire extinguisher":kind==ItemKind.Ingredient?(chopped?"Chopped ":"")+ingredient:dirty?"Dirty dish":Recipe!=null?Recipes.Name(Recipe):IsEmpty?"Clean dish":"Ingredients on dish";
         public void Refresh(){
-            if(!visual)return;if(kind==ItemKind.Ingredient){visual.SetState(chopped?1:0);return;}
+            if(!visual||kind==ItemKind.Pot)return;if(kind==ItemKind.Ingredient){visual.SetState(chopped?1:0);return;}
             contents=soup?Recipes.Soup:0;foreach(var p in portions)if(p.chopped)contents|=Recipes.Ingredient(p.ingredient);
             bool salad=Recipe=="salad";visual.SetState(dirty?5:soup?4:salad?3:0);
             for(int i=0;i<portions.Count;i++){var p=portions[i];p.gameObject.SetActive(!salad);p.displayScale=portions.Count==1?.85f:.62f;float angle=i*2.39996f;float radius=portions.Count==1?0:.064f;

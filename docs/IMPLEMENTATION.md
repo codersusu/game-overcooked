@@ -37,7 +37,7 @@ All paths below are relative to `Unity/BaraKitchen/Assets/BaraKitchen`.
 
 The session owns authoritative transitions. Orders emit delivery/expiry events; the game connects these to the relevant customer, score and plate lifecycle. Eating completion returns a dirty dish to a finite queue. Avoid separate subscribers independently creating plates or scoring a delivery twice. Round settlement runs once; a stopped session rejects further work. Pause suspends gameplay clocks and active audio.
 
-Items retain their root identity through preparation and transfer. Appearance is a view of state; replacing a mesh does not require replacing the logical ingredient. Plate portions are actual child items. Their references/progress survive adding, taking back and recipe invalidation. Reparenting restores a canonical world scale, avoiding the earlier pickup/drop size jump. A pot uses explicit loading/cooking/ready/warning/burning/extinguished states. Recipe and timing parameters are documented in [Game design](GAME_DESIGN.md).
+Items retain their root identity through preparation and transfer. Appearance is a view of state; replacing a mesh does not require replacing the logical ingredient. Plate portions are actual child items. Their references/progress survive adding, taking back and recipe invalidation. Reparenting restores a canonical world scale, avoiding the earlier pickup/drop size jump. A pot uses explicit loading/cooking/ready/warning/burning/extinguished states. The same visual root also owns a `KitchenItem` of kind `Pot` and retains its source station. Extinguished pots can be carried/staged; only the bin resets burnt contents. `PotDocked` prevents a missing pot from accepting ingredients, and redocking a burnt pot preserves the extinguished state. The bin retains the reusable pot; it must be returned before cooking. Recipe and timing parameters are documented in [Game design](GAME_DESIGN.md).
 
 ## Content and regeneration
 
@@ -50,6 +50,8 @@ Items retain their root identity through preparation and transfer. Appearance is
 | `Editor/ArtAnimationBuilder.cs` | Shared motion rig, Animator/AnimationClips and studio reviews |
 | `Editor/GameplayBuilder.cs` | Catalog, room collision boundaries, stations, icons, UI setup and playable entry scene |
 | `scripts/compose_room_glbs.py`, `scripts/build_art_review.py` | Portable populated room GLBs and browser review pages |
+
+`ArtProductionBuilder.BuildPotCleanupIcons` refreshes only the empty/burnt inventory icons. `python3 scripts/package_demo.py` packages existing Web/Mac exports into versioned ZIPs and verifies their CRCs/SHA256 hashes.
 
 Normal local rebuilding uses downloaded sources; it makes no generation API calls. Use Unity's **Bara Kitchen** menu. **Build playable game** refreshes gameplay assets. **Rebuild rooms and materials** refreshes environment data while keeping character prefabs. **Build first art batch** is a broader regeneration and can overwrite generated prefabs; save manual variants separately first. `BuildPolishedGame` rebuilds environment and gameplay before exporting Web.
 
@@ -93,9 +95,9 @@ node scripts/gameplay/play_full_level.cjs 3
 node scripts/gameplay/play_full_level.cjs 4
 ```
 
-These use real UI selection, keyboard input, route finding and read-only telemetry. They cook/serve multiple meals, wash and reuse dishes, exercise dash/rail throws, pause, wait out natural order/round timers, check results and retry. Level 2 also lets a batch warn/burn, extinguishes it and clears the pot. Optional `BARA_CAPTURE=0` skips recording. Test scripts do not set the score or clock. Native checks may advance simulation directly to cover boundary conditions.
+These use real UI selection, keyboard input, route finding and read-only telemetry. They cook/serve multiple meals, wash and reuse dishes, exercise dash/rail throws, pause, wait out natural order/round timers, check results and retry. Level 2 also lets a batch warn/burn, extinguishes it and carries the pot to the bin for cleanup. `BARA_BURNT_POT_CHECK=1 BARA_CAPTURE=0 node scripts/gameplay/play_full_level.cjs 2` runs the focused trash-trip/reuse keyboard test, saving separate evidence in `qa/burnt-pot`. Optional `BARA_CAPTURE=0` skips recording. Test scripts do not set the score or clock. Native checks may advance simulation directly to cover boundary conditions.
 
-The handoff includes **536 passing native assertions**, plus full-round browser evidence for all four kitchens in [QA](../art/production/gameplay-round-01/qa/full-playthrough). Separate existing camera, layout, exploration and audio checks cover saved angles, viewport limits, plate freedom, real audio signal and pause silence. The Mac export received a launch smoke check; complete rounds were exercised in the Web build. Automated success is not evidence that every star target or route feels enjoyable; human balance and broader hardware testing remain.
+Version 0.1.1 has **785 passing native assertions**, plus a passing [keyboard cleanup/reuse test](../art/production/gameplay-round-01/qa/burnt-pot/level-2.json) with 53 checks. The original 0.1.0 handoff includes full-round browser evidence for all four kitchens in [QA](../art/production/gameplay-round-01/qa/full-playthrough). Separate existing camera, layout, exploration and audio checks cover saved angles, viewport limits, plate freedom, real audio signal and pause silence. The Mac export received a launch smoke check; complete rounds were exercised in the Web build. Automated success is not evidence that every star target or route feels enjoyable; human balance and broader hardware testing remain.
 
 ## Trailer and icon
 

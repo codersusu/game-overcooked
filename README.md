@@ -4,14 +4,14 @@
 
 **Little paws. Big appetites.** A single-player 3D animal café: chop, combine, cook, serve, wash, and find your rhythm through four increasingly intricate kitchens. Built in Unity, with capybara, cat and dog chefs and a café full of animal customers.
 
-[Watch / download the trailer](https://github.com/codersusu/game-overcooked/releases/download/v0.1.0/Bara-Kitchen-Trailer.mp4) · [Download the demo](https://github.com/codersusu/game-overcooked/releases/tag/v0.1.0) · [Game design](docs/GAME_DESIGN.md) · [Implementation](docs/IMPLEMENTATION.md) · [Changelog](docs/CHANGELOG.md) · [Prompt summary](docs/PROMPT_SUMMARY.md)
+[Watch / download the trailer](https://github.com/codersusu/game-overcooked/releases/download/v0.1.0/Bara-Kitchen-Trailer.mp4) · [Download the demo](https://github.com/codersusu/game-overcooked/releases/tag/v0.1.1) · [Game design](docs/GAME_DESIGN.md) · [Implementation](docs/IMPLEMENTATION.md) · [Changelog](docs/CHANGELOG.md) · [Prompt summary](docs/PROMPT_SUMMARY.md)
 
 [![Trailer — actual Unity gameplay](art/trailers/round-01/poster.jpg)](https://github.com/codersusu/game-overcooked/releases/download/v0.1.0/Bara-Kitchen-Trailer.mp4)
 
 ## Play the demo
 
-- **[macOS / Apple silicon ZIP](https://github.com/codersusu/game-overcooked/releases/download/v0.1.0/Bara-Kitchen-v0.1.0-macOS-AppleSilicon.zip)** — extract and open **Bara Kitchen.app**. This developer build is not notarized; macOS may require an explicit Open approval in Privacy & Security. Intel Mac and Windows native builds are not included.
-- **[Desktop browser ZIP](https://github.com/codersusu/game-overcooked/releases/download/v0.1.0/Bara-Kitchen-v0.1.0-Web.zip)** — extract, run `python3 -m http.server 8000` inside `Bara-Kitchen-Web`, then open `http://localhost:8000`. Do not open the HTML as a `file://` URL. Use a WebGL-capable desktop browser; touch controls are not implemented.
+- **[macOS / Apple silicon ZIP](https://github.com/codersusu/game-overcooked/releases/download/v0.1.1/Bara-Kitchen-v0.1.1-macOS-AppleSilicon.zip)** — extract and open **Bara Kitchen.app**. This developer build is not notarized; macOS may require an explicit Open approval in Privacy & Security. Intel Mac and Windows native builds are not included.
+- **[Desktop browser ZIP](https://github.com/codersusu/game-overcooked/releases/download/v0.1.1/Bara-Kitchen-v0.1.1-Web.zip)** — extract, run `python3 -m http.server 8000` inside `Bara-Kitchen-Web`, then open `http://localhost:8000`. Do not open the HTML as a `file://` URL. Use a WebGL-capable desktop browser; touch controls are not implemented.
 
 The demo works locally without accounts, online services or AI API keys. All four kitchens are available. An untimed first order introduces each kitchen; delivery starts the timed round. Calm mode gives longer round and order timers. Best scores and preferences are saved on the device.
 
@@ -25,6 +25,8 @@ The demo works locally without accounts, online services or AI API keys. All fou
 | Turn camera | Drag left/right, or comma / period |
 | Tilt camera / reset view | Scroll, or [ / ]; C resets |
 | Picture guide / pause | H / Escape |
+
+After extinguishing a fire, carry the burnt pot to the bin, empty it with E, then return the pot to the stove before cooking again.
 
 ## What is here
 
@@ -68,7 +70,7 @@ Open `http://localhost:54114/production/gameplay-round-01/`. Detailed build and 
 
 HTML galleries need the local server; GitHub displays their source. The trailer folder retains the captured clips, title composition and edit timeline for future recuts.
 
-**Validation:** all four full-round keyboard playthroughs passed, serving 10 meals in total and checking dish reuse, expiry, results and retry. The native suite passed 536 assertions. [Saved validation](art/production/gameplay-round-01/release-validation.json).
+**Validation:** the original 0.1.0 handoff passed all four full-round keyboard playthroughs, serving 10 meals in total and checking dish reuse, expiry, results and retry. The current native suite passed 785 assertions, including cleanup and pot reuse in kitchens 2–4. A focused 0.1.1 keyboard playtest also passed the bin trip, a fresh soup delivery and restart. [Saved validation](art/production/gameplay-round-01/release-validation.json).
 
 ## Development record and usage
 
