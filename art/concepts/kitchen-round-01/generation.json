@@ -1,0 +1,54 @@
+{
+  "mode": "built-in image_gen",
+  "date": "2026-09-13",
+  "outputs": [
+    {
+      "id": "ingredients",
+      "file": "01-ingredients.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-fe8552dd-f489-4909-850e-df450552f2a4.png",
+      "selected": true
+    },
+    {
+      "id": "dishes",
+      "file": "02-dishes.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-71367372-9463-421a-aded-7a3592a4fc63.png",
+      "selected": true
+    },
+    {
+      "id": "tools",
+      "file": "03-tools.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-048ea54f-59e3-43e6-be29-cf8054565068.png",
+      "selected": true
+    },
+    {
+      "id": "stations",
+      "file": "04-stations.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-aabfe795-9aab-4c7a-a674-8e8b9bd57cf6.png",
+      "selected": true
+    },
+    {
+      "id": "storage",
+      "file": "05-supplies.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-f4eac8ff-7888-4830-8aa4-3fa673b6f61d.png",
+      "selected": true
+    },
+    {
+      "id": "environment",
+      "file": "06-environment.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-0c198b38-5f43-4c08-9055-66d912cad4ed.png",
+      "selected": false
+    },
+    {
+      "id": "environment-final",
+      "file": "06-environment-v2.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-b84778f3-3305-4a01-aa41-2f74887e7495.png",
+      "selected": true
+    },
+    {
+      "id": "room",
+      "file": "07-cafe-preview.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-d32a7429-9089-412a-8447-a5507d6ed4a8.png",
+      "selected": true
+    }
+  ]
+}

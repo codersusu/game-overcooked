@@ -1,0 +1,30 @@
+{
+  "revision": "gentle-motion-03",
+  "date": "2026-09-13",
+  "videos": 133,
+  "native_clips": 11,
+  "character_prefabs": 12,
+  "character_action_combinations": 132,
+  "native_pose_comparisons": 132,
+  "skinned_limb_motion_checks": 120,
+  "arm_contact_review_views": 144,
+  "native_playmode_passed": true,
+  "browser_video_checks": 133,
+  "idle_lift_degrees": 21.5,
+  "previous_idle_lift_degrees": 43,
+  "wash_vertical_stroke_m": 0.05,
+  "extinguish_body_sway_m": 0.015,
+  "warning_seconds": 8,
+  "final_urgent_warning_seconds": 3,
+  "worktop_height_m": 0.458,
+  "worktop_height_reduction_percent": 32,
+  "room_placements_preserved": true,
+  "api_calls": 0,
+  "video_bytes": 60482858,
+  "review_url": "http://127.0.0.1:54114/production/animations-round-01/?v=gentle-motion-03#dog-wash",
+  "limitations": [
+    "Procedural sleeve deformation may need further polish during gameplay blending.",
+    "Unity editor QuickSearch startup exception observed; native animation and particle checks passed."
+  ],
+  "browser_exact_seeking_verified": true
+}

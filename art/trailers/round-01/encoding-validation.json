@@ -1,0 +1,9 @@
+{
+  "openingFrames": 90,
+  "closingFrames": 90,
+  "identicalDecodedFrames": true,
+  "audioLevels": [
+    "mean_volume: -18.5 dB",
+    "max_volume: -1.8 dB"
+  ]
+}

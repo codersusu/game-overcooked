@@ -1,0 +1,32 @@
+{
+  "counter_surface_m": 0.45786099999999996,
+  "previous_counter_surface_m": 0.673325,
+  "height_reduction_percent": 32,
+  "above_surface_assets_translated_without_scaling": true,
+  "rooms": [
+    {
+      "level": 1,
+      "station_and_barrier_placements_preserved": true,
+      "cafe_depth_m": 4.508,
+      "worktop_surface_m": 0.458252
+    },
+    {
+      "level": 2,
+      "station_and_barrier_placements_preserved": true,
+      "cafe_depth_m": 4.508,
+      "worktop_surface_m": 0.458252
+    },
+    {
+      "level": 3,
+      "station_and_barrier_placements_preserved": true,
+      "cafe_depth_m": 4.508,
+      "worktop_surface_m": 0.458252
+    },
+    {
+      "level": 4,
+      "station_and_barrier_placements_preserved": true,
+      "cafe_depth_m": 4.508,
+      "worktop_surface_m": 0.458252
+    }
+  ]
+}

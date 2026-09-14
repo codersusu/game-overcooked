@@ -1,0 +1,1136 @@
+{
+  "palette": [
+    {
+      "name": "oak",
+      "hex": "C59159"
+    },
+    {
+      "name": "oakLight",
+      "hex": "DBAE77"
+    },
+    {
+      "name": "oakDark",
+      "hex": "936439"
+    },
+    {
+      "name": "sage",
+      "hex": "8F9D7C"
+    },
+    {
+      "name": "sageDark",
+      "hex": "718463"
+    },
+    {
+      "name": "ivory",
+      "hex": "F3E8D4"
+    },
+    {
+      "name": "cream",
+      "hex": "FFF6E4"
+    },
+    {
+      "name": "cocoa",
+      "hex": "594132"
+    },
+    {
+      "name": "teal",
+      "hex": "326C71"
+    },
+    {
+      "name": "navy",
+      "hex": "344A60"
+    },
+    {
+      "name": "tomato",
+      "hex": "EB5039"
+    },
+    {
+      "name": "tomatoFlesh",
+      "hex": "FF8460"
+    },
+    {
+      "name": "seed",
+      "hex": "FFD078"
+    },
+    {
+      "name": "leaf",
+      "hex": "628637"
+    },
+    {
+      "name": "cucumber",
+      "hex": "3E703B"
+    },
+    {
+      "name": "cucumberFlesh",
+      "hex": "D6E995"
+    },
+    {
+      "name": "carrot",
+      "hex": "F78B30"
+    },
+    {
+      "name": "carrotCore",
+      "hex": "FFAC50"
+    },
+    {
+      "name": "mushroom",
+      "hex": "BB916C"
+    },
+    {
+      "name": "mushroomFlesh",
+      "hex": "EDDCBE"
+    },
+    {
+      "name": "gill",
+      "hex": "8A634F"
+    },
+    {
+      "name": "soup",
+      "hex": "D9A554"
+    },
+    {
+      "name": "metal",
+      "hex": "AEBDB8"
+    },
+    {
+      "name": "darkMetal",
+      "hex": "526964"
+    },
+    {
+      "name": "water",
+      "hex": "83C8D2"
+    },
+    {
+      "name": "tile",
+      "hex": "E6D3B8"
+    },
+    {
+      "name": "tileLight",
+      "hex": "F8EEDC"
+    },
+    {
+      "name": "terracotta",
+      "hex": "BF7852"
+    },
+    {
+      "name": "plum",
+      "hex": "845678"
+    },
+    {
+      "name": "red",
+      "hex": "BB5348"
+    },
+    {
+      "name": "glass",
+      "hex": "B6D7D5"
+    },
+    {
+      "name": "chalk",
+      "hex": "30484A"
+    },
+    {
+      "name": "black",
+      "hex": "302B2B"
+    },
+    {
+      "name": "burnt",
+      "hex": "514131"
+    },
+    {
+      "name": "petalPink",
+      "hex": "F17DA6"
+    },
+    {
+      "name": "petalYellow",
+      "hex": "FFC857"
+    },
+    {
+      "name": "petalLilac",
+      "hex": "AC91DC"
+    },
+    {
+      "name": "mint",
+      "hex": "8AC9AB"
+    }
+  ],
+  "models": [
+    {
+      "name": "tomato-whole",
+      "category": "Food",
+      "triangles": 3280,
+      "vertices": 1884,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "cucumber-whole",
+      "category": "Food",
+      "triangles": 1920,
+      "vertices": 1092,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "carrot-whole",
+      "category": "Food",
+      "triangles": 1840,
+      "vertices": 1065,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "mushroom-whole",
+      "category": "Food",
+      "triangles": 720,
+      "vertices": 451,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "tomato-chopped",
+      "category": "Food",
+      "triangles": 6144,
+      "vertices": 3900,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "cucumber-chopped",
+      "category": "Food",
+      "triangles": 8960,
+      "vertices": 5244,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "carrot-chopped",
+      "category": "Food",
+      "triangles": 384,
+      "vertices": 624,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "mushroom-chopped",
+      "category": "Food",
+      "triangles": 5232,
+      "vertices": 3384,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "dish-clean",
+      "category": "Dishes",
+      "triangles": 1520,
+      "vertices": 861,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "dish-tomato",
+      "category": "Dishes",
+      "triangles": 7664,
+      "vertices": 4761,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "dish-cucumber",
+      "category": "Dishes",
+      "triangles": 10480,
+      "vertices": 6105,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "dish-salad",
+      "category": "Dishes",
+      "triangles": 16624,
+      "vertices": 10005,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "dish-soup",
+      "category": "Dishes",
+      "triangles": 7536,
+      "vertices": 5115,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "dish-dirty",
+      "category": "Dishes",
+      "triangles": 2480,
+      "vertices": 1407,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "cutting-board",
+      "category": "Tools",
+      "triangles": 600,
+      "vertices": 432,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "knife",
+      "category": "Tools",
+      "triangles": 1000,
+      "vertices": 678,
+      "anchors": [
+        {
+          "name": "Grip",
+          "position": [
+            0,
+            0,
+            -0.085
+          ]
+        }
+      ],
+      "collider": null
+    },
+    {
+      "name": "sponge",
+      "category": "Tools",
+      "triangles": 600,
+      "vertices": 432,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "ladle",
+      "category": "Tools",
+      "triangles": 880,
+      "vertices": 519,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "pot-empty",
+      "category": "Tools",
+      "triangles": 3200,
+      "vertices": 1845,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "pot-lid",
+      "category": "Tools",
+      "triangles": 880,
+      "vertices": 519,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "pot-carrot",
+      "category": "Tools",
+      "triangles": 3584,
+      "vertices": 2469,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "pot-mushroom",
+      "category": "Tools",
+      "triangles": 8432,
+      "vertices": 5229,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "pot-both",
+      "category": "Tools",
+      "triangles": 8816,
+      "vertices": 5853,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "pot-cooking",
+      "category": "Tools",
+      "triangles": 9216,
+      "vertices": 6099,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "pot-ready",
+      "category": "Tools",
+      "triangles": 9216,
+      "vertices": 6099,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "pot-burnt",
+      "category": "Tools",
+      "triangles": 3600,
+      "vertices": 2091,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "counter",
+      "category": "Stations",
+      "triangles": 2460,
+      "vertices": 1626,
+      "anchors": [
+        {
+          "name": "Worktop",
+          "position": [
+            0,
+            0.40248,
+            0
+          ]
+        },
+        {
+          "name": "InteractionFront",
+          "position": [
+            0,
+            0.0,
+            0.66
+          ]
+        }
+      ],
+      "collider": {
+        "center": [
+          0,
+          0.18700000000000003,
+          0
+        ],
+        "size": [
+          0.76,
+          0.37400000000000005,
+          0.76
+        ]
+      }
+    },
+    {
+      "name": "station-prep",
+      "category": "Stations",
+      "triangles": 4060,
+      "vertices": 2736,
+      "anchors": [
+        {
+          "name": "Worktop",
+          "position": [
+            0,
+            0.40248,
+            0
+          ]
+        },
+        {
+          "name": "InteractionFront",
+          "position": [
+            0,
+            0.0,
+            0.66
+          ]
+        }
+      ],
+      "collider": {
+        "center": [
+          0,
+          0.18700000000000003,
+          0
+        ],
+        "size": [
+          0.76,
+          0.37400000000000005,
+          0.76
+        ]
+      }
+    },
+    {
+      "name": "source-tomato",
+      "category": "Stations",
+      "triangles": 16780,
+      "vertices": 10026,
+      "anchors": [
+        {
+          "name": "Worktop",
+          "position": [
+            0,
+            0.40248,
+            0
+          ]
+        },
+        {
+          "name": "InteractionFront",
+          "position": [
+            0,
+            0.0,
+            0.66
+          ]
+        }
+      ],
+      "collider": {
+        "center": [
+          0,
+          0.18700000000000003,
+          0
+        ],
+        "size": [
+          0.76,
+          0.37400000000000005,
+          0.76
+        ]
+      }
+    },
+    {
+      "name": "source-cucumber",
+      "category": "Stations",
+      "triangles": 11340,
+      "vertices": 6858,
+      "anchors": [
+        {
+          "name": "Worktop",
+          "position": [
+            0,
+            0.40248,
+            0
+          ]
+        },
+        {
+          "name": "InteractionFront",
+          "position": [
+            0,
+            0.0,
+            0.66
+          ]
+        }
+      ],
+      "collider": {
+        "center": [
+          0,
+          0.18700000000000003,
+          0
+        ],
+        "size": [
+          0.76,
+          0.37400000000000005,
+          0.76
+        ]
+      }
+    },
+    {
+      "name": "source-carrot",
+      "category": "Stations",
+      "triangles": 11020,
+      "vertices": 6750,
+      "anchors": [
+        {
+          "name": "Worktop",
+          "position": [
+            0,
+            0.40248,
+            0
+          ]
+        },
+        {
+          "name": "InteractionFront",
+          "position": [
+            0,
+            0.0,
+            0.66
+          ]
+        }
+      ],
+      "collider": {
+        "center": [
+          0,
+          0.18700000000000003,
+          0
+        ],
+        "size": [
+          0.76,
+          0.37400000000000005,
+          0.76
+        ]
+      }
+    },
+    {
+      "name": "source-mushroom",
+      "category": "Stations",
+      "triangles": 6540,
+      "vertices": 4294,
+      "anchors": [
+        {
+          "name": "Worktop",
+          "position": [
+            0,
+            0.40248,
+            0
+          ]
+        },
+        {
+          "name": "InteractionFront",
+          "position": [
+            0,
+            0.0,
+            0.66
+          ]
+        }
+      ],
+      "collider": {
+        "center": [
+          0,
+          0.18700000000000003,
+          0
+        ],
+        "size": [
+          0.76,
+          0.37400000000000005,
+          0.76
+        ]
+      }
+    },
+    {
+      "name": "station-pot",
+      "category": "Stations",
+      "triangles": 7560,
+      "vertices": 4630,
+      "anchors": [
+        {
+          "name": "Worktop",
+          "position": [
+            0,
+            0.40248,
+            0
+          ]
+        },
+        {
+          "name": "InteractionFront",
+          "position": [
+            0,
+            0.0,
+            0.66
+          ]
+        },
+        {
+          "name": "PotContents",
+          "position": [
+            0,
+            0.43548000000000003,
+            0
+          ]
+        }
+      ],
+      "collider": {
+        "center": [
+          0,
+          0.18700000000000003,
+          0
+        ],
+        "size": [
+          0.76,
+          0.37400000000000005,
+          0.76
+        ]
+      }
+    },
+    {
+      "name": "station-sink",
+      "category": "Stations",
+      "triangles": 6520,
+      "vertices": 4374,
+      "anchors": [
+        {
+          "name": "Worktop",
+          "position": [
+            0,
+            0.40248,
+            0
+          ]
+        },
+        {
+          "name": "InteractionFront",
+          "position": [
+            0,
+            0.0,
+            0.66
+          ]
+        }
+      ],
+      "collider": {
+        "center": [
+          0,
+          0.18700000000000003,
+          0
+        ],
+        "size": [
+          0.76,
+          0.37400000000000005,
+          0.76
+        ]
+      }
+    },
+    {
+      "name": "station-dishes",
+      "category": "Stations",
+      "triangles": 10660,
+      "vertices": 6363,
+      "anchors": [
+        {
+          "name": "Worktop",
+          "position": [
+            0,
+            0.40248,
+            0
+          ]
+        },
+        {
+          "name": "InteractionFront",
+          "position": [
+            0,
+            0.0,
+            0.66
+          ]
+        }
+      ],
+      "collider": {
+        "center": [
+          0,
+          0.18700000000000003,
+          0
+        ],
+        "size": [
+          0.76,
+          0.37400000000000005,
+          0.76
+        ]
+      }
+    },
+    {
+      "name": "station-serve",
+      "category": "Stations",
+      "triangles": 4340,
+      "vertices": 2823,
+      "anchors": [
+        {
+          "name": "Worktop",
+          "position": [
+            0,
+            0.40248,
+            0
+          ]
+        },
+        {
+          "name": "InteractionFront",
+          "position": [
+            0,
+            0.0,
+            0.66
+          ]
+        }
+      ],
+      "collider": {
+        "center": [
+          0,
+          0.18700000000000003,
+          0
+        ],
+        "size": [
+          0.76,
+          0.37400000000000005,
+          0.76
+        ]
+      }
+    },
+    {
+      "name": "station-return",
+      "category": "Stations",
+      "triangles": 5160,
+      "vertices": 3570,
+      "anchors": [
+        {
+          "name": "Worktop",
+          "position": [
+            0,
+            0.40248,
+            0
+          ]
+        },
+        {
+          "name": "InteractionFront",
+          "position": [
+            0,
+            0.0,
+            0.66
+          ]
+        },
+        {
+          "name": "DirtyDishSpawn",
+          "position": [
+            0,
+            0.44248000000000004,
+            -0.22
+          ]
+        }
+      ],
+      "collider": {
+        "center": [
+          0,
+          0.18700000000000003,
+          0
+        ],
+        "size": [
+          0.76,
+          0.37400000000000005,
+          0.76
+        ]
+      }
+    },
+    {
+      "name": "station-bin",
+      "category": "Stations",
+      "triangles": 1176,
+      "vertices": 828,
+      "anchors": [],
+      "collider": {
+        "center": [
+          0,
+          0.1632,
+          0
+        ],
+        "size": [
+          0.49,
+          0.3264,
+          0.49
+        ]
+      }
+    },
+    {
+      "name": "rail",
+      "category": "Environment",
+      "triangles": 3060,
+      "vertices": 2058,
+      "anchors": [],
+      "collider": {
+        "center": [
+          0,
+          0.3,
+          0
+        ],
+        "size": [
+          0.8,
+          0.6,
+          0.18
+        ]
+      }
+    },
+    {
+      "name": "cafe-table",
+      "category": "Cafe",
+      "triangles": 1200,
+      "vertices": 738,
+      "anchors": [
+        {
+          "name": "DishA",
+          "position": [
+            -0.19,
+            0.55,
+            0
+          ]
+        },
+        {
+          "name": "DishB",
+          "position": [
+            0.19,
+            0.55,
+            0
+          ]
+        }
+      ],
+      "collider": {
+        "center": [
+          0,
+          0.265,
+          0
+        ],
+        "size": [
+          0.85,
+          0.53,
+          0.85
+        ]
+      }
+    },
+    {
+      "name": "cafe-chair",
+      "category": "Cafe",
+      "triangles": 2700,
+      "vertices": 1944,
+      "anchors": [
+        {
+          "name": "Seat",
+          "position": [
+            0,
+            0.24,
+            0
+          ]
+        },
+        {
+          "name": "Approach",
+          "position": [
+            0,
+            0,
+            0.62
+          ]
+        }
+      ],
+      "collider": {
+        "center": [
+          0,
+          0.28,
+          0
+        ],
+        "size": [
+          0.47,
+          0.56,
+          0.47
+        ]
+      }
+    },
+    {
+      "name": "cafe-bench",
+      "category": "Cafe",
+      "triangles": 2400,
+      "vertices": 1728,
+      "anchors": [
+        {
+          "name": "SeatA",
+          "position": [
+            -0.28,
+            0.27,
+            0
+          ]
+        },
+        {
+          "name": "SeatB",
+          "position": [
+            0.28,
+            0.27,
+            0
+          ]
+        }
+      ],
+      "collider": {
+        "center": [
+          0,
+          0.3,
+          0
+        ],
+        "size": [
+          1.2,
+          0.6,
+          0.55
+        ]
+      }
+    },
+    {
+      "name": "planter",
+      "category": "Cafe",
+      "triangles": 3840,
+      "vertices": 2212,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "menu-board",
+      "category": "Cafe",
+      "triangles": 2880,
+      "vertices": 2001,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "cafe-door",
+      "category": "Cafe",
+      "triangles": 1980,
+      "vertices": 1353,
+      "anchors": [
+        {
+          "name": "Entrance",
+          "position": [
+            0,
+            0,
+            0.6
+          ]
+        }
+      ],
+      "collider": null
+    },
+    {
+      "name": "window",
+      "category": "Cafe",
+      "triangles": 3300,
+      "vertices": 2376,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "wall-panel",
+      "category": "Environment",
+      "triangles": 1200,
+      "vertices": 864,
+      "anchors": [],
+      "collider": {
+        "center": [
+          0,
+          0.65,
+          0
+        ],
+        "size": [
+          0.8,
+          1.3,
+          0.12
+        ]
+      }
+    },
+    {
+      "name": "floor-cream",
+      "category": "Environment",
+      "triangles": 300,
+      "vertices": 216,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "floor-sand",
+      "category": "Environment",
+      "triangles": 300,
+      "vertices": 216,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "floor-wood",
+      "category": "Environment",
+      "triangles": 600,
+      "vertices": 432,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "welcome-mat",
+      "category": "Cafe",
+      "triangles": 600,
+      "vertices": 432,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "table-flower-vase",
+      "category": "Decor",
+      "triangles": 8960,
+      "vertices": 5147,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "flower-planter-pink",
+      "category": "Decor",
+      "triangles": 22160,
+      "vertices": 12724,
+      "anchors": [],
+      "collider": {
+        "center": [
+          0,
+          0.18,
+          0
+        ],
+        "size": [
+          0.36,
+          0.36,
+          0.36
+        ]
+      }
+    },
+    {
+      "name": "flower-planter-yellow",
+      "category": "Decor",
+      "triangles": 22160,
+      "vertices": 12724,
+      "anchors": [],
+      "collider": {
+        "center": [
+          0,
+          0.18,
+          0
+        ],
+        "size": [
+          0.36,
+          0.36,
+          0.36
+        ]
+      }
+    },
+    {
+      "name": "window-flower-box",
+      "category": "Decor",
+      "triangles": 30580,
+      "vertices": 17658,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "wall-clock",
+      "category": "Decor",
+      "triangles": 7640,
+      "vertices": 4473,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "framed-flowers",
+      "category": "Decor",
+      "triangles": 8220,
+      "vertices": 4902,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "fire-extinguisher",
+      "category": "Tools",
+      "triangles": 8560,
+      "vertices": 5097,
+      "anchors": [
+        {
+          "name": "Grip",
+          "position": [
+            0,
+            0.34,
+            0
+          ]
+        },
+        {
+          "name": "Nozzle",
+          "position": [
+            0.115,
+            0.29,
+            0.22
+          ]
+        }
+      ],
+      "collider": null
+    },
+    {
+      "name": "flame-lobe",
+      "category": "Effects",
+      "triangles": 200,
+      "vertices": 126,
+      "anchors": [],
+      "collider": null
+    },
+    {
+      "name": "foam-puff",
+      "category": "Effects",
+      "triangles": 480,
+      "vertices": 273,
+      "anchors": [],
+      "collider": null
+    }
+  ]
+}

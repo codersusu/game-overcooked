@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "First Service",
+    "instances": 170,
+    "seats": 4,
+    "freeCounters": 6
+  },
+  {
+    "id": 2,
+    "name": "Around the Island",
+    "instances": 210,
+    "seats": 4,
+    "freeCounters": 8
+  },
+  {
+    "id": 3,
+    "name": "Across the Divide",
+    "instances": 256,
+    "seats": 6,
+    "freeCounters": 8
+  },
+  {
+    "id": 4,
+    "name": "The Zigzag Caf\u00e9",
+    "instances": 315,
+    "seats": 6,
+    "freeCounters": 13
+  }
+]

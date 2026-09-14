@@ -1,0 +1,7 @@
+{
+  "status": "FAILED",
+  "consumed_credits": 0,
+  "task_error": {
+    "message": "Meshy HTTP 422: {\"message\":\"Pose estimation failed, please provide a valid model\"}"
+  }
+}

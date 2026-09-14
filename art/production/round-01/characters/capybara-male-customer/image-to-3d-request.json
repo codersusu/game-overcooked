@@ -1,0 +1,18 @@
+{
+  "ai_model": "meshy-6",
+  "model_type": "standard",
+  "should_texture": true,
+  "enable_pbr": false,
+  "should_remesh": true,
+  "topology": "triangle",
+  "target_polycount": 12000,
+  "pose_mode": "a-pose",
+  "texture_resolution": "2k",
+  "image_enhancement": false,
+  "remove_lighting": true,
+  "target_formats": [
+    "glb",
+    "fbx"
+  ],
+  "multi_view_thumbnails": true
+}

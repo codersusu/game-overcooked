@@ -1,0 +1,120 @@
+[
+  {
+    "id": "chop",
+    "seconds": 0.68,
+    "peak": 0.77,
+    "rms": 0.05,
+    "channels": 1
+  },
+  {
+    "id": "fire",
+    "seconds": 3.0,
+    "peak": 0.88,
+    "rms": 0.011,
+    "channels": 1
+  },
+  {
+    "id": "guest-eat",
+    "seconds": 1.28,
+    "peak": 0.88,
+    "rms": 0.112,
+    "channels": 1
+  },
+  {
+    "id": "guest-happy",
+    "seconds": 1.36,
+    "peak": 0.523,
+    "rms": 0.14,
+    "channels": 1
+  },
+  {
+    "id": "music-fire",
+    "seconds": 18.051,
+    "peak": 0.67,
+    "rms": 0.12,
+    "channels": 2
+  },
+  {
+    "id": "music-hurry",
+    "seconds": 18.051,
+    "peak": 0.681,
+    "rms": 0.12,
+    "channels": 2
+  },
+  {
+    "id": "music-service",
+    "seconds": 47.961,
+    "peak": 0.88,
+    "rms": 0.087,
+    "channels": 2
+  },
+  {
+    "id": "plate",
+    "seconds": 0.48,
+    "peak": 0.88,
+    "rms": 0.096,
+    "channels": 1
+  },
+  {
+    "id": "spray",
+    "seconds": 2.61,
+    "peak": 0.776,
+    "rms": 0.14,
+    "channels": 1
+  },
+  {
+    "id": "wash",
+    "seconds": 3.0,
+    "peak": 0.88,
+    "rms": 0.037,
+    "channels": 1
+  },
+  {
+    "id": "success",
+    "seconds": 0.64,
+    "source": "original local synthesis",
+    "peak": 0.23423263554221066
+  },
+  {
+    "id": "ready",
+    "seconds": 0.42,
+    "source": "original local synthesis",
+    "peak": 0.23348275013243716
+  },
+  {
+    "id": "new-order",
+    "seconds": 0.42,
+    "source": "original local synthesis",
+    "peak": 0.2279307444035688
+  },
+  {
+    "id": "warning",
+    "seconds": 0.71,
+    "source": "original local synthesis",
+    "peak": 0.2133170136615373
+  },
+  {
+    "id": "expired",
+    "seconds": 0.6499773242630386,
+    "source": "original local synthesis",
+    "peak": 0.21601459435842102
+  },
+  {
+    "id": "ui",
+    "seconds": 0.24,
+    "source": "original local synthesis",
+    "peak": 0.20928129304065649
+  },
+  {
+    "id": "step",
+    "seconds": 0.1,
+    "source": "original local synthesis",
+    "peak": 0.6188584256072845
+  },
+  {
+    "id": "whoosh",
+    "seconds": 0.22,
+    "source": "original local synthesis",
+    "peak": 0.44760610203723883
+  }
+]

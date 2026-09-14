@@ -1,0 +1,28 @@
+{
+  "mode": "built-in image_gen",
+  "date": "2026-09-13",
+  "variants": [
+    {
+      "id": "environment-final",
+      "title": "Café environment kit",
+      "file": "06-environment-v2.png",
+      "references": [
+        "/Users/yanqima/Documents/ChatGPT/bara kitchen game/art/concepts/kitchen-round-01/06-environment.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Input image 1 is the edit target, an existing Bara Kitchen environment asset sheet.\nMake ONE very small localized correction only: on the slate MENU STAND in the BOTTOM-RIGHT cell, replace the TOP coffee-cup/steam pictogram with a simple ivory pictogram of a shallow salad plate holding two tomato wedges and two cucumber coins. Keep the bottom bowl pictogram below it. The game serves salad and soup, not coffee.\nKeep absolutely everything else unchanged: six-cell layout, all labels, all furniture/architecture shapes, wood and sage colors, lighting, camera, object placement, slate stand outline and lower bowl pictogram. Do not add lettering to the board. Preserve the original image dimensions and style. This is not a redesign of the sheet."
+    },
+    {
+      "id": "room",
+      "title": "Café scene preview",
+      "file": "07-cafe-preview.png",
+      "references": [
+        "/Users/yanqima/Documents/ChatGPT/bara kitchen game/art/concepts/roster-round-02/capybara.png",
+        "/Users/yanqima/Documents/ChatGPT/bara kitchen game/art/concepts/roster-round-02/cat.png",
+        "/Users/yanqima/Documents/ChatGPT/bara kitchen game/art/concepts/kitchen-round-01/04-stations.png",
+        "/Users/yanqima/Documents/ChatGPT/bara kitchen game/art/concepts/kitchen-round-01/06-environment.png",
+        "/Users/yanqima/Documents/ChatGPT/bara kitchen game/art/concepts/kitchen-round-01/02-dishes.png"
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: Bara Kitchen interior art-direction scene, a coherent 3D game diorama built from the supplied character and prop designs.\nInput 1: approved capybara character sheet. Use ONLY its top-left male chef: big broad rounded caramel head, short cocoa muzzle, small black oval animal eyes, extremely short connected legs, fingerless paws, ivory chef toque with navy band, navy neckerchief, short ivory jacket/apron and cocoa shorts.\nInput 2: approved ginger cat sheet. Use ONLY its bottom-right female CUSTOMER in periwinkle short dress, indigo sash and large indigo/ivory bow, no chef hat.\nInput 3: low sage/honey-oak kitchen station designs. Reuse their shapes and materials.\nInput 4: matching room/furniture kit. Use the table, navy-padded round chairs, sage bench, cream-and-clay tiled floor, low cream/sage walls, oak window and sage-striped awning. Do not copy coffee symbols: any menu symbols must be a salad plate and soup bowl.\nInput 5: exact two food recipes and ivory/teal tableware. Salad is ONLY tomato wedges and cucumber coins; soup is ONLY carrot chunks and mushroom slices in golden broth. No extra dishes, coffee cups, herbs, lettuce, bread, drinks or new ingredients.\n\nCreate ONE inviting compact café interior seen from an elevated three-quarter gameplay-like camera, as a wide 1536x1024 open-front dollhouse diorama on a warm ivory ground. No roof or foreground walls. Gentle warm daylight from the back window, soft rounded surfaces matching the reference characters, no photorealism, no text, labels or UI.\nKeep the kitchen on the left and a small dining area on the right. An L-shaped run of low honey-oak/sage counters has prep board, squat sage soup pot on a dark hob, and sink; four small ingredient source crates sit toward the rear with red tomatoes, dark-green cucumbers, orange carrots and cream mushrooms. Include a short clear serving pass with a teal edge, and a compact dirty-dish-return belt near the sink. Fit the modules simply, do not make a crowded maze. Keep a generous open central walking aisle and a clear opening between kitchen and dining.\nPlace exactly TWO characters: the capybara chef standing beside the END of the prep counter, clearly showing his tiny feet and full compact body, holding a modest plate of tomato-cucumber salad in BOTH mitten paws; the ginger cat customer sitting at the small right-hand round table with a bowl of carrot-mushroom soup. Both faces visible in three-quarter view. Do not include any duplicates from the reference sheets or other animals.\nCountertops must be LOW relative to the chef: about belly/lower-chest level, well below his chin, approximately 45% of floor-to-skull height excluding hat. Preserve the huge head and tiny legs rather than making the chef taller. The plate should fit between his paws, not be head-sized. Chair/table scale should fit the cat.\nAdd the simple window planter with only a few broad leaves and the sage bench along the far wall; keep decoration sparse. Prioritize visible interaction surfaces and clear species/food silhouettes. Aim for a cohesive cozy animal café one could later build from the modular props, not a realistic human kitchen."
+    }
+  ]
+}

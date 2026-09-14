@@ -1,0 +1,164 @@
+{
+  "passed": true,
+  "screens": [
+    "wide-main-menu",
+    "wide-settings",
+    "wide-level-select",
+    "wide-level-01-briefing",
+    "wide-level-01-service",
+    "wide-level-02-briefing",
+    "wide-level-02-service",
+    "wide-soup-help",
+    "wide-level-03-briefing",
+    "wide-level-03-service",
+    "wide-level-04-briefing",
+    "wide-level-04-service",
+    "finale-service"
+  ],
+  "viewports": [
+    "1280x720",
+    "1440x1060"
+  ],
+  "checks": [
+    "All four picture guides fit a 720p viewport",
+    "All visible UI buttons fit viewport",
+    "Tickets, score feedback and header stay above the scene",
+    "Routine instructional text is absent",
+    "H opens the picture guide and pauses; closing restores scene framing",
+    "All four service views and resize work",
+    "Space does not trigger pause"
+  ],
+  "layouts": [
+    {
+      "name": "wide-level-01-service",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "cameraSize": 4.479684829711914,
+      "viewY": 0.054999999701976776,
+      "viewH": 0.8100000023841858,
+      "uiBoxes": [
+        {
+          "label": ":service-rail",
+          "x": 0,
+          "y": 0,
+          "w": 1,
+          "h": 0.13472221791744232
+        },
+        {
+          "label": "ticket-1:ticket",
+          "x": 0.010937499813735485,
+          "y": 0.009722222574055195,
+          "w": 0.09140624850988388,
+          "h": 0.10694444924592972
+        }
+      ]
+    },
+    {
+      "name": "wide-level-02-service",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "cameraSize": 5.079409122467041,
+      "viewY": 0.054999999701976776,
+      "viewH": 0.8100000023841858,
+      "uiBoxes": [
+        {
+          "label": ":service-rail",
+          "x": 0,
+          "y": 0,
+          "w": 1,
+          "h": 0.13472221791744232
+        },
+        {
+          "label": "ticket-1:ticket",
+          "x": 0.010937499813735485,
+          "y": 0.009722222574055195,
+          "w": 0.09140624850988388,
+          "h": 0.10694444924592972
+        }
+      ]
+    },
+    {
+      "name": "wide-level-03-service",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "cameraSize": 5.307875633239746,
+      "viewY": 0.054999999701976776,
+      "viewH": 0.8100000023841858,
+      "uiBoxes": [
+        {
+          "label": ":service-rail",
+          "x": 0,
+          "y": 0,
+          "w": 1,
+          "h": 0.13472221791744232
+        },
+        {
+          "label": "ticket-1:ticket",
+          "x": 0.010937499813735485,
+          "y": 0.009722222574055195,
+          "w": 0.09140624850988388,
+          "h": 0.10694444924592972
+        }
+      ]
+    },
+    {
+      "name": "wide-level-04-service",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "cameraSize": 5.650575637817383,
+      "viewY": 0.054999999701976776,
+      "viewH": 0.8100000023841858,
+      "uiBoxes": [
+        {
+          "label": ":service-rail",
+          "x": 0,
+          "y": 0,
+          "w": 1,
+          "h": 0.13472221791744232
+        },
+        {
+          "label": "ticket-1:ticket",
+          "x": 0.010937499813735485,
+          "y": 0.009722222574055195,
+          "w": 0.09140624850988388,
+          "h": 0.10694444924592972
+        }
+      ]
+    },
+    {
+      "name": "finale-service",
+      "viewport": {
+        "width": 1440,
+        "height": 1060
+      },
+      "cameraSize": 5.650575637817383,
+      "viewY": 0.054999999701976776,
+      "viewH": 0.8100000023841858,
+      "uiBoxes": [
+        {
+          "label": ":service-rail",
+          "x": 0,
+          "y": 0,
+          "w": 1,
+          "h": 0.1169811338186264
+        },
+        {
+          "label": "ticket-1:ticket",
+          "x": 0.012500000186264515,
+          "y": 0.008490566164255142,
+          "w": 0.1041666641831398,
+          "h": 0.09245283156633377
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

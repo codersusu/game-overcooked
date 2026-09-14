@@ -1,0 +1,146 @@
+{
+  "errors": [],
+  "geometry_files_inspected": 91,
+  "rooms": [
+    {
+      "level": 1,
+      "approved_station_count": 14,
+      "seats": 4,
+      "seat_approaches": [
+        {
+          "seat": "Seat_1_L",
+          "reachable": true,
+          "sample_offset_m": 0.019
+        },
+        {
+          "seat": "Seat_1_R",
+          "reachable": true,
+          "sample_offset_m": 0.052
+        },
+        {
+          "seat": "Seat_2_L",
+          "reachable": true,
+          "sample_offset_m": 0.052
+        },
+        {
+          "seat": "Seat_2_R",
+          "reachable": true,
+          "sample_offset_m": 0.019
+        }
+      ],
+      "walk_radius_m": 0.22,
+      "sample_grid_m": 0.1
+    },
+    {
+      "level": 2,
+      "approved_station_count": 17,
+      "seats": 4,
+      "seat_approaches": [
+        {
+          "seat": "Seat_1_L",
+          "reachable": true,
+          "sample_offset_m": 0.025
+        },
+        {
+          "seat": "Seat_1_R",
+          "reachable": true,
+          "sample_offset_m": 0.042
+        },
+        {
+          "seat": "Seat_2_L",
+          "reachable": true,
+          "sample_offset_m": 0.046
+        },
+        {
+          "seat": "Seat_2_R",
+          "reachable": true,
+          "sample_offset_m": 0.018
+        }
+      ],
+      "walk_radius_m": 0.22,
+      "sample_grid_m": 0.1
+    },
+    {
+      "level": 3,
+      "approved_station_count": 19,
+      "seats": 6,
+      "seat_approaches": [
+        {
+          "seat": "Seat_1_L",
+          "reachable": true,
+          "sample_offset_m": 0.022
+        },
+        {
+          "seat": "Seat_1_R",
+          "reachable": true,
+          "sample_offset_m": 0.037
+        },
+        {
+          "seat": "Seat_2_L",
+          "reachable": true,
+          "sample_offset_m": 0.046
+        },
+        {
+          "seat": "Seat_2_R",
+          "reachable": true,
+          "sample_offset_m": 0.018
+        },
+        {
+          "seat": "Seat_3_L",
+          "reachable": true,
+          "sample_offset_m": 0.033
+        },
+        {
+          "seat": "Seat_3_R",
+          "reachable": true,
+          "sample_offset_m": 0.033
+        }
+      ],
+      "walk_radius_m": 0.22,
+      "sample_grid_m": 0.1
+    },
+    {
+      "level": 4,
+      "approved_station_count": 25,
+      "seats": 6,
+      "seat_approaches": [
+        {
+          "seat": "Seat_1_L",
+          "reachable": true,
+          "sample_offset_m": 0.046
+        },
+        {
+          "seat": "Seat_1_R",
+          "reachable": true,
+          "sample_offset_m": 0.018
+        },
+        {
+          "seat": "Seat_2_L",
+          "reachable": true,
+          "sample_offset_m": 0.042
+        },
+        {
+          "seat": "Seat_2_R",
+          "reachable": true,
+          "sample_offset_m": 0.025
+        },
+        {
+          "seat": "Seat_3_L",
+          "reachable": true,
+          "sample_offset_m": 0.025
+        },
+        {
+          "seat": "Seat_3_R",
+          "reachable": true,
+          "sample_offset_m": 0.042
+        }
+      ],
+      "walk_radius_m": 0.22,
+      "sample_grid_m": 0.1
+    }
+  ],
+  "meshy_credits": 385,
+  "meshy_balance_before": 2692,
+  "meshy_balance_after": 2307,
+  "limitations": "Circulation is a sampled footprint check, not a Unity NavMesh/physics playtest. Approximate art-review rigs are not production animation."
+}

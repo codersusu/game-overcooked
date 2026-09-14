@@ -1,0 +1,121 @@
+{
+  "clips": [
+    {
+      "id": "chop",
+      "seconds": 0.48,
+      "channels": 1,
+      "bytes": 42380
+    },
+    {
+      "id": "expired",
+      "seconds": 0.65,
+      "channels": 1,
+      "bytes": 57372
+    },
+    {
+      "id": "fire",
+      "seconds": 5.88,
+      "channels": 1,
+      "bytes": 518660
+    },
+    {
+      "id": "guest-eat",
+      "seconds": 1.28,
+      "channels": 1,
+      "bytes": 112940
+    },
+    {
+      "id": "guest-happy",
+      "seconds": 1.36,
+      "channels": 1,
+      "bytes": 119996
+    },
+    {
+      "id": "music-fire",
+      "seconds": 18.051,
+      "channels": 2,
+      "bytes": 3184172
+    },
+    {
+      "id": "music-hurry",
+      "seconds": 18.051,
+      "channels": 2,
+      "bytes": 3184172
+    },
+    {
+      "id": "music-service",
+      "seconds": 47.961,
+      "channels": 2,
+      "bytes": 8460332
+    },
+    {
+      "id": "new-order",
+      "seconds": 0.42,
+      "channels": 1,
+      "bytes": 37088
+    },
+    {
+      "id": "pickup",
+      "seconds": 0.527,
+      "channels": 1,
+      "bytes": 46508
+    },
+    {
+      "id": "plate",
+      "seconds": 0.542,
+      "channels": 1,
+      "bytes": 47886
+    },
+    {
+      "id": "ready",
+      "seconds": 0.42,
+      "channels": 1,
+      "bytes": 37088
+    },
+    {
+      "id": "spray",
+      "seconds": 2.61,
+      "channels": 1,
+      "bytes": 230246
+    },
+    {
+      "id": "step",
+      "seconds": 0.271,
+      "channels": 1,
+      "bytes": 23980
+    },
+    {
+      "id": "success",
+      "seconds": 0.64,
+      "channels": 1,
+      "bytes": 56492
+    },
+    {
+      "id": "ui",
+      "seconds": 0.24,
+      "channels": 1,
+      "bytes": 21212
+    },
+    {
+      "id": "warning",
+      "seconds": 0.71,
+      "channels": 1,
+      "bytes": 62666
+    },
+    {
+      "id": "wash",
+      "seconds": 3.88,
+      "channels": 1,
+      "bytes": 342260
+    },
+    {
+      "id": "whoosh",
+      "seconds": 0.22,
+      "channels": 1,
+      "bytes": 19448
+    }
+  ],
+  "count": 19,
+  "runtimeNetworkCalls": false,
+  "sourceLedger": "docs/IMPLEMENTATION.md#audio-and-third-party-materials"
+}

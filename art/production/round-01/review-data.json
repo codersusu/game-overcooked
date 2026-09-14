@@ -1,0 +1,1589 @@
+{
+  "rooms": [
+    {
+      "id": "1",
+      "title": "First Service",
+      "subtitle": "Open U",
+      "glb": "level-01-populated.glb",
+      "still": "level-01-unity.png",
+      "source": "../../concepts/levels-round-02/level-01.svg",
+      "description": "An open U-shaped kitchen for learning the first salad and dish-washing loop. The adjoining caf\u00e9 now has 40% more depth, with tables, chairs, table flowers and colourful planters. Kitchen worktops are now about 32% lower so food and tools sit below the animals\u2019 heads.",
+      "stats": [
+        [
+          4,
+          "Customer seats"
+        ],
+        [
+          6,
+          "Free counters"
+        ]
+      ],
+      "note": "The dining area has a wider front aisle and the same seat count. Native Unity scenes include chef and seated customer idle loops. The full customer navigation and service loop comes later."
+    },
+    {
+      "id": "2",
+      "title": "Around the Island",
+      "subtitle": "Ring route",
+      "glb": "level-02-populated.glb",
+      "still": "level-02-unity.png",
+      "source": "../../concepts/levels-round-02/level-02.svg",
+      "description": "A central work island separates chopping from cooking. Choose your route around it. The adjoining caf\u00e9 now has 40% more depth, with tables, chairs, table flowers and colourful planters. Kitchen worktops are now about 32% lower so food and tools sit below the animals\u2019 heads.",
+      "stats": [
+        [
+          4,
+          "Customer seats"
+        ],
+        [
+          8,
+          "Free counters"
+        ]
+      ],
+      "note": "The dining area has a wider front aisle and the same seat count. Native Unity scenes include chef and seated customer idle loops. The full customer navigation and service loop comes later."
+    },
+    {
+      "id": "3",
+      "title": "Across the Divide",
+      "subtitle": "Two areas \u00b7 one passage",
+      "glb": "level-03-populated.glb",
+      "still": "level-03-unity.png",
+      "source": "../../concepts/levels-round-02/level-03.svg",
+      "description": "Preparation and service sit across a low rail. The walking passage stays on the left. The adjoining caf\u00e9 now has 40% more depth, with tables, chairs, table flowers and colourful planters. Kitchen worktops are now about 32% lower so food and tools sit below the animals\u2019 heads.",
+      "stats": [
+        [
+          6,
+          "Customer seats"
+        ],
+        [
+          8,
+          "Free counters"
+        ]
+      ],
+      "note": "The dining area has a wider front aisle and the same seat count. Native Unity scenes include chef and seated customer idle loops. The full customer navigation and service loop comes later."
+    },
+    {
+      "id": "4",
+      "title": "The Zigzag Caf\u00e9",
+      "subtitle": "Three areas \u00b7 offset passages",
+      "glb": "level-04-populated.glb",
+      "still": "level-04-unity.png",
+      "source": "../../concepts/levels-round-02/level-04.svg",
+      "description": "Three work areas with offset passages. Ingredients can cross two rails while the chef follows the zigzag route. The adjoining caf\u00e9 now has 40% more depth, with tables, chairs, table flowers and colourful planters. Kitchen worktops are now about 32% lower so food and tools sit below the animals\u2019 heads.",
+      "stats": [
+        [
+          6,
+          "Customer seats"
+        ],
+        [
+          13,
+          "Free counters"
+        ]
+      ],
+      "note": "The dining area has a wider front aisle and the same seat count. Native Unity scenes include chef and seated customer idle loops. The full customer navigation and service loop comes later."
+    }
+  ],
+  "characters": [
+    {
+      "id": "capybara-male-chef",
+      "title": "Capybara",
+      "species": "capybara",
+      "subtitle": "Male Chef",
+      "glb": "characters/capybara-male-chef/model/model.glb",
+      "thumbnail": "characters/capybara-male-chef/model/preview-front.png",
+      "still": "characters/capybara-male-chef/input.png",
+      "source": "../../concepts/roster-round-02/capybara.png",
+      "description": "A first textured 3D model from the approved four-look roster. Oversized animal head, short limbs, connected paws and a distinct outfit.",
+      "stats": [
+        [
+          "12,373",
+          "Triangles"
+        ],
+        [
+          "2K",
+          "Colour texture"
+        ]
+      ],
+      "motions": [],
+      "note": "Costume is baked into this model. Separate wardrobe pieces and final deformation weights remain future work. Unity includes the shared native animation set; review it in the animation gallery."
+    },
+    {
+      "id": "capybara-female-chef",
+      "title": "Capybara",
+      "species": "capybara",
+      "subtitle": "Female Chef",
+      "glb": "characters/capybara-female-chef/model/model.glb",
+      "thumbnail": "characters/capybara-female-chef/model/preview-front.png",
+      "still": "characters/capybara-female-chef/input.png",
+      "source": "../../concepts/roster-round-02/capybara.png",
+      "description": "A first textured 3D model from the approved four-look roster. Oversized animal head, short limbs, connected paws and a distinct outfit.",
+      "stats": [
+        [
+          "12,394",
+          "Triangles"
+        ],
+        [
+          "2K",
+          "Colour texture"
+        ]
+      ],
+      "motions": [],
+      "note": "Costume is baked into this model. Separate wardrobe pieces and final deformation weights remain future work. Unity includes the shared native animation set; review it in the animation gallery."
+    },
+    {
+      "id": "capybara-male-customer",
+      "title": "Capybara",
+      "species": "capybara",
+      "subtitle": "Male Customer",
+      "glb": "characters/capybara-male-customer/model/model.glb",
+      "thumbnail": "characters/capybara-male-customer/model/preview-front.png",
+      "still": "characters/capybara-male-customer/input.png",
+      "source": "../../concepts/roster-round-02/capybara.png",
+      "description": "A first textured 3D model from the approved four-look roster. Oversized animal head, short limbs, connected paws and a distinct outfit.",
+      "stats": [
+        [
+          "12,076",
+          "Triangles"
+        ],
+        [
+          "2K",
+          "Colour texture"
+        ]
+      ],
+      "motions": [],
+      "note": "Costume is baked into this model. Separate wardrobe pieces and final deformation weights remain future work. Unity includes the shared native animation set; review it in the animation gallery."
+    },
+    {
+      "id": "capybara-female-customer",
+      "title": "Capybara",
+      "species": "capybara",
+      "subtitle": "Female Customer",
+      "glb": "characters/capybara-female-customer/model/model.glb",
+      "thumbnail": "characters/capybara-female-customer/model/preview-front.png",
+      "still": "characters/capybara-female-customer/input.png",
+      "source": "../../concepts/roster-round-02/capybara.png",
+      "description": "A first textured 3D model from the approved four-look roster. Oversized animal head, short limbs, connected paws and a distinct outfit.",
+      "stats": [
+        [
+          "12,361",
+          "Triangles"
+        ],
+        [
+          "2K",
+          "Colour texture"
+        ]
+      ],
+      "motions": [],
+      "note": "Costume is baked into this model. Separate wardrobe pieces and final deformation weights remain future work. Unity includes the shared native animation set; review it in the animation gallery."
+    },
+    {
+      "id": "cat-male-chef",
+      "title": "Cat",
+      "species": "cat",
+      "subtitle": "Male Chef",
+      "glb": "characters/cat-male-chef/model/model.glb",
+      "thumbnail": "characters/cat-male-chef/model/preview-front.png",
+      "still": "characters/cat-male-chef/input.png",
+      "source": "../../concepts/roster-round-02/cat.png",
+      "description": "A first textured 3D model from the approved four-look roster. Oversized animal head, short limbs, connected paws and a distinct outfit.",
+      "stats": [
+        [
+          "12,389",
+          "Triangles"
+        ],
+        [
+          "2K",
+          "Colour texture"
+        ]
+      ],
+      "motions": [],
+      "note": "Costume is baked into this model. Separate wardrobe pieces and final deformation weights remain future work. Unity includes the shared native animation set; review it in the animation gallery."
+    },
+    {
+      "id": "cat-female-chef",
+      "title": "Cat",
+      "species": "cat",
+      "subtitle": "Female Chef",
+      "glb": "characters/cat-female-chef/model/model.glb",
+      "thumbnail": "characters/cat-female-chef/model/preview-front.png",
+      "still": "characters/cat-female-chef/input.png",
+      "source": "../../concepts/roster-round-02/cat.png",
+      "description": "A first textured 3D model from the approved four-look roster. Oversized animal head, short limbs, connected paws and a distinct outfit.",
+      "stats": [
+        [
+          "12,259",
+          "Triangles"
+        ],
+        [
+          "2K",
+          "Colour texture"
+        ]
+      ],
+      "motions": [
+        {
+          "label": "Walk \u00b7 automatic rig test",
+          "url": "characters/cat-female-chef/motion-preview/walking_glb.glb"
+        },
+        {
+          "label": "Run \u00b7 automatic rig test",
+          "url": "characters/cat-female-chef/motion-preview/running_glb.glb"
+        }
+      ],
+      "note": "Costume is baked into this model. Separate wardrobe pieces and final deformation weights remain future work. Unity includes the shared native animation set; review it in the animation gallery."
+    },
+    {
+      "id": "cat-male-customer",
+      "title": "Cat",
+      "species": "cat",
+      "subtitle": "Male Customer",
+      "glb": "characters/cat-male-customer/model/model.glb",
+      "thumbnail": "characters/cat-male-customer/model/preview-front.png",
+      "still": "characters/cat-male-customer/input.png",
+      "source": "../../concepts/roster-round-02/cat.png",
+      "description": "A first textured 3D model from the approved four-look roster. Oversized animal head, short limbs, connected paws and a distinct outfit.",
+      "stats": [
+        [
+          "12,187",
+          "Triangles"
+        ],
+        [
+          "2K",
+          "Colour texture"
+        ]
+      ],
+      "motions": [],
+      "note": "Costume is baked into this model. Separate wardrobe pieces and final deformation weights remain future work. Unity includes the shared native animation set; review it in the animation gallery."
+    },
+    {
+      "id": "cat-female-customer",
+      "title": "Cat",
+      "species": "cat",
+      "subtitle": "Female Customer",
+      "glb": "characters/cat-female-customer/model/model.glb",
+      "thumbnail": "characters/cat-female-customer/model/preview-front.png",
+      "still": "characters/cat-female-customer/input.png",
+      "source": "../../concepts/roster-round-02/cat.png",
+      "description": "A first textured 3D model from the approved four-look roster. Oversized animal head, short limbs, connected paws and a distinct outfit.",
+      "stats": [
+        [
+          "12,394",
+          "Triangles"
+        ],
+        [
+          "2K",
+          "Colour texture"
+        ]
+      ],
+      "motions": [
+        {
+          "label": "Walk \u00b7 automatic rig test",
+          "url": "characters/cat-female-customer/motion-preview/walking_glb.glb"
+        },
+        {
+          "label": "Run \u00b7 automatic rig test",
+          "url": "characters/cat-female-customer/motion-preview/running_glb.glb"
+        }
+      ],
+      "note": "Costume is baked into this model. Separate wardrobe pieces and final deformation weights remain future work. Unity includes the shared native animation set; review it in the animation gallery."
+    },
+    {
+      "id": "dog-male-chef",
+      "title": "Dog",
+      "species": "dog",
+      "subtitle": "Male Chef",
+      "glb": "characters/dog-male-chef/model/model.glb",
+      "thumbnail": "characters/dog-male-chef/model/preview-front.png",
+      "still": "characters/dog-male-chef/input.png",
+      "source": "../../concepts/roster-round-02/dog.png",
+      "description": "A first textured 3D model from the approved four-look roster. Oversized animal head, short limbs, connected paws and a distinct outfit.",
+      "stats": [
+        [
+          "12,273",
+          "Triangles"
+        ],
+        [
+          "2K",
+          "Colour texture"
+        ]
+      ],
+      "motions": [
+        {
+          "label": "Walk \u00b7 automatic rig test",
+          "url": "characters/dog-male-chef/motion-preview/walking_glb.glb"
+        },
+        {
+          "label": "Run \u00b7 automatic rig test",
+          "url": "characters/dog-male-chef/motion-preview/running_glb.glb"
+        }
+      ],
+      "note": "Costume is baked into this model. Separate wardrobe pieces and final deformation weights remain future work. Unity includes the shared native animation set; review it in the animation gallery."
+    },
+    {
+      "id": "dog-female-chef",
+      "title": "Dog",
+      "species": "dog",
+      "subtitle": "Female Chef",
+      "glb": "characters/dog-female-chef/model/model.glb",
+      "thumbnail": "characters/dog-female-chef/model/preview-front.png",
+      "still": "characters/dog-female-chef/input.png",
+      "source": "../../concepts/roster-round-02/dog.png",
+      "description": "A first textured 3D model from the approved four-look roster. Oversized animal head, short limbs, connected paws and a distinct outfit.",
+      "stats": [
+        [
+          "12,281",
+          "Triangles"
+        ],
+        [
+          "2K",
+          "Colour texture"
+        ]
+      ],
+      "motions": [
+        {
+          "label": "Walk \u00b7 automatic rig test",
+          "url": "characters/dog-female-chef/motion-preview/walking_glb.glb"
+        },
+        {
+          "label": "Run \u00b7 automatic rig test",
+          "url": "characters/dog-female-chef/motion-preview/running_glb.glb"
+        }
+      ],
+      "note": "Costume is baked into this model. Separate wardrobe pieces and final deformation weights remain future work. Unity includes the shared native animation set; review it in the animation gallery."
+    },
+    {
+      "id": "dog-male-customer",
+      "title": "Dog",
+      "species": "dog",
+      "subtitle": "Male Customer",
+      "glb": "characters/dog-male-customer/model/model.glb",
+      "thumbnail": "characters/dog-male-customer/model/preview-front.png",
+      "still": "characters/dog-male-customer/input.png",
+      "source": "../../concepts/roster-round-02/dog.png",
+      "description": "A first textured 3D model from the approved four-look roster. Oversized animal head, short limbs, connected paws and a distinct outfit.",
+      "stats": [
+        [
+          "12,311",
+          "Triangles"
+        ],
+        [
+          "2K",
+          "Colour texture"
+        ]
+      ],
+      "motions": [
+        {
+          "label": "Walk \u00b7 automatic rig test",
+          "url": "characters/dog-male-customer/motion-preview/walking_glb.glb"
+        },
+        {
+          "label": "Run \u00b7 automatic rig test",
+          "url": "characters/dog-male-customer/motion-preview/running_glb.glb"
+        }
+      ],
+      "note": "Costume is baked into this model. Separate wardrobe pieces and final deformation weights remain future work. Unity includes the shared native animation set; review it in the animation gallery."
+    },
+    {
+      "id": "dog-female-customer",
+      "title": "Dog",
+      "species": "dog",
+      "subtitle": "Female Customer",
+      "glb": "characters/dog-female-customer/model/model.glb",
+      "thumbnail": "characters/dog-female-customer/model/preview-front.png",
+      "still": "characters/dog-female-customer/input.png",
+      "source": "../../concepts/roster-round-02/dog.png",
+      "description": "A first textured 3D model from the approved four-look roster. Oversized animal head, short limbs, connected paws and a distinct outfit.",
+      "stats": [
+        [
+          "12,430",
+          "Triangles"
+        ],
+        [
+          "2K",
+          "Colour texture"
+        ]
+      ],
+      "motions": [],
+      "note": "Costume is baked into this model. Separate wardrobe pieces and final deformation weights remain future work. Unity includes the shared native animation set; review it in the animation gallery."
+    }
+  ],
+  "props": [
+    {
+      "id": "tomato-whole",
+      "title": "Tomato Whole",
+      "category": "Food",
+      "glb": "models/tomato-whole.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Whole and chopped meshes also share a persistent Ingredient prefab root in Unity.",
+      "stats": [
+        [
+          "3,120",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "cucumber-whole",
+      "title": "Cucumber Whole",
+      "category": "Food",
+      "glb": "models/cucumber-whole.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Whole and chopped meshes also share a persistent Ingredient prefab root in Unity.",
+      "stats": [
+        [
+          "1,920",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "carrot-whole",
+      "title": "Carrot Whole",
+      "category": "Food",
+      "glb": "models/carrot-whole.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Whole and chopped meshes also share a persistent Ingredient prefab root in Unity.",
+      "stats": [
+        [
+          "1,680",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "mushroom-whole",
+      "title": "Mushroom Whole",
+      "category": "Food",
+      "glb": "models/mushroom-whole.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Whole and chopped meshes also share a persistent Ingredient prefab root in Unity.",
+      "stats": [
+        [
+          "432",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "tomato-chopped",
+      "title": "Tomato Chopped",
+      "category": "Food",
+      "glb": "models/tomato-chopped.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Whole and chopped meshes also share a persistent Ingredient prefab root in Unity.",
+      "stats": [
+        [
+          "6,144",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "cucumber-chopped",
+      "title": "Cucumber Chopped",
+      "category": "Food",
+      "glb": "models/cucumber-chopped.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Whole and chopped meshes also share a persistent Ingredient prefab root in Unity.",
+      "stats": [
+        [
+          "7,680",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "carrot-chopped",
+      "title": "Carrot Chopped",
+      "category": "Food",
+      "glb": "models/carrot-chopped.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Whole and chopped meshes also share a persistent Ingredient prefab root in Unity.",
+      "stats": [
+        [
+          "384",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "mushroom-chopped",
+      "title": "Mushroom Chopped",
+      "category": "Food",
+      "glb": "models/mushroom-chopped.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Whole and chopped meshes also share a persistent Ingredient prefab root in Unity.",
+      "stats": [
+        [
+          "4,464",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "dish-clean",
+      "title": "Dish Clean",
+      "category": "Dishes",
+      "glb": "models/dish-clean.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "The same universal dish is used for salads and soup. The Unity dish prefab exposes clean, partial, finished and dirty visual states.",
+      "stats": [
+        [
+          "816",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "dish-tomato",
+      "title": "Dish Tomato",
+      "category": "Dishes",
+      "glb": "models/dish-tomato.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "The same universal dish is used for salads and soup. The Unity dish prefab exposes clean, partial, finished and dirty visual states.",
+      "stats": [
+        [
+          "6,960",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "dish-cucumber",
+      "title": "Dish Cucumber",
+      "category": "Dishes",
+      "glb": "models/dish-cucumber.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "The same universal dish is used for salads and soup. The Unity dish prefab exposes clean, partial, finished and dirty visual states.",
+      "stats": [
+        [
+          "8,496",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "dish-salad",
+      "title": "Dish Salad",
+      "category": "Dishes",
+      "glb": "models/dish-salad.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "The same universal dish is used for salads and soup. The Unity dish prefab exposes clean, partial, finished and dirty visual states.",
+      "stats": [
+        [
+          "14,640",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "dish-soup",
+      "title": "Dish Soup",
+      "category": "Dishes",
+      "glb": "models/dish-soup.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "The same universal dish is used for salads and soup. The Unity dish prefab exposes clean, partial, finished and dirty visual states.",
+      "stats": [
+        [
+          "5,904",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "dish-dirty",
+      "title": "Dish Dirty",
+      "category": "Dishes",
+      "glb": "models/dish-dirty.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "The same universal dish is used for salads and soup. The Unity dish prefab exposes clean, partial, finished and dirty visual states.",
+      "stats": [
+        [
+          "1,776",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "cutting-board",
+      "title": "Cutting Board",
+      "category": "Tools",
+      "glb": "models/cutting-board.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "216",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "knife",
+      "title": "Knife",
+      "category": "Tools",
+      "glb": "models/knife.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "456",
+          "Triangles"
+        ],
+        [
+          1,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "sponge",
+      "title": "Sponge",
+      "category": "Tools",
+      "glb": "models/sponge.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "216",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "ladle",
+      "title": "Ladle",
+      "category": "Tools",
+      "glb": "models/ladle.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "720",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "pot-empty",
+      "title": "Pot Empty",
+      "category": "Tools",
+      "glb": "models/pot-empty.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "1,536",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "pot-lid",
+      "title": "Pot Lid",
+      "category": "Tools",
+      "glb": "models/pot-lid.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "720",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "pot-carrot",
+      "title": "Pot Carrot",
+      "category": "Tools",
+      "glb": "models/pot-carrot.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "1,920",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "pot-mushroom",
+      "title": "Pot Mushroom",
+      "category": "Tools",
+      "glb": "models/pot-mushroom.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "6,000",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "pot-both",
+      "title": "Pot Both",
+      "category": "Tools",
+      "glb": "models/pot-both.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "6,384",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "pot-cooking",
+      "title": "Pot Cooking",
+      "category": "Tools",
+      "glb": "models/pot-cooking.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "6,624",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "pot-ready",
+      "title": "Pot Ready",
+      "category": "Tools",
+      "glb": "models/pot-ready.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "6,624",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "pot-burnt",
+      "title": "Pot Burnt",
+      "category": "Tools",
+      "glb": "models/pot-burnt.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "1,776",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "counter",
+      "title": "Counter",
+      "category": "Stations",
+      "glb": "models/counter.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "A generic free worktop. Any empty counter can hold a dish or ingredients; there is no dedicated salad station.",
+      "stats": [
+        [
+          "1,500",
+          "Triangles"
+        ],
+        [
+          2,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "station-prep",
+      "title": "Station Prep",
+      "category": "Stations",
+      "glb": "models/station-prep.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "2,172",
+          "Triangles"
+        ],
+        [
+          2,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "source-tomato",
+      "title": "Source Tomato",
+      "category": "Stations",
+      "glb": "models/source-tomato.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "14,412",
+          "Triangles"
+        ],
+        [
+          2,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "source-cucumber",
+      "title": "Source Cucumber",
+      "category": "Stations",
+      "glb": "models/source-cucumber.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "9,612",
+          "Triangles"
+        ],
+        [
+          2,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "source-carrot",
+      "title": "Source Carrot",
+      "category": "Stations",
+      "glb": "models/source-carrot.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "8,652",
+          "Triangles"
+        ],
+        [
+          2,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "source-mushroom",
+      "title": "Source Mushroom",
+      "category": "Stations",
+      "glb": "models/source-mushroom.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "3,660",
+          "Triangles"
+        ],
+        [
+          2,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "station-pot",
+      "title": "Station Pot",
+      "category": "Stations",
+      "glb": "models/station-pot.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "4,008",
+          "Triangles"
+        ],
+        [
+          3,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "station-sink",
+      "title": "Station Sink",
+      "category": "Stations",
+      "glb": "models/station-sink.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "2,952",
+          "Triangles"
+        ],
+        [
+          2,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "station-dishes",
+      "title": "Station Dishes",
+      "category": "Stations",
+      "glb": "models/station-dishes.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "5,796",
+          "Triangles"
+        ],
+        [
+          2,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "station-serve",
+      "title": "Station Serve",
+      "category": "Stations",
+      "glb": "models/station-serve.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "2,676",
+          "Triangles"
+        ],
+        [
+          2,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "station-return",
+      "title": "Station Return",
+      "category": "Stations",
+      "glb": "models/station-return.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "2,472",
+          "Triangles"
+        ],
+        [
+          3,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "station-bin",
+      "title": "Station Bin",
+      "category": "Stations",
+      "glb": "models/station-bin.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "324",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "rail",
+      "title": "Rail",
+      "category": "Environment",
+      "glb": "models/rail.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Blocks walking and has no worktop slot. Ingredient throws may pass over it in gameplay.",
+      "stats": [
+        [
+          "1,716",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "cafe-table",
+      "title": "Cafe Table",
+      "category": "Cafe",
+      "glb": "models/cafe-table.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "720",
+          "Triangles"
+        ],
+        [
+          2,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "cafe-chair",
+      "title": "Cafe Chair",
+      "category": "Cafe",
+      "glb": "models/cafe-chair.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "972",
+          "Triangles"
+        ],
+        [
+          2,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "planter",
+      "title": "Planter",
+      "category": "Cafe",
+      "glb": "models/planter.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "3,456",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "menu-board",
+      "title": "Menu Board",
+      "category": "Cafe",
+      "glb": "models/menu-board.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "1,344",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "cafe-door",
+      "title": "Cafe Door",
+      "category": "Cafe",
+      "glb": "models/cafe-door.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "1,020",
+          "Triangles"
+        ],
+        [
+          1,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "window",
+      "title": "Window",
+      "category": "Cafe",
+      "glb": "models/window.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "1,188",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "wall-panel",
+      "title": "Wall Panel",
+      "category": "Environment",
+      "glb": "models/wall-panel.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "432",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "floor-cream",
+      "title": "Floor Cream",
+      "category": "Environment",
+      "glb": "models/floor-cream.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "108",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "floor-sand",
+      "title": "Floor Sand",
+      "category": "Environment",
+      "glb": "models/floor-sand.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "108",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "floor-wood",
+      "title": "Floor Wood",
+      "category": "Environment",
+      "glb": "models/floor-wood.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "216",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "welcome-mat",
+      "title": "Welcome Mat",
+      "category": "Cafe",
+      "glb": "models/welcome-mat.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "216",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "table-flower-vase",
+      "title": "Table Flower Vase",
+      "category": "Decor",
+      "glb": "models/table-flower-vase.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Rounded 3D flowers and caf\u00e9 decorations. Placed on dining tables, windowsills and room edges, away from usable kitchen worktops.",
+      "stats": [
+        [
+          "8,448",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "flower-planter-pink",
+      "title": "Flower Planter Pink",
+      "category": "Decor",
+      "glb": "models/flower-planter-pink.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Rounded 3D flowers and caf\u00e9 decorations. Placed on dining tables, windowsills and room edges, away from usable kitchen worktops.",
+      "stats": [
+        [
+          "20,976",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "flower-planter-yellow",
+      "title": "Flower Planter Yellow",
+      "category": "Decor",
+      "glb": "models/flower-planter-yellow.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Rounded 3D flowers and caf\u00e9 decorations. Placed on dining tables, windowsills and room edges, away from usable kitchen worktops.",
+      "stats": [
+        [
+          "20,976",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "window-flower-box",
+      "title": "Window Flower Box",
+      "category": "Decor",
+      "glb": "models/window-flower-box.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Rounded 3D flowers and caf\u00e9 decorations. Placed on dining tables, windowsills and room edges, away from usable kitchen worktops.",
+      "stats": [
+        [
+          "28,884",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "wall-clock",
+      "title": "Wall Clock",
+      "category": "Decor",
+      "glb": "models/wall-clock.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Rounded 3D flowers and caf\u00e9 decorations. Placed on dining tables, windowsills and room edges, away from usable kitchen worktops.",
+      "stats": [
+        [
+          "6,936",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "framed-flowers",
+      "title": "Framed Flowers",
+      "category": "Decor",
+      "glb": "models/framed-flowers.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Rounded 3D flowers and caf\u00e9 decorations. Placed on dining tables, windowsills and room edges, away from usable kitchen worktops.",
+      "stats": [
+        [
+          "7,260",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "fire-extinguisher",
+      "title": "Fire Extinguisher",
+      "category": "Tools",
+      "glb": "models/fire-extinguisher.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "A rounded red extinguisher with named grip and nozzle attachments. Unity includes an aimed spray effect and cooking-fire suppression component.",
+      "stats": [
+        [
+          "6,864",
+          "Triangles"
+        ],
+        [
+          2,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "flame-lobe",
+      "title": "Flame Lobe",
+      "category": "Effects",
+      "glb": "models/flame-lobe.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "200",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    },
+    {
+      "id": "foam-puff",
+      "title": "Foam Puff",
+      "category": "Effects",
+      "glb": "models/foam-puff.glb",
+      "still": "foods-unity.png",
+      "source": "../../concepts/kitchen-round-01/",
+      "description": "Reusable native Unity prefab plus GLB and OBJ mesh sources.",
+      "stats": [
+        [
+          "480",
+          "Triangles"
+        ],
+        [
+          0,
+          "Named anchors"
+        ]
+      ],
+      "note": "Initial stylized mesh pass. Dimensions and contact points will be tuned during playtests."
+    }
+  ]
+}

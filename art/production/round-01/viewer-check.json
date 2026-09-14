@@ -1,0 +1,883 @@
+{
+  "checks": [
+    {
+      "label": "room-1",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 7.378571053594351,
+        "y": 1.7700000368058681,
+        "z": 9.660000004619361
+      }
+    },
+    {
+      "label": "room-2",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 8.178571053594352,
+        "y": 1.7700000368058681,
+        "z": 11.26000000461936
+      }
+    },
+    {
+      "label": "room-3",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 9.778571053594352,
+        "y": 1.7700000368058681,
+        "z": 11.26000000461936
+      }
+    },
+    {
+      "label": "room-4",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 12.178571053594352,
+        "y": 1.7700000368058681,
+        "z": 11.26000000461936
+      }
+    },
+    {
+      "label": "initial-character",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 1.4927999377250671,
+        "y": 1.8989309668540955,
+        "z": 1.2812228202819824
+      }
+    },
+    {
+      "label": "capybara-female-chef",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 1.5330110788345337,
+        "y": 1.8982930779457092,
+        "z": 1.0622859597206116
+      }
+    },
+    {
+      "label": "capybara-male-customer",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 1.5348289608955383,
+        "y": 1.8986270427703857,
+        "z": 1.11689692735672
+      }
+    },
+    {
+      "label": "capybara-female-customer",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 1.7286340594291687,
+        "y": 1.8972291946411133,
+        "z": 1.1178630590438843
+      }
+    },
+    {
+      "label": "cat-male-chef",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 1.592652976512909,
+        "y": 1.897869050502777,
+        "z": 0.9935299158096313
+      }
+    },
+    {
+      "label": "cat-female-chef",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 1.618415117263794,
+        "y": 1.8982159495353699,
+        "z": 1.0603099465370178
+      }
+    },
+    {
+      "label": "cat-female-chef Walk · automatic rig test",
+      "error": null,
+      "animations": [
+        "Armature|walking_man|baselayer"
+      ],
+      "duration": 1.0666667222976685,
+      "dimensions": {
+        "x": 1.0231175069800833,
+        "y": 1.2000000296140862,
+        "z": 0.6702990646826952
+      }
+    },
+    {
+      "label": "cat-female-chef Run · automatic rig test",
+      "error": null,
+      "animations": [
+        "Armature|running|baselayer"
+      ],
+      "duration": 0.6666666865348816,
+      "dimensions": {
+        "x": 1.0231175069800833,
+        "y": 1.2000000296140862,
+        "z": 0.6702990646826952
+      }
+    },
+    {
+      "label": "cat-male-customer",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 1.5915139317512512,
+        "y": 1.8983998894691467,
+        "z": 1.0731459259986877
+      }
+    },
+    {
+      "label": "cat-female-customer",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 1.7448980212211609,
+        "y": 1.897564947605133,
+        "z": 1.0590609908103943
+      }
+    },
+    {
+      "label": "cat-female-customer Walk · automatic rig test",
+      "error": null,
+      "animations": [
+        "Armature|walking_man|baselayer"
+      ],
+      "duration": 1.0666667222976685,
+      "dimensions": {
+        "x": 1.103454927935383,
+        "y": 1.2000003115338573,
+        "z": 0.6697389971446369
+      }
+    },
+    {
+      "label": "cat-female-customer Run · automatic rig test",
+      "error": null,
+      "animations": [
+        "Armature|running|baselayer"
+      ],
+      "duration": 0.6666666865348816,
+      "dimensions": {
+        "x": 1.103454927935383,
+        "y": 1.2000003115338573,
+        "z": 0.6697389971446369
+      }
+    },
+    {
+      "label": "dog-male-chef",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 1.565782070159912,
+        "y": 1.8974080085754395,
+        "z": 1.218042016029358
+      }
+    },
+    {
+      "label": "dog-male-chef Walk · automatic rig test",
+      "error": null,
+      "animations": [
+        "Armature|walking_man|baselayer"
+      ],
+      "duration": 1.0666667222976685,
+      "dimensions": {
+        "x": 0.9902657887705846,
+        "y": 1.1999998680487176,
+        "z": 0.7703408178461105
+      }
+    },
+    {
+      "label": "dog-male-chef Run · automatic rig test",
+      "error": null,
+      "animations": [
+        "Armature|running|baselayer"
+      ],
+      "duration": 0.6666666865348816,
+      "dimensions": {
+        "x": 0.9902657887705846,
+        "y": 1.1999998680487176,
+        "z": 0.7703408178461105
+      }
+    },
+    {
+      "label": "dog-female-chef",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 1.388029932975769,
+        "y": 1.8983328938484192,
+        "z": 1.2041698098182678
+      }
+    },
+    {
+      "label": "dog-female-chef Walk · automatic rig test",
+      "error": null,
+      "animations": [
+        "Armature|walking_man|baselayer"
+      ],
+      "duration": 1.0666667222976685,
+      "dimensions": {
+        "x": 0.8774204776094026,
+        "y": 1.1999997810764536,
+        "z": 0.7611960440088209
+      }
+    },
+    {
+      "label": "dog-female-chef Run · automatic rig test",
+      "error": null,
+      "animations": [
+        "Armature|running|baselayer"
+      ],
+      "duration": 0.6666666865348816,
+      "dimensions": {
+        "x": 0.8774204776094026,
+        "y": 1.1999997810764536,
+        "z": 0.7611960440088209
+      }
+    },
+    {
+      "label": "dog-male-customer",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 1.3844500184059143,
+        "y": 1.898855984210968,
+        "z": 1.1799048781394958
+      }
+    },
+    {
+      "label": "dog-male-customer Walk · automatic rig test",
+      "error": null,
+      "animations": [
+        "Armature|walking_man|baselayer"
+      ],
+      "duration": 1.0666667222976685,
+      "dimensions": {
+        "x": 0.8749163880851483,
+        "y": 1.1999999044961853,
+        "z": 0.7456522337174788
+      }
+    },
+    {
+      "label": "dog-male-customer Run · automatic rig test",
+      "error": null,
+      "animations": [
+        "Armature|running|baselayer"
+      ],
+      "duration": 0.6666666865348816,
+      "dimensions": {
+        "x": 0.8749163880851483,
+        "y": 1.1999999044961853,
+        "z": 0.7456522337174788
+      }
+    },
+    {
+      "label": "dog-female-customer",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 1.4785539507865906,
+        "y": 1.8971478939056396,
+        "z": 1.1004759073257446
+      }
+    },
+    {
+      "label": "initial-prop",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.25,
+        "y": 0.25199999939650297,
+        "z": 0.23399999737739563
+      }
+    },
+    {
+      "label": "cucumber-whole",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.18740877509117126,
+        "y": 0.13399999449029565,
+        "z": 0.30272695422172546
+      }
+    },
+    {
+      "label": "carrot-whole",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.11800000071525574,
+        "y": 0.14813151955604553,
+        "z": 0.30000000447034836
+      }
+    },
+    {
+      "label": "mushroom-whole",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.23000000417232513,
+        "y": 0.2199999988079071,
+        "z": 0.23000000417232513
+      }
+    },
+    {
+      "label": "tomato-chopped",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.26340430974960327,
+        "y": 0.10000000055879354,
+        "z": 0.19907040894031525
+      }
+    },
+    {
+      "label": "cucumber-chopped",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.24658142030239105,
+        "y": 0.06599999871104956,
+        "z": 0.21071533858776093
+      }
+    },
+    {
+      "label": "carrot-chopped",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.25845909863710403,
+        "y": 0.09599999990314245,
+        "z": 0.19431864470243454
+      }
+    },
+    {
+      "label": "mushroom-chopped",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.25201959162950516,
+        "y": 0.1280000051483512,
+        "z": 0.18710942566394806
+      }
+    },
+    {
+      "label": "dish-clean",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.3240000009536743,
+        "y": 0.08799999952316284,
+        "z": 0.3240000009536743
+      }
+    },
+    {
+      "label": "dish-tomato",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.3240000009536743,
+        "y": 0.11631999909877777,
+        "z": 0.3240000009536743
+      }
+    },
+    {
+      "label": "dish-cucumber",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.3240000009536743,
+        "y": 0.10493999719619751,
+        "z": 0.3240000009536743
+      }
+    },
+    {
+      "label": "dish-salad",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.3240000009536743,
+        "y": 0.11631999909877777,
+        "z": 0.3240000009536743
+      }
+    },
+    {
+      "label": "dish-soup",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.3240000009536743,
+        "y": 0.11680000275373459,
+        "z": 0.3240000009536743
+      }
+    },
+    {
+      "label": "dish-dirty",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.3240000009536743,
+        "y": 0.08799999952316284,
+        "z": 0.3240000009536743
+      }
+    },
+    {
+      "label": "cutting-board",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.4000000059604645,
+        "y": 0.032000001054257154,
+        "z": 0.2800000011920929
+      }
+    },
+    {
+      "label": "knife",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.07300000078976154,
+        "y": 0.03049999987706542,
+        "z": 0.26749999821186066
+      }
+    },
+    {
+      "label": "sponge",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.11699999868869781,
+        "y": 0.04799999902024865,
+        "z": 0.07599999755620956
+      }
+    },
+    {
+      "label": "ladle",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.09200000017881393,
+        "y": 0.22568339854478836,
+        "z": 0.14542684890329838
+      }
+    },
+    {
+      "label": "pot-empty",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.49399998784065247,
+        "y": 0.20499999821186066,
+        "z": 0.3400000035762787
+      }
+    },
+    {
+      "label": "pot-lid",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.33799999952316284,
+        "y": 0.10000000149011612,
+        "z": 0.33799999952316284
+      }
+    },
+    {
+      "label": "pot-carrot",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.49399998784065247,
+        "y": 0.20499999821186066,
+        "z": 0.3400000035762787
+      }
+    },
+    {
+      "label": "pot-mushroom",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.49399998784065247,
+        "y": 0.20499999821186066,
+        "z": 0.3400000035762787
+      }
+    },
+    {
+      "label": "pot-both",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.49399998784065247,
+        "y": 0.20499999821186066,
+        "z": 0.3400000035762787
+      }
+    },
+    {
+      "label": "pot-cooking",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.49399998784065247,
+        "y": 0.2405499964952469,
+        "z": 0.3400000035762787
+      }
+    },
+    {
+      "label": "pot-ready",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.49399998784065247,
+        "y": 0.2405499964952469,
+        "z": 0.3400000035762787
+      }
+    },
+    {
+      "label": "pot-burnt",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.49399998784065247,
+        "y": 0.20499999821186066,
+        "z": 0.3400000035762787
+      }
+    },
+    {
+      "label": "counter",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.7799999713897705,
+        "y": 0.5805000020191073,
+        "z": 0.7939999997615814
+      }
+    },
+    {
+      "label": "station-prep",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.7799999713897705,
+        "y": 0.6200000001117587,
+        "z": 0.7939999997615814
+      }
+    },
+    {
+      "label": "source-tomato",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.7799999713897705,
+        "y": 0.8134499741718173,
+        "z": 0.7939999997615814
+      }
+    },
+    {
+      "label": "source-cucumber",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.7799999713897705,
+        "y": 0.7114499760791659,
+        "z": 0.7939999997615814
+      }
+    },
+    {
+      "label": "source-carrot",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.7799999713897705,
+        "y": 0.7680353475734591,
+        "z": 0.7939999997615814
+      }
+    },
+    {
+      "label": "source-mushroom",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.7799999713897705,
+        "y": 0.7820000005885959,
+        "z": 0.7939999997615814
+      }
+    },
+    {
+      "label": "station-pot",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.7799999713897705,
+        "y": 0.8230000091716647,
+        "z": 0.8039999902248383
+      }
+    },
+    {
+      "label": "station-sink",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.7799999713897705,
+        "y": 0.8400000287219882,
+        "z": 0.7939999997615814
+      }
+    },
+    {
+      "label": "station-dishes",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.7799999713897705,
+        "y": 0.7729999972507358,
+        "z": 0.7939999997615814
+      }
+    },
+    {
+      "label": "station-serve",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.7799999713897705,
+        "y": 0.9700000239536166,
+        "z": 0.7939999997615814
+      }
+    },
+    {
+      "label": "station-return",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.7799999713897705,
+        "y": 0.662999982945621,
+        "z": 0.7939999997615814
+      }
+    },
+    {
+      "label": "station-bin",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.49000000953674316,
+        "y": 0.4880000213161111,
+        "z": 0.49000000953674316
+      }
+    },
+    {
+      "label": "rail",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.8360000252723694,
+        "y": 0.6779999732971191,
+        "z": 0.12999999523162842
+      }
+    },
+    {
+      "label": "cafe-table",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.9200000166893005,
+        "y": 0.5350000262260437,
+        "z": 0.9200000166893005
+      }
+    },
+    {
+      "label": "cafe-chair",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.4699999988079071,
+        "y": 0.6499999761581421,
+        "z": 0.44999998807907104
+      }
+    },
+    {
+      "label": "cafe-bench",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 1.2200000286102295,
+        "y": 0.6349999904632568,
+        "z": 0.5799999833106995
+      }
+    },
+    {
+      "label": "planter",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.36000001430511475,
+        "y": 0.5900583863258362,
+        "z": 0.36000001430511475
+      }
+    },
+    {
+      "label": "menu-board",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.6200000047683716,
+        "y": 0.7170859121251851,
+        "z": 0.2993643879890442
+      }
+    },
+    {
+      "label": "cafe-door",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 1.1663212776184082,
+        "y": 1.7100000381469727,
+        "z": 0.9935710579156876
+      }
+    },
+    {
+      "label": "window",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 1.340000033378601,
+        "y": 1.0555784106254578,
+        "z": 0.3915184512734413
+      }
+    },
+    {
+      "label": "wall-panel",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.800000011920929,
+        "y": 1.2999999523162842,
+        "z": 0.16750000044703484
+      }
+    },
+    {
+      "label": "floor-cream",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.7990000247955322,
+        "y": 0.05999999865889549,
+        "z": 0.7990000247955322
+      }
+    },
+    {
+      "label": "floor-sand",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.7990000247955322,
+        "y": 0.05999999865889549,
+        "z": 0.7990000247955322
+      }
+    },
+    {
+      "label": "floor-wood",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 0.7990000247955322,
+        "y": 0.06499999854713678,
+        "z": 0.7990000247955322
+      }
+    },
+    {
+      "label": "welcome-mat",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 1.0299999713897705,
+        "y": 0.02099999994970858,
+        "z": 0.6200000047683716
+      }
+    },
+    {
+      "label": "return-to-rooms",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 7.378571053594351,
+        "y": 1.7700000368058681,
+        "z": 9.660000004619361
+      }
+    }
+  ],
+  "errors": []
+}

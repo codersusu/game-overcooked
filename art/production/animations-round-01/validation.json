@@ -1,0 +1,23 @@
+{
+    "clips": 11,
+    "characters": 12,
+    "poseComparisons": 132,
+    "checks": [
+        "Every native clip matches its pose source on all 12 rigs",
+        "Loop boundary rotations match",
+        "All sampled skinned vertices are finite",
+        "Paw/foot vertex travel exceeds a visible motion threshold on all 12 rigs",
+        "Lower torso has no stray arm weights",
+        "Chop keeps the head upright",
+        "Idle arm sweep halved",
+        "Knife blade stays vertical",
+        "Washing moves vertically at the rim with outward elbows",
+        "Warning lasts a full eight seconds",
+        "Cooking/ready/warning/ignition ordering",
+        "Fire-start/stop events fire once",
+        "Partial suppression and burnt aftermath",
+        "Spray range, aim cone and solid obstruction",
+        "Heat-off and pot-removal reset"
+    ],
+    "limitation": "Procedural skin weights remain an approximation. Dash/throw travel and prop timing are staged; level interaction and navigation are not implemented."
+}

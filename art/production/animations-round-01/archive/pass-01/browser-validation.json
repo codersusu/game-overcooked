@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "id": "chefidle",
+      "error": null,
+      "width": 720,
+      "height": 720,
+      "duration": 3.208333
+    },
+    {
+      "id": "walk",
+      "error": null,
+      "width": 720,
+      "height": 720,
+      "duration": 2.416667
+    },
+    {
+      "id": "dash",
+      "error": null,
+      "width": 720,
+      "height": 720,
+      "duration": 1.166667
+    },
+    {
+      "id": "carryidle",
+      "error": null,
+      "width": 720,
+      "height": 720,
+      "duration": 3.208333
+    },
+    {
+      "id": "carrywalk",
+      "error": null,
+      "width": 720,
+      "height": 720,
+      "duration": 2.708333
+    },
+    {
+      "id": "throw",
+      "error": null,
+      "width": 720,
+      "height": 720,
+      "duration": 1.708333
+    },
+    {
+      "id": "chop",
+      "error": null,
+      "width": 720,
+      "height": 720,
+      "duration": 3.208333
+    },
+    {
+      "id": "wash",
+      "error": null,
+      "width": 720,
+      "height": 720,
+      "duration": 3.208333
+    },
+    {
+      "id": "extinguish",
+      "error": null,
+      "width": 720,
+      "height": 720,
+      "duration": 4.5
+    },
+    {
+      "id": "customeridle",
+      "error": null,
+      "width": 720,
+      "height": 720,
+      "duration": 3.208333
+    },
+    {
+      "id": "customereat",
+      "error": null,
+      "width": 720,
+      "height": 720,
+      "duration": 2.625
+    },
+    {
+      "id": "overcook",
+      "error": null,
+      "width": 720,
+      "height": 720,
+      "duration": 4.833333
+    },
+    {
+      "id": "dog-seated",
+      "error": null,
+      "width": 720,
+      "height": 720,
+      "duration": 3.208333
+    },
+    {
+      "id": "cat-carry",
+      "error": null,
+      "width": 720,
+      "height": 720,
+      "duration": 2.708333
+    },
+    {
+      "id": "dog-wash",
+      "error": null,
+      "width": 720,
+      "height": 720,
+      "duration": 3.208333
+    }
+  ],
+  "errors": []
+}

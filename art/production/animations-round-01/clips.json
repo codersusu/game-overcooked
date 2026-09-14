@@ -1,0 +1,1334 @@
+{
+    "clips": [
+        {
+            "id": "chefidle",
+            "title": "Chef idle",
+            "action": "ChefIdle",
+            "animal": "capybara-male-chef",
+            "description": "A gentle sideways paw lift at half the previous amplitude.",
+            "duration": 3.200000047683716,
+            "video": "chefidle.mp4",
+            "poster": "chefidle.png"
+        },
+        {
+            "id": "walk",
+            "title": "Walking",
+            "action": "Walk",
+            "animal": "capybara-male-chef",
+            "description": "Visible forward/back steps, planted short paws and opposing arm swings.",
+            "duration": 2.4000000953674316,
+            "video": "walk.mp4",
+            "poster": "walk.png"
+        },
+        {
+            "id": "dash",
+            "title": "Dash burst",
+            "action": "Dash",
+            "animal": "capybara-male-chef",
+            "description": "Forward body lean, quick running feet, travel and fading shadow silhouettes.",
+            "duration": 1.149999976158142,
+            "video": "dash.mp4",
+            "poster": "dash.png"
+        },
+        {
+            "id": "carryidle",
+            "title": "Hold a plate",
+            "action": "CarryIdle",
+            "animal": "capybara-male-chef",
+            "description": "Two paws support a level plate with a quiet breathing loop.",
+            "duration": 3.200000047683716,
+            "video": "carryidle.mp4",
+            "poster": "carryidle.png"
+        },
+        {
+            "id": "carrywalk",
+            "title": "Walk with a plate",
+            "action": "CarryWalk",
+            "animal": "capybara-male-chef",
+            "description": "A walking cycle with the plate kept level between the paws.",
+            "duration": 2.700000047683716,
+            "video": "carrywalk.mp4",
+            "poster": "carrywalk.png"
+        },
+        {
+            "id": "throw",
+            "title": "Throw an ingredient",
+            "action": "Throw",
+            "animal": "capybara-male-chef",
+            "description": "Wind-up, release, ingredient arc over the rail and follow-through.",
+            "duration": 2.0,
+            "video": "throw.mp4",
+            "poster": "throw.png"
+        },
+        {
+            "id": "chop",
+            "title": "Chop a tomato",
+            "action": "Chop",
+            "animal": "capybara-male-chef",
+            "description": "Three knife strokes, then the same ingredient changes to its chopped state.",
+            "duration": 3.200000047683716,
+            "video": "chop.mp4",
+            "poster": "chop.png"
+        },
+        {
+            "id": "wash",
+            "title": "Wash a dirty plate",
+            "action": "Wash",
+            "animal": "capybara-male-chef",
+            "description": "A small up/down stroke at the plate rim, then a clean dish is picked up.",
+            "duration": 3.200000047683716,
+            "video": "wash.mp4",
+            "poster": "wash.png"
+        },
+        {
+            "id": "extinguish",
+            "title": "Fight a kitchen fire",
+            "action": "Extinguish",
+            "animal": "capybara-male-chef",
+            "description": "A gentle sway while aiming and spraying. Flames shrink and stop.",
+            "duration": 4.5,
+            "video": "extinguish.mp4",
+            "poster": "extinguish.png"
+        },
+        {
+            "id": "customeridle",
+            "title": "Seated customer idle",
+            "action": "CustomerIdle",
+            "animal": "cat-female-customer",
+            "description": "A small seated paw lift, matching the gentler chef idle.",
+            "duration": 3.200000047683716,
+            "video": "customeridle.mp4",
+            "poster": "customeridle.png"
+        },
+        {
+            "id": "customereat",
+            "title": "Customer eating",
+            "action": "CustomerEat",
+            "animal": "capybara-female-customer",
+            "description": "A visible paw-to-mouth bite and a return to the table.",
+            "duration": 2.5999999046325684,
+            "video": "customereat.mp4",
+            "poster": "customereat.png"
+        },
+        {
+            "id": "overcook",
+            "title": "Overcooking → fire",
+            "action": "Overcook",
+            "animal": "capybara-male-chef",
+            "description": "Steam → eight seconds of small warning flames → spreading fire. The last three warning seconds become more urgent.",
+            "duration": 12.5,
+            "video": "overcook.mp4",
+            "poster": "overcook.png"
+        },
+        {
+            "id": "dog-seated",
+            "title": "Dog · seated idle",
+            "action": "CustomerIdle",
+            "animal": "dog-male-customer",
+            "description": "A small seated paw lift, matching the gentler chef idle.",
+            "duration": 3.200000047683716,
+            "video": "dog-seated.mp4",
+            "poster": "dog-seated.png"
+        },
+        {
+            "id": "cat-carry",
+            "title": "Cat · carrying",
+            "action": "CarryWalk",
+            "animal": "cat-male-chef",
+            "description": "A walking cycle with the plate kept level between the paws.",
+            "duration": 2.700000047683716,
+            "video": "cat-carry.mp4",
+            "poster": "cat-carry.png"
+        },
+        {
+            "id": "dog-wash",
+            "title": "Dog · washing",
+            "action": "Wash",
+            "animal": "dog-female-chef",
+            "description": "A small up/down stroke at the plate rim, then a clean dish is picked up.",
+            "duration": 3.200000047683716,
+            "video": "dog-wash.mp4",
+            "poster": "dog-wash.png"
+        },
+        {
+            "id": "capybara-female-chef--chefidle",
+            "title": "Chef idle",
+            "action": "ChefIdle",
+            "animal": "capybara-female-chef",
+            "description": "A gentle sideways paw lift at half the previous amplitude.",
+            "duration": 3.200000047683716,
+            "video": "capybara-female-chef--chefidle.mp4",
+            "poster": "capybara-female-chef--chefidle.png"
+        },
+        {
+            "id": "capybara-female-chef--walk",
+            "title": "Walking",
+            "action": "Walk",
+            "animal": "capybara-female-chef",
+            "description": "Visible forward/back steps, planted short paws and opposing arm swings.",
+            "duration": 2.4000000953674316,
+            "video": "capybara-female-chef--walk.mp4",
+            "poster": "capybara-female-chef--walk.png"
+        },
+        {
+            "id": "capybara-female-chef--dash",
+            "title": "Dash burst",
+            "action": "Dash",
+            "animal": "capybara-female-chef",
+            "description": "Forward body lean, quick running feet, travel and fading shadow silhouettes.",
+            "duration": 1.149999976158142,
+            "video": "capybara-female-chef--dash.mp4",
+            "poster": "capybara-female-chef--dash.png"
+        },
+        {
+            "id": "capybara-female-chef--carryidle",
+            "title": "Hold a plate",
+            "action": "CarryIdle",
+            "animal": "capybara-female-chef",
+            "description": "Two paws support a level plate with a quiet breathing loop.",
+            "duration": 3.200000047683716,
+            "video": "capybara-female-chef--carryidle.mp4",
+            "poster": "capybara-female-chef--carryidle.png"
+        },
+        {
+            "id": "capybara-female-chef--carrywalk",
+            "title": "Walk with a plate",
+            "action": "CarryWalk",
+            "animal": "capybara-female-chef",
+            "description": "A walking cycle with the plate kept level between the paws.",
+            "duration": 2.700000047683716,
+            "video": "capybara-female-chef--carrywalk.mp4",
+            "poster": "capybara-female-chef--carrywalk.png"
+        },
+        {
+            "id": "capybara-female-chef--throw",
+            "title": "Throw an ingredient",
+            "action": "Throw",
+            "animal": "capybara-female-chef",
+            "description": "Wind-up, release, ingredient arc over the rail and follow-through.",
+            "duration": 2.0,
+            "video": "capybara-female-chef--throw.mp4",
+            "poster": "capybara-female-chef--throw.png"
+        },
+        {
+            "id": "capybara-female-chef--chop",
+            "title": "Chop a tomato",
+            "action": "Chop",
+            "animal": "capybara-female-chef",
+            "description": "Three knife strokes, then the same ingredient changes to its chopped state.",
+            "duration": 3.200000047683716,
+            "video": "capybara-female-chef--chop.mp4",
+            "poster": "capybara-female-chef--chop.png"
+        },
+        {
+            "id": "capybara-female-chef--wash",
+            "title": "Wash a dirty plate",
+            "action": "Wash",
+            "animal": "capybara-female-chef",
+            "description": "A small up/down stroke at the plate rim, then a clean dish is picked up.",
+            "duration": 3.200000047683716,
+            "video": "capybara-female-chef--wash.mp4",
+            "poster": "capybara-female-chef--wash.png"
+        },
+        {
+            "id": "capybara-female-chef--extinguish",
+            "title": "Fight a kitchen fire",
+            "action": "Extinguish",
+            "animal": "capybara-female-chef",
+            "description": "A gentle sway while aiming and spraying. Flames shrink and stop.",
+            "duration": 4.5,
+            "video": "capybara-female-chef--extinguish.mp4",
+            "poster": "capybara-female-chef--extinguish.png"
+        },
+        {
+            "id": "capybara-female-chef--customeridle",
+            "title": "Seated customer idle",
+            "action": "CustomerIdle",
+            "animal": "capybara-female-chef",
+            "description": "A small seated paw lift, matching the gentler chef idle.",
+            "duration": 3.200000047683716,
+            "video": "capybara-female-chef--customeridle.mp4",
+            "poster": "capybara-female-chef--customeridle.png"
+        },
+        {
+            "id": "capybara-female-chef--customereat",
+            "title": "Customer eating",
+            "action": "CustomerEat",
+            "animal": "capybara-female-chef",
+            "description": "A visible paw-to-mouth bite and a return to the table.",
+            "duration": 2.5999999046325684,
+            "video": "capybara-female-chef--customereat.mp4",
+            "poster": "capybara-female-chef--customereat.png"
+        },
+        {
+            "id": "capybara-female-customer--chefidle",
+            "title": "Chef idle",
+            "action": "ChefIdle",
+            "animal": "capybara-female-customer",
+            "description": "A gentle sideways paw lift at half the previous amplitude.",
+            "duration": 3.200000047683716,
+            "video": "capybara-female-customer--chefidle.mp4",
+            "poster": "capybara-female-customer--chefidle.png"
+        },
+        {
+            "id": "capybara-female-customer--walk",
+            "title": "Walking",
+            "action": "Walk",
+            "animal": "capybara-female-customer",
+            "description": "Visible forward/back steps, planted short paws and opposing arm swings.",
+            "duration": 2.4000000953674316,
+            "video": "capybara-female-customer--walk.mp4",
+            "poster": "capybara-female-customer--walk.png"
+        },
+        {
+            "id": "capybara-female-customer--dash",
+            "title": "Dash burst",
+            "action": "Dash",
+            "animal": "capybara-female-customer",
+            "description": "Forward body lean, quick running feet, travel and fading shadow silhouettes.",
+            "duration": 1.149999976158142,
+            "video": "capybara-female-customer--dash.mp4",
+            "poster": "capybara-female-customer--dash.png"
+        },
+        {
+            "id": "capybara-female-customer--carryidle",
+            "title": "Hold a plate",
+            "action": "CarryIdle",
+            "animal": "capybara-female-customer",
+            "description": "Two paws support a level plate with a quiet breathing loop.",
+            "duration": 3.200000047683716,
+            "video": "capybara-female-customer--carryidle.mp4",
+            "poster": "capybara-female-customer--carryidle.png"
+        },
+        {
+            "id": "capybara-female-customer--carrywalk",
+            "title": "Walk with a plate",
+            "action": "CarryWalk",
+            "animal": "capybara-female-customer",
+            "description": "A walking cycle with the plate kept level between the paws.",
+            "duration": 2.700000047683716,
+            "video": "capybara-female-customer--carrywalk.mp4",
+            "poster": "capybara-female-customer--carrywalk.png"
+        },
+        {
+            "id": "capybara-female-customer--throw",
+            "title": "Throw an ingredient",
+            "action": "Throw",
+            "animal": "capybara-female-customer",
+            "description": "Wind-up, release, ingredient arc over the rail and follow-through.",
+            "duration": 2.0,
+            "video": "capybara-female-customer--throw.mp4",
+            "poster": "capybara-female-customer--throw.png"
+        },
+        {
+            "id": "capybara-female-customer--chop",
+            "title": "Chop a tomato",
+            "action": "Chop",
+            "animal": "capybara-female-customer",
+            "description": "Three knife strokes, then the same ingredient changes to its chopped state.",
+            "duration": 3.200000047683716,
+            "video": "capybara-female-customer--chop.mp4",
+            "poster": "capybara-female-customer--chop.png"
+        },
+        {
+            "id": "capybara-female-customer--wash",
+            "title": "Wash a dirty plate",
+            "action": "Wash",
+            "animal": "capybara-female-customer",
+            "description": "A small up/down stroke at the plate rim, then a clean dish is picked up.",
+            "duration": 3.200000047683716,
+            "video": "capybara-female-customer--wash.mp4",
+            "poster": "capybara-female-customer--wash.png"
+        },
+        {
+            "id": "capybara-female-customer--extinguish",
+            "title": "Fight a kitchen fire",
+            "action": "Extinguish",
+            "animal": "capybara-female-customer",
+            "description": "A gentle sway while aiming and spraying. Flames shrink and stop.",
+            "duration": 4.5,
+            "video": "capybara-female-customer--extinguish.mp4",
+            "poster": "capybara-female-customer--extinguish.png"
+        },
+        {
+            "id": "capybara-female-customer--customeridle",
+            "title": "Seated customer idle",
+            "action": "CustomerIdle",
+            "animal": "capybara-female-customer",
+            "description": "A small seated paw lift, matching the gentler chef idle.",
+            "duration": 3.200000047683716,
+            "video": "capybara-female-customer--customeridle.mp4",
+            "poster": "capybara-female-customer--customeridle.png"
+        },
+        {
+            "id": "capybara-male-chef--customeridle",
+            "title": "Seated customer idle",
+            "action": "CustomerIdle",
+            "animal": "capybara-male-chef",
+            "description": "A small seated paw lift, matching the gentler chef idle.",
+            "duration": 3.200000047683716,
+            "video": "capybara-male-chef--customeridle.mp4",
+            "poster": "capybara-male-chef--customeridle.png"
+        },
+        {
+            "id": "capybara-male-chef--customereat",
+            "title": "Customer eating",
+            "action": "CustomerEat",
+            "animal": "capybara-male-chef",
+            "description": "A visible paw-to-mouth bite and a return to the table.",
+            "duration": 2.5999999046325684,
+            "video": "capybara-male-chef--customereat.mp4",
+            "poster": "capybara-male-chef--customereat.png"
+        },
+        {
+            "id": "capybara-male-customer--chefidle",
+            "title": "Chef idle",
+            "action": "ChefIdle",
+            "animal": "capybara-male-customer",
+            "description": "A gentle sideways paw lift at half the previous amplitude.",
+            "duration": 3.200000047683716,
+            "video": "capybara-male-customer--chefidle.mp4",
+            "poster": "capybara-male-customer--chefidle.png"
+        },
+        {
+            "id": "capybara-male-customer--walk",
+            "title": "Walking",
+            "action": "Walk",
+            "animal": "capybara-male-customer",
+            "description": "Visible forward/back steps, planted short paws and opposing arm swings.",
+            "duration": 2.4000000953674316,
+            "video": "capybara-male-customer--walk.mp4",
+            "poster": "capybara-male-customer--walk.png"
+        },
+        {
+            "id": "capybara-male-customer--dash",
+            "title": "Dash burst",
+            "action": "Dash",
+            "animal": "capybara-male-customer",
+            "description": "Forward body lean, quick running feet, travel and fading shadow silhouettes.",
+            "duration": 1.149999976158142,
+            "video": "capybara-male-customer--dash.mp4",
+            "poster": "capybara-male-customer--dash.png"
+        },
+        {
+            "id": "capybara-male-customer--carryidle",
+            "title": "Hold a plate",
+            "action": "CarryIdle",
+            "animal": "capybara-male-customer",
+            "description": "Two paws support a level plate with a quiet breathing loop.",
+            "duration": 3.200000047683716,
+            "video": "capybara-male-customer--carryidle.mp4",
+            "poster": "capybara-male-customer--carryidle.png"
+        },
+        {
+            "id": "capybara-male-customer--carrywalk",
+            "title": "Walk with a plate",
+            "action": "CarryWalk",
+            "animal": "capybara-male-customer",
+            "description": "A walking cycle with the plate kept level between the paws.",
+            "duration": 2.700000047683716,
+            "video": "capybara-male-customer--carrywalk.mp4",
+            "poster": "capybara-male-customer--carrywalk.png"
+        },
+        {
+            "id": "capybara-male-customer--throw",
+            "title": "Throw an ingredient",
+            "action": "Throw",
+            "animal": "capybara-male-customer",
+            "description": "Wind-up, release, ingredient arc over the rail and follow-through.",
+            "duration": 2.0,
+            "video": "capybara-male-customer--throw.mp4",
+            "poster": "capybara-male-customer--throw.png"
+        },
+        {
+            "id": "capybara-male-customer--chop",
+            "title": "Chop a tomato",
+            "action": "Chop",
+            "animal": "capybara-male-customer",
+            "description": "Three knife strokes, then the same ingredient changes to its chopped state.",
+            "duration": 3.200000047683716,
+            "video": "capybara-male-customer--chop.mp4",
+            "poster": "capybara-male-customer--chop.png"
+        },
+        {
+            "id": "capybara-male-customer--wash",
+            "title": "Wash a dirty plate",
+            "action": "Wash",
+            "animal": "capybara-male-customer",
+            "description": "A small up/down stroke at the plate rim, then a clean dish is picked up.",
+            "duration": 3.200000047683716,
+            "video": "capybara-male-customer--wash.mp4",
+            "poster": "capybara-male-customer--wash.png"
+        },
+        {
+            "id": "capybara-male-customer--extinguish",
+            "title": "Fight a kitchen fire",
+            "action": "Extinguish",
+            "animal": "capybara-male-customer",
+            "description": "A gentle sway while aiming and spraying. Flames shrink and stop.",
+            "duration": 4.5,
+            "video": "capybara-male-customer--extinguish.mp4",
+            "poster": "capybara-male-customer--extinguish.png"
+        },
+        {
+            "id": "capybara-male-customer--customeridle",
+            "title": "Seated customer idle",
+            "action": "CustomerIdle",
+            "animal": "capybara-male-customer",
+            "description": "A small seated paw lift, matching the gentler chef idle.",
+            "duration": 3.200000047683716,
+            "video": "capybara-male-customer--customeridle.mp4",
+            "poster": "capybara-male-customer--customeridle.png"
+        },
+        {
+            "id": "capybara-male-customer--customereat",
+            "title": "Customer eating",
+            "action": "CustomerEat",
+            "animal": "capybara-male-customer",
+            "description": "A visible paw-to-mouth bite and a return to the table.",
+            "duration": 2.5999999046325684,
+            "video": "capybara-male-customer--customereat.mp4",
+            "poster": "capybara-male-customer--customereat.png"
+        },
+        {
+            "id": "cat-female-chef--chefidle",
+            "title": "Chef idle",
+            "action": "ChefIdle",
+            "animal": "cat-female-chef",
+            "description": "A gentle sideways paw lift at half the previous amplitude.",
+            "duration": 3.200000047683716,
+            "video": "cat-female-chef--chefidle.mp4",
+            "poster": "cat-female-chef--chefidle.png"
+        },
+        {
+            "id": "cat-female-chef--walk",
+            "title": "Walking",
+            "action": "Walk",
+            "animal": "cat-female-chef",
+            "description": "Visible forward/back steps, planted short paws and opposing arm swings.",
+            "duration": 2.4000000953674316,
+            "video": "cat-female-chef--walk.mp4",
+            "poster": "cat-female-chef--walk.png"
+        },
+        {
+            "id": "cat-female-chef--dash",
+            "title": "Dash burst",
+            "action": "Dash",
+            "animal": "cat-female-chef",
+            "description": "Forward body lean, quick running feet, travel and fading shadow silhouettes.",
+            "duration": 1.149999976158142,
+            "video": "cat-female-chef--dash.mp4",
+            "poster": "cat-female-chef--dash.png"
+        },
+        {
+            "id": "cat-female-chef--carryidle",
+            "title": "Hold a plate",
+            "action": "CarryIdle",
+            "animal": "cat-female-chef",
+            "description": "Two paws support a level plate with a quiet breathing loop.",
+            "duration": 3.200000047683716,
+            "video": "cat-female-chef--carryidle.mp4",
+            "poster": "cat-female-chef--carryidle.png"
+        },
+        {
+            "id": "cat-female-chef--carrywalk",
+            "title": "Walk with a plate",
+            "action": "CarryWalk",
+            "animal": "cat-female-chef",
+            "description": "A walking cycle with the plate kept level between the paws.",
+            "duration": 2.700000047683716,
+            "video": "cat-female-chef--carrywalk.mp4",
+            "poster": "cat-female-chef--carrywalk.png"
+        },
+        {
+            "id": "cat-female-chef--throw",
+            "title": "Throw an ingredient",
+            "action": "Throw",
+            "animal": "cat-female-chef",
+            "description": "Wind-up, release, ingredient arc over the rail and follow-through.",
+            "duration": 2.0,
+            "video": "cat-female-chef--throw.mp4",
+            "poster": "cat-female-chef--throw.png"
+        },
+        {
+            "id": "cat-female-chef--chop",
+            "title": "Chop a tomato",
+            "action": "Chop",
+            "animal": "cat-female-chef",
+            "description": "Three knife strokes, then the same ingredient changes to its chopped state.",
+            "duration": 3.200000047683716,
+            "video": "cat-female-chef--chop.mp4",
+            "poster": "cat-female-chef--chop.png"
+        },
+        {
+            "id": "cat-female-chef--wash",
+            "title": "Wash a dirty plate",
+            "action": "Wash",
+            "animal": "cat-female-chef",
+            "description": "A small up/down stroke at the plate rim, then a clean dish is picked up.",
+            "duration": 3.200000047683716,
+            "video": "cat-female-chef--wash.mp4",
+            "poster": "cat-female-chef--wash.png"
+        },
+        {
+            "id": "cat-female-chef--extinguish",
+            "title": "Fight a kitchen fire",
+            "action": "Extinguish",
+            "animal": "cat-female-chef",
+            "description": "A gentle sway while aiming and spraying. Flames shrink and stop.",
+            "duration": 4.5,
+            "video": "cat-female-chef--extinguish.mp4",
+            "poster": "cat-female-chef--extinguish.png"
+        },
+        {
+            "id": "cat-female-chef--customeridle",
+            "title": "Seated customer idle",
+            "action": "CustomerIdle",
+            "animal": "cat-female-chef",
+            "description": "A small seated paw lift, matching the gentler chef idle.",
+            "duration": 3.200000047683716,
+            "video": "cat-female-chef--customeridle.mp4",
+            "poster": "cat-female-chef--customeridle.png"
+        },
+        {
+            "id": "cat-female-chef--customereat",
+            "title": "Customer eating",
+            "action": "CustomerEat",
+            "animal": "cat-female-chef",
+            "description": "A visible paw-to-mouth bite and a return to the table.",
+            "duration": 2.5999999046325684,
+            "video": "cat-female-chef--customereat.mp4",
+            "poster": "cat-female-chef--customereat.png"
+        },
+        {
+            "id": "cat-female-customer--chefidle",
+            "title": "Chef idle",
+            "action": "ChefIdle",
+            "animal": "cat-female-customer",
+            "description": "A gentle sideways paw lift at half the previous amplitude.",
+            "duration": 3.200000047683716,
+            "video": "cat-female-customer--chefidle.mp4",
+            "poster": "cat-female-customer--chefidle.png"
+        },
+        {
+            "id": "cat-female-customer--walk",
+            "title": "Walking",
+            "action": "Walk",
+            "animal": "cat-female-customer",
+            "description": "Visible forward/back steps, planted short paws and opposing arm swings.",
+            "duration": 2.4000000953674316,
+            "video": "cat-female-customer--walk.mp4",
+            "poster": "cat-female-customer--walk.png"
+        },
+        {
+            "id": "cat-female-customer--dash",
+            "title": "Dash burst",
+            "action": "Dash",
+            "animal": "cat-female-customer",
+            "description": "Forward body lean, quick running feet, travel and fading shadow silhouettes.",
+            "duration": 1.149999976158142,
+            "video": "cat-female-customer--dash.mp4",
+            "poster": "cat-female-customer--dash.png"
+        },
+        {
+            "id": "cat-female-customer--carryidle",
+            "title": "Hold a plate",
+            "action": "CarryIdle",
+            "animal": "cat-female-customer",
+            "description": "Two paws support a level plate with a quiet breathing loop.",
+            "duration": 3.200000047683716,
+            "video": "cat-female-customer--carryidle.mp4",
+            "poster": "cat-female-customer--carryidle.png"
+        },
+        {
+            "id": "cat-female-customer--carrywalk",
+            "title": "Walk with a plate",
+            "action": "CarryWalk",
+            "animal": "cat-female-customer",
+            "description": "A walking cycle with the plate kept level between the paws.",
+            "duration": 2.700000047683716,
+            "video": "cat-female-customer--carrywalk.mp4",
+            "poster": "cat-female-customer--carrywalk.png"
+        },
+        {
+            "id": "cat-female-customer--throw",
+            "title": "Throw an ingredient",
+            "action": "Throw",
+            "animal": "cat-female-customer",
+            "description": "Wind-up, release, ingredient arc over the rail and follow-through.",
+            "duration": 2.0,
+            "video": "cat-female-customer--throw.mp4",
+            "poster": "cat-female-customer--throw.png"
+        },
+        {
+            "id": "cat-female-customer--chop",
+            "title": "Chop a tomato",
+            "action": "Chop",
+            "animal": "cat-female-customer",
+            "description": "Three knife strokes, then the same ingredient changes to its chopped state.",
+            "duration": 3.200000047683716,
+            "video": "cat-female-customer--chop.mp4",
+            "poster": "cat-female-customer--chop.png"
+        },
+        {
+            "id": "cat-female-customer--wash",
+            "title": "Wash a dirty plate",
+            "action": "Wash",
+            "animal": "cat-female-customer",
+            "description": "A small up/down stroke at the plate rim, then a clean dish is picked up.",
+            "duration": 3.200000047683716,
+            "video": "cat-female-customer--wash.mp4",
+            "poster": "cat-female-customer--wash.png"
+        },
+        {
+            "id": "cat-female-customer--extinguish",
+            "title": "Fight a kitchen fire",
+            "action": "Extinguish",
+            "animal": "cat-female-customer",
+            "description": "A gentle sway while aiming and spraying. Flames shrink and stop.",
+            "duration": 4.5,
+            "video": "cat-female-customer--extinguish.mp4",
+            "poster": "cat-female-customer--extinguish.png"
+        },
+        {
+            "id": "cat-female-customer--customereat",
+            "title": "Customer eating",
+            "action": "CustomerEat",
+            "animal": "cat-female-customer",
+            "description": "A visible paw-to-mouth bite and a return to the table.",
+            "duration": 2.5999999046325684,
+            "video": "cat-female-customer--customereat.mp4",
+            "poster": "cat-female-customer--customereat.png"
+        },
+        {
+            "id": "cat-male-chef--chefidle",
+            "title": "Chef idle",
+            "action": "ChefIdle",
+            "animal": "cat-male-chef",
+            "description": "A gentle sideways paw lift at half the previous amplitude.",
+            "duration": 3.200000047683716,
+            "video": "cat-male-chef--chefidle.mp4",
+            "poster": "cat-male-chef--chefidle.png"
+        },
+        {
+            "id": "cat-male-chef--walk",
+            "title": "Walking",
+            "action": "Walk",
+            "animal": "cat-male-chef",
+            "description": "Visible forward/back steps, planted short paws and opposing arm swings.",
+            "duration": 2.4000000953674316,
+            "video": "cat-male-chef--walk.mp4",
+            "poster": "cat-male-chef--walk.png"
+        },
+        {
+            "id": "cat-male-chef--dash",
+            "title": "Dash burst",
+            "action": "Dash",
+            "animal": "cat-male-chef",
+            "description": "Forward body lean, quick running feet, travel and fading shadow silhouettes.",
+            "duration": 1.149999976158142,
+            "video": "cat-male-chef--dash.mp4",
+            "poster": "cat-male-chef--dash.png"
+        },
+        {
+            "id": "cat-male-chef--carryidle",
+            "title": "Hold a plate",
+            "action": "CarryIdle",
+            "animal": "cat-male-chef",
+            "description": "Two paws support a level plate with a quiet breathing loop.",
+            "duration": 3.200000047683716,
+            "video": "cat-male-chef--carryidle.mp4",
+            "poster": "cat-male-chef--carryidle.png"
+        },
+        {
+            "id": "cat-male-chef--throw",
+            "title": "Throw an ingredient",
+            "action": "Throw",
+            "animal": "cat-male-chef",
+            "description": "Wind-up, release, ingredient arc over the rail and follow-through.",
+            "duration": 2.0,
+            "video": "cat-male-chef--throw.mp4",
+            "poster": "cat-male-chef--throw.png"
+        },
+        {
+            "id": "cat-male-chef--chop",
+            "title": "Chop a tomato",
+            "action": "Chop",
+            "animal": "cat-male-chef",
+            "description": "Three knife strokes, then the same ingredient changes to its chopped state.",
+            "duration": 3.200000047683716,
+            "video": "cat-male-chef--chop.mp4",
+            "poster": "cat-male-chef--chop.png"
+        },
+        {
+            "id": "cat-male-chef--wash",
+            "title": "Wash a dirty plate",
+            "action": "Wash",
+            "animal": "cat-male-chef",
+            "description": "A small up/down stroke at the plate rim, then a clean dish is picked up.",
+            "duration": 3.200000047683716,
+            "video": "cat-male-chef--wash.mp4",
+            "poster": "cat-male-chef--wash.png"
+        },
+        {
+            "id": "cat-male-chef--extinguish",
+            "title": "Fight a kitchen fire",
+            "action": "Extinguish",
+            "animal": "cat-male-chef",
+            "description": "A gentle sway while aiming and spraying. Flames shrink and stop.",
+            "duration": 4.5,
+            "video": "cat-male-chef--extinguish.mp4",
+            "poster": "cat-male-chef--extinguish.png"
+        },
+        {
+            "id": "cat-male-chef--customeridle",
+            "title": "Seated customer idle",
+            "action": "CustomerIdle",
+            "animal": "cat-male-chef",
+            "description": "A small seated paw lift, matching the gentler chef idle.",
+            "duration": 3.200000047683716,
+            "video": "cat-male-chef--customeridle.mp4",
+            "poster": "cat-male-chef--customeridle.png"
+        },
+        {
+            "id": "cat-male-chef--customereat",
+            "title": "Customer eating",
+            "action": "CustomerEat",
+            "animal": "cat-male-chef",
+            "description": "A visible paw-to-mouth bite and a return to the table.",
+            "duration": 2.5999999046325684,
+            "video": "cat-male-chef--customereat.mp4",
+            "poster": "cat-male-chef--customereat.png"
+        },
+        {
+            "id": "cat-male-customer--chefidle",
+            "title": "Chef idle",
+            "action": "ChefIdle",
+            "animal": "cat-male-customer",
+            "description": "A gentle sideways paw lift at half the previous amplitude.",
+            "duration": 3.200000047683716,
+            "video": "cat-male-customer--chefidle.mp4",
+            "poster": "cat-male-customer--chefidle.png"
+        },
+        {
+            "id": "cat-male-customer--walk",
+            "title": "Walking",
+            "action": "Walk",
+            "animal": "cat-male-customer",
+            "description": "Visible forward/back steps, planted short paws and opposing arm swings.",
+            "duration": 2.4000000953674316,
+            "video": "cat-male-customer--walk.mp4",
+            "poster": "cat-male-customer--walk.png"
+        },
+        {
+            "id": "cat-male-customer--dash",
+            "title": "Dash burst",
+            "action": "Dash",
+            "animal": "cat-male-customer",
+            "description": "Forward body lean, quick running feet, travel and fading shadow silhouettes.",
+            "duration": 1.149999976158142,
+            "video": "cat-male-customer--dash.mp4",
+            "poster": "cat-male-customer--dash.png"
+        },
+        {
+            "id": "cat-male-customer--carryidle",
+            "title": "Hold a plate",
+            "action": "CarryIdle",
+            "animal": "cat-male-customer",
+            "description": "Two paws support a level plate with a quiet breathing loop.",
+            "duration": 3.200000047683716,
+            "video": "cat-male-customer--carryidle.mp4",
+            "poster": "cat-male-customer--carryidle.png"
+        },
+        {
+            "id": "cat-male-customer--carrywalk",
+            "title": "Walk with a plate",
+            "action": "CarryWalk",
+            "animal": "cat-male-customer",
+            "description": "A walking cycle with the plate kept level between the paws.",
+            "duration": 2.700000047683716,
+            "video": "cat-male-customer--carrywalk.mp4",
+            "poster": "cat-male-customer--carrywalk.png"
+        },
+        {
+            "id": "cat-male-customer--throw",
+            "title": "Throw an ingredient",
+            "action": "Throw",
+            "animal": "cat-male-customer",
+            "description": "Wind-up, release, ingredient arc over the rail and follow-through.",
+            "duration": 2.0,
+            "video": "cat-male-customer--throw.mp4",
+            "poster": "cat-male-customer--throw.png"
+        },
+        {
+            "id": "cat-male-customer--chop",
+            "title": "Chop a tomato",
+            "action": "Chop",
+            "animal": "cat-male-customer",
+            "description": "Three knife strokes, then the same ingredient changes to its chopped state.",
+            "duration": 3.200000047683716,
+            "video": "cat-male-customer--chop.mp4",
+            "poster": "cat-male-customer--chop.png"
+        },
+        {
+            "id": "cat-male-customer--wash",
+            "title": "Wash a dirty plate",
+            "action": "Wash",
+            "animal": "cat-male-customer",
+            "description": "A small up/down stroke at the plate rim, then a clean dish is picked up.",
+            "duration": 3.200000047683716,
+            "video": "cat-male-customer--wash.mp4",
+            "poster": "cat-male-customer--wash.png"
+        },
+        {
+            "id": "cat-male-customer--extinguish",
+            "title": "Fight a kitchen fire",
+            "action": "Extinguish",
+            "animal": "cat-male-customer",
+            "description": "A gentle sway while aiming and spraying. Flames shrink and stop.",
+            "duration": 4.5,
+            "video": "cat-male-customer--extinguish.mp4",
+            "poster": "cat-male-customer--extinguish.png"
+        },
+        {
+            "id": "cat-male-customer--customeridle",
+            "title": "Seated customer idle",
+            "action": "CustomerIdle",
+            "animal": "cat-male-customer",
+            "description": "A small seated paw lift, matching the gentler chef idle.",
+            "duration": 3.200000047683716,
+            "video": "cat-male-customer--customeridle.mp4",
+            "poster": "cat-male-customer--customeridle.png"
+        },
+        {
+            "id": "cat-male-customer--customereat",
+            "title": "Customer eating",
+            "action": "CustomerEat",
+            "animal": "cat-male-customer",
+            "description": "A visible paw-to-mouth bite and a return to the table.",
+            "duration": 2.5999999046325684,
+            "video": "cat-male-customer--customereat.mp4",
+            "poster": "cat-male-customer--customereat.png"
+        },
+        {
+            "id": "dog-female-chef--chefidle",
+            "title": "Chef idle",
+            "action": "ChefIdle",
+            "animal": "dog-female-chef",
+            "description": "A gentle sideways paw lift at half the previous amplitude.",
+            "duration": 3.200000047683716,
+            "video": "dog-female-chef--chefidle.mp4",
+            "poster": "dog-female-chef--chefidle.png"
+        },
+        {
+            "id": "dog-female-chef--walk",
+            "title": "Walking",
+            "action": "Walk",
+            "animal": "dog-female-chef",
+            "description": "Visible forward/back steps, planted short paws and opposing arm swings.",
+            "duration": 2.4000000953674316,
+            "video": "dog-female-chef--walk.mp4",
+            "poster": "dog-female-chef--walk.png"
+        },
+        {
+            "id": "dog-female-chef--dash",
+            "title": "Dash burst",
+            "action": "Dash",
+            "animal": "dog-female-chef",
+            "description": "Forward body lean, quick running feet, travel and fading shadow silhouettes.",
+            "duration": 1.149999976158142,
+            "video": "dog-female-chef--dash.mp4",
+            "poster": "dog-female-chef--dash.png"
+        },
+        {
+            "id": "dog-female-chef--carryidle",
+            "title": "Hold a plate",
+            "action": "CarryIdle",
+            "animal": "dog-female-chef",
+            "description": "Two paws support a level plate with a quiet breathing loop.",
+            "duration": 3.200000047683716,
+            "video": "dog-female-chef--carryidle.mp4",
+            "poster": "dog-female-chef--carryidle.png"
+        },
+        {
+            "id": "dog-female-chef--carrywalk",
+            "title": "Walk with a plate",
+            "action": "CarryWalk",
+            "animal": "dog-female-chef",
+            "description": "A walking cycle with the plate kept level between the paws.",
+            "duration": 2.700000047683716,
+            "video": "dog-female-chef--carrywalk.mp4",
+            "poster": "dog-female-chef--carrywalk.png"
+        },
+        {
+            "id": "dog-female-chef--throw",
+            "title": "Throw an ingredient",
+            "action": "Throw",
+            "animal": "dog-female-chef",
+            "description": "Wind-up, release, ingredient arc over the rail and follow-through.",
+            "duration": 2.0,
+            "video": "dog-female-chef--throw.mp4",
+            "poster": "dog-female-chef--throw.png"
+        },
+        {
+            "id": "dog-female-chef--chop",
+            "title": "Chop a tomato",
+            "action": "Chop",
+            "animal": "dog-female-chef",
+            "description": "Three knife strokes, then the same ingredient changes to its chopped state.",
+            "duration": 3.200000047683716,
+            "video": "dog-female-chef--chop.mp4",
+            "poster": "dog-female-chef--chop.png"
+        },
+        {
+            "id": "dog-female-chef--extinguish",
+            "title": "Fight a kitchen fire",
+            "action": "Extinguish",
+            "animal": "dog-female-chef",
+            "description": "A gentle sway while aiming and spraying. Flames shrink and stop.",
+            "duration": 4.5,
+            "video": "dog-female-chef--extinguish.mp4",
+            "poster": "dog-female-chef--extinguish.png"
+        },
+        {
+            "id": "dog-female-chef--customeridle",
+            "title": "Seated customer idle",
+            "action": "CustomerIdle",
+            "animal": "dog-female-chef",
+            "description": "A small seated paw lift, matching the gentler chef idle.",
+            "duration": 3.200000047683716,
+            "video": "dog-female-chef--customeridle.mp4",
+            "poster": "dog-female-chef--customeridle.png"
+        },
+        {
+            "id": "dog-female-chef--customereat",
+            "title": "Customer eating",
+            "action": "CustomerEat",
+            "animal": "dog-female-chef",
+            "description": "A visible paw-to-mouth bite and a return to the table.",
+            "duration": 2.5999999046325684,
+            "video": "dog-female-chef--customereat.mp4",
+            "poster": "dog-female-chef--customereat.png"
+        },
+        {
+            "id": "dog-female-customer--chefidle",
+            "title": "Chef idle",
+            "action": "ChefIdle",
+            "animal": "dog-female-customer",
+            "description": "A gentle sideways paw lift at half the previous amplitude.",
+            "duration": 3.200000047683716,
+            "video": "dog-female-customer--chefidle.mp4",
+            "poster": "dog-female-customer--chefidle.png"
+        },
+        {
+            "id": "dog-female-customer--walk",
+            "title": "Walking",
+            "action": "Walk",
+            "animal": "dog-female-customer",
+            "description": "Visible forward/back steps, planted short paws and opposing arm swings.",
+            "duration": 2.4000000953674316,
+            "video": "dog-female-customer--walk.mp4",
+            "poster": "dog-female-customer--walk.png"
+        },
+        {
+            "id": "dog-female-customer--dash",
+            "title": "Dash burst",
+            "action": "Dash",
+            "animal": "dog-female-customer",
+            "description": "Forward body lean, quick running feet, travel and fading shadow silhouettes.",
+            "duration": 1.149999976158142,
+            "video": "dog-female-customer--dash.mp4",
+            "poster": "dog-female-customer--dash.png"
+        },
+        {
+            "id": "dog-female-customer--carryidle",
+            "title": "Hold a plate",
+            "action": "CarryIdle",
+            "animal": "dog-female-customer",
+            "description": "Two paws support a level plate with a quiet breathing loop.",
+            "duration": 3.200000047683716,
+            "video": "dog-female-customer--carryidle.mp4",
+            "poster": "dog-female-customer--carryidle.png"
+        },
+        {
+            "id": "dog-female-customer--carrywalk",
+            "title": "Walk with a plate",
+            "action": "CarryWalk",
+            "animal": "dog-female-customer",
+            "description": "A walking cycle with the plate kept level between the paws.",
+            "duration": 2.700000047683716,
+            "video": "dog-female-customer--carrywalk.mp4",
+            "poster": "dog-female-customer--carrywalk.png"
+        },
+        {
+            "id": "dog-female-customer--throw",
+            "title": "Throw an ingredient",
+            "action": "Throw",
+            "animal": "dog-female-customer",
+            "description": "Wind-up, release, ingredient arc over the rail and follow-through.",
+            "duration": 2.0,
+            "video": "dog-female-customer--throw.mp4",
+            "poster": "dog-female-customer--throw.png"
+        },
+        {
+            "id": "dog-female-customer--chop",
+            "title": "Chop a tomato",
+            "action": "Chop",
+            "animal": "dog-female-customer",
+            "description": "Three knife strokes, then the same ingredient changes to its chopped state.",
+            "duration": 3.200000047683716,
+            "video": "dog-female-customer--chop.mp4",
+            "poster": "dog-female-customer--chop.png"
+        },
+        {
+            "id": "dog-female-customer--wash",
+            "title": "Wash a dirty plate",
+            "action": "Wash",
+            "animal": "dog-female-customer",
+            "description": "A small up/down stroke at the plate rim, then a clean dish is picked up.",
+            "duration": 3.200000047683716,
+            "video": "dog-female-customer--wash.mp4",
+            "poster": "dog-female-customer--wash.png"
+        },
+        {
+            "id": "dog-female-customer--extinguish",
+            "title": "Fight a kitchen fire",
+            "action": "Extinguish",
+            "animal": "dog-female-customer",
+            "description": "A gentle sway while aiming and spraying. Flames shrink and stop.",
+            "duration": 4.5,
+            "video": "dog-female-customer--extinguish.mp4",
+            "poster": "dog-female-customer--extinguish.png"
+        },
+        {
+            "id": "dog-female-customer--customeridle",
+            "title": "Seated customer idle",
+            "action": "CustomerIdle",
+            "animal": "dog-female-customer",
+            "description": "A small seated paw lift, matching the gentler chef idle.",
+            "duration": 3.200000047683716,
+            "video": "dog-female-customer--customeridle.mp4",
+            "poster": "dog-female-customer--customeridle.png"
+        },
+        {
+            "id": "dog-female-customer--customereat",
+            "title": "Customer eating",
+            "action": "CustomerEat",
+            "animal": "dog-female-customer",
+            "description": "A visible paw-to-mouth bite and a return to the table.",
+            "duration": 2.5999999046325684,
+            "video": "dog-female-customer--customereat.mp4",
+            "poster": "dog-female-customer--customereat.png"
+        },
+        {
+            "id": "dog-male-chef--chefidle",
+            "title": "Chef idle",
+            "action": "ChefIdle",
+            "animal": "dog-male-chef",
+            "description": "A gentle sideways paw lift at half the previous amplitude.",
+            "duration": 3.200000047683716,
+            "video": "dog-male-chef--chefidle.mp4",
+            "poster": "dog-male-chef--chefidle.png"
+        },
+        {
+            "id": "dog-male-chef--walk",
+            "title": "Walking",
+            "action": "Walk",
+            "animal": "dog-male-chef",
+            "description": "Visible forward/back steps, planted short paws and opposing arm swings.",
+            "duration": 2.4000000953674316,
+            "video": "dog-male-chef--walk.mp4",
+            "poster": "dog-male-chef--walk.png"
+        },
+        {
+            "id": "dog-male-chef--dash",
+            "title": "Dash burst",
+            "action": "Dash",
+            "animal": "dog-male-chef",
+            "description": "Forward body lean, quick running feet, travel and fading shadow silhouettes.",
+            "duration": 1.149999976158142,
+            "video": "dog-male-chef--dash.mp4",
+            "poster": "dog-male-chef--dash.png"
+        },
+        {
+            "id": "dog-male-chef--carryidle",
+            "title": "Hold a plate",
+            "action": "CarryIdle",
+            "animal": "dog-male-chef",
+            "description": "Two paws support a level plate with a quiet breathing loop.",
+            "duration": 3.200000047683716,
+            "video": "dog-male-chef--carryidle.mp4",
+            "poster": "dog-male-chef--carryidle.png"
+        },
+        {
+            "id": "dog-male-chef--carrywalk",
+            "title": "Walk with a plate",
+            "action": "CarryWalk",
+            "animal": "dog-male-chef",
+            "description": "A walking cycle with the plate kept level between the paws.",
+            "duration": 2.700000047683716,
+            "video": "dog-male-chef--carrywalk.mp4",
+            "poster": "dog-male-chef--carrywalk.png"
+        },
+        {
+            "id": "dog-male-chef--throw",
+            "title": "Throw an ingredient",
+            "action": "Throw",
+            "animal": "dog-male-chef",
+            "description": "Wind-up, release, ingredient arc over the rail and follow-through.",
+            "duration": 2.0,
+            "video": "dog-male-chef--throw.mp4",
+            "poster": "dog-male-chef--throw.png"
+        },
+        {
+            "id": "dog-male-chef--chop",
+            "title": "Chop a tomato",
+            "action": "Chop",
+            "animal": "dog-male-chef",
+            "description": "Three knife strokes, then the same ingredient changes to its chopped state.",
+            "duration": 3.200000047683716,
+            "video": "dog-male-chef--chop.mp4",
+            "poster": "dog-male-chef--chop.png"
+        },
+        {
+            "id": "dog-male-chef--wash",
+            "title": "Wash a dirty plate",
+            "action": "Wash",
+            "animal": "dog-male-chef",
+            "description": "A small up/down stroke at the plate rim, then a clean dish is picked up.",
+            "duration": 3.200000047683716,
+            "video": "dog-male-chef--wash.mp4",
+            "poster": "dog-male-chef--wash.png"
+        },
+        {
+            "id": "dog-male-chef--extinguish",
+            "title": "Fight a kitchen fire",
+            "action": "Extinguish",
+            "animal": "dog-male-chef",
+            "description": "A gentle sway while aiming and spraying. Flames shrink and stop.",
+            "duration": 4.5,
+            "video": "dog-male-chef--extinguish.mp4",
+            "poster": "dog-male-chef--extinguish.png"
+        },
+        {
+            "id": "dog-male-chef--customeridle",
+            "title": "Seated customer idle",
+            "action": "CustomerIdle",
+            "animal": "dog-male-chef",
+            "description": "A small seated paw lift, matching the gentler chef idle.",
+            "duration": 3.200000047683716,
+            "video": "dog-male-chef--customeridle.mp4",
+            "poster": "dog-male-chef--customeridle.png"
+        },
+        {
+            "id": "dog-male-chef--customereat",
+            "title": "Customer eating",
+            "action": "CustomerEat",
+            "animal": "dog-male-chef",
+            "description": "A visible paw-to-mouth bite and a return to the table.",
+            "duration": 2.5999999046325684,
+            "video": "dog-male-chef--customereat.mp4",
+            "poster": "dog-male-chef--customereat.png"
+        },
+        {
+            "id": "dog-male-customer--chefidle",
+            "title": "Chef idle",
+            "action": "ChefIdle",
+            "animal": "dog-male-customer",
+            "description": "A gentle sideways paw lift at half the previous amplitude.",
+            "duration": 3.200000047683716,
+            "video": "dog-male-customer--chefidle.mp4",
+            "poster": "dog-male-customer--chefidle.png"
+        },
+        {
+            "id": "dog-male-customer--walk",
+            "title": "Walking",
+            "action": "Walk",
+            "animal": "dog-male-customer",
+            "description": "Visible forward/back steps, planted short paws and opposing arm swings.",
+            "duration": 2.4000000953674316,
+            "video": "dog-male-customer--walk.mp4",
+            "poster": "dog-male-customer--walk.png"
+        },
+        {
+            "id": "dog-male-customer--dash",
+            "title": "Dash burst",
+            "action": "Dash",
+            "animal": "dog-male-customer",
+            "description": "Forward body lean, quick running feet, travel and fading shadow silhouettes.",
+            "duration": 1.149999976158142,
+            "video": "dog-male-customer--dash.mp4",
+            "poster": "dog-male-customer--dash.png"
+        },
+        {
+            "id": "dog-male-customer--carryidle",
+            "title": "Hold a plate",
+            "action": "CarryIdle",
+            "animal": "dog-male-customer",
+            "description": "Two paws support a level plate with a quiet breathing loop.",
+            "duration": 3.200000047683716,
+            "video": "dog-male-customer--carryidle.mp4",
+            "poster": "dog-male-customer--carryidle.png"
+        },
+        {
+            "id": "dog-male-customer--carrywalk",
+            "title": "Walk with a plate",
+            "action": "CarryWalk",
+            "animal": "dog-male-customer",
+            "description": "A walking cycle with the plate kept level between the paws.",
+            "duration": 2.700000047683716,
+            "video": "dog-male-customer--carrywalk.mp4",
+            "poster": "dog-male-customer--carrywalk.png"
+        },
+        {
+            "id": "dog-male-customer--throw",
+            "title": "Throw an ingredient",
+            "action": "Throw",
+            "animal": "dog-male-customer",
+            "description": "Wind-up, release, ingredient arc over the rail and follow-through.",
+            "duration": 2.0,
+            "video": "dog-male-customer--throw.mp4",
+            "poster": "dog-male-customer--throw.png"
+        },
+        {
+            "id": "dog-male-customer--chop",
+            "title": "Chop a tomato",
+            "action": "Chop",
+            "animal": "dog-male-customer",
+            "description": "Three knife strokes, then the same ingredient changes to its chopped state.",
+            "duration": 3.200000047683716,
+            "video": "dog-male-customer--chop.mp4",
+            "poster": "dog-male-customer--chop.png"
+        },
+        {
+            "id": "dog-male-customer--wash",
+            "title": "Wash a dirty plate",
+            "action": "Wash",
+            "animal": "dog-male-customer",
+            "description": "A small up/down stroke at the plate rim, then a clean dish is picked up.",
+            "duration": 3.200000047683716,
+            "video": "dog-male-customer--wash.mp4",
+            "poster": "dog-male-customer--wash.png"
+        },
+        {
+            "id": "dog-male-customer--extinguish",
+            "title": "Fight a kitchen fire",
+            "action": "Extinguish",
+            "animal": "dog-male-customer",
+            "description": "A gentle sway while aiming and spraying. Flames shrink and stop.",
+            "duration": 4.5,
+            "video": "dog-male-customer--extinguish.mp4",
+            "poster": "dog-male-customer--extinguish.png"
+        },
+        {
+            "id": "dog-male-customer--customereat",
+            "title": "Customer eating",
+            "action": "CustomerEat",
+            "animal": "dog-male-customer",
+            "description": "A visible paw-to-mouth bite and a return to the table.",
+            "duration": 2.5999999046325684,
+            "video": "dog-male-customer--customereat.mp4",
+            "poster": "dog-male-customer--customereat.png"
+        }
+    ]
+}

@@ -1,0 +1,2035 @@
+{
+  "id": 1,
+  "name": "First Service",
+  "shape": "Open U",
+  "cols": 8,
+  "rows": 7,
+  "module": 0.8,
+  "cafeRows": 5,
+  "instances": [
+    {
+      "asset": "floor-sand",
+      "name": "Floor_0_0",
+      "position": [
+        2.8000000000000003,
+        0,
+        0.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_1_0",
+      "position": [
+        2.0,
+        0,
+        0.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_2_0",
+      "position": [
+        1.2000000000000002,
+        0,
+        0.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_3_0",
+      "position": [
+        0.4,
+        0,
+        0.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_4_0",
+      "position": [
+        -0.4,
+        0,
+        0.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_5_0",
+      "position": [
+        -1.2000000000000002,
+        0,
+        0.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_6_0",
+      "position": [
+        -2.0,
+        0,
+        0.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_7_0",
+      "position": [
+        -2.8000000000000003,
+        0,
+        0.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_0_1",
+      "position": [
+        2.8000000000000003,
+        0,
+        0.8
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_1_1",
+      "position": [
+        2.0,
+        0,
+        0.8
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_2_1",
+      "position": [
+        1.2000000000000002,
+        0,
+        0.8
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_3_1",
+      "position": [
+        0.4,
+        0,
+        0.8
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_4_1",
+      "position": [
+        -0.4,
+        0,
+        0.8
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_5_1",
+      "position": [
+        -1.2000000000000002,
+        0,
+        0.8
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_6_1",
+      "position": [
+        -2.0,
+        0,
+        0.8
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_7_1",
+      "position": [
+        -2.8000000000000003,
+        0,
+        0.8
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_0_2",
+      "position": [
+        2.8000000000000003,
+        0,
+        1.6
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_1_2",
+      "position": [
+        2.0,
+        0,
+        1.6
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_2_2",
+      "position": [
+        1.2000000000000002,
+        0,
+        1.6
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_3_2",
+      "position": [
+        0.4,
+        0,
+        1.6
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_4_2",
+      "position": [
+        -0.4,
+        0,
+        1.6
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_5_2",
+      "position": [
+        -1.2000000000000002,
+        0,
+        1.6
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_6_2",
+      "position": [
+        -2.0,
+        0,
+        1.6
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_7_2",
+      "position": [
+        -2.8000000000000003,
+        0,
+        1.6
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_0_3",
+      "position": [
+        2.8000000000000003,
+        0,
+        2.4000000000000004
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_1_3",
+      "position": [
+        2.0,
+        0,
+        2.4000000000000004
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_2_3",
+      "position": [
+        1.2000000000000002,
+        0,
+        2.4000000000000004
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_3_3",
+      "position": [
+        0.4,
+        0,
+        2.4000000000000004
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_4_3",
+      "position": [
+        -0.4,
+        0,
+        2.4000000000000004
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_5_3",
+      "position": [
+        -1.2000000000000002,
+        0,
+        2.4000000000000004
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_6_3",
+      "position": [
+        -2.0,
+        0,
+        2.4000000000000004
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_7_3",
+      "position": [
+        -2.8000000000000003,
+        0,
+        2.4000000000000004
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_0_4",
+      "position": [
+        2.8000000000000003,
+        0,
+        3.2
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_1_4",
+      "position": [
+        2.0,
+        0,
+        3.2
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_2_4",
+      "position": [
+        1.2000000000000002,
+        0,
+        3.2
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_3_4",
+      "position": [
+        0.4,
+        0,
+        3.2
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_4_4",
+      "position": [
+        -0.4,
+        0,
+        3.2
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_5_4",
+      "position": [
+        -1.2000000000000002,
+        0,
+        3.2
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_6_4",
+      "position": [
+        -2.0,
+        0,
+        3.2
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_7_4",
+      "position": [
+        -2.8000000000000003,
+        0,
+        3.2
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_0_5",
+      "position": [
+        2.8000000000000003,
+        0,
+        4.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_1_5",
+      "position": [
+        2.0,
+        0,
+        4.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_2_5",
+      "position": [
+        1.2000000000000002,
+        0,
+        4.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_3_5",
+      "position": [
+        0.4,
+        0,
+        4.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_4_5",
+      "position": [
+        -0.4,
+        0,
+        4.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_5_5",
+      "position": [
+        -1.2000000000000002,
+        0,
+        4.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_6_5",
+      "position": [
+        -2.0,
+        0,
+        4.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_7_5",
+      "position": [
+        -2.8000000000000003,
+        0,
+        4.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_0_6",
+      "position": [
+        2.8000000000000003,
+        0,
+        4.800000000000001
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_1_6",
+      "position": [
+        2.0,
+        0,
+        4.800000000000001
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_2_6",
+      "position": [
+        1.2000000000000002,
+        0,
+        4.800000000000001
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_3_6",
+      "position": [
+        0.4,
+        0,
+        4.800000000000001
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_4_6",
+      "position": [
+        -0.4,
+        0,
+        4.800000000000001
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_5_6",
+      "position": [
+        -1.2000000000000002,
+        0,
+        4.800000000000001
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-sand",
+      "name": "Floor_6_6",
+      "position": [
+        -2.0,
+        0,
+        4.800000000000001
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-cream",
+      "name": "Floor_7_6",
+      "position": [
+        -2.8000000000000003,
+        0,
+        4.800000000000001
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_0_7",
+      "position": [
+        2.8000000000000003,
+        0,
+        5.6000000000000005
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_1_7",
+      "position": [
+        2.0,
+        0,
+        5.6000000000000005
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_2_7",
+      "position": [
+        1.2000000000000002,
+        0,
+        5.6000000000000005
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_3_7",
+      "position": [
+        0.4,
+        0,
+        5.6000000000000005
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_4_7",
+      "position": [
+        -0.4,
+        0,
+        5.6000000000000005
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_5_7",
+      "position": [
+        -1.2000000000000002,
+        0,
+        5.6000000000000005
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_6_7",
+      "position": [
+        -2.0,
+        0,
+        5.6000000000000005
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_7_7",
+      "position": [
+        -2.8000000000000003,
+        0,
+        5.6000000000000005
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_0_8",
+      "position": [
+        2.8000000000000003,
+        0,
+        6.4
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_1_8",
+      "position": [
+        2.0,
+        0,
+        6.4
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_2_8",
+      "position": [
+        1.2000000000000002,
+        0,
+        6.4
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_3_8",
+      "position": [
+        0.4,
+        0,
+        6.4
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_4_8",
+      "position": [
+        -0.4,
+        0,
+        6.4
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_5_8",
+      "position": [
+        -1.2000000000000002,
+        0,
+        6.4
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_6_8",
+      "position": [
+        -2.0,
+        0,
+        6.4
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_7_8",
+      "position": [
+        -2.8000000000000003,
+        0,
+        6.4
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_0_9",
+      "position": [
+        2.8000000000000003,
+        0,
+        7.2
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_1_9",
+      "position": [
+        2.0,
+        0,
+        7.2
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_2_9",
+      "position": [
+        1.2000000000000002,
+        0,
+        7.2
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_3_9",
+      "position": [
+        0.4,
+        0,
+        7.2
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_4_9",
+      "position": [
+        -0.4,
+        0,
+        7.2
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_5_9",
+      "position": [
+        -1.2000000000000002,
+        0,
+        7.2
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_6_9",
+      "position": [
+        -2.0,
+        0,
+        7.2
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_7_9",
+      "position": [
+        -2.8000000000000003,
+        0,
+        7.2
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_0_10",
+      "position": [
+        2.8000000000000003,
+        0,
+        8.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_1_10",
+      "position": [
+        2.0,
+        0,
+        8.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_2_10",
+      "position": [
+        1.2000000000000002,
+        0,
+        8.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_3_10",
+      "position": [
+        0.4,
+        0,
+        8.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_4_10",
+      "position": [
+        -0.4,
+        0,
+        8.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_5_10",
+      "position": [
+        -1.2000000000000002,
+        0,
+        8.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_6_10",
+      "position": [
+        -2.0,
+        0,
+        8.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_7_10",
+      "position": [
+        -2.8000000000000003,
+        0,
+        8.0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_0_11",
+      "position": [
+        2.8000000000000003,
+        0,
+        8.8
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_1_11",
+      "position": [
+        2.0,
+        0,
+        8.8
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_2_11",
+      "position": [
+        1.2000000000000002,
+        0,
+        8.8
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_3_11",
+      "position": [
+        0.4,
+        0,
+        8.8
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_4_11",
+      "position": [
+        -0.4,
+        0,
+        8.8
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_5_11",
+      "position": [
+        -1.2000000000000002,
+        0,
+        8.8
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_6_11",
+      "position": [
+        -2.0,
+        0,
+        8.8
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "floor-wood",
+      "name": "Floor_7_11",
+      "position": [
+        -2.8000000000000003,
+        0,
+        8.8
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "source-tomato",
+      "name": "tomato",
+      "position": [
+        2.0,
+        0,
+        0.0
+      ],
+      "yaw": 0,
+      "station": true,
+      "kind": "tomato",
+      "grid": [
+        1,
+        0
+      ]
+    },
+    {
+      "asset": "source-cucumber",
+      "name": "cucumber",
+      "position": [
+        1.2000000000000002,
+        0,
+        0.0
+      ],
+      "yaw": 0,
+      "station": true,
+      "kind": "cucumber",
+      "grid": [
+        2,
+        0
+      ]
+    },
+    {
+      "asset": "station-prep",
+      "name": "prep",
+      "position": [
+        0.4,
+        0,
+        0.0
+      ],
+      "yaw": 0,
+      "station": true,
+      "kind": "prep",
+      "grid": [
+        3,
+        0
+      ]
+    },
+    {
+      "asset": "counter",
+      "name": "C1",
+      "position": [
+        -0.4,
+        0,
+        0.0
+      ],
+      "yaw": 0,
+      "station": true,
+      "kind": "counter",
+      "grid": [
+        4,
+        0
+      ]
+    },
+    {
+      "asset": "counter",
+      "name": "C2",
+      "position": [
+        -1.2000000000000002,
+        0,
+        0.0
+      ],
+      "yaw": 0,
+      "station": true,
+      "kind": "counter",
+      "grid": [
+        5,
+        0
+      ]
+    },
+    {
+      "asset": "counter",
+      "name": "C3",
+      "position": [
+        2.8000000000000003,
+        0,
+        0.0
+      ],
+      "yaw": 0,
+      "station": true,
+      "kind": "counter",
+      "grid": [
+        0,
+        0
+      ]
+    },
+    {
+      "asset": "station-dishes",
+      "name": "dishes",
+      "position": [
+        2.8000000000000003,
+        0,
+        1.6
+      ],
+      "yaw": -90,
+      "station": true,
+      "kind": "dishes",
+      "grid": [
+        0,
+        2
+      ]
+    },
+    {
+      "asset": "counter",
+      "name": "C4",
+      "position": [
+        2.8000000000000003,
+        0,
+        2.4000000000000004
+      ],
+      "yaw": 0,
+      "station": true,
+      "kind": "counter",
+      "grid": [
+        0,
+        3
+      ]
+    },
+    {
+      "asset": "station-sink",
+      "name": "sink",
+      "position": [
+        2.8000000000000003,
+        0,
+        3.2
+      ],
+      "yaw": -90,
+      "station": true,
+      "kind": "sink",
+      "grid": [
+        0,
+        4
+      ]
+    },
+    {
+      "asset": "station-return",
+      "name": "return",
+      "position": [
+        2.8000000000000003,
+        0,
+        4.0
+      ],
+      "yaw": -90,
+      "station": true,
+      "kind": "return",
+      "grid": [
+        0,
+        5
+      ]
+    },
+    {
+      "asset": "counter",
+      "name": "C5",
+      "position": [
+        -2.8000000000000003,
+        0,
+        0.8
+      ],
+      "yaw": 0,
+      "station": true,
+      "kind": "counter",
+      "grid": [
+        7,
+        1
+      ]
+    },
+    {
+      "asset": "counter",
+      "name": "C6",
+      "position": [
+        -2.8000000000000003,
+        0,
+        1.6
+      ],
+      "yaw": 0,
+      "station": true,
+      "kind": "counter",
+      "grid": [
+        7,
+        2
+      ]
+    },
+    {
+      "asset": "station-serve",
+      "name": "serve",
+      "position": [
+        -2.8000000000000003,
+        0,
+        2.4000000000000004
+      ],
+      "yaw": 90,
+      "station": true,
+      "kind": "serve",
+      "grid": [
+        7,
+        3
+      ]
+    },
+    {
+      "asset": "station-bin",
+      "name": "bin",
+      "position": [
+        -2.8000000000000003,
+        0,
+        4.0
+      ],
+      "yaw": 90,
+      "station": true,
+      "kind": "bin",
+      "grid": [
+        7,
+        5
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "BackWall_0",
+      "position": [
+        2.8000000000000003,
+        0,
+        -0.4
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "wall-panel",
+      "name": "BackWall_1",
+      "position": [
+        2.0,
+        0,
+        -0.4
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "wall-panel",
+      "name": "BackWall_2",
+      "position": [
+        1.2000000000000002,
+        0,
+        -0.4
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "wall-panel",
+      "name": "BackWall_3",
+      "position": [
+        0.4,
+        0,
+        -0.4
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "wall-panel",
+      "name": "BackWall_4",
+      "position": [
+        -0.4,
+        0,
+        -0.4
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "wall-panel",
+      "name": "BackWall_5",
+      "position": [
+        -1.2000000000000002,
+        0,
+        -0.4
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "wall-panel",
+      "name": "BackWall_6",
+      "position": [
+        -2.0,
+        0,
+        -0.4
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "wall-panel",
+      "name": "BackWall_7",
+      "position": [
+        -2.8000000000000003,
+        0,
+        -0.4
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "wall-panel",
+      "name": "LeftWall_0",
+      "position": [
+        3.2,
+        0,
+        0.0
+      ],
+      "yaw": -90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "RightWall_0",
+      "position": [
+        -3.2,
+        0,
+        0.0
+      ],
+      "yaw": 90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "LeftWall_1",
+      "position": [
+        3.2,
+        0,
+        0.8
+      ],
+      "yaw": -90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "RightWall_1",
+      "position": [
+        -3.2,
+        0,
+        0.8
+      ],
+      "yaw": 90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "LeftWall_2",
+      "position": [
+        3.2,
+        0,
+        1.6
+      ],
+      "yaw": -90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "RightWall_2",
+      "position": [
+        -3.2,
+        0,
+        1.6
+      ],
+      "yaw": 90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "LeftWall_3",
+      "position": [
+        3.2,
+        0,
+        2.4000000000000004
+      ],
+      "yaw": -90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "RightWall_3",
+      "position": [
+        -3.2,
+        0,
+        2.4000000000000004
+      ],
+      "yaw": 90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "LeftWall_4",
+      "position": [
+        3.2,
+        0,
+        3.2
+      ],
+      "yaw": -90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "RightWall_4",
+      "position": [
+        -3.2,
+        0,
+        3.2
+      ],
+      "yaw": 90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "LeftWall_5",
+      "position": [
+        3.2,
+        0,
+        4.0
+      ],
+      "yaw": -90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "RightWall_5",
+      "position": [
+        -3.2,
+        0,
+        4.0
+      ],
+      "yaw": 90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "LeftWall_6",
+      "position": [
+        3.2,
+        0,
+        4.800000000000001
+      ],
+      "yaw": -90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "RightWall_6",
+      "position": [
+        -3.2,
+        0,
+        4.800000000000001
+      ],
+      "yaw": 90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "LeftWall_7",
+      "position": [
+        3.2,
+        0,
+        5.6000000000000005
+      ],
+      "yaw": -90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "RightWall_7",
+      "position": [
+        -3.2,
+        0,
+        5.6000000000000005
+      ],
+      "yaw": 90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "LeftWall_8",
+      "position": [
+        3.2,
+        0,
+        6.4
+      ],
+      "yaw": -90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "RightWall_8",
+      "position": [
+        -3.2,
+        0,
+        6.4
+      ],
+      "yaw": 90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "LeftWall_9",
+      "position": [
+        3.2,
+        0,
+        7.2
+      ],
+      "yaw": -90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "LeftWall_10",
+      "position": [
+        3.2,
+        0,
+        8.0
+      ],
+      "yaw": -90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "LeftWall_11",
+      "position": [
+        3.2,
+        0,
+        8.8
+      ],
+      "yaw": -90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "wall-panel",
+      "name": "RightWall_11",
+      "position": [
+        -3.2,
+        0,
+        8.8
+      ],
+      "yaw": 90,
+      "scale": [
+        1,
+        0.35,
+        1
+      ]
+    },
+    {
+      "asset": "rail",
+      "name": "CafeBoundary_0",
+      "position": [
+        2.8000000000000003,
+        0,
+        5.48
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "rail",
+      "name": "CafeBoundary_1",
+      "position": [
+        2.0,
+        0,
+        5.48
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "rail",
+      "name": "CafeBoundary_2",
+      "position": [
+        1.2000000000000002,
+        0,
+        5.48
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "rail",
+      "name": "CafeBoundary_3",
+      "position": [
+        0.4,
+        0,
+        5.48
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "rail",
+      "name": "CafeBoundary_4",
+      "position": [
+        -0.4,
+        0,
+        5.48
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "rail",
+      "name": "CafeBoundary_5",
+      "position": [
+        -1.2000000000000002,
+        0,
+        5.48
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "rail",
+      "name": "CafeBoundary_6",
+      "position": [
+        -2.0,
+        0,
+        5.48
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "rail",
+      "name": "CafeBoundary_7",
+      "position": [
+        -2.8000000000000003,
+        0,
+        5.48
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "cafe-table",
+      "name": "Table_1",
+      "position": [
+        1.0666666666666669,
+        0,
+        7.28
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "cafe-chair",
+      "name": "Chair_0_-1",
+      "position": [
+        1.7866666666666668,
+        0,
+        7.28
+      ],
+      "yaw": -90
+    },
+    {
+      "asset": "cafe-chair",
+      "name": "Chair_0_1",
+      "position": [
+        0.3466666666666669,
+        0,
+        7.28
+      ],
+      "yaw": 90
+    },
+    {
+      "asset": "cafe-table",
+      "name": "Table_2",
+      "position": [
+        -1.0666666666666664,
+        0,
+        7.28
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "cafe-chair",
+      "name": "Chair_1_-1",
+      "position": [
+        -0.34666666666666646,
+        0,
+        7.28
+      ],
+      "yaw": -90
+    },
+    {
+      "asset": "cafe-chair",
+      "name": "Chair_1_1",
+      "position": [
+        -1.7866666666666664,
+        0,
+        7.28
+      ],
+      "yaw": 90
+    },
+    {
+      "asset": "dish-salad",
+      "name": "DiningDish_Seat_1_L",
+      "position": [
+        1.2566666666666668,
+        0.542,
+        7.28
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "dish-salad",
+      "name": "DiningDish_Seat_1_R",
+      "position": [
+        0.8766666666666669,
+        0.542,
+        7.28
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "dish-salad",
+      "name": "DiningDish_Seat_2_L",
+      "position": [
+        -0.8766666666666665,
+        0.542,
+        7.28
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "cafe-door",
+      "name": "CustomerEntrance",
+      "position": [
+        -3.2,
+        0,
+        7.6000000000000005
+      ],
+      "yaw": 90
+    },
+    {
+      "asset": "welcome-mat",
+      "name": "WelcomeMat",
+      "position": [
+        -2.5600000000000005,
+        0,
+        7.6000000000000005
+      ],
+      "yaw": -90
+    },
+    {
+      "asset": "menu-board",
+      "name": "Menu",
+      "position": [
+        -2.7200000000000006,
+        0,
+        6.120000000000001
+      ],
+      "yaw": 20
+    },
+    {
+      "asset": "cafe-bench",
+      "name": "WaitingBench",
+      "position": [
+        2.6,
+        0,
+        6.04
+      ],
+      "yaw": -90
+    },
+    {
+      "asset": "planter",
+      "name": "EntrancePlant",
+      "position": [
+        -2.64,
+        0,
+        8.92
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "planter",
+      "name": "CafePlant",
+      "position": [
+        2.68,
+        0,
+        8.88
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "window",
+      "name": "KitchenWindow_2.0",
+      "position": [
+        1.2000000000000002,
+        0,
+        -0.36000000000000004
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "window",
+      "name": "KitchenWindow_5.76",
+      "position": [
+        -1.8079999999999998,
+        0,
+        -0.36000000000000004
+      ],
+      "yaw": 0
+    }
+  ],
+  "seats": [
+    {
+      "name": "Seat_1_L",
+      "position": [
+        1.7866666666666668,
+        0.31,
+        7.28
+      ],
+      "yaw": -90,
+      "approach": [
+        1.7866666666666668,
+        0,
+        7.96
+      ],
+      "dishPosition": [
+        1.2566666666666668,
+        0.542,
+        7.28
+      ]
+    },
+    {
+      "name": "Seat_1_R",
+      "position": [
+        0.3466666666666669,
+        0.31,
+        7.28
+      ],
+      "yaw": 90,
+      "approach": [
+        0.3466666666666669,
+        0,
+        7.96
+      ],
+      "dishPosition": [
+        0.8766666666666669,
+        0.542,
+        7.28
+      ]
+    },
+    {
+      "name": "Seat_2_L",
+      "position": [
+        -0.34666666666666646,
+        0.31,
+        7.28
+      ],
+      "yaw": -90,
+      "approach": [
+        -0.34666666666666646,
+        0,
+        7.96
+      ],
+      "dishPosition": [
+        -0.8766666666666665,
+        0.542,
+        7.28
+      ]
+    },
+    {
+      "name": "Seat_2_R",
+      "position": [
+        -1.7866666666666664,
+        0.31,
+        7.28
+      ],
+      "yaw": 90,
+      "approach": [
+        -1.7866666666666664,
+        0,
+        7.96
+      ],
+      "dishPosition": [
+        -1.2566666666666664,
+        0.542,
+        7.28
+      ]
+    }
+  ],
+  "anchors": [
+    {
+      "name": "CustomerEntrance",
+      "position": [
+        -2.8000000000000003,
+        0,
+        7.6000000000000005
+      ]
+    },
+    {
+      "name": "CustomerQueue",
+      "position": [
+        -2.7200000000000006,
+        0,
+        6.5200000000000005
+      ]
+    },
+    {
+      "name": "CustomerAisleEast",
+      "position": [
+        -2.7200000000000006,
+        0,
+        8.520000000000001
+      ]
+    },
+    {
+      "name": "CustomerAisleWest",
+      "position": [
+        2.16,
+        0,
+        8.520000000000001
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "capybara-male-chef",
+      "position": [
+        -0.4,
+        0,
+        3.2
+      ],
+      "yaw": 0,
+      "pose": "idle"
+    },
+    {
+      "id": "cat-female-customer",
+      "position": [
+        1.7866666666666668,
+        0.31,
+        7.28
+      ],
+      "yaw": -90,
+      "pose": "seated",
+      "seat": "Seat_1_L"
+    },
+    {
+      "id": "dog-male-customer",
+      "position": [
+        0.3466666666666669,
+        0.31,
+        7.28
+      ],
+      "yaw": 90,
+      "pose": "seated",
+      "seat": "Seat_1_R"
+    },
+    {
+      "id": "capybara-female-customer",
+      "position": [
+        -0.34666666666666646,
+        0.31,
+        7.28
+      ],
+      "yaw": -90,
+      "pose": "seated",
+      "seat": "Seat_2_L"
+    },
+    {
+      "id": "dog-female-customer",
+      "position": [
+        -1.9200000000000004,
+        0,
+        8.64
+      ],
+      "yaw": 60,
+      "pose": "walk"
+    }
+  ],
+  "cameraTarget": [
+    0,
+    0.3,
+    4.0
+  ],
+  "cameraSize": 4.224000000000001,
+  "kitchenRules": {
+    "universalDish": true,
+    "freeCounterCount": 6,
+    "railsBlockWalking": true,
+    "railsAllowIngredientThrows": true,
+    "customerAreaSeparate": true
+  }
+}

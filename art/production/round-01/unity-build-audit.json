@@ -1,0 +1,13 @@
+{
+    "prefabCount": 60,
+    "characterCount": 12,
+    "sceneCount": 5,
+    "unityVersion": "6000.6.0f1",
+    "scenes": [
+        "Assets/BaraKitchen/Scenes/Level_01.unity",
+        "Assets/BaraKitchen/Scenes/Level_02.unity",
+        "Assets/BaraKitchen/Scenes/Level_03.unity",
+        "Assets/BaraKitchen/Scenes/Level_04.unity"
+    ],
+    "rigStatus": "Approximate local art-review rigs; not final production animation."
+}

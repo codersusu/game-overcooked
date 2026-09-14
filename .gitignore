@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+.local/
+__pycache__/
+.DS_Store
+art/experiments/*/motion-frames/
+node_modules/
+*.app/
+*.log
+*.tmp
+*.key
+*.pem
+Point\ Inf*
+point-inf*
+art/experiments/

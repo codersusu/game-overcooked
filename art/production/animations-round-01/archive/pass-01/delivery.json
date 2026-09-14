@@ -1,0 +1,12 @@
+{
+  "shared_unity_clips": 11,
+  "character_prefabs": 12,
+  "review_videos": 15,
+  "all_videos_decode": true,
+  "native_pose_comparisons": 132,
+  "dining_depth_increase_percent": 40,
+  "kitchen_station_transforms_unchanged": true,
+  "additional_external_api_calls": 0,
+  "video_bytes": 5650864,
+  "notes": "First animation pass: final sleeve/skin and prop contact cleanup remains. See README.md."
+}

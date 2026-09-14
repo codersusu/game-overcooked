@@ -1,0 +1,752 @@
+{
+  "models": 12,
+  "shared_native_clips": 11,
+  "model_action_combinations": 132,
+  "review_videos": 133,
+  "coverage": [
+    {
+      "animal": "capybara-female-chef",
+      "prefab": "Unity/BaraKitchen/Assets/BaraKitchen/Characters/Prefabs/capybara-female-chef.prefab",
+      "controller": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Character.controller",
+      "motions": [
+        {
+          "action": "ChefIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/ChefIdle.anim",
+          "video": "capybara-female-chef--chefidle.mp4"
+        },
+        {
+          "action": "Walk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Walk.anim",
+          "video": "capybara-female-chef--walk.mp4"
+        },
+        {
+          "action": "Dash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Dash.anim",
+          "video": "capybara-female-chef--dash.mp4"
+        },
+        {
+          "action": "CarryIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryIdle.anim",
+          "video": "capybara-female-chef--carryidle.mp4"
+        },
+        {
+          "action": "CarryWalk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryWalk.anim",
+          "video": "capybara-female-chef--carrywalk.mp4"
+        },
+        {
+          "action": "Throw",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Throw.anim",
+          "video": "capybara-female-chef--throw.mp4"
+        },
+        {
+          "action": "Chop",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Chop.anim",
+          "video": "capybara-female-chef--chop.mp4"
+        },
+        {
+          "action": "Wash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Wash.anim",
+          "video": "capybara-female-chef--wash.mp4"
+        },
+        {
+          "action": "Extinguish",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Extinguish.anim",
+          "video": "capybara-female-chef--extinguish.mp4"
+        },
+        {
+          "action": "CustomerIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerIdle.anim",
+          "video": "capybara-female-chef--customeridle.mp4"
+        },
+        {
+          "action": "CustomerEat",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerEat.anim",
+          "video": "capybara-female-chef--customereat.mp4"
+        }
+      ]
+    },
+    {
+      "animal": "capybara-female-customer",
+      "prefab": "Unity/BaraKitchen/Assets/BaraKitchen/Characters/Prefabs/capybara-female-customer.prefab",
+      "controller": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Character.controller",
+      "motions": [
+        {
+          "action": "CustomerEat",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerEat.anim",
+          "video": "customereat.mp4"
+        },
+        {
+          "action": "ChefIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/ChefIdle.anim",
+          "video": "capybara-female-customer--chefidle.mp4"
+        },
+        {
+          "action": "Walk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Walk.anim",
+          "video": "capybara-female-customer--walk.mp4"
+        },
+        {
+          "action": "Dash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Dash.anim",
+          "video": "capybara-female-customer--dash.mp4"
+        },
+        {
+          "action": "CarryIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryIdle.anim",
+          "video": "capybara-female-customer--carryidle.mp4"
+        },
+        {
+          "action": "CarryWalk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryWalk.anim",
+          "video": "capybara-female-customer--carrywalk.mp4"
+        },
+        {
+          "action": "Throw",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Throw.anim",
+          "video": "capybara-female-customer--throw.mp4"
+        },
+        {
+          "action": "Chop",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Chop.anim",
+          "video": "capybara-female-customer--chop.mp4"
+        },
+        {
+          "action": "Wash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Wash.anim",
+          "video": "capybara-female-customer--wash.mp4"
+        },
+        {
+          "action": "Extinguish",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Extinguish.anim",
+          "video": "capybara-female-customer--extinguish.mp4"
+        },
+        {
+          "action": "CustomerIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerIdle.anim",
+          "video": "capybara-female-customer--customeridle.mp4"
+        }
+      ]
+    },
+    {
+      "animal": "capybara-male-chef",
+      "prefab": "Unity/BaraKitchen/Assets/BaraKitchen/Characters/Prefabs/capybara-male-chef.prefab",
+      "controller": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Character.controller",
+      "motions": [
+        {
+          "action": "ChefIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/ChefIdle.anim",
+          "video": "chefidle.mp4"
+        },
+        {
+          "action": "Walk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Walk.anim",
+          "video": "walk.mp4"
+        },
+        {
+          "action": "Dash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Dash.anim",
+          "video": "dash.mp4"
+        },
+        {
+          "action": "CarryIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryIdle.anim",
+          "video": "carryidle.mp4"
+        },
+        {
+          "action": "CarryWalk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryWalk.anim",
+          "video": "carrywalk.mp4"
+        },
+        {
+          "action": "Throw",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Throw.anim",
+          "video": "throw.mp4"
+        },
+        {
+          "action": "Chop",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Chop.anim",
+          "video": "chop.mp4"
+        },
+        {
+          "action": "Wash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Wash.anim",
+          "video": "wash.mp4"
+        },
+        {
+          "action": "Extinguish",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Extinguish.anim",
+          "video": "extinguish.mp4"
+        },
+        {
+          "action": "CustomerIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerIdle.anim",
+          "video": "capybara-male-chef--customeridle.mp4"
+        },
+        {
+          "action": "CustomerEat",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerEat.anim",
+          "video": "capybara-male-chef--customereat.mp4"
+        }
+      ]
+    },
+    {
+      "animal": "capybara-male-customer",
+      "prefab": "Unity/BaraKitchen/Assets/BaraKitchen/Characters/Prefabs/capybara-male-customer.prefab",
+      "controller": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Character.controller",
+      "motions": [
+        {
+          "action": "ChefIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/ChefIdle.anim",
+          "video": "capybara-male-customer--chefidle.mp4"
+        },
+        {
+          "action": "Walk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Walk.anim",
+          "video": "capybara-male-customer--walk.mp4"
+        },
+        {
+          "action": "Dash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Dash.anim",
+          "video": "capybara-male-customer--dash.mp4"
+        },
+        {
+          "action": "CarryIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryIdle.anim",
+          "video": "capybara-male-customer--carryidle.mp4"
+        },
+        {
+          "action": "CarryWalk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryWalk.anim",
+          "video": "capybara-male-customer--carrywalk.mp4"
+        },
+        {
+          "action": "Throw",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Throw.anim",
+          "video": "capybara-male-customer--throw.mp4"
+        },
+        {
+          "action": "Chop",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Chop.anim",
+          "video": "capybara-male-customer--chop.mp4"
+        },
+        {
+          "action": "Wash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Wash.anim",
+          "video": "capybara-male-customer--wash.mp4"
+        },
+        {
+          "action": "Extinguish",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Extinguish.anim",
+          "video": "capybara-male-customer--extinguish.mp4"
+        },
+        {
+          "action": "CustomerIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerIdle.anim",
+          "video": "capybara-male-customer--customeridle.mp4"
+        },
+        {
+          "action": "CustomerEat",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerEat.anim",
+          "video": "capybara-male-customer--customereat.mp4"
+        }
+      ]
+    },
+    {
+      "animal": "cat-female-chef",
+      "prefab": "Unity/BaraKitchen/Assets/BaraKitchen/Characters/Prefabs/cat-female-chef.prefab",
+      "controller": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Character.controller",
+      "motions": [
+        {
+          "action": "ChefIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/ChefIdle.anim",
+          "video": "cat-female-chef--chefidle.mp4"
+        },
+        {
+          "action": "Walk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Walk.anim",
+          "video": "cat-female-chef--walk.mp4"
+        },
+        {
+          "action": "Dash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Dash.anim",
+          "video": "cat-female-chef--dash.mp4"
+        },
+        {
+          "action": "CarryIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryIdle.anim",
+          "video": "cat-female-chef--carryidle.mp4"
+        },
+        {
+          "action": "CarryWalk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryWalk.anim",
+          "video": "cat-female-chef--carrywalk.mp4"
+        },
+        {
+          "action": "Throw",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Throw.anim",
+          "video": "cat-female-chef--throw.mp4"
+        },
+        {
+          "action": "Chop",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Chop.anim",
+          "video": "cat-female-chef--chop.mp4"
+        },
+        {
+          "action": "Wash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Wash.anim",
+          "video": "cat-female-chef--wash.mp4"
+        },
+        {
+          "action": "Extinguish",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Extinguish.anim",
+          "video": "cat-female-chef--extinguish.mp4"
+        },
+        {
+          "action": "CustomerIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerIdle.anim",
+          "video": "cat-female-chef--customeridle.mp4"
+        },
+        {
+          "action": "CustomerEat",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerEat.anim",
+          "video": "cat-female-chef--customereat.mp4"
+        }
+      ]
+    },
+    {
+      "animal": "cat-female-customer",
+      "prefab": "Unity/BaraKitchen/Assets/BaraKitchen/Characters/Prefabs/cat-female-customer.prefab",
+      "controller": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Character.controller",
+      "motions": [
+        {
+          "action": "CustomerIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerIdle.anim",
+          "video": "customeridle.mp4"
+        },
+        {
+          "action": "ChefIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/ChefIdle.anim",
+          "video": "cat-female-customer--chefidle.mp4"
+        },
+        {
+          "action": "Walk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Walk.anim",
+          "video": "cat-female-customer--walk.mp4"
+        },
+        {
+          "action": "Dash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Dash.anim",
+          "video": "cat-female-customer--dash.mp4"
+        },
+        {
+          "action": "CarryIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryIdle.anim",
+          "video": "cat-female-customer--carryidle.mp4"
+        },
+        {
+          "action": "CarryWalk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryWalk.anim",
+          "video": "cat-female-customer--carrywalk.mp4"
+        },
+        {
+          "action": "Throw",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Throw.anim",
+          "video": "cat-female-customer--throw.mp4"
+        },
+        {
+          "action": "Chop",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Chop.anim",
+          "video": "cat-female-customer--chop.mp4"
+        },
+        {
+          "action": "Wash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Wash.anim",
+          "video": "cat-female-customer--wash.mp4"
+        },
+        {
+          "action": "Extinguish",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Extinguish.anim",
+          "video": "cat-female-customer--extinguish.mp4"
+        },
+        {
+          "action": "CustomerEat",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerEat.anim",
+          "video": "cat-female-customer--customereat.mp4"
+        }
+      ]
+    },
+    {
+      "animal": "cat-male-chef",
+      "prefab": "Unity/BaraKitchen/Assets/BaraKitchen/Characters/Prefabs/cat-male-chef.prefab",
+      "controller": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Character.controller",
+      "motions": [
+        {
+          "action": "CarryWalk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryWalk.anim",
+          "video": "cat-carry.mp4"
+        },
+        {
+          "action": "ChefIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/ChefIdle.anim",
+          "video": "cat-male-chef--chefidle.mp4"
+        },
+        {
+          "action": "Walk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Walk.anim",
+          "video": "cat-male-chef--walk.mp4"
+        },
+        {
+          "action": "Dash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Dash.anim",
+          "video": "cat-male-chef--dash.mp4"
+        },
+        {
+          "action": "CarryIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryIdle.anim",
+          "video": "cat-male-chef--carryidle.mp4"
+        },
+        {
+          "action": "Throw",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Throw.anim",
+          "video": "cat-male-chef--throw.mp4"
+        },
+        {
+          "action": "Chop",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Chop.anim",
+          "video": "cat-male-chef--chop.mp4"
+        },
+        {
+          "action": "Wash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Wash.anim",
+          "video": "cat-male-chef--wash.mp4"
+        },
+        {
+          "action": "Extinguish",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Extinguish.anim",
+          "video": "cat-male-chef--extinguish.mp4"
+        },
+        {
+          "action": "CustomerIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerIdle.anim",
+          "video": "cat-male-chef--customeridle.mp4"
+        },
+        {
+          "action": "CustomerEat",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerEat.anim",
+          "video": "cat-male-chef--customereat.mp4"
+        }
+      ]
+    },
+    {
+      "animal": "cat-male-customer",
+      "prefab": "Unity/BaraKitchen/Assets/BaraKitchen/Characters/Prefabs/cat-male-customer.prefab",
+      "controller": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Character.controller",
+      "motions": [
+        {
+          "action": "ChefIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/ChefIdle.anim",
+          "video": "cat-male-customer--chefidle.mp4"
+        },
+        {
+          "action": "Walk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Walk.anim",
+          "video": "cat-male-customer--walk.mp4"
+        },
+        {
+          "action": "Dash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Dash.anim",
+          "video": "cat-male-customer--dash.mp4"
+        },
+        {
+          "action": "CarryIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryIdle.anim",
+          "video": "cat-male-customer--carryidle.mp4"
+        },
+        {
+          "action": "CarryWalk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryWalk.anim",
+          "video": "cat-male-customer--carrywalk.mp4"
+        },
+        {
+          "action": "Throw",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Throw.anim",
+          "video": "cat-male-customer--throw.mp4"
+        },
+        {
+          "action": "Chop",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Chop.anim",
+          "video": "cat-male-customer--chop.mp4"
+        },
+        {
+          "action": "Wash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Wash.anim",
+          "video": "cat-male-customer--wash.mp4"
+        },
+        {
+          "action": "Extinguish",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Extinguish.anim",
+          "video": "cat-male-customer--extinguish.mp4"
+        },
+        {
+          "action": "CustomerIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerIdle.anim",
+          "video": "cat-male-customer--customeridle.mp4"
+        },
+        {
+          "action": "CustomerEat",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerEat.anim",
+          "video": "cat-male-customer--customereat.mp4"
+        }
+      ]
+    },
+    {
+      "animal": "dog-female-chef",
+      "prefab": "Unity/BaraKitchen/Assets/BaraKitchen/Characters/Prefabs/dog-female-chef.prefab",
+      "controller": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Character.controller",
+      "motions": [
+        {
+          "action": "Wash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Wash.anim",
+          "video": "dog-wash.mp4"
+        },
+        {
+          "action": "ChefIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/ChefIdle.anim",
+          "video": "dog-female-chef--chefidle.mp4"
+        },
+        {
+          "action": "Walk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Walk.anim",
+          "video": "dog-female-chef--walk.mp4"
+        },
+        {
+          "action": "Dash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Dash.anim",
+          "video": "dog-female-chef--dash.mp4"
+        },
+        {
+          "action": "CarryIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryIdle.anim",
+          "video": "dog-female-chef--carryidle.mp4"
+        },
+        {
+          "action": "CarryWalk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryWalk.anim",
+          "video": "dog-female-chef--carrywalk.mp4"
+        },
+        {
+          "action": "Throw",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Throw.anim",
+          "video": "dog-female-chef--throw.mp4"
+        },
+        {
+          "action": "Chop",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Chop.anim",
+          "video": "dog-female-chef--chop.mp4"
+        },
+        {
+          "action": "Extinguish",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Extinguish.anim",
+          "video": "dog-female-chef--extinguish.mp4"
+        },
+        {
+          "action": "CustomerIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerIdle.anim",
+          "video": "dog-female-chef--customeridle.mp4"
+        },
+        {
+          "action": "CustomerEat",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerEat.anim",
+          "video": "dog-female-chef--customereat.mp4"
+        }
+      ]
+    },
+    {
+      "animal": "dog-female-customer",
+      "prefab": "Unity/BaraKitchen/Assets/BaraKitchen/Characters/Prefabs/dog-female-customer.prefab",
+      "controller": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Character.controller",
+      "motions": [
+        {
+          "action": "ChefIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/ChefIdle.anim",
+          "video": "dog-female-customer--chefidle.mp4"
+        },
+        {
+          "action": "Walk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Walk.anim",
+          "video": "dog-female-customer--walk.mp4"
+        },
+        {
+          "action": "Dash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Dash.anim",
+          "video": "dog-female-customer--dash.mp4"
+        },
+        {
+          "action": "CarryIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryIdle.anim",
+          "video": "dog-female-customer--carryidle.mp4"
+        },
+        {
+          "action": "CarryWalk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryWalk.anim",
+          "video": "dog-female-customer--carrywalk.mp4"
+        },
+        {
+          "action": "Throw",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Throw.anim",
+          "video": "dog-female-customer--throw.mp4"
+        },
+        {
+          "action": "Chop",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Chop.anim",
+          "video": "dog-female-customer--chop.mp4"
+        },
+        {
+          "action": "Wash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Wash.anim",
+          "video": "dog-female-customer--wash.mp4"
+        },
+        {
+          "action": "Extinguish",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Extinguish.anim",
+          "video": "dog-female-customer--extinguish.mp4"
+        },
+        {
+          "action": "CustomerIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerIdle.anim",
+          "video": "dog-female-customer--customeridle.mp4"
+        },
+        {
+          "action": "CustomerEat",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerEat.anim",
+          "video": "dog-female-customer--customereat.mp4"
+        }
+      ]
+    },
+    {
+      "animal": "dog-male-chef",
+      "prefab": "Unity/BaraKitchen/Assets/BaraKitchen/Characters/Prefabs/dog-male-chef.prefab",
+      "controller": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Character.controller",
+      "motions": [
+        {
+          "action": "ChefIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/ChefIdle.anim",
+          "video": "dog-male-chef--chefidle.mp4"
+        },
+        {
+          "action": "Walk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Walk.anim",
+          "video": "dog-male-chef--walk.mp4"
+        },
+        {
+          "action": "Dash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Dash.anim",
+          "video": "dog-male-chef--dash.mp4"
+        },
+        {
+          "action": "CarryIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryIdle.anim",
+          "video": "dog-male-chef--carryidle.mp4"
+        },
+        {
+          "action": "CarryWalk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryWalk.anim",
+          "video": "dog-male-chef--carrywalk.mp4"
+        },
+        {
+          "action": "Throw",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Throw.anim",
+          "video": "dog-male-chef--throw.mp4"
+        },
+        {
+          "action": "Chop",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Chop.anim",
+          "video": "dog-male-chef--chop.mp4"
+        },
+        {
+          "action": "Wash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Wash.anim",
+          "video": "dog-male-chef--wash.mp4"
+        },
+        {
+          "action": "Extinguish",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Extinguish.anim",
+          "video": "dog-male-chef--extinguish.mp4"
+        },
+        {
+          "action": "CustomerIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerIdle.anim",
+          "video": "dog-male-chef--customeridle.mp4"
+        },
+        {
+          "action": "CustomerEat",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerEat.anim",
+          "video": "dog-male-chef--customereat.mp4"
+        }
+      ]
+    },
+    {
+      "animal": "dog-male-customer",
+      "prefab": "Unity/BaraKitchen/Assets/BaraKitchen/Characters/Prefabs/dog-male-customer.prefab",
+      "controller": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Character.controller",
+      "motions": [
+        {
+          "action": "CustomerIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerIdle.anim",
+          "video": "dog-seated.mp4"
+        },
+        {
+          "action": "ChefIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/ChefIdle.anim",
+          "video": "dog-male-customer--chefidle.mp4"
+        },
+        {
+          "action": "Walk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Walk.anim",
+          "video": "dog-male-customer--walk.mp4"
+        },
+        {
+          "action": "Dash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Dash.anim",
+          "video": "dog-male-customer--dash.mp4"
+        },
+        {
+          "action": "CarryIdle",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryIdle.anim",
+          "video": "dog-male-customer--carryidle.mp4"
+        },
+        {
+          "action": "CarryWalk",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CarryWalk.anim",
+          "video": "dog-male-customer--carrywalk.mp4"
+        },
+        {
+          "action": "Throw",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Throw.anim",
+          "video": "dog-male-customer--throw.mp4"
+        },
+        {
+          "action": "Chop",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Chop.anim",
+          "video": "dog-male-customer--chop.mp4"
+        },
+        {
+          "action": "Wash",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Wash.anim",
+          "video": "dog-male-customer--wash.mp4"
+        },
+        {
+          "action": "Extinguish",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/Extinguish.anim",
+          "video": "dog-male-customer--extinguish.mp4"
+        },
+        {
+          "action": "CustomerEat",
+          "clip": "Unity/BaraKitchen/Assets/BaraKitchen/Animation/Clips/CustomerEat.anim",
+          "video": "dog-male-customer--customereat.mp4"
+        }
+      ]
+    }
+  ]
+}

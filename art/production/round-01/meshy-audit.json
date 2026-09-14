@@ -1,0 +1,230 @@
+[
+  {
+    "character": "capybara-female-chef",
+    "model": {
+      "stage": "model",
+      "id": "01a09c3a-0e13-75f2-966d-5b22dc31cebe",
+      "status": "SUCCEEDED",
+      "progress": 100,
+      "consumed_credits": 30,
+      "task_error": null
+    },
+    "rig": {
+      "stage": "rig",
+      "status": "FAILED",
+      "consumed_credits": 0,
+      "task_error": {
+        "message": "Meshy HTTP 422: {\"message\":\"Pose estimation failed, please provide a valid model\"}"
+      }
+    }
+  },
+  {
+    "character": "capybara-female-customer",
+    "model": {
+      "stage": "model",
+      "id": "01a09c3a-2743-7561-b835-a9739700c553",
+      "status": "SUCCEEDED",
+      "progress": 100,
+      "consumed_credits": 30,
+      "task_error": null
+    },
+    "rig": {
+      "stage": "rig",
+      "status": "FAILED",
+      "consumed_credits": 0,
+      "task_error": {
+        "message": "Meshy HTTP 422: {\"message\":\"Pose estimation failed, please provide a valid model\"}"
+      }
+    }
+  },
+  {
+    "character": "capybara-male-chef",
+    "model": {
+      "stage": "model",
+      "id": "01a09c34-b3f8-7698-9989-6d1fa749acc4",
+      "status": "SUCCEEDED",
+      "progress": 100,
+      "consumed_credits": 30,
+      "task_error": null
+    },
+    "rig": {
+      "stage": "rig",
+      "status": "FAILED",
+      "consumed_credits": 0,
+      "task_error": {
+        "message": "Meshy HTTP 422: Pose estimation failed, please provide a valid model"
+      }
+    }
+  },
+  {
+    "character": "capybara-male-customer",
+    "model": {
+      "stage": "model",
+      "id": "01a09c3a-1a51-74e7-b87a-03811c6a0e23",
+      "status": "SUCCEEDED",
+      "progress": 100,
+      "consumed_credits": 30,
+      "task_error": null
+    },
+    "rig": {
+      "stage": "rig",
+      "status": "FAILED",
+      "consumed_credits": 0,
+      "task_error": {
+        "message": "Meshy HTTP 422: {\"message\":\"Pose estimation failed, please provide a valid model\"}"
+      }
+    }
+  },
+  {
+    "character": "cat-female-chef",
+    "model": {
+      "stage": "model",
+      "id": "01a09c3a-43fd-70c8-8978-f11e14537cdf",
+      "status": "SUCCEEDED",
+      "progress": 100,
+      "consumed_credits": 30,
+      "task_error": null
+    },
+    "rig": {
+      "stage": "rig",
+      "id": "01a09c41-c8bc-7319-83f0-50c966438414",
+      "status": "SUCCEEDED",
+      "progress": 100,
+      "consumed_credits": 5,
+      "task_error": null
+    }
+  },
+  {
+    "character": "cat-female-customer",
+    "model": {
+      "stage": "model",
+      "id": "01a09c3a-5f28-72ce-b663-173e5e11d248",
+      "status": "SUCCEEDED",
+      "progress": 100,
+      "consumed_credits": 30,
+      "task_error": null
+    },
+    "rig": {
+      "stage": "rig",
+      "id": "01a09c40-3f76-767f-a485-7616d8ecd7d3",
+      "status": "SUCCEEDED",
+      "progress": 100,
+      "consumed_credits": 5,
+      "task_error": null
+    }
+  },
+  {
+    "character": "cat-male-chef",
+    "model": {
+      "stage": "model",
+      "id": "01a09c3a-3505-73d7-bd45-0689b513720e",
+      "status": "SUCCEEDED",
+      "progress": 100,
+      "consumed_credits": 30,
+      "task_error": null
+    },
+    "rig": {
+      "stage": "rig",
+      "status": "FAILED",
+      "consumed_credits": 0,
+      "task_error": {
+        "message": "Meshy HTTP 422: {\"message\":\"Pose estimation failed, please provide a valid model\"}"
+      }
+    }
+  },
+  {
+    "character": "cat-male-customer",
+    "model": {
+      "stage": "model",
+      "id": "01a09c3a-50e5-75c0-a432-2770eb8ff539",
+      "status": "SUCCEEDED",
+      "progress": 100,
+      "consumed_credits": 30,
+      "task_error": null
+    },
+    "rig": {
+      "stage": "rig",
+      "status": "FAILED",
+      "consumed_credits": 0,
+      "task_error": {
+        "message": "Meshy HTTP 422: {\"message\":\"Pose estimation failed, please provide a valid model\"}"
+      }
+    }
+  },
+  {
+    "character": "dog-female-chef",
+    "model": {
+      "stage": "model",
+      "id": "01a09c3a-7b3b-7666-86e2-f926ca9c6a5f",
+      "status": "SUCCEEDED",
+      "progress": 100,
+      "consumed_credits": 30,
+      "task_error": null
+    },
+    "rig": {
+      "stage": "rig",
+      "id": "01a09c40-f032-7748-9779-49d675a0b837",
+      "status": "SUCCEEDED",
+      "progress": 100,
+      "consumed_credits": 5,
+      "task_error": null
+    }
+  },
+  {
+    "character": "dog-female-customer",
+    "model": {
+      "stage": "model",
+      "id": "01a09c3a-943b-70db-8911-4bca825d9014",
+      "status": "SUCCEEDED",
+      "progress": 100,
+      "consumed_credits": 30,
+      "task_error": null
+    },
+    "rig": {
+      "stage": "rig",
+      "status": "FAILED",
+      "consumed_credits": 0,
+      "task_error": {
+        "message": "Meshy HTTP 422: {\"message\":\"Pose estimation failed, please provide a valid model\"}"
+      }
+    }
+  },
+  {
+    "character": "dog-male-chef",
+    "model": {
+      "stage": "model",
+      "id": "01a09c3a-6de3-74cc-a0ea-cb70e51735d4",
+      "status": "SUCCEEDED",
+      "progress": 100,
+      "consumed_credits": 30,
+      "task_error": null
+    },
+    "rig": {
+      "stage": "rig",
+      "id": "01a09c3f-c30a-7393-8257-bc56849bd063",
+      "status": "SUCCEEDED",
+      "progress": 100,
+      "consumed_credits": 5,
+      "task_error": null
+    }
+  },
+  {
+    "character": "dog-male-customer",
+    "model": {
+      "stage": "model",
+      "id": "01a09c3a-87bf-74da-9347-38434741ec81",
+      "status": "SUCCEEDED",
+      "progress": 100,
+      "consumed_credits": 30,
+      "task_error": null
+    },
+    "rig": {
+      "stage": "rig",
+      "id": "01a09c41-22ba-754c-b5df-2b8917fc132d",
+      "status": "SUCCEEDED",
+      "progress": 100,
+      "consumed_credits": 5,
+      "task_error": null
+    }
+  }
+]

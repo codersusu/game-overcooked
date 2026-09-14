@@ -1,0 +1,724 @@
+{
+    "samples": [
+        {
+            "animal": "capybara-female-chef",
+            "action": "ChefIdle",
+            "rightPawMeters": 0.24771733582019806,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-female-chef",
+            "action": "Walk",
+            "rightPawMeters": 0.1687258929014206,
+            "leftFootMeters": 0.21968577802181244
+        },
+        {
+            "animal": "capybara-female-chef",
+            "action": "Dash",
+            "rightPawMeters": 0.1500951051712036,
+            "leftFootMeters": 0.19246795773506165
+        },
+        {
+            "animal": "capybara-female-chef",
+            "action": "CarryWalk",
+            "rightPawMeters": 0.0570625476539135,
+            "leftFootMeters": 0.2192026823759079
+        },
+        {
+            "animal": "capybara-female-chef",
+            "action": "Throw",
+            "rightPawMeters": 0.3430904448032379,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-female-chef",
+            "action": "Chop",
+            "rightPawMeters": 0.1133079081773758,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-female-chef",
+            "action": "Wash",
+            "rightPawMeters": 0.18010391294956207,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-female-chef",
+            "action": "Extinguish",
+            "rightPawMeters": 0.19024904072284698,
+            "leftFootMeters": 0.10385359078645706
+        },
+        {
+            "animal": "capybara-female-chef",
+            "action": "CustomerIdle",
+            "rightPawMeters": 0.24771733582019806,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-female-chef",
+            "action": "CustomerEat",
+            "rightPawMeters": 0.2968194782733917,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-female-customer",
+            "action": "ChefIdle",
+            "rightPawMeters": 0.2975936830043793,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-female-customer",
+            "action": "Walk",
+            "rightPawMeters": 0.2720103859901428,
+            "leftFootMeters": 0.221116304397583
+        },
+        {
+            "animal": "capybara-female-customer",
+            "action": "Dash",
+            "rightPawMeters": 0.2413102090358734,
+            "leftFootMeters": 0.1951712667942047
+        },
+        {
+            "animal": "capybara-female-customer",
+            "action": "CarryWalk",
+            "rightPawMeters": 0.025782648473978043,
+            "leftFootMeters": 0.22063381969928741
+        },
+        {
+            "animal": "capybara-female-customer",
+            "action": "Throw",
+            "rightPawMeters": 0.4717947542667389,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-female-customer",
+            "action": "Chop",
+            "rightPawMeters": 0.14392736554145813,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-female-customer",
+            "action": "Wash",
+            "rightPawMeters": 0.21709872782230377,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-female-customer",
+            "action": "Extinguish",
+            "rightPawMeters": 0.1934739053249359,
+            "leftFootMeters": 0.09607300907373428
+        },
+        {
+            "animal": "capybara-female-customer",
+            "action": "CustomerIdle",
+            "rightPawMeters": 0.2975936830043793,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-female-customer",
+            "action": "CustomerEat",
+            "rightPawMeters": 0.34448644518852234,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-male-chef",
+            "action": "ChefIdle",
+            "rightPawMeters": 0.27349019050598145,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-male-chef",
+            "action": "Walk",
+            "rightPawMeters": 0.24174760282039642,
+            "leftFootMeters": 0.21287500858306885
+        },
+        {
+            "animal": "capybara-male-chef",
+            "action": "Dash",
+            "rightPawMeters": 0.21926333010196686,
+            "leftFootMeters": 0.18828830122947693
+        },
+        {
+            "animal": "capybara-male-chef",
+            "action": "CarryWalk",
+            "rightPawMeters": 0.02170856110751629,
+            "leftFootMeters": 0.21239115297794342
+        },
+        {
+            "animal": "capybara-male-chef",
+            "action": "Throw",
+            "rightPawMeters": 0.38570067286491394,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-male-chef",
+            "action": "Chop",
+            "rightPawMeters": 0.10254822671413422,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-male-chef",
+            "action": "Wash",
+            "rightPawMeters": 0.1792597472667694,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-male-chef",
+            "action": "Extinguish",
+            "rightPawMeters": 0.17634668946266174,
+            "leftFootMeters": 0.09955330193042755
+        },
+        {
+            "animal": "capybara-male-chef",
+            "action": "CustomerIdle",
+            "rightPawMeters": 0.27349019050598145,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-male-chef",
+            "action": "CustomerEat",
+            "rightPawMeters": 0.28681987524032593,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-male-customer",
+            "action": "ChefIdle",
+            "rightPawMeters": 0.24800275266170502,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-male-customer",
+            "action": "Walk",
+            "rightPawMeters": 0.25727009773254395,
+            "leftFootMeters": 0.20902448892593384
+        },
+        {
+            "animal": "capybara-male-customer",
+            "action": "Dash",
+            "rightPawMeters": 0.23559688031673431,
+            "leftFootMeters": 0.18636372685432434
+        },
+        {
+            "animal": "capybara-male-customer",
+            "action": "CarryWalk",
+            "rightPawMeters": 0.031007248908281326,
+            "leftFootMeters": 0.20855194330215454
+        },
+        {
+            "animal": "capybara-male-customer",
+            "action": "Throw",
+            "rightPawMeters": 0.37757864594459534,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-male-customer",
+            "action": "Chop",
+            "rightPawMeters": 0.13080644607543945,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-male-customer",
+            "action": "Wash",
+            "rightPawMeters": 0.206744983792305,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-male-customer",
+            "action": "Extinguish",
+            "rightPawMeters": 0.1693425476551056,
+            "leftFootMeters": 0.09387314319610596
+        },
+        {
+            "animal": "capybara-male-customer",
+            "action": "CustomerIdle",
+            "rightPawMeters": 0.24800275266170502,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "capybara-male-customer",
+            "action": "CustomerEat",
+            "rightPawMeters": 0.29895317554473877,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-female-chef",
+            "action": "ChefIdle",
+            "rightPawMeters": 0.2655075192451477,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-female-chef",
+            "action": "Walk",
+            "rightPawMeters": 0.1610710173845291,
+            "leftFootMeters": 0.2093183845281601
+        },
+        {
+            "animal": "cat-female-chef",
+            "action": "Dash",
+            "rightPawMeters": 0.14641225337982178,
+            "leftFootMeters": 0.18356655538082123
+        },
+        {
+            "animal": "cat-female-chef",
+            "action": "CarryWalk",
+            "rightPawMeters": 0.0871708020567894,
+            "leftFootMeters": 0.20886395871639252
+        },
+        {
+            "animal": "cat-female-chef",
+            "action": "Throw",
+            "rightPawMeters": 0.313704252243042,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-female-chef",
+            "action": "Chop",
+            "rightPawMeters": 0.09478370100259781,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-female-chef",
+            "action": "Wash",
+            "rightPawMeters": 0.15300264954566956,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-female-chef",
+            "action": "Extinguish",
+            "rightPawMeters": 0.19072182476520538,
+            "leftFootMeters": 0.10613260418176651
+        },
+        {
+            "animal": "cat-female-chef",
+            "action": "CustomerIdle",
+            "rightPawMeters": 0.2655075192451477,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-female-chef",
+            "action": "CustomerEat",
+            "rightPawMeters": 0.2884357273578644,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-female-customer",
+            "action": "ChefIdle",
+            "rightPawMeters": 0.22662635147571564,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-female-customer",
+            "action": "Walk",
+            "rightPawMeters": 0.06894279271364212,
+            "leftFootMeters": 0.20939837396144867
+        },
+        {
+            "animal": "cat-female-customer",
+            "action": "Dash",
+            "rightPawMeters": 0.060485221445560455,
+            "leftFootMeters": 0.18211345374584198
+        },
+        {
+            "animal": "cat-female-customer",
+            "action": "CarryWalk",
+            "rightPawMeters": 0.11735288053750992,
+            "leftFootMeters": 0.20892441272735596
+        },
+        {
+            "animal": "cat-female-customer",
+            "action": "Throw",
+            "rightPawMeters": 0.2733222246170044,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-female-customer",
+            "action": "Chop",
+            "rightPawMeters": 0.11086788773536682,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-female-customer",
+            "action": "Wash",
+            "rightPawMeters": 0.1687498390674591,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-female-customer",
+            "action": "Extinguish",
+            "rightPawMeters": 0.19595885276794434,
+            "leftFootMeters": 0.10256937146186829
+        },
+        {
+            "animal": "cat-female-customer",
+            "action": "CustomerIdle",
+            "rightPawMeters": 0.22662635147571564,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-female-customer",
+            "action": "CustomerEat",
+            "rightPawMeters": 0.276873916387558,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-male-chef",
+            "action": "ChefIdle",
+            "rightPawMeters": 0.26329684257507324,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-male-chef",
+            "action": "Walk",
+            "rightPawMeters": 0.17533954977989197,
+            "leftFootMeters": 0.2446354329586029
+        },
+        {
+            "animal": "cat-male-chef",
+            "action": "Dash",
+            "rightPawMeters": 0.15492431819438934,
+            "leftFootMeters": 0.2144821584224701
+        },
+        {
+            "animal": "cat-male-chef",
+            "action": "CarryWalk",
+            "rightPawMeters": 0.059903617948293686,
+            "leftFootMeters": 0.2441646009683609
+        },
+        {
+            "animal": "cat-male-chef",
+            "action": "Throw",
+            "rightPawMeters": 0.3630651831626892,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-male-chef",
+            "action": "Chop",
+            "rightPawMeters": 0.11623693257570267,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-male-chef",
+            "action": "Wash",
+            "rightPawMeters": 0.18079009652137756,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-male-chef",
+            "action": "Extinguish",
+            "rightPawMeters": 0.19509780406951904,
+            "leftFootMeters": 0.10175663232803345
+        },
+        {
+            "animal": "cat-male-chef",
+            "action": "CustomerIdle",
+            "rightPawMeters": 0.26329684257507324,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-male-chef",
+            "action": "CustomerEat",
+            "rightPawMeters": 0.30809369683265686,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-male-customer",
+            "action": "ChefIdle",
+            "rightPawMeters": 0.24348795413970947,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-male-customer",
+            "action": "Walk",
+            "rightPawMeters": 0.21464094519615173,
+            "leftFootMeters": 0.21117077767848969
+        },
+        {
+            "animal": "cat-male-customer",
+            "action": "Dash",
+            "rightPawMeters": 0.1968771070241928,
+            "leftFootMeters": 0.18800289928913116
+        },
+        {
+            "animal": "cat-male-customer",
+            "action": "CarryWalk",
+            "rightPawMeters": 0.02121640555560589,
+            "leftFootMeters": 0.21069836616516113
+        },
+        {
+            "animal": "cat-male-customer",
+            "action": "Throw",
+            "rightPawMeters": 0.329829603433609,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-male-customer",
+            "action": "Chop",
+            "rightPawMeters": 0.09593600779771805,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-male-customer",
+            "action": "Wash",
+            "rightPawMeters": 0.17254379391670227,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-male-customer",
+            "action": "Extinguish",
+            "rightPawMeters": 0.1687120795249939,
+            "leftFootMeters": 0.09665755182504654
+        },
+        {
+            "animal": "cat-male-customer",
+            "action": "CustomerIdle",
+            "rightPawMeters": 0.24348795413970947,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "cat-male-customer",
+            "action": "CustomerEat",
+            "rightPawMeters": 0.26615244150161743,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-female-chef",
+            "action": "ChefIdle",
+            "rightPawMeters": 0.24626193940639496,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-female-chef",
+            "action": "Walk",
+            "rightPawMeters": 0.2338285744190216,
+            "leftFootMeters": 0.22628334164619446
+        },
+        {
+            "animal": "dog-female-chef",
+            "action": "Dash",
+            "rightPawMeters": 0.21633446216583252,
+            "leftFootMeters": 0.19735939800739288
+        },
+        {
+            "animal": "dog-female-chef",
+            "action": "CarryWalk",
+            "rightPawMeters": 0.03421972319483757,
+            "leftFootMeters": 0.22581541538238525
+        },
+        {
+            "animal": "dog-female-chef",
+            "action": "Throw",
+            "rightPawMeters": 0.32764583826065063,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-female-chef",
+            "action": "Chop",
+            "rightPawMeters": 0.08375620096921921,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-female-chef",
+            "action": "Wash",
+            "rightPawMeters": 0.16527582705020905,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-female-chef",
+            "action": "Extinguish",
+            "rightPawMeters": 0.16025327146053314,
+            "leftFootMeters": 0.10782018303871155
+        },
+        {
+            "animal": "dog-female-chef",
+            "action": "CustomerIdle",
+            "rightPawMeters": 0.24626193940639496,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-female-chef",
+            "action": "CustomerEat",
+            "rightPawMeters": 0.24652475118637085,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-female-customer",
+            "action": "ChefIdle",
+            "rightPawMeters": 0.24002932012081146,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-female-customer",
+            "action": "Walk",
+            "rightPawMeters": 0.24850362539291382,
+            "leftFootMeters": 0.23987536132335663
+        },
+        {
+            "animal": "dog-female-customer",
+            "action": "Dash",
+            "rightPawMeters": 0.23150655627250671,
+            "leftFootMeters": 0.21022285521030426
+        },
+        {
+            "animal": "dog-female-customer",
+            "action": "CarryWalk",
+            "rightPawMeters": 0.03680213540792465,
+            "leftFootMeters": 0.23939740657806396
+        },
+        {
+            "animal": "dog-female-customer",
+            "action": "Throw",
+            "rightPawMeters": 0.32118332386016846,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-female-customer",
+            "action": "Chop",
+            "rightPawMeters": 0.08990440517663956,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-female-customer",
+            "action": "Wash",
+            "rightPawMeters": 0.17308658361434937,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-female-customer",
+            "action": "Extinguish",
+            "rightPawMeters": 0.151768296957016,
+            "leftFootMeters": 0.10510722547769547
+        },
+        {
+            "animal": "dog-female-customer",
+            "action": "CustomerIdle",
+            "rightPawMeters": 0.24002932012081146,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-female-customer",
+            "action": "CustomerEat",
+            "rightPawMeters": 0.23838059604167938,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-male-chef",
+            "action": "ChefIdle",
+            "rightPawMeters": 0.2978263199329376,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-male-chef",
+            "action": "Walk",
+            "rightPawMeters": 0.2563948631286621,
+            "leftFootMeters": 0.20720365643501282
+        },
+        {
+            "animal": "dog-male-chef",
+            "action": "Dash",
+            "rightPawMeters": 0.23069307208061218,
+            "leftFootMeters": 0.18198993802070618
+        },
+        {
+            "animal": "dog-male-chef",
+            "action": "CarryWalk",
+            "rightPawMeters": 0.02959107980132103,
+            "leftFootMeters": 0.20672163367271423
+        },
+        {
+            "animal": "dog-male-chef",
+            "action": "Throw",
+            "rightPawMeters": 0.4266781508922577,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-male-chef",
+            "action": "Chop",
+            "rightPawMeters": 0.1045810729265213,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-male-chef",
+            "action": "Wash",
+            "rightPawMeters": 0.18012964725494385,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-male-chef",
+            "action": "Extinguish",
+            "rightPawMeters": 0.18593505024909973,
+            "leftFootMeters": 0.1010977178812027
+        },
+        {
+            "animal": "dog-male-chef",
+            "action": "CustomerIdle",
+            "rightPawMeters": 0.2978263199329376,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-male-chef",
+            "action": "CustomerEat",
+            "rightPawMeters": 0.3030123710632324,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-male-customer",
+            "action": "ChefIdle",
+            "rightPawMeters": 0.19271676242351532,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-male-customer",
+            "action": "Walk",
+            "rightPawMeters": 0.20796498656272888,
+            "leftFootMeters": 0.20886047184467316
+        },
+        {
+            "animal": "dog-male-customer",
+            "action": "Dash",
+            "rightPawMeters": 0.19527004659175873,
+            "leftFootMeters": 0.1837644875049591
+        },
+        {
+            "animal": "dog-male-customer",
+            "action": "CarryWalk",
+            "rightPawMeters": 0.015544496476650238,
+            "leftFootMeters": 0.20838245749473572
+        },
+        {
+            "animal": "dog-male-customer",
+            "action": "Throw",
+            "rightPawMeters": 0.24937541782855988,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-male-customer",
+            "action": "Chop",
+            "rightPawMeters": 0.09760895371437073,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-male-customer",
+            "action": "Wash",
+            "rightPawMeters": 0.1738477349281311,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-male-customer",
+            "action": "Extinguish",
+            "rightPawMeters": 0.14744874835014343,
+            "leftFootMeters": 0.09935153275728226
+        },
+        {
+            "animal": "dog-male-customer",
+            "action": "CustomerIdle",
+            "rightPawMeters": 0.19271676242351532,
+            "leftFootMeters": 0.0
+        },
+        {
+            "animal": "dog-male-customer",
+            "action": "CustomerEat",
+            "rightPawMeters": 0.23100627958774567,
+            "leftFootMeters": 0.0
+        }
+    ]
+}

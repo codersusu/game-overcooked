@@ -1,0 +1,195 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEditor;
+using UnityEditor.SceneManagement;
+using BaraKitchen;
+public static partial class ArtProductionBuilder {
+    [Serializable] class MotionReview {public string id,title,action,animal,description;public float duration;public string video,poster;}
+    [Serializable] class MotionReviews {public MotionReview[] clips;}
+    [Serializable] class MotionAudit {public int clips,characters,poseComparisons;public string[] checks;public string limitation;}
+    static MotionReview[] ReviewList() {
+        var list=new List<MotionReview>();string[] titles={"Chef idle","Walking","Dash burst","Hold a plate","Walk with a plate","Throw an ingredient","Chop a tomato","Wash a dirty plate","Fight a kitchen fire","Seated customer idle","Customer eating","Overcooking → fire"};
+        string[] descriptions={"A gentle sideways paw lift at half the previous amplitude.","Visible forward/back steps, planted short paws and opposing arm swings.","Forward body lean, quick running feet, travel and fading shadow silhouettes.","Two paws support a level plate with a quiet breathing loop.","A walking cycle with the plate kept level between the paws.","Wind-up, release, ingredient arc over the rail and follow-through.","Three knife strokes, then the same ingredient changes to its chopped state.","A small up/down stroke at the plate rim, then a clean dish is picked up.","A gentle sway while aiming and spraying. Flames shrink and stop.","A small seated paw lift, matching the gentler chef idle.","A visible paw-to-mouth bite and a return to the table.","Steam → eight seconds of small warning flames → spreading fire. The last three warning seconds become more urgent."};
+        for(int i=0;i<AnimationReviewStage.Scenarios.Length;i++){string action=AnimationReviewStage.Scenarios[i];var id=action.ToLowerInvariant();list.Add(new MotionReview{id=id,title=titles[i],action=action,animal=action=="CustomerIdle"?"cat-female-customer":action=="CustomerEat"?"capybara-female-customer":"capybara-male-chef",description=descriptions[i],duration=AnimationReviewStage.Length(action),video=id+".mp4",poster=id+".png"});}
+        foreach(var spec in new[]{new[]{"dog-seated","Dog · seated idle","CustomerIdle","dog-male-customer"},new[]{"cat-carry","Cat · carrying","CarryWalk","cat-male-chef"},new[]{"dog-wash","Dog · washing","Wash","dog-female-chef"}})list.Add(new MotionReview{id=spec[0],title=spec[1],action=spec[2],animal=spec[3],description=descriptions[Array.IndexOf(AnimationReviewStage.Scenarios,spec[2])],duration=AnimationReviewStage.Length(spec[2]),video=spec[0]+".mp4",poster=spec[0]+".png"});
+        foreach(var path in Directory.GetFiles(Base+"/Characters/Prefabs","*.prefab").OrderBy(p=>p)) {
+            string animal=Path.GetFileNameWithoutExtension(path);
+            for(int i=0;i<11;i++) {
+                string action=AnimationReviewStage.Scenarios[i];if(list.Any(item=>item.animal==animal&&item.action==action))continue;
+                string id=animal+"--"+action.ToLowerInvariant();
+                list.Add(new MotionReview{id=id,title=titles[i],action=action,animal=animal,description=descriptions[i],duration=AnimationReviewStage.Length(action),video=id+".mp4",poster=id+".png"});
+            }
+        }
+        return list.ToArray();
+    }
+    static void ReviewCamera(Camera cam,string scenario) {
+        AnimationReviewStage.FrameCamera(cam,scenario);
+    }
+    static void BuildAnimationReview() {
+        EditorSceneManager.NewScene(NewSceneSetup.EmptyScene,NewSceneMode.Single);Lighting();
+        var floor=GameObject.CreatePrimitive(PrimitiveType.Cube);floor.name="Preview floor";floor.transform.position=new Vector3(0,-.08f,.6f);floor.transform.localScale=new Vector3(12,.15f,12);floor.GetComponent<Renderer>().sharedMaterial=materials["ivory"];
+        var stage=new GameObject("Animation review controls").AddComponent<AnimationReviewStage>();
+        string[] required={"cafe-chair","cafe-table","dish-salad","table-flower-vase","rail","counter","tomato-whole","cutting-board","knife","station-sink","sponge","fire-extinguisher","CookingFireVisual","ExtinguisherSpray","pot-lid"};
+        var assets=required.Select(id=>new ReviewAsset{id=id,prefab=prefabs[id]}).ToList();
+        foreach(var name in new[]{"Ingredient_tomato","UniversalDish","CookingPot"})assets.Add(new ReviewAsset{id=name,prefab=AssetDatabase.LoadAssetAtPath<GameObject>(Base+"/Prefabs/Stateful/"+name+".prefab")});
+        stage.assets=assets.ToArray();stage.animals=characters.Select(p=>new ReviewAsset{id=p.Key,prefab=p.Value}).ToArray();
+        stage.SetScenario("ChefIdle","capybara-male-chef");var cam=CameraAt(new Vector3(0,.7f,0),1.1f);ReviewCamera(cam,"ChefIdle");
+        string path=Base+"/Scenes/Animation_Studio.unity";EditorSceneManager.SaveScene(EditorSceneManager.GetActiveScene(),path);
+        foreach(var item in ReviewList()) {
+            stage.SetScenario(item.action,item.animal);ReviewCamera(cam,item.action);
+            float time=item.action=="Overcook"?11.3f:item.action=="Extinguish"?1.2f:item.action=="Throw"?.60f:item.action=="Dash"?.3f:.4f;
+            // Advance sequentially because the fire sequence responds to elapsed time.
+            for(float t=0;t<time;t+=1f/24)stage.SampleFrame(t);stage.SampleFrame(time);
+            CaptureSquare(cam,Path.Combine(MotionSource,item.poster));
+        }
+        File.WriteAllText(Path.Combine(MotionSource,"clips.json"),JsonUtility.ToJson(new MotionReviews{clips=ReviewList()},true));
+    }
+    static void CaptureSquare(Camera cam,string path,RenderTexture rt=null,Texture2D image=null) {
+        bool own=rt==null;if(own){rt=new RenderTexture(720,720,24,RenderTextureFormat.ARGB32){antiAliasing=4};image=new Texture2D(720,720,TextureFormat.RGB24,false);}
+        // Several explicit Camera.Render calls can share one editor frame. Unity's
+        // GPU skinning cache then retains the first pose. Bake the current bones
+        // for each offline capture; runtime characters retain their skinned renderer.
+        var snapshots=new List<(SkinnedMeshRenderer skin,GameObject go,Mesh mesh)>();
+        foreach(var skin in UnityEngine.Object.FindObjectsByType<SkinnedMeshRenderer>(FindObjectsSortMode.None)) {
+            if(!skin.enabled||!skin.gameObject.activeInHierarchy)continue;
+            var mesh=new Mesh();skin.BakeMesh(mesh);
+            var go=new GameObject("Offline pose snapshot");go.transform.SetParent(skin.transform,false);
+            go.AddComponent<MeshFilter>().sharedMesh=mesh;var renderer=go.AddComponent<MeshRenderer>();
+            renderer.sharedMaterials=skin.sharedMaterials;renderer.shadowCastingMode=skin.shadowCastingMode;renderer.receiveShadows=skin.receiveShadows;
+            snapshots.Add((skin,go,mesh));skin.enabled=false;
+        }
+        cam.targetTexture=rt;cam.aspect=1;cam.Render();RenderTexture.active=rt;image.ReadPixels(new Rect(0,0,720,720),0,0);image.Apply();File.WriteAllBytes(path,image.EncodeToPNG());RenderTexture.active=null;cam.targetTexture=null;
+        foreach(var item in snapshots){item.skin.enabled=true;UnityEngine.Object.DestroyImmediate(item.go);UnityEngine.Object.DestroyImmediate(item.mesh);}
+        if(own){UnityEngine.Object.DestroyImmediate(image);rt.Release();UnityEngine.Object.DestroyImmediate(rt);}
+    }
+    public static void RebuildMotionProbe(){BuildAnimationPass();ProbeVisibleMotion();}
+    public static void ProbeVisibleMotion() {
+        EditorSceneManager.OpenScene(Base+"/Scenes/Animation_Studio.unity");var stage=UnityEngine.Object.FindFirstObjectByType<AnimationReviewStage>();var cam=Camera.main;
+        var dir=Path.Combine(Root,".local/motion-probe");Directory.CreateDirectory(dir);
+        foreach(var action in new[]{"ChefIdle","Walk","Chop","Wash","Throw","CustomerEat","CustomerIdle","Extinguish","Overcook","Dash"}) {
+            stage.SetScenario(action,action=="CustomerEat"?"capybara-female-customer":"capybara-male-chef");
+            for(int i=0;i<4;i++){stage.SampleFrame((action=="Overcook"?12.5f:CharacterMotion.Duration((ChefAction)Enum.Parse(typeof(ChefAction),action)))*i/4);CaptureSquare(cam,Path.Combine(dir,action+i+".png"));}
+        }
+        stage.SetScenario("ChefIdle","capybara-male-chef");
+        var skin=stage.actor.GetComponent<SkinnedMeshRenderer>();var a=new Mesh();var b=new Mesh();
+        stage.SampleFrame(0);skin.BakeMesh(a);stage.SampleFrame(1.6f);skin.BakeMesh(b);
+        var before=a.vertices;var after=b.vertices;var rest=skin.sharedMesh.vertices;var weights=skin.sharedMesh.boneWeights;
+        var csv=new System.Text.StringBuilder("x,y,z,dx,dy,dz,b0,w0,b1,w1,b2,w2\n");
+        for(int j=0;j<before.Length;j++) {var v=rest[j];var delta=after[j]-before[j];var w=weights[j];csv.AppendLine($"{v.x},{v.y},{v.z},{delta.x},{delta.y},{delta.z},{w.boneIndex0},{w.weight0},{w.boneIndex1},{w.weight1},{w.boneIndex2},{w.weight2}");}
+        File.WriteAllText(Path.Combine(dir,"weights.csv"),csv.ToString());UnityEngine.Object.DestroyImmediate(a);UnityEngine.Object.DestroyImmediate(b);
+        Debug.Log("BARA_VISIBLE_PROBE_OK");
+    }
+    public static void BuildArmReview(){BuildAnimationPass();RenderArmReview();}
+    public static void RenderArmReview() {
+        EditorSceneManager.OpenScene(Base+"/Scenes/Animation_Studio.unity");var stage=UnityEngine.Object.FindAnyObjectByType<AnimationReviewStage>();var cam=Camera.main;
+        foreach(var animal in stage.animals)foreach(var action in new[]{"Chop","Wash"}) {
+            string dir=Path.Combine(Root,".local/arm-review-03",animal.id);Directory.CreateDirectory(dir);
+            for(int angle=0;angle<2;angle++)for(int phase=0;phase<3;phase++) {
+                float samplePhase=phase==0?0:phase==1?.25f:action=="Chop"?.5f:.75f;
+                stage.SetScenario(action,animal.id);stage.SampleFrame(CharacterMotion.Duration((ChefAction)Enum.Parse(typeof(ChefAction),action))*samplePhase);
+                if(angle==1){var target=new Vector3(0,.66f,.12f);cam.transform.position=target+new Vector3(4,1.9f,-2.8f);cam.transform.LookAt(target);cam.orthographicSize=1.03f;}
+                CaptureSquare(cam,Path.Combine(dir,action+"-"+angle+"-"+phase+".png"));
+            }
+        }
+        Debug.Log("BARA_ARM_REVIEW_OK characters="+stage.animals.Length+" views=144");
+    }
+    [MenuItem("Bara Kitchen/Render animation review videos")]
+    public static void RenderAnimationPreviews(){RenderAnimationSet();}
+    public static void RenderOvercookPreview(){RenderAnimationSet("overcook");}
+    static void RenderAnimationSet(string only=null) {
+        EditorSceneManager.OpenScene(Base+"/Scenes/Animation_Studio.unity");var stage=UnityEngine.Object.FindFirstObjectByType<AnimationReviewStage>();var cam=Camera.main;
+        var rt=new RenderTexture(720,720,24,RenderTextureFormat.ARGB32){antiAliasing=4};var image=new Texture2D(720,720,TextureFormat.RGB24,false);
+        foreach(var item in ReviewList()) {
+            if(only!=null&&item.id!=only)continue;
+            string dir=Path.Combine(Root,".local/animation-frames",item.id);Directory.CreateDirectory(dir);foreach(var oldFrame in Directory.GetFiles(dir,"*.png"))File.Delete(oldFrame);stage.SetScenario(item.action,item.animal);ReviewCamera(cam,item.action);
+            int frames=Mathf.CeilToInt(item.duration*24);
+            for(int f=0;f<frames;f++){stage.SampleFrame(f/24f);CaptureSquare(cam,Path.Combine(dir,$"{f:0000}.png"),rt,image);if(only!=null&&f==120)CaptureSquare(cam,Path.Combine(MotionSource,item.poster),rt,image);}
+            Debug.Log("BARA_MOTION_RENDER "+item.id+" frames="+frames+" finalFire="+(stage.hazard?stage.hazard.state.ToString():"none"));
+        }
+        UnityEngine.Object.DestroyImmediate(image);rt.Release();UnityEngine.Object.DestroyImmediate(rt);Debug.Log("BARA_MOTION_RENDERS_OK");
+    }
+    static void Require(bool condition,string message){if(!condition)throw new Exception("Animation validation: "+message);}
+    [Serializable] class MeshTravel {public string animal,action;public float rightPawMeters,leftFootMeters;}
+    [Serializable] class MeshTravels {public MeshTravel[] samples;}
+    static Vector3 Mean(Vector3[] points,int[] indices){var sum=Vector3.zero;foreach(int i in indices)sum+=points[i];return sum/indices.Length;}
+    static void ValidateVisibleTravel(GameObject go,string animal,List<MeshTravel> output) {
+        var skin=go.GetComponent<SkinnedMeshRenderer>();var rest=skin.sharedMesh.vertices;
+        float pawEdge=rest.Where(v=>v.y>.20f&&v.y<.58f&&Mathf.Abs(v.z)<.20f).Max(v=>v.x);
+        var paw=Enumerable.Range(0,rest.Length).Where(i=>rest[i].x>pawEdge-.065f&&rest[i].y>.20f&&rest[i].y<.58f&&Mathf.Abs(rest[i].z)<.20f).ToArray();
+        var foot=Enumerable.Range(0,rest.Length).Where(i=>rest[i].x<-.06f&&rest[i].y<.10f).ToArray();
+        Require(paw.Length>10&&foot.Length>10,animal+" limb sample missing");
+        foreach(ChefAction action in Enum.GetValues(typeof(ChefAction))) {
+            if(action==ChefAction.CarryIdle)continue;
+            float a=.25f,b=.75f;
+            if(action==ChefAction.ChefIdle||action==ChefAction.CustomerIdle||action==ChefAction.Chop){a=0;b=.5f;}
+            if(action==ChefAction.Throw||action==ChefAction.CustomerEat){a=0;b=.25f;}
+            if(action==ChefAction.Dash){a=.1875f;b=.3125f;}
+            var clip=AssetDatabase.LoadAssetAtPath<AnimationClip>(MotionBase+"/Clips/"+action+".anim");
+            var mesh=new Mesh();clip.SampleAnimation(go,clip.length*a);skin.BakeMesh(mesh);var first=mesh.vertices;
+            clip.SampleAnimation(go,clip.length*b);skin.BakeMesh(mesh);var second=mesh.vertices;
+            float dp=Vector3.Distance(Mean(first,paw),Mean(second,paw)),df=Vector3.Distance(Mean(first,foot),Mean(second,foot));
+            output.Add(new MeshTravel{animal=animal,action=action.ToString(),rightPawMeters=dp,leftFootMeters=df});
+            bool steps=action==ChefAction.Walk||action==ChefAction.CarryWalk||action==ChefAction.Dash;
+            float minPaw=action==ChefAction.Extinguish?.008f:action==ChefAction.Wash?.018f:.035f;
+            Require(steps?df>.045f:dp>minPaw,animal+" "+action+" skinned limb barely moves: paw="+dp+" foot="+df);
+            if(action==ChefAction.Chop)Require(Quaternion.Angle(CharacterMotion.Bind(go.transform)[2].localRotation,Quaternion.identity)<.1f,"Chop tilts the head");
+            UnityEngine.Object.DestroyImmediate(mesh);
+        }
+        // Arm gestures must not pull the lower torso out into wings.
+        var weights=skin.sharedMesh.boneWeights;
+        for(int i=0;i<rest.Length;i++)if(rest[i].y<.35f&&Mathf.Abs(rest[i].x)<.30f) {
+            var w=weights[i];float arm=0;
+            if(w.boneIndex0>=3&&w.boneIndex0<=6)arm+=w.weight0;if(w.boneIndex1>=3&&w.boneIndex1<=6)arm+=w.weight1;if(w.boneIndex2>=3&&w.boneIndex2<=6)arm+=w.weight2;
+            Require(arm<.02f,animal+" lower torso weighted to an arm");
+        }
+    }
+    static void ValidateMotionPass() {
+        int comparisons=0;var travel=new List<MeshTravel>();
+        foreach(var pair in characters) {
+            var go=UnityEngine.Object.Instantiate(pair.Value);var rig=CharacterMotion.Bind(go.transform);Require(rig.All(t=>t),pair.Key+" missing animation binding");
+            foreach(ChefAction action in Enum.GetValues(typeof(ChefAction))) {
+                var clip=AssetDatabase.LoadAssetAtPath<AnimationClip>(MotionBase+"/Clips/"+action+".anim");Require(clip&&clip.length>0,"Missing clip "+action);
+                float duration=CharacterMotion.Duration(action);int frames=Mathf.CeilToInt(duration*30);float t=Mathf.Round(frames*.4f)*duration/frames;
+                CharacterMotion.Sample(go.transform,rig,action,t);var expected=rig.Select(b=>b.localRotation).ToArray();clip.SampleAnimation(go,t);
+                for(int b=0;b<rig.Length;b++)Require(Quaternion.Angle(expected[b],rig[b].localRotation)<.5f,pair.Key+" baked pose differs "+action+" "+b);
+                var mesh=new Mesh();go.GetComponent<SkinnedMeshRenderer>().BakeMesh(mesh);Require(mesh.vertices.All(v=>float.IsFinite(v.x)&&float.IsFinite(v.y)&&float.IsFinite(v.z)),"Non-finite deformed mesh");UnityEngine.Object.DestroyImmediate(mesh);comparisons++;
+                if(CharacterMotion.Loops(action)) {
+                    CharacterMotion.Sample(go.transform,rig,action,0);var first=rig.Select(b=>b.localRotation).ToArray();CharacterMotion.Sample(go.transform,rig,action,duration);
+                    for(int b=0;b<rig.Length;b++)Require(Quaternion.Angle(first[b],rig[b].localRotation)<.1f,"Loop seam "+action);
+                }
+            }
+            ValidateVisibleTravel(go,pair.Key,travel);
+            UnityEngine.Object.DestroyImmediate(go);
+        }
+        File.WriteAllText(Path.Combine(MotionSource,"mesh-motion-validation.json"),JsonUtility.ToJson(new MeshTravels{samples=travel.ToArray()},true));
+        var poseRoot=UnityEngine.Object.Instantiate(characters["capybara-male-chef"]);var poseBones=CharacterMotion.Bind(poseRoot.transform);
+        CharacterMotion.Sample(poseRoot.transform,poseBones,ChefAction.ChefIdle,1.6f);
+        Require(Mathf.Abs(Mathf.DeltaAngle(0,poseBones[5].localEulerAngles.z)-25.5f)<.1f,"Idle amplitude not halved");
+        for(int phase=0;phase<=24;phase++) {
+            CharacterMotion.Sample(poseRoot.transform,poseBones,ChefAction.Chop,CharacterMotion.Duration(ChefAction.Chop)*phase/24);
+            Require(Mathf.Abs(Vector3.Dot(poseBones[12].up,Vector3.up))<.1f,"Knife blade lies flat");
+            Require(poseBones[6].position.x>poseBones[5].position.x,"Working elbow folds inward");
+            CharacterMotion.Sample(poseRoot.transform,poseBones,ChefAction.Wash,CharacterMotion.Duration(ChefAction.Wash)*phase/24);
+            Require(Mathf.Abs(poseBones[12].position.x-.34f)<.003f&&Mathf.Abs(poseBones[12].position.z-.34f)<.003f,"Wash stroke still travels in a circle");
+            Require(poseBones[6].position.x>poseBones[5].position.x,"Washing elbow folds inward");
+        }
+        UnityEngine.Object.DestroyImmediate(poseRoot);
+        var test=new GameObject("Hazard validation");var hazard=test.AddComponent<CookingHazard>();hazard.cookingSeconds=1;hazard.readySeconds=1;hazard.warningSeconds=1;int starts=0,stops=0;hazard.FireStarted+=()=>starts++;hazard.FireStopped+=()=>stops++;
+        hazard.BeginCooking();hazard.Tick(1);Require(hazard.state==HeatState.Ready,"Ready timing");hazard.Tick(1);Require(hazard.state==HeatState.Warning,"Warning timing");hazard.Tick(1);Require(hazard.state==HeatState.Burning&&starts==1,"Ignition event");hazard.Tick(10);Require(starts==1,"Repeated ignition event");hazard.Suppress(.4f);Require(hazard.state==HeatState.Burning,"Partial suppression");hazard.Suppress(.7f);Require(hazard.state==HeatState.Extinguished&&stops==1&&!hazard.heating,"Extinguish event");hazard.Tick(100);Require(hazard.state==HeatState.Extinguished,"Reignited without new cooking");hazard.BeginCooking();hazard.heating=false;hazard.Tick(100);Require(hazard.state==HeatState.Cooking,"Heat-off timer");hazard.RemovePot();Require(hazard.state==HeatState.Empty,"Removing pot");
+        hazard.cookingSeconds=1.2f;hazard.readySeconds=1;hazard.warningSeconds=8;hazard.BeginCooking();hazard.Tick(2.2f);
+        Require(hazard.state==HeatState.Warning,"Eight-second warning did not start");hazard.Tick(7.99f);Require(hazard.state==HeatState.Warning,"Warning ends before eight seconds");hazard.Tick(.02f);Require(hazard.state==HeatState.Burning,"Warning never ignites");
+        hazard.cookingSeconds=1;hazard.readySeconds=1;hazard.warningSeconds=1;
+        test.transform.position=new Vector3(50,0,0);hazard.BeginCooking();hazard.Tick(3);
+        var nozzle=new GameObject("Validation nozzle");nozzle.transform.position=new Vector3(50,0,-.5f);var spray=nozzle.AddComponent<ExtinguisherSpray>();spray.nozzle=nozzle.transform;spray.spraying=true;
+        Physics.SyncTransforms();Require(spray.TrySuppress(hazard,.1f)&&hazard.fireRemaining<1,"Aimed spray did not suppress");
+        nozzle.transform.rotation=Quaternion.Euler(0,180,0);Require(!spray.TrySuppress(hazard,.1f),"Spray suppressed behind nozzle");
+        nozzle.transform.rotation=Quaternion.identity;nozzle.transform.position=new Vector3(50,0,-3);Require(!spray.TrySuppress(hazard,.1f),"Spray suppressed beyond range");
+        nozzle.transform.position=new Vector3(50,0,-.5f);var obstacle=GameObject.CreatePrimitive(PrimitiveType.Cube);obstacle.transform.position=new Vector3(50,0,-.25f);obstacle.transform.localScale=Vector3.one*.12f;Physics.SyncTransforms();Require(!spray.TrySuppress(hazard,.1f),"Spray passed through solid obstacle");
+        UnityEngine.Object.DestroyImmediate(obstacle);UnityEngine.Object.DestroyImmediate(nozzle);UnityEngine.Object.DestroyImmediate(test);
+        var audit=new MotionAudit{clips=11,characters=characters.Count,poseComparisons=comparisons,checks=new[]{"Every native clip matches its pose source on all 12 rigs","Loop boundary rotations match","All sampled skinned vertices are finite","Paw/foot vertex travel exceeds a visible motion threshold on all 12 rigs","Lower torso has no stray arm weights","Chop keeps the head upright","Idle arm sweep halved","Knife blade stays vertical","Washing moves vertically at the rim with outward elbows","Warning lasts a full eight seconds","Cooking/ready/warning/ignition ordering","Fire-start/stop events fire once","Partial suppression and burnt aftermath","Spray range, aim cone and solid obstruction","Heat-off and pot-removal reset"},limitation="Procedural skin weights remain an approximation. Dash/throw travel and prop timing are staged; level interaction and navigation are not implemented."};
+        File.WriteAllText(Path.Combine(MotionSource,"validation.json"),JsonUtility.ToJson(audit,true));Debug.Log("BARA_MOTION_VALIDATION_OK comparisons="+comparisons);
+    }
+}

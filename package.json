@@ -1,0 +1,13 @@
+{
+  "name": "bara-kitchen-tools",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Browser playtests and media capture for the Unity Bara Kitchen demo",
+  "scripts": {
+    "test:level": "node scripts/gameplay/play_full_level.cjs",
+    "capture:title": "node scripts/trailer/capture_title.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

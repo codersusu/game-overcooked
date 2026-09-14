@@ -1,0 +1,979 @@
+[
+  {
+    "id": 1,
+    "title": "First Service",
+    "shape": "Open U",
+    "subtitle": "Learn to assemble food anywhere on a free worktop.",
+    "cols": 8,
+    "rows": 7,
+    "ingredients": [
+      "tomato",
+      "cucumber"
+    ],
+    "recipes": [
+      "salad"
+    ],
+    "skill": "Pick up, chop, combine, serve and wash",
+    "start": [
+      4,
+      4
+    ],
+    "dish_pool": 3,
+    "tickets": 1,
+    "stations": [
+      {
+        "id": "tomato",
+        "kind": "tomato",
+        "x": 1,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "cucumber",
+        "kind": "cucumber",
+        "x": 2,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "prep",
+        "kind": "prep",
+        "x": 3,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "C1",
+        "kind": "counter",
+        "x": 4,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "C2",
+        "kind": "counter",
+        "x": 5,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "C3",
+        "kind": "counter",
+        "x": 0,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "dishes",
+        "kind": "dishes",
+        "x": 0,
+        "y": 2,
+        "face": "E"
+      },
+      {
+        "id": "C4",
+        "kind": "counter",
+        "x": 0,
+        "y": 3,
+        "face": "S"
+      },
+      {
+        "id": "sink",
+        "kind": "sink",
+        "x": 0,
+        "y": 4,
+        "face": "E"
+      },
+      {
+        "id": "return",
+        "kind": "return",
+        "x": 0,
+        "y": 5,
+        "face": "E"
+      },
+      {
+        "id": "C5",
+        "kind": "counter",
+        "x": 7,
+        "y": 1,
+        "face": "S"
+      },
+      {
+        "id": "C6",
+        "kind": "counter",
+        "x": 7,
+        "y": 2,
+        "face": "S"
+      },
+      {
+        "id": "serve",
+        "kind": "serve",
+        "x": 7,
+        "y": 3,
+        "face": "W"
+      },
+      {
+        "id": "bin",
+        "kind": "bin",
+        "x": 7,
+        "y": 5,
+        "face": "W"
+      }
+    ],
+    "barriers": [],
+    "dash": null,
+    "throws": [],
+    "routes": [
+      {
+        "kind": "food",
+        "ids": [
+          "tomato",
+          "prep",
+          "C1",
+          "serve"
+        ]
+      },
+      {
+        "kind": "wash",
+        "ids": [
+          "return",
+          "sink",
+          "dishes"
+        ]
+      }
+    ],
+    "headline": "A short U around an open working area. Six interchangeable empty counters.",
+    "decision": "Choose a counter for the current dish and another for the next chopped ingredient.",
+    "loop": "Put a clean dish on any empty counter. Add chopped tomato and cucumber in either order, then serve. The second ingredient needs its own pickup and chop.",
+    "changed": "No island or divided route. The first level teaches the common counter system with several convenient assembly positions.",
+    "counter_groups": [
+      "C1\u2013C2: beside chopping",
+      "C3\u2013C4: dish and washing side",
+      "C5\u2013C6: near serving"
+    ],
+    "fairness": "Guide the first complete serve-and-wash loop without order pressure. All six empty worktops behave identically."
+  },
+  {
+    "id": 2,
+    "title": "Around the Island",
+    "shape": "Ring route",
+    "subtitle": "Prepare on the far side; cook and serve on the near side.",
+    "cols": 9,
+    "rows": 9,
+    "ingredients": [
+      "carrot",
+      "mushroom"
+    ],
+    "recipes": [
+      "soup"
+    ],
+    "skill": "Cooking and dash",
+    "start": [
+      1,
+      6
+    ],
+    "dish_pool": 3,
+    "tickets": 2,
+    "stations": [
+      {
+        "id": "carrot",
+        "kind": "carrot",
+        "x": 2,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "mushroom",
+        "kind": "mushroom",
+        "x": 6,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "prep",
+        "kind": "prep",
+        "x": 3,
+        "y": 3,
+        "face": "N"
+      },
+      {
+        "id": "C1",
+        "kind": "counter",
+        "x": 4,
+        "y": 3,
+        "face": "S"
+      },
+      {
+        "id": "C2",
+        "kind": "counter",
+        "x": 5,
+        "y": 3,
+        "face": "S"
+      },
+      {
+        "id": "C3",
+        "kind": "counter",
+        "x": 3,
+        "y": 4,
+        "face": "S"
+      },
+      {
+        "id": "C4",
+        "kind": "counter",
+        "x": 5,
+        "y": 4,
+        "face": "S"
+      },
+      {
+        "id": "C5",
+        "kind": "counter",
+        "x": 3,
+        "y": 5,
+        "face": "S"
+      },
+      {
+        "id": "pot",
+        "kind": "pot",
+        "x": 4,
+        "y": 5,
+        "face": "S"
+      },
+      {
+        "id": "C6",
+        "kind": "counter",
+        "x": 5,
+        "y": 5,
+        "face": "S"
+      },
+      {
+        "id": "return",
+        "kind": "return",
+        "x": 1,
+        "y": 8,
+        "face": "N"
+      },
+      {
+        "id": "sink",
+        "kind": "sink",
+        "x": 2,
+        "y": 8,
+        "face": "N"
+      },
+      {
+        "id": "dishes",
+        "kind": "dishes",
+        "x": 3,
+        "y": 8,
+        "face": "N"
+      },
+      {
+        "id": "C7",
+        "kind": "counter",
+        "x": 5,
+        "y": 8,
+        "face": "S"
+      },
+      {
+        "id": "serve",
+        "kind": "serve",
+        "x": 6,
+        "y": 8,
+        "face": "N"
+      },
+      {
+        "id": "C8",
+        "kind": "counter",
+        "x": 7,
+        "y": 8,
+        "face": "S"
+      },
+      {
+        "id": "bin",
+        "kind": "bin",
+        "x": 8,
+        "y": 8,
+        "face": "N"
+      }
+    ],
+    "barriers": [
+      {
+        "kind": "solid",
+        "cells": [
+          [
+            4,
+            4
+          ]
+        ]
+      }
+    ],
+    "dash": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        5
+      ]
+    ],
+    "throws": [],
+    "routes": [
+      {
+        "kind": "food",
+        "ids": [
+          "carrot",
+          "prep",
+          "pot",
+          "serve"
+        ]
+      },
+      {
+        "kind": "wash",
+        "ids": [
+          "return",
+          "sink",
+          "dishes"
+        ]
+      }
+    ],
+    "headline": "One central block creates a loop, with preparation and cooking on opposite faces.",
+    "decision": "Walk around the left or right end, and decide whether the cooking window is long enough for another preparation trip.",
+    "loop": "Chop carrot and mushroom, then add both to the pot. While they cook, wash or stage the next ingredient. Fill a clean universal dish at the ready pot and serve.",
+    "changed": "The island interrupts the direct route. The player circulates around it instead of crossing an open room; eight free counters support advance preparation.",
+    "counter_groups": [
+      "C1\u2013C2: raw or chopped preparation buffers",
+      "C3\u2013C6: flexible worktops on both island sides",
+      "C7\u2013C8: clean dishes or finished orders near serving"
+    ],
+    "fairness": "Teach cooking before introducing a second ticket. Keep the pot status visible. Dash helps on the clear side aisle; tune completion for walking first."
+  },
+  {
+    "id": 3,
+    "title": "Across the Divide",
+    "shape": "Two areas \u00b7 one passage",
+    "subtitle": "Throw food across the rail; walk around to use it.",
+    "cols": 11,
+    "rows": 9,
+    "ingredients": [
+      "tomato",
+      "cucumber",
+      "carrot",
+      "mushroom"
+    ],
+    "recipes": [
+      "salad",
+      "soup"
+    ],
+    "skill": "Ingredient throw",
+    "start": [
+      1,
+      6
+    ],
+    "dish_pool": 4,
+    "tickets": 2,
+    "stations": [
+      {
+        "id": "tomato",
+        "kind": "tomato",
+        "x": 2,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "cucumber",
+        "kind": "cucumber",
+        "x": 3,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "C1",
+        "kind": "counter",
+        "x": 4,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "C2",
+        "kind": "counter",
+        "x": 5,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "carrot",
+        "kind": "carrot",
+        "x": 6,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "mushroom",
+        "kind": "mushroom",
+        "x": 7,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "prep",
+        "kind": "prep",
+        "x": 8,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "C3",
+        "kind": "counter",
+        "x": 9,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "C4",
+        "kind": "counter",
+        "x": 4,
+        "y": 5,
+        "face": "S"
+      },
+      {
+        "id": "C5",
+        "kind": "counter",
+        "x": 5,
+        "y": 5,
+        "face": "S"
+      },
+      {
+        "id": "C6",
+        "kind": "counter",
+        "x": 7,
+        "y": 5,
+        "face": "S"
+      },
+      {
+        "id": "C7",
+        "kind": "counter",
+        "x": 8,
+        "y": 5,
+        "face": "S"
+      },
+      {
+        "id": "pot",
+        "kind": "pot",
+        "x": 10,
+        "y": 6,
+        "face": "W"
+      },
+      {
+        "id": "C8",
+        "kind": "counter",
+        "x": 8,
+        "y": 7,
+        "face": "S"
+      },
+      {
+        "id": "return",
+        "kind": "return",
+        "x": 2,
+        "y": 8,
+        "face": "N"
+      },
+      {
+        "id": "sink",
+        "kind": "sink",
+        "x": 3,
+        "y": 8,
+        "face": "N"
+      },
+      {
+        "id": "dishes",
+        "kind": "dishes",
+        "x": 4,
+        "y": 8,
+        "face": "N"
+      },
+      {
+        "id": "serve",
+        "kind": "serve",
+        "x": 7,
+        "y": 8,
+        "face": "N"
+      },
+      {
+        "id": "bin",
+        "kind": "bin",
+        "x": 10,
+        "y": 8,
+        "face": "N"
+      }
+    ],
+    "barriers": [
+      {
+        "kind": "rail",
+        "cells": [
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            10,
+            4
+          ]
+        ]
+      }
+    ],
+    "dash": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        6
+      ]
+    ],
+    "throws": [
+      {
+        "start": [
+          4,
+          3
+        ],
+        "target": "C4"
+      },
+      {
+        "start": [
+          5,
+          3
+        ],
+        "target": "C5"
+      },
+      {
+        "start": [
+          7,
+          3
+        ],
+        "target": "C6"
+      },
+      {
+        "start": [
+          8,
+          3
+        ],
+        "target": "C7"
+      }
+    ],
+    "routes": [
+      {
+        "kind": "food",
+        "ids": [
+          "tomato",
+          "prep",
+          "C4",
+          "serve"
+        ]
+      },
+      {
+        "kind": "soup",
+        "ids": [
+          "carrot",
+          "prep",
+          "pot",
+          "serve"
+        ]
+      },
+      {
+        "kind": "wash",
+        "ids": [
+          "return",
+          "sink",
+          "dishes"
+        ]
+      }
+    ],
+    "headline": "A low rail separates preparation from service. The only walking connection is the two-module passage on the left.",
+    "decision": "Stage both chopped ingredients over the rail before walking to the other side once.",
+    "loop": "Prepare on the upper side. Throw ingredients onto ordinary empty counters below, then go around the rail to plate a salad or load the soup pot. Return to preparation while keeping space free below.",
+    "changed": "The barrier cannot be walked through or used as a counter. Food takes a short airborne route; the chef takes a longer passage route. No dedicated landing or salad station.",
+    "counter_groups": [
+      "C1\u2013C3: preparation-side buffers",
+      "C4\u2013C7: four flexible counters beyond the rail",
+      "C8: spare counter by cooking and service"
+    ],
+    "fairness": "Teach one throw with pressure paused. Then practice two ingredients into two empty counters. An occupied target keeps the item in hand. Every station still has a walking route."
+  },
+  {
+    "id": 4,
+    "title": "The Zigzag Caf\u00e9",
+    "shape": "Three areas \u00b7 offset passages",
+    "subtitle": "Pantry \u2192 preparation \u2192 cooking and service.",
+    "cols": 14,
+    "rows": 9,
+    "ingredients": [
+      "tomato",
+      "cucumber",
+      "carrot",
+      "mushroom"
+    ],
+    "recipes": [
+      "salad",
+      "soup"
+    ],
+    "skill": "Batch preparation, dash and two throw shortcuts",
+    "start": [
+      11,
+      6
+    ],
+    "dish_pool": 5,
+    "tickets": 3,
+    "stations": [
+      {
+        "id": "tomato",
+        "kind": "tomato",
+        "x": 0,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "cucumber",
+        "kind": "cucumber",
+        "x": 1,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "carrot",
+        "kind": "carrot",
+        "x": 2,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "mushroom",
+        "kind": "mushroom",
+        "x": 3,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "C1",
+        "kind": "counter",
+        "x": 0,
+        "y": 3,
+        "face": "S"
+      },
+      {
+        "id": "C2",
+        "kind": "counter",
+        "x": 0,
+        "y": 4,
+        "face": "S"
+      },
+      {
+        "id": "C3",
+        "kind": "counter",
+        "x": 1,
+        "y": 8,
+        "face": "S"
+      },
+      {
+        "id": "C4",
+        "kind": "counter",
+        "x": 2,
+        "y": 8,
+        "face": "S"
+      },
+      {
+        "id": "C5",
+        "kind": "counter",
+        "x": 5,
+        "y": 2,
+        "face": "S"
+      },
+      {
+        "id": "C6",
+        "kind": "counter",
+        "x": 5,
+        "y": 3,
+        "face": "S"
+      },
+      {
+        "id": "C7",
+        "kind": "counter",
+        "x": 5,
+        "y": 5,
+        "face": "S"
+      },
+      {
+        "id": "C8",
+        "kind": "counter",
+        "x": 8,
+        "y": 6,
+        "face": "S"
+      },
+      {
+        "id": "C9",
+        "kind": "counter",
+        "x": 7,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "prep",
+        "kind": "prep",
+        "x": 6,
+        "y": 8,
+        "face": "N"
+      },
+      {
+        "id": "prep2",
+        "kind": "prep",
+        "x": 7,
+        "y": 8,
+        "face": "N"
+      },
+      {
+        "id": "C10",
+        "kind": "counter",
+        "x": 10,
+        "y": 4,
+        "face": "S"
+      },
+      {
+        "id": "C11",
+        "kind": "counter",
+        "x": 10,
+        "y": 5,
+        "face": "S"
+      },
+      {
+        "id": "C12",
+        "kind": "counter",
+        "x": 12,
+        "y": 0,
+        "face": "S"
+      },
+      {
+        "id": "C13",
+        "kind": "counter",
+        "x": 13,
+        "y": 5,
+        "face": "S"
+      },
+      {
+        "id": "pot",
+        "kind": "pot",
+        "x": 13,
+        "y": 3,
+        "face": "W"
+      },
+      {
+        "id": "serve",
+        "kind": "serve",
+        "x": 13,
+        "y": 7,
+        "face": "W"
+      },
+      {
+        "id": "dishes",
+        "kind": "dishes",
+        "x": 10,
+        "y": 8,
+        "face": "N"
+      },
+      {
+        "id": "sink",
+        "kind": "sink",
+        "x": 11,
+        "y": 8,
+        "face": "N"
+      },
+      {
+        "id": "return",
+        "kind": "return",
+        "x": 12,
+        "y": 8,
+        "face": "N"
+      },
+      {
+        "id": "bin",
+        "kind": "bin",
+        "x": 13,
+        "y": 0,
+        "face": "S"
+      }
+    ],
+    "barriers": [
+      {
+        "kind": "rail",
+        "cells": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "kind": "rail",
+        "cells": [
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            9,
+            8
+          ]
+        ]
+      }
+    ],
+    "dash": [
+      [
+        6,
+        2
+      ],
+      [
+        6,
+        6
+      ]
+    ],
+    "throws": [
+      {
+        "start": [
+          3,
+          2
+        ],
+        "target": "C5"
+      },
+      {
+        "start": [
+          3,
+          3
+        ],
+        "target": "C6"
+      },
+      {
+        "start": [
+          8,
+          4
+        ],
+        "target": "C10"
+      },
+      {
+        "start": [
+          8,
+          5
+        ],
+        "target": "C11"
+      }
+    ],
+    "routes": [
+      {
+        "kind": "food",
+        "ids": [
+          "tomato",
+          "prep",
+          "C10",
+          "serve"
+        ]
+      },
+      {
+        "kind": "soup",
+        "ids": [
+          "carrot",
+          "prep",
+          "pot",
+          "serve"
+        ]
+      },
+      {
+        "kind": "wash",
+        "ids": [
+          "return",
+          "sink",
+          "dishes"
+        ]
+      }
+    ],
+    "headline": "Three work areas connect at alternating ends: bottom passage first, top passage second. Throws cut across both low rails.",
+    "decision": "Send a small batch of raw ingredients to preparation, process it, then send chopped ingredients to service before moving on.",
+    "loop": "Pantry on the left, chopping in the middle, cooking/assembly/serving on the right. Keep the dish pool on the service side. Reserve some counters for clean dishes instead of filling every surface with ingredients.",
+    "changed": "A three-stage zigzag replaces level 3\u2019s single crossing. The second ingredient-transfer step and shared counter space create a new planning problem without adding recipes.",
+    "counter_groups": [
+      "C1\u2013C4: pantry-side staging",
+      "C5\u2013C9: preparation buffers",
+      "C10\u2013C13: cooking, assembly and ready dishes"
+    ],
+    "fairness": "Start with one calm ticket; allow three only after tuning. Test the full dish cycle at walking speed. Barriers stay fixed, passages never close, and a helper is not required."
+  }
+]

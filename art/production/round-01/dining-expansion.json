@@ -1,0 +1,34 @@
+[
+  {
+    "level": 1,
+    "kitchen_unchanged": true,
+    "cafe_depth_m": 4.508,
+    "previous_cafe_depth_m": 3.22,
+    "increase_percent": 40,
+    "seats": 4
+  },
+  {
+    "level": 2,
+    "kitchen_unchanged": true,
+    "cafe_depth_m": 4.508,
+    "previous_cafe_depth_m": 3.22,
+    "increase_percent": 40,
+    "seats": 4
+  },
+  {
+    "level": 3,
+    "kitchen_unchanged": true,
+    "cafe_depth_m": 4.508,
+    "previous_cafe_depth_m": 3.22,
+    "increase_percent": 40,
+    "seats": 6
+  },
+  {
+    "level": 4,
+    "kitchen_unchanged": true,
+    "cafe_depth_m": 4.508,
+    "previous_cafe_depth_m": 3.22,
+    "increase_percent": 40,
+    "seats": 6
+  }
+]

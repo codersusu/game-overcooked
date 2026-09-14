@@ -1,0 +1,50 @@
+[
+  {
+    "id": "chop",
+    "source": "Joseph SARDIN / BigSoundBank #2070",
+    "license": "CC0",
+    "seconds": 0.48,
+    "peak": 0.8200000524520874,
+    "rms": 0.03045886941254139
+  },
+  {
+    "id": "wash",
+    "source": "Joseph SARDIN / BigSoundBank #0651",
+    "license": "CC0",
+    "seconds": 3.88,
+    "peak": 0.5589122772216797,
+    "rms": 0.1156941923202669
+  },
+  {
+    "id": "plate",
+    "source": "Kenney Impact Sounds / impactPlate_light_000",
+    "license": "CC0",
+    "seconds": 0.5424263038548753,
+    "peak": 0.6669087409973145,
+    "rms": 0.045639049261808395
+  },
+  {
+    "id": "step",
+    "source": "Kenney Impact Sounds / footstep_wood_000",
+    "license": "CC0",
+    "seconds": 0.27138321995464854,
+    "peak": 0.46112167835235596,
+    "rms": 0.0502801313996315
+  },
+  {
+    "id": "pickup",
+    "source": "Kenney Impact Sounds / impactSoft_heavy_000",
+    "license": "CC0",
+    "seconds": 0.5268027210884354,
+    "peak": 0.801656186580658,
+    "rms": 0.11255720257759094
+  },
+  {
+    "id": "fire",
+    "source": "Joseph SARDIN / BigSoundBank #0988",
+    "license": "CC0",
+    "seconds": 5.88,
+    "peak": 0.8199999928474426,
+    "rms": 0.11613400500991646
+  }
+]

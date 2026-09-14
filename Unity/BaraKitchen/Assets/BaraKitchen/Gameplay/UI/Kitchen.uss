@@ -1,0 +1,159 @@
+.root { flex-grow: 1; color: rgb(84,59,39); font-size: 16px; }
+.overlay { position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-color: rgba(39,51,37,.65); justify-content: center; align-items: center; }
+.panel { width: 520px; padding: 30px 38px; background-color: rgb(255,247,218); border-radius: 24px; border-width: 12px; border-color: rgb(176,127,72); }
+.panel.wide { width: 1070px; padding: 30px; }
+.wood-frame { position: absolute; left: -13px; right: -13px; top: -13px; bottom: -13px; }
+.panel > .wood-frame { display: none; }
+.panel-leaves { position: absolute; right: -42px; top: -40px; width: 74px; height: 130px; rotate: 30deg; }
+.eyebrow { font-size: 11px; -unity-font-style: bold; color: rgb(92,117,75); letter-spacing: 1px; margin-bottom: 5px; }
+.title { font-size: 42px; color: rgb(82,60,40); margin-bottom: 5px; }
+.subtitle { white-space: normal; font-size: 15px; color: rgb(128,113,78); margin-bottom: 22px; }
+.primary, .secondary { height: 49px; margin: 5px 0; padding: 5px 18px; border-radius: 16px; border-width: 2px; border-bottom-width: 5px; border-color: rgb(52,84,54); background-color: rgb(111,146,84); color: rgb(255,250,225); font-size: 22px; transition-property: scale, background-color; transition-duration: .10s; }
+.secondary { background-color: rgb(255,241,201); border-color: rgb(151,109,59); color: rgb(93,64,38); }
+.primary:hover { background-color: rgb(136,165,94); scale: 1.025; }
+.secondary:hover { background-color: rgb(255,219,146); scale: 1.025; }
+.primary:active, .secondary:active { scale: 0.97; border-bottom-width: 2px; }
+.primary:focus, .secondary:focus { border-color: rgb(219,159,47); }
+.caption { white-space: normal; font-size: 13px; color: rgb(126,111,79); }
+.main-menu { position: absolute; left: 0; right: 0; top: 0; bottom: 0; }
+.menu-sign { position: absolute; left: 68px; top: 180px; width: 318px; padding: 24px 25px 22px; align-items: stretch; }
+.mascot-badge { height: 135px; width: 150px; align-self: center; margin-top: -124px; border-radius: 80px; background-color: rgb(255,237,195); border-width: 5px; border-color: rgb(111,78,45); }
+.mascot { width: 180px; height: 180px; position: absolute; left: -20px; top: -26px; -unity-background-scale-mode: scale-to-fit; }
+.logo { font-size: 83px; -unity-text-align: middle-center; color: rgb(255,247,219); margin-top: 3px; margin-bottom: -14px; -unity-text-outline-width: 2px; -unity-text-outline-color: rgb(99,66,38); }
+.logo-small { font-size: 48px; -unity-text-align: middle-center; color: rgb(255,242,203); -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(99,66,38); }
+.menu-tagline { font-size: 14px; color: rgb(81,52,28); -unity-text-align: middle-center; margin: 8px 0 22px; }
+.menu-sign .primary { height: 57px; font-size: 25px; }
+.menu-sign .secondary { height: 47px; font-size: 22px; }
+.menu-leaves-left { position: absolute; left: 22px; top: 230px; width: 86px; height: 195px; rotate: -23deg; }
+.menu-leaves-right { position: absolute; left: 360px; top: 115px; width: 74px; height: 166px; rotate: 25deg; }
+.menu-footnote { position: absolute; left: 57px; bottom: 36px; font-size: 13px; color: rgb(81,108,70); }
+.welcome-sign { position: absolute; right: 19%; bottom: 25px; padding: 14px 34px; rotate: -3deg; background-color: rgb(253,239,192); border-radius: 10px; border-width: 3px; border-color: rgb(153,107,56); align-items: center; }
+.welcome-title { font-size: 25px; color: rgb(74,108,61); }
+.level-grid { flex-direction: row; justify-content: space-between; margin: 12px 0 14px; }
+.level-card { position: relative; width: 230px; padding: 12px; padding-top: 20px; background-color: rgb(255,253,233); border-radius: 5px; border-width: 1px; border-bottom-width: 5px; border-color: rgb(214,191,145); }
+.level-photo { height: 151px; width: 202px; -unity-background-scale-mode: scale-to-fit; margin-bottom: 12px; background-color: rgb(225,229,195); border-radius: 6px; }
+.card-title { white-space: normal; font-size: 24px; color: rgb(86,63,38); margin-bottom: 6px; }
+.level-card .card-title { min-height: 59px; }
+.level-card .caption { min-height: 34px; font-size: 11px; }
+.level-card .primary { font-size: 20px; }
+.best { font-size: 12px; color: rgb(150,108,43); -unity-text-align: middle-center; margin: 4px 0; }
+.paper-clip { position: absolute; left: 45%; top: -14px; width: 22px; height: 31px; }
+.stars-row { flex-direction: row; justify-content: center; margin: 5px 0; }
+.star-icon { width: 40px; height: 40px; }
+.chef-grid { flex-direction: row; flex-wrap: wrap; justify-content: space-around; }
+.chef-card { width: 29%; height: 195px; border-radius: 45px 45px 15px 15px; margin: 8px; padding: 8px; border-width: 3px; border-bottom-width: 6px; border-color: rgb(199,163,108); background-color: rgb(255,247,212); }
+.chef-card.selected { border-color: rgb(78,126,68); background-color: rgb(224,236,184); }
+.chef-card:hover { background-color: rgb(243,225,176); }
+.chef-photo { height: 146px; width: 100%; -unity-background-scale-mode: scale-to-fit; }
+.setting { margin: 10px 0; font-size: 15px; color: rgb(83,93,53); }
+.setting .unity-toggle__input > .unity-toggle__checkmark { border-radius: 5px; border-width: 2px; border-color: rgb(116,139,82); width: 24px; height: 24px; }
+.setting .unity-base-slider__tracker { background-color: rgb(191,177,127); height: 8px; border-radius: 4px; }
+.setting .unity-base-slider__dragger { background-color: rgb(111,146,84); border-radius: 10px; width: 20px; height: 20px; }
+.recipe-grid { flex-direction: row; margin-top: 10px; margin-bottom: 8px; }
+.recipe-card { position: relative; flex-grow: 1; margin-right: 16px; padding: 16px 22px; border-width: 1px; border-bottom-width: 4px; border-color: rgb(213,188,141); border-radius: 7px; background-color: rgb(255,254,235); }
+.icon { -unity-background-scale-mode: scale-to-fit; flex-shrink: 0; }
+.ingredient-row { flex-direction: row; align-items: center; }
+.controls { white-space: normal; font-size: 13px; color: rgb(240,241,207); margin-top: 14px; padding: 16px; background-color: rgb(67,96,73); border-width: 3px; border-color: rgb(142,116,76); border-radius: 8px; }
+.brief-stats { white-space: normal; font-size: 13px; color: rgb(134,99,41); margin: 14px 0; }
+.button-row { flex-direction: row; }
+.button-row > Button { margin-right: 14px; padding-left: 24px; padding-right: 24px; }
+.hud { position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
+.tickets { position: absolute; top: 23px; left: 23px; flex-direction: row; }
+.ticket { position: relative; width: 215px; padding: 15px 12px 9px; margin-right: 12px; background-color: rgb(255,252,229); border-radius: 5px 5px 16px 16px; border-width: 2px; border-bottom-width: 5px; border-color: rgb(187,150,95); }
+.ticket-top { flex-direction: row; align-items: center; margin-top: -4px; margin-bottom: -3px; }
+.ticket-title { white-space: normal; font-size: 23px; color: rgb(96,67,40); flex-shrink: 1; }
+.recipe-steps { font-size: 11px; margin-left: 8px; color: rgb(132,114,76); }
+.patience-track { height: 10px; background-color: rgb(228,219,184); margin-top: 5px; border-radius: 7px; overflow: hidden; }
+.patience-fill { height: 10px; border-radius: 7px; }
+.patience-time { margin-top: 3px; font-size: 10px; color: rgb(133,115,78); -unity-text-align: middle-right; }
+.urgent-ticket { border-color: rgb(210,90,57); background-color: rgb(255,233,206); }
+.waiting-paw { width: 52px; height: 52px; align-self: center; margin-bottom: 6px; }
+.summary { position: absolute; right: 23px; top: 23px; width: 205px; height: 88px; padding: 7px 10px; background-color: rgb(255,241,194); border-radius: 44px 17px 17px 44px; border-width: 3px; border-bottom-width: 5px; border-color: rgb(159,112,56); flex-direction: row; align-items: center; }
+.coin-icon { width: 65px; height: 65px; margin-right: 7px; }
+.tally { flex-grow: 1; }
+.score { font-size: 41px; color: rgb(108,74,30); margin: -6px 0; }
+.summary .caption { font-size: 10px; }
+.kitchen-badge { position: absolute; right: 28px; top: 127px; width: 195px; -unity-text-align: middle-right; }
+.context { position: absolute; left: 23px; bottom: 70px; max-width: 410px; flex-direction: row; align-items: center; padding: 10px 15px 10px 9px; border-radius: 28px 16px 16px 28px; background-color: rgb(255,247,214); border-width: 2px; border-bottom-width: 4px; border-color: rgb(176,142,87); }
+.held-icon { width: 56px; height: 56px; margin-right: 10px; flex-shrink: 0; }
+.paw-icon { width: 52px; height: 52px; }
+.context-info { flex-shrink: 1; }
+.held { font-size: 16px; -unity-font-style: bold; margin-bottom: 4px; }
+.prompt { font-size: 13px; color: rgb(75,112,59); white-space: normal; }
+.context .caption { font-size: 10px; margin-top: 4px; }
+.work-track { height: 9px; margin-top: 7px; margin-bottom: 3px; background-color: rgb(220,211,170); border-radius: 5px; overflow: hidden; }
+.work-fill { height: 9px; background-color: rgb(221,165,54); }
+.clock { position: absolute; right: 32px; bottom: 69px; width: 148px; height: 148px; align-items: center; justify-content: center; }
+.clock-face { position: absolute; left: 0; top: 0; width: 148px; height: 148px; }
+.timer { font-size: 35px; color: rgb(82,75,42); margin-top: 4px; }
+.timer.urgent { color: rgb(197,69,49); }
+.clock-caption { font-size: 9px; color: rgb(130,107,64); margin-top: -2px; }
+.pause-button { position: absolute; right: 57px; bottom: 24px; width: 100px; height: 35px; margin: 0; padding: 1px 10px; font-size: 18px; border-radius: 15px; }
+.hud-footer { position: absolute; bottom: 27px; left: 25px; flex-direction: row; }
+.key-hint { flex-direction: row; align-items: center; margin-right: 11px; }
+.keycap { font-size: 10px; -unity-font-style: bold; padding: 4px 6px; border-radius: 6px; border-width: 1px; border-bottom-width: 3px; border-color: rgb(137,149,101); background-color: rgb(247,242,209); color: rgb(77,101,58); }
+.key-name { font-size: 11px; color: rgb(86,110,66); margin-left: 4px; }
+.toast { position: absolute; left: 29%; right: 24%; bottom: 178px; padding: 12px 21px; background-color: rgb(63,99,70); border-radius: 22px; border-width: 3px; border-color: rgb(239,217,151); }
+.toast-text { font-size: 16px; color: rgb(255,248,216); -unity-text-align: middle-center; white-space: normal; }
+.results { flex-direction: row; margin: 18px 0; justify-content: space-between; }
+.stat { width: 22%; padding: 16px; align-items: center; background-color: rgb(242,227,181); border-radius: 18px; border-bottom-width: 4px; border-bottom-color: rgb(195,166,105); }
+.stat-value { font-size: 45px; color: rgb(96,123,64); }
+.world-label { position: absolute; width: 150px; padding: 7px 9px; border-radius: 10px; border-width: 2px; border-color: rgb(255,241,175); font-size: 11px; -unity-font-style: bold; -unity-text-align: middle-center; color: rgb(255,249,219); background-color: rgb(74,125,66); }
+
+/* The room owns the screen. Compact information sits in reserved edge strips. */
+.service-rail { position: absolute; top: 0; left: 0; right: 0; height: 108px; background-color: rgba(244,239,209,.45); border-bottom-width: 1px; border-bottom-color: rgba(139,151,99,.22); }
+.tickets { top: 8px; left: 16px; }
+.ticket { width: 130px; height: 85px; padding: 6px 8px; margin-right: 8px; border-width: 1px; border-bottom-width: 3px; border-radius: 5px 5px 12px 12px; }
+.ticket-top { margin-top: 0; margin-bottom: 0; height: 49px; }
+.ticket-number { font-size: 9px; color: rgb(128,111,74); height: 12px; }
+.ticket .ingredient-row { margin-left: 1px; }
+.patience-track, .patience-fill { height: 5px; margin-top: 2px; border-radius: 4px; }
+.patience-fill { margin-top: 0; }
+.empty-ticket { width: 68px; height: 65px; justify-content: center; align-items: center; margin-top: 9px; background-color: rgba(255,251,225,.55); }
+.waiting-paw { width: 30px; height: 30px; margin: 0; opacity: .5; }
+.summary { right: 145px; top: 17px; width: 114px; height: 58px; padding: 4px 8px; border-width: 1px; border-bottom-width: 3px; border-radius: 25px 12px 12px 25px; }
+.coin-icon { width: 30px; height: 30px; margin-right: 6px; }
+.score { font-size: 27px; margin: 0; }
+.summary .caption { font-size: 9px; margin-top: -2px; }
+.clock { right: 16px; top: 17px; bottom: auto; width: 118px; height: 58px; border-width: 1px; border-bottom-width: 3px; border-color: rgb(159,112,56); border-radius: 13px; background-color: rgb(255,247,218); padding-left: 25px; }
+.clock-face { left: 5px; top: 14px; width: 28px; height: 28px; }
+.timer { font-size: 26px; margin-top: 1px; }
+.clock-caption { font-size: 8px; margin-top: -2px; }
+.score-feedback { position: absolute; top: 28px; left: 56%; width: 100px; font-size: 28px; color: rgb(63,112,71); -unity-text-align: middle-center; }
+.context { left: 16px; bottom: 6px; width: 90px; height: 36px; padding: 0 6px; border-width: 1px; border-bottom-width: 2px; border-radius: 13px; }
+.held-icon { width: 34px; height: 34px; margin-right: 4px; }
+.paw-icon { width: 30px; height: 30px; }
+.prompt { font-size: 10px; }
+.work-track { width: 31px; height: 4px; margin-top: 2px; }
+.work-fill { height: 4px; }
+.hud-footer { left: 25%; bottom: 10px; }
+.key-hint { margin-right: 10px; }
+.hud .keycap { font-size: 9px; padding: 2px 5px; border-bottom-width: 2px; }
+.key-name { font-size: 10px; }
+.pause-button { right: 16px; bottom: 18px; width: 78px; height: 31px; font-size: 15px; }
+.pot-meter { position: absolute; width: 74px; height: 13px; flex-direction: row; align-items: center; }
+.pot-track { width: 57px; height: 7px; background-color: rgb(105,89,62); border-width: 1px; border-color: rgb(255,244,204); border-radius: 4px; overflow: hidden; }
+.pot-fill { height: 5px; border-radius: 3px; }
+.pot-status { width: 13px; height: 13px; margin-left: 3px; }
+/* Static picture instructions use existing game art and vector gesture diagrams. */
+.notebook { padding: 22px 28px; }
+.notebook .title { font-size: 32px; margin-bottom: 10px; }
+.lesson-recipe { flex-direction: row; align-items: center; margin-bottom: 10px; padding: 8px 10px; background-color: rgb(255,254,236); border-radius: 15px; border-bottom-width: 3px; border-bottom-color: rgb(224,206,165); }
+.lesson-recipe-name { width: 108px; align-items: center; flex-shrink: 0; }
+.lesson-word { font-size: 16px; color: rgb(71,101,60); white-space: normal; -unity-text-align: middle-center; }
+.lesson-flow { flex-grow: 1; flex-direction: row; align-items: center; }
+.lesson-step { width: 175px; flex-shrink: 1; }
+.lesson-picture { position: relative; width: 174px; height: 119px; align-self: center; }
+.lesson-step-caption { flex-direction: row; align-items: center; justify-content: center; height: 29px; }
+.lesson-step-caption .keycap { margin-left: 7px; font-size: 9px; padding: 3px 4px; }
+.lesson-arrow { flex-shrink: 0; margin: 0 1px; }
+.lesson-clock { position: absolute; width: 27px; height: 27px; }
+.lesson-foot { flex-direction: row; justify-content: space-around; margin-top: 3px; margin-bottom: 10px; padding: 8px 12px; border-radius: 13px; background-color: rgb(233,238,202); }
+.lesson-small { position: relative; width: 160px; height: 89px; flex-shrink: 1; }
+.lesson-mini-arrow { position: absolute; top: 22px; width: 27px; height: 27px; }
+.lesson-ticket { position: absolute; top: 4px; width: 45px; height: 54px; }
+.lesson-mini-caption { position: absolute; bottom: 0; left: 0; right: 0; font-size: 11px; color: rgb(81,105,62); -unity-text-align: middle-center; }
+.lesson-skill { position: absolute; left: 31%; top: 3px; width: 61px; height: 61px; }
+.lesson-buttons { justify-content: center; }
+
+.camera-help { font-size: 11px; color: rgb(81,105,62); -unity-text-align: middle-center; margin: 0 0 7px; }

@@ -1,0 +1,141 @@
+{
+  "source": "Decoded MP4 videos, played in Chrome and sampled at four phases",
+  "clips": [
+    {
+      "id": "chefidle",
+      "times": [
+        0,
+        0.8,
+        1.6,
+        2.4
+      ]
+    },
+    {
+      "id": "walk",
+      "times": [
+        0,
+        0.2,
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "id": "dash",
+      "times": [
+        0,
+        0.18,
+        0.35,
+        0.52
+      ]
+    },
+    {
+      "id": "carryidle",
+      "times": [
+        0,
+        0.8,
+        1.6,
+        2.4
+      ]
+    },
+    {
+      "id": "carrywalk",
+      "times": [
+        0,
+        0.225,
+        0.45,
+        0.675
+      ]
+    },
+    {
+      "id": "throw",
+      "times": [
+        0,
+        0.25,
+        0.46,
+        0.9
+      ]
+    },
+    {
+      "id": "chop",
+      "times": [
+        0,
+        0.18,
+        0.36,
+        0.54
+      ]
+    },
+    {
+      "id": "wash",
+      "times": [
+        0,
+        0.3,
+        0.6,
+        0.9
+      ]
+    },
+    {
+      "id": "customeridle",
+      "times": [
+        0,
+        0.8,
+        1.6,
+        2.4
+      ]
+    },
+    {
+      "id": "customereat",
+      "times": [
+        0,
+        0.65,
+        1.3,
+        1.95
+      ]
+    },
+    {
+      "id": "extinguish",
+      "times": [
+        0,
+        0.9,
+        1.8,
+        3.8
+      ]
+    },
+    {
+      "id": "overcook",
+      "times": [
+        1.1,
+        2.8,
+        3.6,
+        4.9
+      ]
+    },
+    {
+      "id": "dog-seated",
+      "times": [
+        0,
+        0.8,
+        1.6,
+        2.4
+      ]
+    },
+    {
+      "id": "cat-carry",
+      "times": [
+        0,
+        0.225,
+        0.45,
+        0.675
+      ]
+    },
+    {
+      "id": "dog-wash",
+      "times": [
+        0,
+        0.3,
+        0.6,
+        0.9
+      ]
+    }
+  ],
+  "final_fire_framing": "Final re-encoded overcook MP4 played and inspected at 1.1, 2.8, 3.6 and 4.9 seconds; chef and flames fit the frame."
+}

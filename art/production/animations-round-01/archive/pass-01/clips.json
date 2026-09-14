@@ -1,0 +1,154 @@
+{
+    "clips": [
+        {
+            "id": "chefidle",
+            "title": "Chef idle",
+            "action": "ChefIdle",
+            "animal": "capybara-male-chef",
+            "description": "Breathing, small head turns and relaxed paws.",
+            "duration": 3.200000047683716,
+            "video": "chefidle.mp4",
+            "poster": "chefidle.png"
+        },
+        {
+            "id": "walk",
+            "title": "Walking",
+            "action": "Walk",
+            "animal": "capybara-male-chef",
+            "description": "In-place gait with short steps and opposing arm swings.",
+            "duration": 2.4000000953674316,
+            "video": "walk.mp4",
+            "poster": "walk.png"
+        },
+        {
+            "id": "dash",
+            "title": "Dash burst",
+            "action": "Dash",
+            "animal": "capybara-male-chef",
+            "description": "Anticipation, forward lean, fast feet and recovery. Travel shown here is a preview.",
+            "duration": 1.149999976158142,
+            "video": "dash.mp4",
+            "poster": "dash.png"
+        },
+        {
+            "id": "carryidle",
+            "title": "Hold a plate",
+            "action": "CarryIdle",
+            "animal": "capybara-male-chef",
+            "description": "Two paws support a level plate with a quiet breathing loop.",
+            "duration": 3.200000047683716,
+            "video": "carryidle.mp4",
+            "poster": "carryidle.png"
+        },
+        {
+            "id": "carrywalk",
+            "title": "Walk with a plate",
+            "action": "CarryWalk",
+            "animal": "capybara-male-chef",
+            "description": "A walking cycle with the plate kept level between the paws.",
+            "duration": 2.700000047683716,
+            "video": "carrywalk.mp4",
+            "poster": "carrywalk.png"
+        },
+        {
+            "id": "throw",
+            "title": "Throw an ingredient",
+            "action": "Throw",
+            "animal": "capybara-male-chef",
+            "description": "Wind-up, release, ingredient arc over the rail and follow-through.",
+            "duration": 1.7000000476837158,
+            "video": "throw.mp4",
+            "poster": "throw.png"
+        },
+        {
+            "id": "chop",
+            "title": "Chop a tomato",
+            "action": "Chop",
+            "animal": "capybara-male-chef",
+            "description": "Three knife strokes, then the same ingredient changes to its chopped state.",
+            "duration": 3.200000047683716,
+            "video": "chop.mp4",
+            "poster": "chop.png"
+        },
+        {
+            "id": "wash",
+            "title": "Wash a dirty plate",
+            "action": "Wash",
+            "animal": "capybara-male-chef",
+            "description": "Scrubbing with a sponge, then the same dish becomes clean and is picked up.",
+            "duration": 3.200000047683716,
+            "video": "wash.mp4",
+            "poster": "wash.png"
+        },
+        {
+            "id": "extinguish",
+            "title": "Fight a kitchen fire",
+            "action": "Extinguish",
+            "animal": "capybara-male-chef",
+            "description": "Hold, aim and spray. Flames shrink and stop; the food stays burnt.",
+            "duration": 4.5,
+            "video": "extinguish.mp4",
+            "poster": "extinguish.png"
+        },
+        {
+            "id": "customeridle",
+            "title": "Seated customer idle",
+            "action": "CustomerIdle",
+            "animal": "cat-female-customer",
+            "description": "Seated breathing, gentle looking around and small arm shifts.",
+            "duration": 3.200000047683716,
+            "video": "customeridle.mp4",
+            "poster": "customeridle.png"
+        },
+        {
+            "id": "customereat",
+            "title": "Customer eating",
+            "action": "CustomerEat",
+            "animal": "capybara-female-customer",
+            "description": "A slow bite gesture and a head bob, returning to a resting pose.",
+            "duration": 2.5999999046325684,
+            "video": "customereat.mp4",
+            "poster": "customereat.png"
+        },
+        {
+            "id": "overcook",
+            "title": "Overcooking → fire",
+            "action": "Overcook",
+            "animal": "capybara-male-chef",
+            "description": "Accelerated review: cooking, ready, warning smoke, then ignition.",
+            "duration": 4.800000190734863,
+            "video": "overcook.mp4",
+            "poster": "overcook.png"
+        },
+        {
+            "id": "dog-seated",
+            "title": "Dog · seated idle",
+            "action": "CustomerIdle",
+            "animal": "dog-male-customer",
+            "description": "The shared animation set applied to another animal. Review joint and clothing deformation before final production.",
+            "duration": 3.200000047683716,
+            "video": "dog-seated.mp4",
+            "poster": "dog-seated.png"
+        },
+        {
+            "id": "cat-carry",
+            "title": "Cat · carrying",
+            "action": "CarryWalk",
+            "animal": "cat-male-chef",
+            "description": "The shared animation set applied to another animal. Review joint and clothing deformation before final production.",
+            "duration": 2.700000047683716,
+            "video": "cat-carry.mp4",
+            "poster": "cat-carry.png"
+        },
+        {
+            "id": "dog-wash",
+            "title": "Dog · washing",
+            "action": "Wash",
+            "animal": "dog-female-chef",
+            "description": "The shared animation set applied to another animal. Review joint and clothing deformation before final production.",
+            "duration": 3.200000047683716,
+            "video": "dog-wash.mp4",
+            "poster": "dog-wash.png"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+  "revision": "paw-height-motion-02",
+  "date": "2026-09-13",
+  "videos": 15,
+  "native_clips": 11,
+  "character_prefabs": 12,
+  "native_pose_comparisons": 132,
+  "skinned_limb_motion_checks": 120,
+  "native_playmode_passed": true,
+  "worktop_height_m": 0.458,
+  "worktop_height_reduction_percent": 32,
+  "room_placements_preserved": true,
+  "api_calls": 0,
+  "video_bytes": 7046995,
+  "review_url": "http://127.0.0.1:54114/production/animations-round-01/?v=paw-height-motion-02#chop"
+}

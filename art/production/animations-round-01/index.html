@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bara Kitchen · Animation review</title>
+<style>
+:root{--ink:#343d32;--muted:#727667;--paper:#fffcf5;--bg:#f4f1e7;--green:#376c5c;--line:#dddfd1}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,sans-serif}main{max-width:1220px;margin:auto;padding:32px 4vw}header{display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid var(--line);padding-bottom:24px}.eyebrow{color:var(--green);text-transform:uppercase;font-size:11px;letter-spacing:.16em;font-weight:750}h1{font:600 34px/1.2 Georgia,serif;margin:8px 0}p{color:var(--muted)}header p{margin:6px 0}a{color:var(--green);text-decoration:none}a:hover{text-decoration:underline}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:22px;margin-top:24px}.screen{background:#e7e3d7;border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:1}video{display:block;width:100%;height:100%;object-fit:contain}aside{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:24px;align-self:start}h2{font:600 27px/1.2 Georgia,serif;margin:8px 0 18px}select{width:100%;font:inherit;padding:10px;border:1px solid var(--line);border-radius:8px;background:white;color:var(--ink)}.details{border-top:1px solid var(--line);padding-top:15px;margin-top:20px;font-size:13px}.details strong{color:var(--ink)}.hint{font-size:12px;margin-top:22px}.shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:22px}button{background:var(--paper);border:1px solid var(--line);border-radius:12px;text-align:left;padding:12px;color:var(--ink);font:inherit;cursor:pointer}button.active{border:2px solid var(--green);padding:11px;background:#e7eedf}button:hover{border-color:var(--green)}button img{display:block;width:100%;aspect-ratio:1;object-fit:contain;border-radius:8px;margin-bottom:8px}button strong{font-size:13px;display:block}button small{font-size:11px;color:var(--muted)}.footer{font-size:12px;border-top:1px solid var(--line);margin-top:26px;padding-top:18px}#status{color:var(--green);font-size:12px}button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid #dcb76b;outline-offset:3px}@media(max-width:800px){.workspace{grid-template-columns:1fr}header{align-items:flex-start;flex-direction:column}.screen{max-height:650px}aside{padding:20px}.shelf{grid-template-columns:repeat(3,1fr)}}@media(max-width:500px){main{padding:24px 16px}.shelf{grid-template-columns:repeat(2,1fr)}}
+</style>
+<main><header><div><div class="eyebrow">Bara Kitchen / Animation pass 03</div><h1>Gentle motions. Every animal.</h1><p>Smaller idle gestures, upright knife strokes and eight seconds to react to warning flames.</p></div><a href="../round-01/?build=paw-height&view=unity">View the four rooms ↗</a></header>
+<div class="workspace"><div class="screen"><video id="video" controls autoplay muted loop playsinline preload="auto"></video></div><aside><div class="eyebrow">Actual Unity capture</div><h2 id="title">Chef idle</h2><label class="hint" for="animalSelect">Character</label><select id="animalSelect" aria-label="Choose character"></select><label class="hint" for="clipSelect">Animation</label><select id="clipSelect" aria-label="Choose animation"></select><p id="description"></p><div class="details"><strong id="animal"></strong><br><span id="duration"></span><br><span id="status" role="status">Loading…</span></div><label class="hint" for="speed">Playback speed</label><select id="speed"><option value="1">Normal</option><option value=".5">Half speed</option><option value=".25">Quarter speed</option></select><p class="hint">Pause or scrub the video to inspect paw contacts and the shape of each pose.</p><a id="download" download>Download clip ↗</a><p class="hint"><a href="#overcook" id="fireDemo">Watch the longer fire warning ↗</a></p><p class="hint"><a href="../round-01/?tab=props&asset=fire-extinguisher">Inspect the extinguisher in 3D ↗</a></p></aside></div>
+<div id="shelf" class="shelf" aria-label="Animation clips"></div><p class="footer">12 character variants × 11 motions · 132 character/action previews, plus the fire sequence. Worktops stay at paw height. Use half or quarter speed to inspect the arm and sleeve movement. Gameplay interactions and navigation come next.</p></main>
+<script>
+const $=id=>document.getElementById(id);let clips=[],selected,videoURL,videoRequest;const revision='gentle-motion-03';const video=$('video');window.previewReady=false;
+const nice=s=>s.split('-').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' ');
+function characterClips(animal){return clips.filter(c=>c.animal===animal)}
+function shelf(animal){
+ $('shelf').replaceChildren();$('clipSelect').replaceChildren();
+ for(const c of characterClips(animal)){
+  const o=document.createElement('option');o.value=c.id;o.textContent=c.title;$('clipSelect').append(o);
+  const b=document.createElement('button');b.dataset.clip=c.id;const img=document.createElement('img');img.src=c.poster+'?v='+revision;img.alt='';img.loading='lazy';
+  const name=document.createElement('strong');name.textContent=c.title;const info=document.createElement('small');info.textContent=c.duration.toFixed(1)+'s';b.append(img,name,info);b.onclick=()=>choose(c.id);$('shelf').append(b);
+ }
+}
+async function choose(id){
+ const item=clips.find(c=>c.id===id);if(!item)return;
+ if(!selected||selected.animal!==item.animal)shelf(item.animal);
+ selected=item;window.previewReady=false;window.previewError=null;
+ $('animalSelect').value=item.animal;$('title').textContent=item.title;$('description').textContent=item.description;
+ $('animal').textContent=nice(item.animal);$('duration').textContent=item.duration.toFixed(1)+' seconds · 24 fps';$('download').href=item.video+'?v='+revision;
+ $('clipSelect').value=id;$('status').textContent='Loading clip…';video.poster=item.poster+'?v='+revision;
+ document.querySelectorAll('[data-clip]').forEach(b=>b.classList.toggle('active',b.dataset.clip===id));history.replaceState(null,'','#'+id);
+ if(videoRequest)videoRequest.abort();videoRequest=new AbortController();const request=videoRequest;
+ video.pause();video.removeAttribute('src');video.load();if(videoURL){URL.revokeObjectURL(videoURL);videoURL=null}
+ try{
+  // A complete local blob supports accurate seeking even on a simple HTTP server without byte ranges.
+  const response=await fetch(item.video+'?v='+revision,{signal:request.signal});if(!response.ok)throw new Error('Video could not load');
+  const blob=await response.blob();if(request!==videoRequest)return;
+  videoURL=URL.createObjectURL(blob);video.src=videoURL;video.load();video.play().catch(()=>{});
+ }catch(e){if(e.name!=='AbortError'){window.previewError=e.message;$('status').textContent=e.message}}
+}
+video.addEventListener('loadeddata',()=>{video.playbackRate=Number($('speed').value);window.previewReady=true;$('status').textContent='Ready to review'});
+video.addEventListener('error',()=>{window.previewError='Video could not load';$('status').textContent=window.previewError});
+$('animalSelect').onchange=()=>{const options=characterClips($('animalSelect').value);choose((options.find(c=>c.action===selected?.action)||options[0]).id)};
+$('clipSelect').onchange=()=>choose($('clipSelect').value);$('speed').onchange=()=>{video.playbackRate=Number($('speed').value)};
+$('fireDemo').onclick=e=>{e.preventDefault();choose('overcook')};
+fetch('clips.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
+ clips=d.clips;for(const animal of [...new Set(clips.map(c=>c.animal))].sort()){const o=document.createElement('option');o.value=animal;o.textContent=nice(animal);$('animalSelect').append(o)}
+ choose(clips.some(c=>c.id===location.hash.slice(1))?location.hash.slice(1):'dog-wash');
+}).catch(e=>{$('status').textContent=e.message;window.previewError=e.message});
+</script></html>

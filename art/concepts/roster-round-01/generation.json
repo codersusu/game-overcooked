@@ -1,0 +1,36 @@
+{
+  "mode": "built-in image_gen",
+  "reference": "../../approved/capybara-c1.png",
+  "outputs": [
+    {
+      "id": "cat",
+      "file": "cat.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-09448a83-13de-40f3-8c36-bfa77cf8f0e2.png"
+    },
+    {
+      "id": "dog",
+      "file": "dog.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-f7fb006b-34a9-426e-b020-f01d4e1878ce.png"
+    },
+    {
+      "id": "red-panda",
+      "file": "red-panda.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-c24fc37d-6f1e-4118-b1e6-28ef349ab72f.png"
+    },
+    {
+      "id": "rabbit",
+      "file": "rabbit.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-5ba946e7-abe0-42f9-a822-06a3862dc08f.png"
+    },
+    {
+      "id": "otter",
+      "file": "otter.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-df5851c2-7efb-4656-bf31-b2d22283cb4c.png"
+    },
+    {
+      "id": "raccoon",
+      "file": "raccoon.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-040cc20f-1964-47ad-a17f-78e66de557b2.png"
+    }
+  ]
+}

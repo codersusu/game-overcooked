@@ -1,0 +1,143 @@
+[
+  {
+    "level": 1,
+    "shape": "Open U",
+    "free_counters": 6,
+    "station_counts": {
+      "tomato": 1,
+      "cucumber": 1,
+      "prep": 1,
+      "counter": 6,
+      "dishes": 1,
+      "sink": 1,
+      "return": 1,
+      "serve": 1,
+      "bin": 1
+    },
+    "all_working_faces_reachable_on_foot": true,
+    "recipe_assets_complete": true,
+    "one_tableware_type": true,
+    "no_recipe_specific_counter": true,
+    "barriers_block_walking_and_placement": true,
+    "throws": [],
+    "limit": "Discrete grid audit, not a collision, throw-arc, timing or fun test."
+  },
+  {
+    "level": 2,
+    "shape": "Ring route",
+    "free_counters": 8,
+    "station_counts": {
+      "carrot": 1,
+      "mushroom": 1,
+      "prep": 1,
+      "counter": 8,
+      "pot": 1,
+      "return": 1,
+      "sink": 1,
+      "dishes": 1,
+      "serve": 1,
+      "bin": 1
+    },
+    "all_working_faces_reachable_on_foot": true,
+    "recipe_assets_complete": true,
+    "one_tableware_type": true,
+    "no_recipe_specific_counter": true,
+    "barriers_block_walking_and_placement": true,
+    "throws": [],
+    "limit": "Discrete grid audit, not a collision, throw-arc, timing or fun test."
+  },
+  {
+    "level": 3,
+    "shape": "Two areas \u00b7 one passage",
+    "free_counters": 8,
+    "station_counts": {
+      "tomato": 1,
+      "cucumber": 1,
+      "counter": 8,
+      "carrot": 1,
+      "mushroom": 1,
+      "prep": 1,
+      "pot": 1,
+      "return": 1,
+      "sink": 1,
+      "dishes": 1,
+      "serve": 1,
+      "bin": 1
+    },
+    "all_working_faces_reachable_on_foot": true,
+    "recipe_assets_complete": true,
+    "one_tableware_type": true,
+    "no_recipe_specific_counter": true,
+    "barriers_block_walking_and_placement": true,
+    "throws": [
+      {
+        "target": "C4",
+        "throw_span_modules": 2,
+        "chef_walk_to_target_modules": 7
+      },
+      {
+        "target": "C5",
+        "throw_span_modules": 2,
+        "chef_walk_to_target_modules": 11
+      },
+      {
+        "target": "C6",
+        "throw_span_modules": 2,
+        "chef_walk_to_target_modules": 15
+      },
+      {
+        "target": "C7",
+        "throw_span_modules": 2,
+        "chef_walk_to_target_modules": 17
+      }
+    ],
+    "limit": "Discrete grid audit, not a collision, throw-arc, timing or fun test."
+  },
+  {
+    "level": 4,
+    "shape": "Three areas \u00b7 offset passages",
+    "free_counters": 13,
+    "station_counts": {
+      "tomato": 1,
+      "cucumber": 1,
+      "carrot": 1,
+      "mushroom": 1,
+      "counter": 13,
+      "prep": 2,
+      "pot": 1,
+      "serve": 1,
+      "dishes": 1,
+      "sink": 1,
+      "return": 1,
+      "bin": 1
+    },
+    "all_working_faces_reachable_on_foot": true,
+    "recipe_assets_complete": true,
+    "one_tableware_type": true,
+    "no_recipe_specific_counter": true,
+    "barriers_block_walking_and_placement": true,
+    "throws": [
+      {
+        "target": "C5",
+        "throw_span_modules": 2,
+        "chef_walk_to_target_modules": 13
+      },
+      {
+        "target": "C6",
+        "throw_span_modules": 2,
+        "chef_walk_to_target_modules": 11
+      },
+      {
+        "target": "C10",
+        "throw_span_modules": 2,
+        "chef_walk_to_target_modules": 7
+      },
+      {
+        "target": "C11",
+        "throw_span_modules": 2,
+        "chef_walk_to_target_modules": 11
+      }
+    ],
+    "limit": "Discrete grid audit, not a collision, throw-arc, timing or fun test."
+  }
+]

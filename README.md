@@ -1,0 +1,90 @@
+# Bara Kitchen
+
+<img src="art/brand/round-01/bara-kitchen-icon.png" width="180" alt="Bara Kitchen capybara chef icon">
+
+**Little paws. Big appetites.** A single-player 3D animal café: chop, combine, cook, serve, wash, and find your rhythm through four increasingly intricate kitchens. Built in Unity, with capybara, cat and dog chefs and a café full of animal customers.
+
+[Watch / download the trailer](https://github.com/codersusu/game-overcooked/releases/download/v0.1.0/Bara-Kitchen-Trailer.mp4) · [Download the demo](https://github.com/codersusu/game-overcooked/releases/tag/v0.1.0) · [Game design](docs/GAME_DESIGN.md) · [Implementation](docs/IMPLEMENTATION.md) · [Changelog](docs/CHANGELOG.md) · [Prompt summary](docs/PROMPT_SUMMARY.md)
+
+[![Trailer — actual Unity gameplay](art/trailers/round-01/poster.jpg)](https://github.com/codersusu/game-overcooked/releases/download/v0.1.0/Bara-Kitchen-Trailer.mp4)
+
+## Play the demo
+
+- **[macOS / Apple silicon ZIP](https://github.com/codersusu/game-overcooked/releases/download/v0.1.0/Bara-Kitchen-v0.1.0-macOS-AppleSilicon.zip)** — extract and open **Bara Kitchen.app**. This developer build is not notarized; macOS may require an explicit Open approval in Privacy & Security. Intel Mac and Windows native builds are not included.
+- **[Desktop browser ZIP](https://github.com/codersusu/game-overcooked/releases/download/v0.1.0/Bara-Kitchen-v0.1.0-Web.zip)** — extract, run `python3 -m http.server 8000` inside `Bara-Kitchen-Web`, then open `http://localhost:8000`. Do not open the HTML as a `file://` URL. Use a WebGL-capable desktop browser; touch controls are not implemented.
+
+The demo works locally without accounts, online services or AI API keys. All four kitchens are available. An untimed first order introduces each kitchen; delivery starts the timed round. Calm mode gives longer round and order timers. Best scores and preferences are saved on the device.
+
+| Action | Control |
+|---|---|
+| Move | WASD / arrow keys, relative to camera |
+| Pick up, place, combine, serve | E |
+| Chop, wash, extinguish | Tap Space once; moving cancels |
+| Lift a portion off a plate | R with empty paws |
+| Dash / throw ingredient | Shift from kitchen 2 / Q from kitchen 3 |
+| Turn camera | Drag left/right, or comma / period |
+| Tilt camera / reset view | Scroll, or [ / ]; C resets |
+| Picture guide / pause | H / Escape |
+
+## What is here
+
+Four kitchens, two recipes, four ingredients, six selectable chef looks and six customer looks. Ingredients can be placed freely on plates and worktops. Only exact prepared combinations become dishes. Dishes circulate through service, customers, return and washing. Customers arrive, sit, eat and leave. Cooking has ready, warning, burning and extinguished states. Compact order tickets, score, timers, settings and results are native Unity UI.
+
+![First Service — salad kitchen and customer café](art/production/gameplay-round-01/qa/full-playthrough/level-1-served-1.png)
+
+![The Zigzag Café — three work areas and throwing routes](art/production/gameplay-round-01/qa/full-playthrough/level-4-served-2.png)
+
+These are screenshots from the playable build. The current character rig can still crease at sleeves and elbows; final animation contact, performance/download optimization, and human difficulty testing remain. AI helpers, voice commands, multiplayer and upgrades are future ideas.
+
+## Continue development
+
+```sh
+git clone https://github.com/codersusu/game-overcooked.git
+cd game-overcooked
+git lfs install
+git lfs pull
+```
+
+Add **`Unity/BaraKitchen`** in Unity Hub with **6000.6.0f1**. Open **`Assets/BaraKitchen/Scenes/BaraKitchen_Game.unity`**, then press Play. Install the Web build-support module to rebuild the browser demo. Source, scenes, prefabs, textures, audio and exported builds are included; Unity's Library cache is excluded. Large binary files use Git LFS. GitHub source ZIP downloads may not contain the expanded LFS files; use the release downloads to play.
+
+To open the existing browser build and art galleries locally:
+
+```sh
+python3 -m http.server 54114 --directory art
+```
+
+Open `http://localhost:54114/production/gameplay-round-01/`. Detailed build and verification commands are in [Implementation](docs/IMPLEMENTATION.md).
+
+| Content | Location |
+|---|---|
+| Unity project / runtime source | [Unity/BaraKitchen](Unity/BaraKitchen) / [Gameplay](Unity/BaraKitchen/Assets/BaraKitchen/Gameplay) |
+| Approved character reference / wardrobe sheets | [C1](art/approved/capybara-c1.png) / [roster round 2](art/concepts/roster-round-02) |
+| Food concepts / approved floor plans | [kitchen concepts](art/concepts/kitchen-round-01) / [level round 2](art/concepts/levels-round-02) |
+| Original 3D characters, props and rooms | [production assets](art/production/round-01) |
+| Shared animation reviews | [animation gallery](art/production/animations-round-01) |
+| Audio sources and provenance | [audio](art/audio) / [credits](docs/IMPLEMENTATION.md#audio-and-third-party-materials) |
+| New icon / trailer and editable source | [brand](art/brand/round-01) / [trailer](art/trailers/round-01) |
+| Playable ZIPs / verification evidence | [downloads](art/downloads) / [QA](art/production/gameplay-round-01/qa/full-playthrough) |
+
+HTML galleries need the local server; GitHub displays their source. The trailer folder retains the captured clips, title composition and edit timeline for future recuts.
+
+
+**Validation:** all four full-round keyboard playthroughs passed, serving 10 meals in total and checking dish reuse, expiry, results and retry. The native suite passed 536 assertions. [Saved validation](art/production/gameplay-round-01/release-validation.json).
+
+## Development record and usage
+
+Developed collaboratively with the user from **8–14 September 2026**, roughly **six elapsed calendar days**. This includes discussion, art review and multiple interactive work sessions; it is not a claim of six continuous days or a measured number of labor hours. Historical milestones are reconstructed in the [changelog](docs/CHANGELOG.md); this repository begins with the consolidated handoff.
+
+The available conversation usage checkpoint is **2026-09-14T11:31:41.730Z**. Model recorded: **gpt-6-astra**.
+
+| Recorded category | Tokens |
+|---|---:|
+| Input, including cached input | 71,211,144 |
+| Cached input, included above | 68,914,944 |
+| Uncached input, calculated difference | 2,296,200 |
+| Output, including reasoning output | 528,848 |
+| Reasoning output, included above | 186,867 |
+| Cache-write input | 0 |
+| Total input + output | 71,739,992 |
+
+Input totals count repeated conversation context across requests. Do not add cached input or reasoning output again. These counters cover the recorded checkpoint, **not all later work on the release**. [Machine-readable record](docs/development-metrics.json). Currency cost cannot be stated reliably without the account's billing/rate records. The documented main Meshy production batch used **385 credits**; initial experiments and ElevenLabs/image-generation charges are not fully reconciled, so no combined cost is invented.

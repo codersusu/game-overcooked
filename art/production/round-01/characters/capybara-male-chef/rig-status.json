@@ -1,0 +1,8 @@
+{
+  "status": "FAILED",
+  "consumed_credits": 0,
+  "task_error": {
+    "message": "Meshy HTTP 422: Pose estimation failed, please provide a valid model"
+  },
+  "note": "Synchronous input rejection observed in process output; no task ID was issued."
+}

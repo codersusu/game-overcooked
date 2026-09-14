@@ -1,0 +1,50 @@
+{
+  "native": {
+    "passed": true,
+    "checks": 536
+  },
+  "fullRounds": [
+    {
+      "level": 1,
+      "passed": true,
+      "checks": 22,
+      "score": 140,
+      "served": 2,
+      "missed": 2,
+      "errors": []
+    },
+    {
+      "level": 2,
+      "passed": true,
+      "checks": 35,
+      "score": 174,
+      "served": 2,
+      "missed": 2,
+      "errors": []
+    },
+    {
+      "level": 3,
+      "passed": true,
+      "checks": 33,
+      "score": 242,
+      "served": 3,
+      "missed": 1,
+      "errors": []
+    },
+    {
+      "level": 4,
+      "passed": true,
+      "checks": 33,
+      "score": 240,
+      "served": 3,
+      "missed": 2,
+      "errors": []
+    }
+  ],
+  "macOS": {
+    "architecture": "arm64",
+    "buildSucceeded": true,
+    "launchSmokePassed": true,
+    "completeRoundsTested": false
+  }
+}

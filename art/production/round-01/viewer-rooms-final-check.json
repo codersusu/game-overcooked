@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "label": "room-1",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 8.485356711633504,
+        "y": 2.035500042326748,
+        "z": 11.01700000462681
+      }
+    },
+    {
+      "label": "room-1#viewStill",
+      "src": "http://127.0.0.1:54114/production/round-01/level-01-unity.png?v=paw-height-motion-02"
+    },
+    {
+      "label": "room-1#viewBefore",
+      "src": "http://127.0.0.1:54114/production/round-01/archive/tall-worktops/level-01-unity.png?v=paw-height-motion-02"
+    },
+    {
+      "label": "room-2",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 9.405356711633502,
+        "y": 2.035500042326748,
+        "z": 12.857000004626808
+      }
+    },
+    {
+      "label": "room-2#viewStill",
+      "src": "http://127.0.0.1:54114/production/round-01/level-02-unity.png?v=paw-height-motion-02"
+    },
+    {
+      "label": "room-2#viewBefore",
+      "src": "http://127.0.0.1:54114/production/round-01/archive/tall-worktops/level-02-unity.png?v=paw-height-motion-02"
+    },
+    {
+      "label": "room-3",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 11.245356711633502,
+        "y": 2.035500042326748,
+        "z": 12.857000004626808
+      }
+    },
+    {
+      "label": "room-3#viewStill",
+      "src": "http://127.0.0.1:54114/production/round-01/level-03-unity.png?v=paw-height-motion-02"
+    },
+    {
+      "label": "room-3#viewBefore",
+      "src": "http://127.0.0.1:54114/production/round-01/archive/tall-worktops/level-03-unity.png?v=paw-height-motion-02"
+    },
+    {
+      "label": "room-4",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 14.005356711633503,
+        "y": 2.035500042326748,
+        "z": 12.857000004626808
+      }
+    },
+    {
+      "label": "room-4#viewStill",
+      "src": "http://127.0.0.1:54114/production/round-01/level-04-unity.png?v=paw-height-motion-02"
+    },
+    {
+      "label": "room-4#viewBefore",
+      "src": "http://127.0.0.1:54114/production/round-01/archive/tall-worktops/level-04-unity.png?v=paw-height-motion-02"
+    },
+    {
+      "label": "return-to-rooms",
+      "error": null,
+      "animations": [],
+      "duration": 0,
+      "dimensions": {
+        "x": 8.485356711633504,
+        "y": 2.035500042326748,
+        "z": 11.01700000462681
+      }
+    }
+  ],
+  "errors": []
+}

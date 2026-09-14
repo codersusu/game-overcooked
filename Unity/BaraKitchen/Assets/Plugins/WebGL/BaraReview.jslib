@@ -1,0 +1,1 @@
+mergeInto(LibraryManager.library, { BaraReviewState: function (text) { try { window.baraState = JSON.parse(UTF8ToString(text)); } catch (error) { console.warn("Bara review snapshot skipped", error.message); } } });

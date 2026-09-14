@@ -1,0 +1,67 @@
+{
+  "mode": "built-in image_gen",
+  "outputs": [
+    {
+      "id": "capybara",
+      "file": "capybara.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-b662969e-87a3-485e-bb6c-060178189d3f.png",
+      "references": [
+        "/Users/yanqima/Documents/ChatGPT/bara kitchen game/art/approved/capybara-c1.png"
+      ]
+    },
+    {
+      "id": "cat",
+      "file": "cat.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-d3f43589-9dd2-461a-8e63-706ba4c11e0c.png",
+      "references": [
+        "/Users/yanqima/Documents/ChatGPT/bara kitchen game/art/concepts/roster-round-01/cat.png",
+        "/Users/yanqima/Documents/ChatGPT/bara kitchen game/art/approved/capybara-c1.png"
+      ]
+    },
+    {
+      "id": "dog",
+      "file": "dog.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-6f50db59-274c-45ce-8d77-73748aeb07c9.png",
+      "references": [
+        "/Users/yanqima/Documents/ChatGPT/bara kitchen game/art/concepts/roster-round-01/dog.png",
+        "/Users/yanqima/Documents/ChatGPT/bara kitchen game/art/approved/capybara-c1.png"
+      ]
+    },
+    {
+      "id": "red-panda",
+      "file": "red-panda.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-e8caf582-54db-47a1-9d73-9d27e469bc94.png",
+      "references": [
+        "/Users/yanqima/Documents/ChatGPT/bara kitchen game/art/concepts/roster-round-01/red-panda.png",
+        "/Users/yanqima/Documents/ChatGPT/bara kitchen game/art/approved/capybara-c1.png"
+      ]
+    },
+    {
+      "id": "rabbit",
+      "file": "rabbit.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-b6e8abba-6a05-4d1b-b33e-babba62ce635.png",
+      "references": [
+        "/Users/yanqima/Documents/ChatGPT/bara kitchen game/art/concepts/roster-round-01/rabbit.png",
+        "/Users/yanqima/Documents/ChatGPT/bara kitchen game/art/approved/capybara-c1.png"
+      ]
+    },
+    {
+      "id": "otter",
+      "file": "otter.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-694b3765-f63c-4dab-b963-0ef42e476a27.png",
+      "references": [
+        "/Users/yanqima/Documents/ChatGPT/bara kitchen game/art/concepts/roster-round-01/otter.png",
+        "/Users/yanqima/Documents/ChatGPT/bara kitchen game/art/approved/capybara-c1.png"
+      ]
+    },
+    {
+      "id": "raccoon",
+      "file": "raccoon.png",
+      "generated_source": "/Users/yanqima/.codex/generated_images/01a080a3-adef-7000-9bac-47959ebd6c3f/exec-155a670e-c6e7-4fab-b665-4310c73a8e35.png",
+      "references": [
+        "/Users/yanqima/Documents/ChatGPT/bara kitchen game/art/concepts/roster-round-01/raccoon.png",
+        "/Users/yanqima/Documents/ChatGPT/bara kitchen game/art/approved/capybara-c1.png"
+      ]
+    }
+  ]
+}

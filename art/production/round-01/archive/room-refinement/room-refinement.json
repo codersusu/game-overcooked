@@ -1,0 +1,59 @@
+{
+  "revision": "Room scale, compact dining and colour refinement",
+  "additional_meshy_requests": 0,
+  "rooms": [
+    {
+      "level": 1,
+      "module_m": 0.9199999999999999,
+      "old_module_m": 0.8,
+      "cafe_depth_m": 3.22,
+      "old_cafe_depth_m": 4.0,
+      "cafe_area_change_percent": -7.43,
+      "seats": 4,
+      "bench_instances": 0,
+      "decor_instances": 9
+    },
+    {
+      "level": 2,
+      "module_m": 0.9199999999999999,
+      "old_module_m": 0.8,
+      "cafe_depth_m": 3.22,
+      "old_cafe_depth_m": 4.0,
+      "cafe_area_change_percent": -7.43,
+      "seats": 4,
+      "bench_instances": 0,
+      "decor_instances": 9
+    },
+    {
+      "level": 3,
+      "module_m": 0.9199999999999999,
+      "old_module_m": 0.8,
+      "cafe_depth_m": 3.22,
+      "old_cafe_depth_m": 4.0,
+      "cafe_area_change_percent": -7.43,
+      "seats": 6,
+      "bench_instances": 0,
+      "decor_instances": 10
+    },
+    {
+      "level": 4,
+      "module_m": 0.9199999999999999,
+      "old_module_m": 0.8,
+      "cafe_depth_m": 3.22,
+      "old_cafe_depth_m": 4.0,
+      "cafe_area_change_percent": -7.43,
+      "seats": 6,
+      "bench_instances": 0,
+      "decor_instances": 10
+    }
+  ],
+  "rendering": {
+    "engine": "Unity 6000.6.0f1",
+    "graphics": "Metal",
+    "colour_space": "Linear",
+    "shader": "Bara Kitchen/Soft Color",
+    "source_palette_and_textures_preserved": true,
+    "real_directional_shadows": true
+  },
+  "verification": "See validation.json, unity-build-audit.json and viewer-environment-check.json. Runtime navigation and interaction remain future playtests."
+}

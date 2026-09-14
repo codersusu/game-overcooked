@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "mode": "Unity Play Mode, native Animator and GPU skinning",
+  "checks": [
+    "Walking paw movement",
+    "Sideways idle paw movement",
+    "Warning phase before fire",
+    "Live native particle rendering"
+  ],
+  "editor_note": "Unity QuickSearch reported an indexing exception during editor startup; the animation checks completed successfully and no Bara Kitchen runtime exception occurred."
+}
