@@ -69,3 +69,7 @@ Use the available OpenAI API to let the player ask the chef how to play at any t
 ## Live conversation refinement
 
 Use GPT-Live for a more natural ongoing conversation. Remove writing because typing is impractical during gameplay; provide a simple chat button. Beyond how-to questions, the chef should discuss whether the player is doing well, offer hints when the player is idle, and remind them about important unattended tasks such as a burning pot. The game should continue while the player talks. This remains companionship and advice, not an autonomous cooking assistant.
+
+## Cuter voice and second trailer
+
+Make the assistant voice cuter to fit the animal café. Create a second trailer emphasizing in-game voice support: show different player questions and the chef’s replies, plus casual conversation. End by asking “What is the cutest animal in this kitchen?” with a playful answer along the lines of “Me, Bara.” Keep the original gameplay trailer.

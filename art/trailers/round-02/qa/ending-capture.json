@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "model": "gpt-live-1",
+  "voice": "marin",
+  "syntheticPlayer": true,
+  "assistantReplies": "Actual live session output",
+  "controlsOnly": true,
+  "clips": [
+    {
+      "name": "chat-button",
+      "seconds": 3.212800000011921
+    },
+    {
+      "name": "cutest",
+      "seconds": 9.72440000000596
+    }
+  ],
+  "errors": []
+}

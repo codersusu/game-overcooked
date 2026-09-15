@@ -31,7 +31,7 @@ After extinguishing a fire, carry the burnt pot to the bin, empty it with E, the
 
 ## Chat with Bara while playing
 
-Click **AI chat** or press **V**, allow microphone access, and talk naturally. Click **End chat** or press V again to stop. The kitchen keeps running; you can move, cook and interrupt Bara while chatting. There is no typing or conversation panel.
+Click **AI chat** or press **V**, allow microphone access, and talk naturally with Bara’s soft, bright, playful voice. Click **End chat** or press V again to stop. The kitchen keeps running; you can move, cook and interrupt Bara while chatting. There is no typing or conversation panel.
 
 Bara can explain the next cooking step, give directions relative to your current camera, and discuss your actual score, deliveries, misses and streak. While chat is on, it gives occasional reminders for an unattended warning/burning pot, a nearly overdue dish in your paws, or a longer idle period. It offers brief encouragement after real progress. Say “no hints” to silence automatic reminders. A small blue marker can identify the suggested station. Bara gives advice and never performs game actions.
 
@@ -47,7 +47,9 @@ Keep the helper open while playing. Both ZIPs include a separate `Bara-Kitchen-V
 
 Microphone audio streams to OpenAI **only while chat is on**, alongside kitchen context for guidance. The helper does not save audio or conversations. Closing chat or leaving the game stops the microphone. Sessions also end after 15 minutes or a lost game heartbeat. API usage is billed to your key: GPT-Live currently costs $0.05 per connected minute, plus delegated reasoning. This is a local prototype; public distribution needs a hosted authenticated service. [Official GPT-Live model details](https://developers.openai.com/api/docs/models/gpt-live-1).
 
-![Live chat — one small button while the kitchen stays playable](art/production/gameplay-round-01/qa/voice/live-chat.png)
+[![Meet Bara — live voice support trailer](art/trailers/round-02/poster.jpg)](https://github.com/codersusu/game-overcooked/releases/download/v0.2.0/Bara-Kitchen-Voice-Trailer.mp4)
+
+[Watch the live voice trailer](https://github.com/codersusu/game-overcooked/releases/download/v0.2.0/Bara-Kitchen-Voice-Trailer.mp4): real gameplay and GPT-Live replies, with synthetic player questions, edited pauses, captions and game music. It closes with Bara’s playful answer to “What is the cutest animal in this kitchen?”
 
 ## What is here
 

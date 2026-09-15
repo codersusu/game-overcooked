@@ -4,6 +4,7 @@ This is a reconstructed development history from the conversation and saved arti
 
 ## 0.2.0 — GPT-Live kitchen companion · 15 September 2026
 
+- Gave Bara a softer, brighter capybara voice direction with brief playful banter. Added a second trailer showing real live answers, progress feedback, a pot reminder and the requested cutest-animal closing joke.
 - Added one **AI chat / End chat** button with V shortcut. Voice-only, continuous, interruptible conversation while the kitchen keeps running; no typing or conversation overlay.
 - Integrated `gpt-live-1` through browser WebRTC and native Unity PCM/WebSocket, with private key handling in the local helper. Detailed gameplay questions delegate to contextual reasoning; casual conversation stays in Live.
 - Added current orders, held items, worktop/pot/fire state, performance, unlocks and verified camera-relative routes to the companion context. Suggested stations get a brief blue marker; Bara cannot execute game actions.

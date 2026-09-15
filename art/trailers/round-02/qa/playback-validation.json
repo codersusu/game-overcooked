@@ -1,0 +1,12 @@
+{
+  "duration": 56.618034,
+  "width": 1920,
+  "height": 1080,
+  "ended": true,
+  "frames": {
+    "total": 1697,
+    "dropped": 0
+  },
+  "errors": [],
+  "passed": true
+}

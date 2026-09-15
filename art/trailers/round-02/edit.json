@@ -1,0 +1,198 @@
+{
+  "duration": 56.6,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "openingClosingIdentical": true,
+  "source": "Actual Unity keyboard gameplay and GPT-Live WebRTC replies. Player questions are synthetic. Pauses/backchannels shortened; crops, captions, loudness balancing and game music added in editing. Closing joke follows the authored Bara persona. No fabricated game scores or model replies.",
+  "model": "gpt-live-1",
+  "voice": "marin",
+  "timeline": [
+    {
+      "start": 0,
+      "duration": 3,
+      "kind": "title",
+      "file": "title-card.png"
+    },
+    {
+      "start": 3,
+      "duration": 3.1,
+      "sourceStart": 0,
+      "sourceEnd": 3.1,
+      "file": "source/chat-button.webm",
+      "crop": null,
+      "feature": "One tap. A little company.",
+      "captions": []
+    },
+    {
+      "start": 6.1,
+      "duration": 4.1,
+      "sourceStart": 0.35,
+      "sourceEnd": 4.45,
+      "file": "source/chop.webm",
+      "crop": [
+        460,
+        220,
+        1120,
+        525
+      ],
+      "feature": "Ask while you cook",
+      "captions": [
+        [
+          0.1,
+          4.05,
+          "YOU",
+          "Bara, how do I chop this tomato?"
+        ]
+      ]
+    },
+    {
+      "start": 10.2,
+      "duration": 8.6,
+      "sourceStart": 7.0,
+      "sourceEnd": 15.6,
+      "file": "source/chop.webm",
+      "crop": [
+        460,
+        220,
+        1120,
+        525
+      ],
+      "feature": "Ask while you cook",
+      "captions": [
+        [
+          0.2,
+          5.25,
+          "BARA",
+          "Pop it onto the chopping board with E, then press\nSpace with empty paws to chop."
+        ]
+      ]
+    },
+    {
+      "start": 18.8,
+      "duration": 3.7333333333333334,
+      "sourceStart": 0.35,
+      "sourceEnd": 4.1,
+      "file": "source/progress.webm",
+      "crop": null,
+      "feature": "A little encouragement",
+      "captions": [
+        [
+          0.1,
+          3.7,
+          "YOU",
+          "How am I doing so far?"
+        ]
+      ]
+    },
+    {
+      "start": 22.533,
+      "duration": 8.533333333333333,
+      "sourceStart": 7.25,
+      "sourceEnd": 15.8,
+      "file": "source/progress.webm",
+      "crop": null,
+      "feature": "A little encouragement",
+      "captions": [
+        [
+          0.1,
+          5.9,
+          "BARA",
+          "Nice pace! You're at 80 points with one served,\nnone missed, and a one-hit streak."
+        ],
+        [
+          5.9,
+          8.5,
+          "BARA",
+          "Only 20 more points for the first star."
+        ]
+      ]
+    },
+    {
+      "start": 31.067,
+      "duration": 6.3,
+      "sourceStart": 16.2,
+      "sourceEnd": 22.5,
+      "file": "source/pot-reminder.webm",
+      "crop": [
+        560,
+        330,
+        1024,
+        480
+      ],
+      "feature": "A timely nudge",
+      "captions": [
+        [
+          0.7,
+          6.2,
+          "BARA",
+          "Ooh, quick one: the soup is ready. Scoop it with\na clean empty plate before it burns."
+        ]
+      ]
+    },
+    {
+      "start": 37.367,
+      "duration": 8.733333333333333,
+      "sourceStart": 0.35,
+      "sourceEnd": 9.08,
+      "file": "source/casual.webm",
+      "crop": [
+        530,
+        325,
+        1152,
+        540
+      ],
+      "feature": "Or just have a little chat",
+      "captions": [
+        [
+          0.1,
+          3.4,
+          "YOU",
+          "This little caf\u00e9 feels cozy, huh?"
+        ],
+        [
+          3.65,
+          8.7,
+          "BARA",
+          "Oh, super cozy! Like, tiny mug\nand warm soup energy."
+        ]
+      ]
+    },
+    {
+      "start": 46.1,
+      "duration": 7.5,
+      "sourceStart": 0.35,
+      "sourceEnd": 7.85,
+      "file": "source/cutest.webm",
+      "crop": [
+        570,
+        145,
+        896,
+        420
+      ],
+      "feature": "Your new kitchen companion",
+      "captions": [
+        [
+          0.1,
+          3.9,
+          "YOU",
+          "What is the cutest animal in this kitchen?"
+        ],
+        [
+          4.1,
+          7.5,
+          "BARA",
+          "Hee-hee, me! Bara, the capybara."
+        ]
+      ]
+    },
+    {
+      "start": 53.6,
+      "duration": 3,
+      "kind": "title",
+      "file": "title-card.png"
+    }
+  ]
+}

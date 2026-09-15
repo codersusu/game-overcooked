@@ -1,0 +1,556 @@
+{
+  "name": "casual",
+  "seconds": 14.20040000000596,
+  "events": [
+    {
+      "type": "session.input_transcript.delta",
+      "delta": " This",
+      "at": 2.0222000000178815,
+      "start_ms": 59600,
+      "end_ms": 59800
+    },
+    {
+      "type": "session.input_transcript.delta",
+      "delta": " little",
+      "at": 2.5535,
+      "start_ms": 60000,
+      "end_ms": 60200
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " Mm-h",
+      "at": 2.734200000017881,
+      "start_ms": 60200,
+      "end_ms": 60400
+    },
+    {
+      "type": "session.input_transcript.delta",
+      "delta": " cafe",
+      "at": 2.9369000000059606,
+      "start_ms": 60400,
+      "end_ms": 60600
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": "mm.",
+      "at": 2.9390999999940397,
+      "start_ms": 60400,
+      "end_ms": 60600
+    },
+    {
+      "type": "session.input_transcript.delta",
+      "delta": " feels",
+      "at": 3.3039000000059606,
+      "start_ms": 60800,
+      "end_ms": 61000
+    },
+    {
+      "type": "session.input_transcript.delta",
+      "delta": " cozy",
+      "at": 3.6282000000178813,
+      "start_ms": 61200,
+      "end_ms": 61400
+    },
+    {
+      "type": "session.input_transcript.delta",
+      "delta": ", huh",
+      "at": 4.135200000017881,
+      "start_ms": 61600,
+      "end_ms": 61800
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " Oh",
+      "at": 4.34390000000596,
+      "start_ms": 61800,
+      "end_ms": 62000
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": ", super",
+      "at": 4.5295,
+      "start_ms": 62000,
+      "end_ms": 62200
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " cozy!",
+      "at": 4.719800000011921,
+      "start_ms": 62200,
+      "end_ms": 62400
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " Like,",
+      "at": 5.313200000017881,
+      "start_ms": 62800,
+      "end_ms": 63000
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " tiny",
+      "at": 5.95890000000596,
+      "start_ms": 63400,
+      "end_ms": 63600
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " mug",
+      "at": 6.5235,
+      "start_ms": 64000,
+      "end_ms": 64200
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " and",
+      "at": 6.937300000011921,
+      "start_ms": 64400,
+      "end_ms": 64600
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " warm",
+      "at": 7.131400000005961,
+      "start_ms": 64600,
+      "end_ms": 64800
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " soup",
+      "at": 7.583599999994039,
+      "start_ms": 65000,
+      "end_ms": 65200
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " energy.",
+      "at": 7.75890000000596,
+      "start_ms": 65200,
+      "end_ms": 65400
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " Hee",
+      "at": 8.539200000017882,
+      "start_ms": 66000,
+      "end_ms": 66200
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": "-hee",
+      "at": 8.808900000005961,
+      "start_ms": 66200,
+      "end_ms": 66400
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": ",",
+      "at": 8.941400000005961,
+      "start_ms": 66400,
+      "end_ms": 66600
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " it",
+      "at": 9.329400000005961,
+      "start_ms": 66800,
+      "end_ms": 67000
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " makes",
+      "at": 9.74740000000596,
+      "start_ms": 67200,
+      "end_ms": 67400
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " my",
+      "at": 9.94540000000596,
+      "start_ms": 67400,
+      "end_ms": 67600
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " whiskers",
+      "at": 10.14880000001192,
+      "start_ms": 67600,
+      "end_ms": 67800
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " wiggle",
+      "at": 10.531400000005961,
+      "start_ms": 68000,
+      "end_ms": 68200
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": ".",
+      "at": 10.72840000000596,
+      "start_ms": 68200,
+      "end_ms": 68400
+    }
+  ],
+  "question": {
+    "text": "This little cafe feels cozy, huh?",
+    "start": 0.5120999999940395,
+    "duration": 2.85
+  },
+  "assistant": " Mm-hmm. Oh, super cozy! Like, tiny mug and warm soup energy. Hee-hee, it makes my whiskers wiggle.",
+  "state": {
+    "helpOpen": true,
+    "helpState": "connected",
+    "phase": "Service",
+    "held": "",
+    "focused": "serve",
+    "working": "",
+    "music": "service",
+    "workSound": "",
+    "level": 1,
+    "score": 80,
+    "served": 1,
+    "missed": 0,
+    "guests": 2,
+    "clean": 2,
+    "dirty": 1,
+    "training": false,
+    "musicPlaying": true,
+    "workPlaying": false,
+    "aa": 4,
+    "audioClips": 19,
+    "sfxCount": 72,
+    "guestSounds": 4,
+    "heldScale": 0,
+    "workProgress": 0,
+    "musicGain": 0.05407999828457832,
+    "remaining": 148.8747100830078,
+    "x": -2.360586643218994,
+    "z": 2.7157561779022217,
+    "fx": -0.9850496649742126,
+    "fz": -0.1722707748413086,
+    "cameraTilt": 46.923954010009766,
+    "cameraTargetTilt": 46.923954010009766,
+    "cameraYaw": 20.080123901367188,
+    "cameraTargetYaw": 20.080123901367188,
+    "roomBounds": {
+      "serializedVersion": "2",
+      "x": 0.26233893632888794,
+      "y": 0.011740590445697308,
+      "width": 0.4753221869468689,
+      "height": 0.9758328795433044
+    },
+    "cameraSize": 5.368801116943359,
+    "viewY": 0.054999999701976776,
+    "viewH": 0.8100000023841858,
+    "rightX": -0.9392136335372925,
+    "rightZ": 0.34333398938179016,
+    "forwardX": -0.3433338701725006,
+    "forwardZ": -0.9392133951187134,
+    "uiBoxes": [
+      {
+        "label": ":service-rail",
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.13518518209457397
+      },
+      {
+        "label": "ticket-2:ticket",
+        "x": 0.011458332650363445,
+        "y": 0.010185184888541698,
+        "w": 0.0911458358168602,
+        "h": 0.10648147761821747
+      },
+      {
+        "label": "ticket-3:ticket",
+        "x": 0.10833333432674408,
+        "y": 0.010185184888541698,
+        "w": 0.09166666120290756,
+        "h": 0.10648147761821747
+      }
+    ],
+    "visibleLabels": [
+      "#2",
+      "#3",
+      "80",
+      "×1",
+      "02:29",
+      "",
+      "E",
+      "WASD",
+      "Move",
+      "E",
+      "Place",
+      "R",
+      "Lift",
+      "SPACE",
+      "Work",
+      "H",
+      "Guide",
+      "SCROLL",
+      "Tilt",
+      "DRAG",
+      "Turn",
+      "Mic on · OpenAI"
+    ],
+    "buttons": [
+      {
+        "label": "Pause",
+        "x": 0.9338541626930237,
+        "y": 0.9388888478279114,
+        "w": 0.05468754097819328,
+        "h": 0.03888893127441406
+      },
+      {
+        "label": "End chat · V",
+        "x": 0.8119791746139526,
+        "y": 0.9333332777023315,
+        "w": 0.09687495231628418,
+        "h": 0.04537040740251541
+      }
+    ],
+    "stations": [
+      {
+        "id": "tomato",
+        "kind": "tomato",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": 2.299999952316284,
+        "z": 0,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "cucumber",
+        "kind": "cucumber",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": 1.3799999952316284,
+        "z": 0,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "prep",
+        "kind": "prep",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": 0.46000000834465027,
+        "z": 0,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "C1",
+        "kind": "counter",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": -0.46000000834465027,
+        "z": 0,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "C2",
+        "kind": "counter",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": -1.3799999952316284,
+        "z": 0,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "C3",
+        "kind": "counter",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": 3.2200000286102295,
+        "z": 0,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "dishes",
+        "kind": "dishes",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": 3.2200000286102295,
+        "z": 1.840000033378601,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "C4",
+        "kind": "counter",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": 3.2200000286102295,
+        "z": 2.759999990463257,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "sink",
+        "kind": "sink",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": 3.2200000286102295,
+        "z": 3.680000066757202,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "return",
+        "kind": "return",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": 3.2200000286102295,
+        "z": 4.599999904632568,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "C5",
+        "kind": "counter",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": -3.2200000286102295,
+        "z": 0.9200000166893005,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "C6",
+        "kind": "counter",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": -3.2200000286102295,
+        "z": 1.840000033378601,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "serve",
+        "kind": "serve",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": -3.2200000286102295,
+        "z": 2.759999990463257,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "bin",
+        "kind": "bin",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": -3.2200000286102295,
+        "z": 4.599999904632568,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "extinguisher",
+        "kind": "extinguisher",
+        "item": "Fire extinguisher",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 1,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": -2.369999885559082,
+        "z": 4.599999904632568,
+        "scale": 1,
+        "progress": 0
+      }
+    ]
+  }
+}

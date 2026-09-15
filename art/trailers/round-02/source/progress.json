@@ -1,0 +1,569 @@
+{
+  "name": "progress",
+  "seconds": 16.54880000001192,
+  "events": [
+    {
+      "type": "session.input_transcript.delta",
+      "delta": " How",
+      "at": 2.165,
+      "start_ms": 43000,
+      "end_ms": 43200
+    },
+    {
+      "type": "session.input_transcript.delta",
+      "delta": " am I",
+      "at": 2.307699999988079,
+      "start_ms": 43200,
+      "end_ms": 43400
+    },
+    {
+      "type": "session.input_transcript.delta",
+      "delta": " doing",
+      "at": 2.928800000011921,
+      "start_ms": 43800,
+      "end_ms": 44000
+    },
+    {
+      "type": "session.input_transcript.delta",
+      "delta": " so",
+      "at": 3.1149000000059606,
+      "start_ms": 44000,
+      "end_ms": 44200
+    },
+    {
+      "type": "session.input_transcript.delta",
+      "delta": " far",
+      "at": 3.4940999999940394,
+      "start_ms": 44400,
+      "end_ms": 44600
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " Checking",
+      "at": 4.85,
+      "start_ms": 45600,
+      "end_ms": 45800
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " your",
+      "at": 5.01959999999404,
+      "start_ms": 45800,
+      "end_ms": 46000
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " game",
+      "at": 5.176,
+      "start_ms": 46000,
+      "end_ms": 46200
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " status.",
+      "at": 5.610300000011921,
+      "start_ms": 46400,
+      "end_ms": 46600
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " Nice pace",
+      "at": 7.44490000000596,
+      "start_ms": 48200,
+      "end_ms": 48400
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": "!",
+      "at": 7.64009999999404,
+      "start_ms": 48400,
+      "end_ms": 48600
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " You're",
+      "at": 8.214800000011921,
+      "start_ms": 49000,
+      "end_ms": 49200
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " at",
+      "at": 8.406099999994039,
+      "start_ms": 49200,
+      "end_ms": 49400
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " eighty",
+      "at": 8.613300000011922,
+      "start_ms": 49400,
+      "end_ms": 49600
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " points",
+      "at": 9.042599999994039,
+      "start_ms": 49800,
+      "end_ms": 50000
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " with one",
+      "at": 9.39990000000596,
+      "start_ms": 50200,
+      "end_ms": 50400
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " served,",
+      "at": 9.8075,
+      "start_ms": 50600,
+      "end_ms": 50800
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " none",
+      "at": 10.3935,
+      "start_ms": 51200,
+      "end_ms": 51400
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " missed,",
+      "at": 10.79640000000596,
+      "start_ms": 51600,
+      "end_ms": 51800
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " and",
+      "at": 11.20359999999404,
+      "start_ms": 52000,
+      "end_ms": 52200
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " a",
+      "at": 11.39880000001192,
+      "start_ms": 52200,
+      "end_ms": 52400
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " one-hit",
+      "at": 11.64469999998808,
+      "start_ms": 52400,
+      "end_ms": 52600
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " streak.",
+      "at": 11.99059999999404,
+      "start_ms": 52800,
+      "end_ms": 53000
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " Only",
+      "at": 12.78780000001192,
+      "start_ms": 53600,
+      "end_ms": 53800
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " twenty",
+      "at": 13.255,
+      "start_ms": 54000,
+      "end_ms": 54200
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " more",
+      "at": 13.40819999998808,
+      "start_ms": 54200,
+      "end_ms": 54400
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " points",
+      "at": 13.588300000011921,
+      "start_ms": 54400,
+      "end_ms": 54600
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " for the",
+      "at": 14.0195,
+      "start_ms": 54800,
+      "end_ms": 55000
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " first",
+      "at": 14.21280000001192,
+      "start_ms": 55000,
+      "end_ms": 55200
+    },
+    {
+      "type": "session.output_transcript.delta",
+      "delta": " star.",
+      "at": 14.375199999988078,
+      "start_ms": 55200,
+      "end_ms": 55400
+    }
+  ],
+  "question": {
+    "text": "How am I doing so far?",
+    "start": 0.5135999999940395,
+    "duration": 3.3
+  },
+  "assistant": " Checking your game status. Nice pace! You're at eighty points with one served, none missed, and a one-hit streak. Only twenty more points for the first star.",
+  "state": {
+    "helpOpen": true,
+    "helpState": "connected",
+    "phase": "Service",
+    "held": "",
+    "focused": "serve",
+    "working": "",
+    "music": "service",
+    "workSound": "",
+    "level": 1,
+    "score": 80,
+    "served": 1,
+    "missed": 0,
+    "guests": 2,
+    "clean": 2,
+    "dirty": 1,
+    "training": false,
+    "musicPlaying": true,
+    "workPlaying": false,
+    "aa": 4,
+    "audioClips": 19,
+    "sfxCount": 71,
+    "guestSounds": 4,
+    "heldScale": 0,
+    "workProgress": 0,
+    "musicGain": 0.05407999828457832,
+    "remaining": 163.18821716308594,
+    "x": -2.360586643218994,
+    "z": 2.7157561779022217,
+    "fx": -0.9850496649742126,
+    "fz": -0.1722707748413086,
+    "cameraTilt": 46.923954010009766,
+    "cameraTargetTilt": 46.923954010009766,
+    "cameraYaw": 35.08012390136719,
+    "cameraTargetYaw": 35.08012390136719,
+    "roomBounds": {
+      "serializedVersion": "2",
+      "x": 0.24288100004196167,
+      "y": 0.011740590445697308,
+      "width": 0.5142380595207214,
+      "height": 0.9758328199386597
+    },
+    "cameraSize": 5.505739688873291,
+    "viewY": 0.054999999701976776,
+    "viewH": 0.8100000023841858,
+    "rightX": -0.8183491230010986,
+    "rightZ": 0.5747213959693909,
+    "forwardX": -0.5747213959693909,
+    "forwardZ": -0.8183491230010986,
+    "uiBoxes": [
+      {
+        "label": ":service-rail",
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.13518518209457397
+      },
+      {
+        "label": "ticket-2:ticket",
+        "x": 0.011458332650363445,
+        "y": 0.010185184888541698,
+        "w": 0.0911458358168602,
+        "h": 0.10648147761821747
+      }
+    ],
+    "visibleLabels": [
+      "#2",
+      "80",
+      "×1",
+      "02:44",
+      "",
+      "E",
+      "WASD",
+      "Move",
+      "E",
+      "Place",
+      "R",
+      "Lift",
+      "SPACE",
+      "Work",
+      "H",
+      "Guide",
+      "SCROLL",
+      "Tilt",
+      "DRAG",
+      "Turn",
+      "Mic on · OpenAI"
+    ],
+    "buttons": [
+      {
+        "label": "Pause",
+        "x": 0.9338541626930237,
+        "y": 0.9388888478279114,
+        "w": 0.05468754097819328,
+        "h": 0.03888893127441406
+      },
+      {
+        "label": "End chat · V",
+        "x": 0.8119791746139526,
+        "y": 0.9333332777023315,
+        "w": 0.09687495231628418,
+        "h": 0.04537040740251541
+      }
+    ],
+    "stations": [
+      {
+        "id": "tomato",
+        "kind": "tomato",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": 2.299999952316284,
+        "z": 0,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "cucumber",
+        "kind": "cucumber",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": 1.3799999952316284,
+        "z": 0,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "prep",
+        "kind": "prep",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": 0.46000000834465027,
+        "z": 0,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "C1",
+        "kind": "counter",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": -0.46000000834465027,
+        "z": 0,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "C2",
+        "kind": "counter",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": -1.3799999952316284,
+        "z": 0,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "C3",
+        "kind": "counter",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": 3.2200000286102295,
+        "z": 0,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "dishes",
+        "kind": "dishes",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": 3.2200000286102295,
+        "z": 1.840000033378601,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "C4",
+        "kind": "counter",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": 3.2200000286102295,
+        "z": 2.759999990463257,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "sink",
+        "kind": "sink",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": 3.2200000286102295,
+        "z": 3.680000066757202,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "return",
+        "kind": "return",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": 3.2200000286102295,
+        "z": 4.599999904632568,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "C5",
+        "kind": "counter",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": -3.2200000286102295,
+        "z": 0.9200000166893005,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "C6",
+        "kind": "counter",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": -3.2200000286102295,
+        "z": 1.840000033378601,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "serve",
+        "kind": "serve",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": -3.2200000286102295,
+        "z": 2.759999990463257,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "bin",
+        "kind": "bin",
+        "item": "",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 0,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": -3.2200000286102295,
+        "z": 4.599999904632568,
+        "scale": 0,
+        "progress": 0
+      },
+      {
+        "id": "extinguisher",
+        "kind": "extinguisher",
+        "item": "Fire extinguisher",
+        "recipe": "",
+        "heat": "",
+        "portions": 0,
+        "stack": 1,
+        "potContents": 0,
+        "potDocked": false,
+        "ingredients": [],
+        "x": -2.369999885559082,
+        "z": 4.599999904632568,
+        "scale": 1,
+        "progress": 0
+      }
+    ]
+  }
+}

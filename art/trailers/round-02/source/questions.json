@@ -1,0 +1,11 @@
+{
+  "source": "Synthetic player questions for recording; assistant replies are captured from the live game",
+  "model": "gpt-4o-mini-tts",
+  "voice": "coral",
+  "questions": {
+    "chop": "Bara, how do I chop this tomato?",
+    "progress": "How am I doing so far?",
+    "casual": "This little cafe feels cozy, huh?",
+    "cutest": "What is the cutest animal in this kitchen?"
+  }
+}

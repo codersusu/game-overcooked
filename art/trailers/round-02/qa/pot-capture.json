@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "model": "gpt-live-1",
+  "voice": "marin",
+  "syntheticPlayer": true,
+  "assistantReplies": "Actual live session output",
+  "controlsOnly": true,
+  "clips": [
+    {
+      "name": "chat-button",
+      "seconds": 3.2157000000178813
+    },
+    {
+      "name": "pot-reminder",
+      "seconds": 22.56829999998212
+    }
+  ],
+  "errors": []
+}
