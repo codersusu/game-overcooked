@@ -157,3 +157,8 @@
 .lesson-buttons { justify-content: center; }
 
 .camera-help { font-size: 11px; color: rgb(81,105,62); -unity-text-align: middle-center; margin: 0 0 7px; }
+
+/* Optional live voice uses a single toggle and leaves gameplay unobscured. */
+.live-chat-toggle { position: absolute; right: 126px; bottom: 15px; height: 36px; width: 138px; background-color: rgb(255,243,211); color: rgb(83,85,54); border-radius: 18px; border-width: 2px; border-color: rgb(167,140,91); font-size: 17px; -unity-font-style: bold; }
+.live-chat-toggle.live { background-color: rgb(64,119,101); color: rgb(255,245,220); border-color: rgb(228,216,150); }
+.live-chat-status { position: absolute; right: 125px; bottom: 57px; max-width: 350px; white-space: normal; background-color: rgba(255,248,226,.96); color: rgb(88,80,56); border-radius: 9px; padding: 5px 9px; font-size: 13px; -unity-text-align: middle-right; }

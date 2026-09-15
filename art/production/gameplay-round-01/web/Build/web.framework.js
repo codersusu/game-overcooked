@@ -1207,6 +1207,17 @@ async function createWasm() {
       assert(typeof ptr == 'number', `UTF8ToString expects a number (got ${typeof ptr})`);
       return ptr ? UTF8ArrayToString(HEAPU8, ptr, maxBytesToRead, ignoreNul) : '';
     };
+  function _BaraLiveContext(context,volume) {if(window.BaraLive){window.BaraLive.volume(volume);window.BaraLive.update(JSON.parse(UTF8ToString(context)));}}
+
+  var _BaraLiveStart = function(name, context, volume) {
+      const objectName=UTF8ToString(name), snapshot=JSON.parse(UTF8ToString(context));
+      const emit=data=>SendMessage(objectName,'OnLiveEvent',JSON.stringify(data));
+      if(!window.BaraLive){emit({type:'error',message:'Open the game from its main index page to use live chat.'});return;}
+      window.BaraLive.start(snapshot,emit,volume);
+    };
+
+  function _BaraLiveStop() {if(window.BaraLive)window.BaraLive.stop();}
+
   function _BaraReviewState(text) { try { window.baraState = JSON.parse(UTF8ToString(text)); } catch (error) { console.warn("Bara review snapshot skipped", error.message); } }
 
   function _GetJSLoadTimeInfo(loadTimePtr) {
@@ -16886,6 +16897,12 @@ function assignWasmExports(wasmExports) {
 }
 
 var wasmImports = {
+  /** @export */
+  BaraLiveContext: _BaraLiveContext,
+  /** @export */
+  BaraLiveStart: _BaraLiveStart,
+  /** @export */
+  BaraLiveStop: _BaraLiveStop,
   /** @export */
   BaraReviewState: _BaraReviewState,
   /** @export */

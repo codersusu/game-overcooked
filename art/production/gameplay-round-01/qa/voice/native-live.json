@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "model": "gpt-live-1",
+  "syntheticAudioOnly": true,
+  "stateSource": "Fixtures exported from actual kitchens; hazards/performance modified for controlled tests",
+  "checks": [
+    "Native PCM WebSocket reaches GPT-Live session.started",
+    "Native receives continuous PCM reply audio",
+    "Performance reply uses fixture progress",
+    "Warning phase produces a spoken soup/pot reminder",
+    "Actual fire receives an urgent spoken reminder",
+    "Post-fire advice starts recovery by freeing occupied paws at the stand",
+    "Idle player gets a concrete next-step hint",
+    "Native closes with final session usage",
+    "No native gateway errors"
+  ],
+  "spokenReplies": {
+    "progress": " Hey, Bara here, your AI kitchen companion. Game keeps going. Ask me about cooking or how're Sure, let me check. You're doing well: 240 points, three served, one missed, and a two-streak. You're just ten points shy of the two fifty-star goal.",
+    "warning": " Your soup’s ready. Grab it with a clean empty plate before",
+    "burning": " it burns. Ah! The pot’s on fire! Grab the red extinguisher and face the pot, then tap space.",
+    "recovery": " Lemme check. First, set down the extinguisher by pressing E at the marked spot. Then, pick up the burnt pot with E, empty it at the food bin with E, and return the empty pot to its original stove.",
+    "idle": " Head to the carrot crate, grab one with E, and bring it to the chopping board."
+  },
+  "events": [
+    {
+      "type": "bara.target",
+      "targetId": "",
+      "version": 1
+    },
+    {
+      "type": "bara.target",
+      "targetId": "pot",
+      "version": 2
+    },
+    {
+      "type": "bara.target",
+      "targetId": "pot",
+      "version": 3
+    },
+    {
+      "type": "bara.target",
+      "targetId": "extinguisher",
+      "version": 4
+    },
+    {
+      "type": "bara.target",
+      "targetId": "carrot",
+      "version": 5
+    },
+    {
+      "type": "session.closed",
+      "usage": {
+        "seconds": 93.0
+      }
+    },
+    {
+      "type": "bara.closed",
+      "finalized": true
+    }
+  ],
+  "audioBytes": 4402560
+}

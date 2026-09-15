@@ -2,6 +2,15 @@
 
 This is a reconstructed development history from the conversation and saved artifacts. Earlier stages predate this repository's first commit; they are not invented Git revisions. Dates are calendar milestones, not continuous labor estimates.
 
+## 0.2.0 — GPT-Live kitchen companion · 15 September 2026
+
+- Added one **AI chat / End chat** button with V shortcut. Voice-only, continuous, interruptible conversation while the kitchen keeps running; no typing or conversation overlay.
+- Integrated `gpt-live-1` through browser WebRTC and native Unity PCM/WebSocket, with private key handling in the local helper. Detailed gameplay questions delegate to contextual reasoning; casual conversation stays in Live.
+- Added current orders, held items, worktop/pot/fire state, performance, unlocks and verified camera-relative routes to the companion context. Suggested stations get a brief blue marker; Bara cannot execute game actions.
+- Added restrained warning/fire, near-expiry serving, idle and progress hints, plus spoken reminder preferences. Preserved explicit burnt-pot disposal and pot return guidance.
+- Added audio ducking, microphone permission/error handling, immediate capture stop, session finalization, orphan/session timeouts and stale-answer protection. Offline gameplay remains available.
+- Added gameplay/context checks, offline gateway/hint regressions and synthetic live browser/native evidence. Included the helper and dependency/setup instructions in refreshed Web and Mac downloads.
+
 ## Development time audit · 14 September 2026
 
 - Replaced the approximate calendar-only estimate with measured totals through v0.1.1: 6d 2h 16m 54s elapsed and 7h 23m 37s recorded active assistant runtime, across 37 completed turns on three dates.
@@ -58,4 +67,4 @@ This is a reconstructed development history from the conversation and saved arti
 
 ## Remaining work
 
-Human difficulty/first-time-player testing; character weight and contact cleanup; smaller/faster builds and broader hardware coverage; native Windows/Intel distribution if desired; localization/accessibility expansion. AI assistance, voice commands, upgrades and additional content remain deferred.
+Human difficulty/first-time-player testing; character weight and contact cleanup; smaller/faster builds and broader hardware coverage; native Windows/Intel distribution if desired; localization/accessibility expansion. Autonomous AI assistance, voice task commands, upgrades and additional content remain deferred.

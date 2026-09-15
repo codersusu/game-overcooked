@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "model": "gpt-live-1",
+  "syntheticAudioOnly": true,
+  "checks": [
+    "No microphone requested before Chat",
+    "Real GPT-Live WebRTC connects from the game button",
+    "Live chat leaves service running",
+    "Movement works while microphone is on",
+    "Only live chat control; no writing or recording panel",
+    "Synthetic spoken gameplay question is heard",
+    "Chef speaks contextual cooking guidance",
+    "Assistant audio is received over WebRTC",
+    "End chat immediately stops microphone tracks",
+    "Ending chat leaves the kitchen playable",
+    "Live session closes with confirmed final usage",
+    "Offline helper fails gracefully without pausing",
+    "Denied microphone permission has a clear small status",
+    "Denied permission leaves normal gameplay available",
+    "No browser page errors"
+  ],
+  "transcripts": {
+    "input": " What should I do first to make a salad",
+    "output": "Hey! I’m Bara, your kitchen buddy. The game’s rolling. Ask me if you wanna know what to cook or how you’re doing, and Lemme check quickly. Walk left, and press E at the tomato crate."
+  },
+  "inboundAudioBytes": 133598,
+  "finalUsage": [
+    24
+  ],
+  "pageErrors": []
+}

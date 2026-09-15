@@ -4,16 +4,16 @@
 
 **Little paws. Big appetites.** A single-player 3D animal café: chop, combine, cook, serve, wash, and find your rhythm through four increasingly intricate kitchens. Built in Unity, with capybara, cat and dog chefs and a café full of animal customers.
 
-[Watch / download the trailer](https://github.com/codersusu/game-overcooked/releases/download/v0.1.0/Bara-Kitchen-Trailer.mp4) · [Download the demo](https://github.com/codersusu/game-overcooked/releases/tag/v0.1.1) · [Game design](docs/GAME_DESIGN.md) · [Implementation](docs/IMPLEMENTATION.md) · [Changelog](docs/CHANGELOG.md) · [Prompt summary](docs/PROMPT_SUMMARY.md)
+[Watch / download the trailer](https://github.com/codersusu/game-overcooked/releases/download/v0.1.0/Bara-Kitchen-Trailer.mp4) · [Download the demo](https://github.com/codersusu/game-overcooked/releases/tag/v0.2.0) · [Game design](docs/GAME_DESIGN.md) · [Implementation](docs/IMPLEMENTATION.md) · [Changelog](docs/CHANGELOG.md) · [Prompt summary](docs/PROMPT_SUMMARY.md)
 
 [![Trailer — actual Unity gameplay](art/trailers/round-01/poster.jpg)](https://github.com/codersusu/game-overcooked/releases/download/v0.1.0/Bara-Kitchen-Trailer.mp4)
 
 ## Play the demo
 
-- **[macOS / Apple silicon ZIP](https://github.com/codersusu/game-overcooked/releases/download/v0.1.1/Bara-Kitchen-v0.1.1-macOS-AppleSilicon.zip)** — extract and open **Bara Kitchen.app**. This developer build is not notarized; macOS may require an explicit Open approval in Privacy & Security. Intel Mac and Windows native builds are not included.
-- **[Desktop browser ZIP](https://github.com/codersusu/game-overcooked/releases/download/v0.1.1/Bara-Kitchen-v0.1.1-Web.zip)** — extract, run `python3 -m http.server 8000` inside `Bara-Kitchen-Web`, then open `http://localhost:8000`. Do not open the HTML as a `file://` URL. Use a WebGL-capable desktop browser; touch controls are not implemented.
+- **[macOS / Apple silicon ZIP](https://github.com/codersusu/game-overcooked/releases/download/v0.2.0/Bara-Kitchen-v0.2.0-macOS-AppleSilicon.zip)** — extract and open **Bara Kitchen.app**. This developer build is not notarized; macOS may require an explicit Open approval in Privacy & Security. Intel Mac and Windows native builds are not included.
+- **[Desktop browser ZIP](https://github.com/codersusu/game-overcooked/releases/download/v0.2.0/Bara-Kitchen-v0.2.0-Web.zip)** — extract, run `python3 -m http.server 8000` inside `Bara-Kitchen-Web`, then open `http://localhost:8000`. Do not open the HTML as a `file://` URL. Use a WebGL-capable desktop browser; touch controls are not implemented.
 
-The demo works locally without accounts, online services or AI API keys. All four kitchens are available. An untimed first order introduces each kitchen; delivery starts the timed round. Calm mode gives longer round and order timers. Best scores and preferences are saved on the device.
+The cooking game works locally without accounts, online services or AI API keys. Optional **AI chat** uses your own OpenAI API key through a private local helper. All four kitchens are available. An untimed first order introduces each kitchen; delivery starts the timed round. Calm mode gives longer round and order timers. Best scores and preferences are saved on the device.
 
 | Action | Control |
 |---|---|
@@ -25,8 +25,29 @@ The demo works locally without accounts, online services or AI API keys. All fou
 | Turn camera | Drag left/right, or comma / period |
 | Tilt camera / reset view | Scroll, or [ / ]; C resets |
 | Picture guide / pause | H / Escape |
+| Start / end live voice chat | V / AI chat button |
 
 After extinguishing a fire, carry the burnt pot to the bin, empty it with E, then return the pot to the stove before cooking again.
+
+## Chat with Bara while playing
+
+Click **AI chat** or press **V**, allow microphone access, and talk naturally. Click **End chat** or press V again to stop. The kitchen keeps running; you can move, cook and interrupt Bara while chatting. There is no typing or conversation panel.
+
+Bara can explain the next cooking step, give directions relative to your current camera, and discuss your actual score, deliveries, misses and streak. While chat is on, it gives occasional reminders for an unattended warning/burning pot, a nearly overdue dish in your paws, or a longer idle period. It offers brief encouragement after real progress. Say “no hints” to silence automatic reminders. A small blue marker can identify the suggested station. Bara gives advice and never performs game actions.
+
+For a repository checkout, copy `.env.example` to `.env`, set your own `OPENAI_API_KEY`, then run:
+
+```sh
+python3 -m venv .local/voice-venv
+.local/voice-venv/bin/pip install -r scripts/voice/requirements.txt
+.local/voice-venv/bin/python scripts/voice/live_chef_server.py
+```
+
+Keep the helper open while playing. Both ZIPs include a separate `Bara-Kitchen-Voice-Helper` folder. Keep its private `.env` outside the Web folder served by HTTP. Python 3.9+ and access to **gpt-live-1** are required. The private helper listens on `127.0.0.1:54115`; the key stays out of the game.
+
+Microphone audio streams to OpenAI **only while chat is on**, alongside kitchen context for guidance. The helper does not save audio or conversations. Closing chat or leaving the game stops the microphone. Sessions also end after 15 minutes or a lost game heartbeat. API usage is billed to your key: GPT-Live currently costs $0.05 per connected minute, plus delegated reasoning. This is a local prototype; public distribution needs a hosted authenticated service. [Official GPT-Live model details](https://developers.openai.com/api/docs/models/gpt-live-1).
+
+![Live chat — one small button while the kitchen stays playable](art/production/gameplay-round-01/qa/voice/live-chat.png)
 
 ## What is here
 
@@ -36,7 +57,7 @@ Four kitchens, two recipes, four ingredients, six selectable chef looks and six 
 
 ![The Zigzag Café — three work areas and throwing routes](art/production/gameplay-round-01/qa/full-playthrough/level-4-served-2.png)
 
-These are screenshots from the playable build. The current character rig can still crease at sleeves and elbows; final animation contact, performance/download optimization, and human difficulty testing remain. AI helpers, voice commands, multiplayer and upgrades are future ideas.
+These are screenshots from the playable build. The current character rig can still crease at sleeves and elbows; final animation contact, performance/download optimization, and human difficulty testing remain. Contextual spoken help is now available in English and Chinese. A helper that performs cooking tasks, voice task assignment, multiplayer and upgrades remain future ideas.
 
 ## Continue development
 
@@ -70,11 +91,11 @@ Open `http://localhost:54114/production/gameplay-round-01/`. Detailed build and 
 
 HTML galleries need the local server; GitHub displays their source. The trailer folder retains the captured clips, title composition and edit timeline for future recuts.
 
-**Validation:** the original 0.1.0 handoff passed all four full-round keyboard playthroughs, serving 10 meals in total and checking dish reuse, expiry, results and retry. The current native suite passed 785 assertions, including cleanup and pot reuse in kitchens 2–4. A focused 0.1.1 keyboard playtest also passed the bin trip, a fresh soup delivery and restart. [Saved validation](art/production/gameplay-round-01/release-validation.json).
+**Validation:** the original 0.1.0 handoff passed all four full-round keyboard playthroughs, serving 10 meals in total and checking dish reuse, expiry, results and retry. The current native suite passed 896 assertions, including cleanup and pot reuse in kitchens 2–4. A focused 0.1.1 keyboard playtest also passed the bin trip, a fresh soup delivery and restart. [Saved validation](art/production/gameplay-round-01/release-validation.json).
 
 ## Development record and usage
 
-Measured through the completed **v0.1.1** cleanup update (commit `949aea3`), excluding this timing audit:
+Measured through the completed **v0.1.1** cleanup update (commit `949aea3`), excluding the timing audit and subsequent voice-help development:
 
 | Time measure | Recorded result |
 |---|---:|

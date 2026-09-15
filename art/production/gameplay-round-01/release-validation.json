@@ -1,7 +1,7 @@
 {
   "native": {
     "passed": true,
-    "checks": 785
+    "checks": 896
   },
   "fullRounds": [
     {
@@ -46,9 +46,11 @@
     "buildSucceeded": true,
     "launchSmokePassed": true,
     "completeRoundsTested": false,
-    "version": "0.1.1"
+    "version": "0.2.0",
+    "microphonePermissionDescriptionChecked": true,
+    "hardwareMicrophoneTested": false
   },
-  "version": "0.1.1",
+  "version": "0.2.0",
   "fullRoundsVersion": "0.1.0",
   "burntPot": {
     "passed": true,
@@ -57,5 +59,25 @@
     "served": 2,
     "errors": [],
     "report": "qa/burnt-pot/level-2.json"
+  },
+  "burntPotVersion": "0.1.1",
+  "liveVoice": {
+    "version": "0.2.0",
+    "model": "gpt-live-1",
+    "syntheticAudioOnly": true,
+    "nativeTransport": {
+      "passed": true,
+      "report": "qa/voice/native-live.json"
+    },
+    "browser": {
+      "passed": true,
+      "checks": 15,
+      "report": "qa/voice/browser-live.json"
+    },
+    "offlineGatewayAndHints": {
+      "passed": true,
+      "tests": 14
+    },
+    "hardwareMicrophoneTested": false
   }
 }

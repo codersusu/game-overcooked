@@ -1,0 +1,441 @@
+{
+    "level": 2,
+    "cleanPlates": 3,
+    "dirtyPlates": 0,
+    "score": 0,
+    "served": 0,
+    "missed": 0,
+    "streak": 0,
+    "starGoals": [
+        100,
+        250,
+        430
+    ],
+    "working": "",
+    "idleSeconds": 0.0,
+    "chefX": 2.759999990463257,
+    "chefZ": 5.519999980926514,
+    "kitchen": "Around the Island",
+    "phase": "Service",
+    "focusedStation": "",
+    "practice": true,
+    "dashUnlocked": false,
+    "throwUnlocked": false,
+    "roundSecondsLeft": 210.0,
+    "holding": {
+        "label": "",
+        "kind": "",
+        "ingredient": "",
+        "recipe": "",
+        "homeStove": "",
+        "chopped": false,
+        "dirty": false,
+        "burnt": false,
+        "chopProgress": 0.0,
+        "portions": []
+    },
+    "orders": [],
+    "recipes": [
+        "soup"
+    ],
+    "stations": [
+        {
+            "id": "carrot",
+            "kind": "carrot",
+            "label": "carrot crate",
+            "screenArea": "upper centre",
+            "directionFromChef": "up-right",
+            "heat": "",
+            "reachable": true,
+            "availableNow": false,
+            "potDocked": false,
+            "walkRoute": [
+                "up about 6 worktop widths",
+                "then face right toward the station"
+            ],
+            "possibleActions": [
+                "E: pick up raw carrot"
+            ],
+            "potIngredients": [],
+            "cookProgress": 0.0,
+            "warningSecondsLeft": 0.0,
+            "items": []
+        },
+        {
+            "id": "mushroom",
+            "kind": "mushroom",
+            "label": "mushroom crate",
+            "screenArea": "upper right",
+            "directionFromChef": "right",
+            "heat": "",
+            "reachable": true,
+            "availableNow": false,
+            "potDocked": false,
+            "walkRoute": [
+                "up about 5 worktop widths",
+                "right about 2 worktop widths",
+                "up about 1 worktop widths",
+                "right about 2 worktop widths",
+                "then face right toward the station"
+            ],
+            "possibleActions": [
+                "E: pick up raw mushroom"
+            ],
+            "potIngredients": [],
+            "cookProgress": 0.0,
+            "warningSecondsLeft": 0.0,
+            "items": []
+        },
+        {
+            "id": "prep",
+            "kind": "prep",
+            "label": "Chopping board",
+            "screenArea": "upper centre",
+            "directionFromChef": "up-right",
+            "heat": "",
+            "reachable": true,
+            "availableNow": false,
+            "potDocked": false,
+            "walkRoute": [
+                "up about 3 worktop widths",
+                "right about 1 worktop widths",
+                "then face right toward the station"
+            ],
+            "possibleActions": [],
+            "potIngredients": [],
+            "cookProgress": 0.0,
+            "warningSecondsLeft": 0.0,
+            "items": []
+        },
+        {
+            "id": "C1",
+            "kind": "counter",
+            "label": "Worktop",
+            "screenArea": "upper centre",
+            "directionFromChef": "right",
+            "heat": "",
+            "reachable": true,
+            "availableNow": false,
+            "potDocked": false,
+            "walkRoute": [
+                "up about 4 worktop widths",
+                "right about 3 worktop widths",
+                "then face down toward the station"
+            ],
+            "possibleActions": [],
+            "potIngredients": [],
+            "cookProgress": 0.0,
+            "warningSecondsLeft": 0.0,
+            "items": []
+        },
+        {
+            "id": "C2",
+            "kind": "counter",
+            "label": "Worktop",
+            "screenArea": "upper centre",
+            "directionFromChef": "right",
+            "heat": "",
+            "reachable": true,
+            "availableNow": false,
+            "potDocked": false,
+            "walkRoute": [
+                "up about 4 worktop widths",
+                "right about 4 worktop widths",
+                "then face down toward the station"
+            ],
+            "possibleActions": [],
+            "potIngredients": [],
+            "cookProgress": 0.0,
+            "warningSecondsLeft": 0.0,
+            "items": []
+        },
+        {
+            "id": "C3",
+            "kind": "counter",
+            "label": "Worktop",
+            "screenArea": "upper centre",
+            "directionFromChef": "right",
+            "heat": "",
+            "reachable": true,
+            "availableNow": false,
+            "potDocked": false,
+            "walkRoute": [
+                "up about 2 worktop widths",
+                "right about 1 worktop widths",
+                "then face right toward the station"
+            ],
+            "possibleActions": [],
+            "potIngredients": [],
+            "cookProgress": 0.0,
+            "warningSecondsLeft": 0.0,
+            "items": []
+        },
+        {
+            "id": "C4",
+            "kind": "counter",
+            "label": "Worktop",
+            "screenArea": "middle centre",
+            "directionFromChef": "right",
+            "heat": "",
+            "reachable": true,
+            "availableNow": false,
+            "potDocked": false,
+            "walkRoute": [
+                "right about 5 worktop widths",
+                "up about 2 worktop widths",
+                "then face left toward the station"
+            ],
+            "possibleActions": [],
+            "potIngredients": [],
+            "cookProgress": 0.0,
+            "warningSecondsLeft": 0.0,
+            "items": []
+        },
+        {
+            "id": "C5",
+            "kind": "counter",
+            "label": "Worktop",
+            "screenArea": "middle centre",
+            "directionFromChef": "right",
+            "heat": "",
+            "reachable": true,
+            "availableNow": false,
+            "potDocked": false,
+            "walkRoute": [
+                "up about 1 worktop widths",
+                "right about 1 worktop widths",
+                "then face right toward the station"
+            ],
+            "possibleActions": [],
+            "potIngredients": [],
+            "cookProgress": 0.0,
+            "warningSecondsLeft": 0.0,
+            "items": []
+        },
+        {
+            "id": "pot",
+            "kind": "pot",
+            "label": "Soup pot",
+            "screenArea": "middle centre",
+            "directionFromChef": "right",
+            "heat": "Empty",
+            "reachable": true,
+            "availableNow": false,
+            "potDocked": true,
+            "walkRoute": [
+                "right about 3 worktop widths",
+                "then face up toward the station"
+            ],
+            "possibleActions": [],
+            "potIngredients": [],
+            "cookProgress": 0.0,
+            "warningSecondsLeft": 0.0,
+            "items": []
+        },
+        {
+            "id": "C6",
+            "kind": "counter",
+            "label": "Worktop",
+            "screenArea": "middle centre",
+            "directionFromChef": "right",
+            "heat": "",
+            "reachable": true,
+            "availableNow": false,
+            "potDocked": false,
+            "walkRoute": [
+                "right about 4 worktop widths",
+                "then face up toward the station"
+            ],
+            "possibleActions": [],
+            "potIngredients": [],
+            "cookProgress": 0.0,
+            "warningSecondsLeft": 0.0,
+            "items": []
+        },
+        {
+            "id": "return",
+            "kind": "return",
+            "label": "Dish return",
+            "screenArea": "middle left",
+            "directionFromChef": "down",
+            "heat": "",
+            "reachable": true,
+            "availableNow": false,
+            "potDocked": false,
+            "walkRoute": [
+                "down about 1 worktop widths",
+                "then face down toward the station"
+            ],
+            "possibleActions": [],
+            "potIngredients": [],
+            "cookProgress": 0.0,
+            "warningSecondsLeft": 0.0,
+            "items": []
+        },
+        {
+            "id": "sink",
+            "kind": "sink",
+            "label": "Wash station",
+            "screenArea": "middle centre",
+            "directionFromChef": "down",
+            "heat": "",
+            "reachable": true,
+            "availableNow": false,
+            "potDocked": false,
+            "walkRoute": [
+                "down about 1 worktop widths",
+                "right about 1 worktop widths",
+                "then face down toward the station"
+            ],
+            "possibleActions": [],
+            "potIngredients": [],
+            "cookProgress": 0.0,
+            "warningSecondsLeft": 0.0,
+            "items": []
+        },
+        {
+            "id": "dishes",
+            "kind": "dishes",
+            "label": "Clean dishes",
+            "screenArea": "middle centre",
+            "directionFromChef": "down",
+            "heat": "",
+            "reachable": true,
+            "availableNow": false,
+            "potDocked": false,
+            "walkRoute": [
+                "down about 1 worktop widths",
+                "right about 2 worktop widths",
+                "then face down toward the station"
+            ],
+            "possibleActions": [
+                "E: pick up clean plate"
+            ],
+            "potIngredients": [],
+            "cookProgress": 0.0,
+            "warningSecondsLeft": 0.0,
+            "items": []
+        },
+        {
+            "id": "C7",
+            "kind": "counter",
+            "label": "Worktop",
+            "screenArea": "lower centre",
+            "directionFromChef": "down-right",
+            "heat": "",
+            "reachable": true,
+            "availableNow": false,
+            "potDocked": false,
+            "walkRoute": [
+                "down about 1 worktop widths",
+                "right about 3 worktop widths",
+                "down about 1 worktop widths",
+                "then face right toward the station"
+            ],
+            "possibleActions": [],
+            "potIngredients": [],
+            "cookProgress": 0.0,
+            "warningSecondsLeft": 0.0,
+            "items": []
+        },
+        {
+            "id": "serve",
+            "kind": "serve",
+            "label": "Service hatch",
+            "screenArea": "lower centre",
+            "directionFromChef": "down-right",
+            "heat": "",
+            "reachable": true,
+            "availableNow": false,
+            "potDocked": false,
+            "walkRoute": [
+                "down about 1 worktop widths",
+                "right about 5 worktop widths",
+                "then face down toward the station"
+            ],
+            "possibleActions": [],
+            "potIngredients": [],
+            "cookProgress": 0.0,
+            "warningSecondsLeft": 0.0,
+            "items": []
+        },
+        {
+            "id": "C8",
+            "kind": "counter",
+            "label": "Worktop",
+            "screenArea": "lower centre",
+            "directionFromChef": "down-right",
+            "heat": "",
+            "reachable": true,
+            "availableNow": false,
+            "potDocked": false,
+            "walkRoute": [
+                "down about 1 worktop widths",
+                "right about 6 worktop widths",
+                "then face down toward the station"
+            ],
+            "possibleActions": [],
+            "potIngredients": [],
+            "cookProgress": 0.0,
+            "warningSecondsLeft": 0.0,
+            "items": []
+        },
+        {
+            "id": "bin",
+            "kind": "bin",
+            "label": "Food bin",
+            "screenArea": "lower right",
+            "directionFromChef": "down-right",
+            "heat": "",
+            "reachable": true,
+            "availableNow": false,
+            "potDocked": false,
+            "walkRoute": [
+                "down about 1 worktop widths",
+                "right about 7 worktop widths",
+                "then face down toward the station"
+            ],
+            "possibleActions": [],
+            "potIngredients": [],
+            "cookProgress": 0.0,
+            "warningSecondsLeft": 0.0,
+            "items": []
+        },
+        {
+            "id": "extinguisher",
+            "kind": "extinguisher",
+            "label": "Extinguisher stand",
+            "screenArea": "lower right",
+            "directionFromChef": "down-right",
+            "heat": "",
+            "reachable": true,
+            "availableNow": false,
+            "potDocked": false,
+            "walkRoute": [
+                "down about 1 worktop widths",
+                "right about 6 worktop widths",
+                "then face right toward the station"
+            ],
+            "possibleActions": [
+                "E: pick up Fire extinguisher"
+            ],
+            "potIngredients": [],
+            "cookProgress": 0.0,
+            "warningSecondsLeft": 0.0,
+            "items": [
+                {
+                    "label": "Fire extinguisher",
+                    "kind": "Extinguisher",
+                    "ingredient": "",
+                    "recipe": "",
+                    "homeStove": "",
+                    "chopped": false,
+                    "dirty": false,
+                    "burnt": false,
+                    "chopProgress": 0.0,
+                    "portions": []
+                }
+            ]
+        }
+    ]
+}

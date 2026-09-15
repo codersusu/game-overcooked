@@ -61,3 +61,11 @@ Submit all completed work to Git. After the fire is extinguished, burnt food mus
 ## Development time request
 
 Check the total elapsed creation period and actual active development time, and update the repository with both figures and their measurement basis.
+
+## Contextual voice help request
+
+Use the available OpenAI API to let the player ask the chef how to play at any time. The program should supply the live kitchen context so the answer can give concrete directions, such as collecting vegetables on one side and using a chopping board on the other. Enable the feature in the game. This request is for spoken gameplay support; it does not ask for autonomous cooking or voice task execution.
+
+## Live conversation refinement
+
+Use GPT-Live for a more natural ongoing conversation. Remove writing because typing is impractical during gameplay; provide a simple chat button. Beyond how-to questions, the chef should discuss whether the player is doing well, offer hints when the player is idle, and remind them about important unattended tasks such as a burning pot. The game should continue while the player talks. This remains companionship and advice, not an autonomous cooking assistant.

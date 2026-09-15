@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "tests": 14,
+  "command": "python scripts/voice/test_live.py",
+  "paidRequests": false
+}

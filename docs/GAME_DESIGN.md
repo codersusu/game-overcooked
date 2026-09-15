@@ -1,6 +1,6 @@
 # Bara Kitchen — game design
 
-Version 0.1.1 · 14 September 2026 · Current four-kitchen demo
+Version 0.2.0 · 15 September 2026 · Current four-kitchen demo
 
 ## Intent
 
@@ -46,6 +46,16 @@ Tickets display a recipe image, ingredient pictures, order number and patience b
 
 The round ends once at zero time, with score, deliveries, misses and stars. Star thresholds are 100 / 250 / 430 in kitchens 1–2 and 150 / 350 / 580 in kitchens 3–4. Best results and settings save locally. Pause freezes orders, cooking, customers and the round clock. Retry resets the service cleanly.
 
+## Optional live voice companion
+
+One small **AI chat** button (V) starts a GPT-Live conversation; **End chat** / V stops it. Microphone access is explicit. The player keeps moving and cooking, can interrupt naturally, and never has to type. Chat does not pause service or cancel work. The game UI remains English; Bara is instructed to follow the player's spoken language, including English and Chinese.
+
+Bara answers questions using actual orders, held items, plate portions, station contents, cooking state and verified routes relative to the current camera. It can discuss score, served/missed orders and streak without inventing achievements. A temporary blue marker indicates a suggested station. Burnt-pot recovery preserves the required bin-and-return sequence. Gameplay advice is normally one short next step.
+
+While connected, the companion may give one warning per pot warning/fire state, an imminent service reminder for a matching completed dish in hand, an idle hint after at least 18 seconds, or occasional encouragement after three more deliveries. General hints have a 45-second cooldown and wait for conversation to settle; fire takes priority. No reminders during pause/menu/results or while actively extinguishing. “No hints” disables unsolicited guidance while questions remain available.
+
+Chat is optional and requires the private OpenAI helper. The picture guide and offline loop remain available. The companion cannot move the chef, cook, change scores or unlock abilities. Human playtesting should assess conversational timing, interruptions, reminder frequency and occasional model mistakes.
+
 ## Character standard
 
 **[Capybara C1](../art/approved/capybara-c1.png) is the approved proportion and face reference.** Preserve its oversized rounded head, smaller gently rounded body, extremely short connected legs, short broad muzzle, dark animal eyes and fingerless paws. Avoid white human eye sclera, long snouts, long shins, detached limbs and an excessively broad belly.
@@ -74,4 +84,4 @@ Music changes for normal service, the final 30 seconds and fire. Foley accompani
 
 Human playtests should assess first-time discovery, route length, solo ticket pressure, the value of batch throwing, star thresholds, and whether plate freedom helps exploration. Artist review should refine sleeves/elbows, foot contact and utensil contact in motion. Performance and build size need optimization before a wider launch.
 
-Deferred: AI support chef, later voice task assignment, remote oven control, upgrades, extra recipes/levels, remaining species and multiplayer. Expand only after the four-kitchen loop is enjoyable.
+Deferred: autonomous AI support chef, voice task assignment, remote oven control, upgrades, extra recipes/levels, remaining species and multiplayer. Expand only after the four-kitchen loop is enjoyable.

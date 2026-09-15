@@ -1,10 +1,10 @@
 # Bara Kitchen — implementation and handoff
 
-Version 0.1.0 · Unity 6000.6.0f1 · 14 September 2026
+Version 0.2.0 · Unity 6000.6.0f1 · 15 September 2026
 
 ## Open and run
 
-Clone with Git LFS; instructions and playable downloads are in the [README](../README.md). Unity project: `Unity/BaraKitchen`. Entry scene: `Assets/BaraKitchen/Scenes/BaraKitchen_Game.unity`. The project uses Unity's built-in renderer, C#, native UI Toolkit, local assets and local saves. No paid Unity plugin or runtime AI service is required.
+Clone with Git LFS; instructions and playable downloads are in the [README](../README.md). Unity project: `Unity/BaraKitchen`. Entry scene: `Assets/BaraKitchen/Scenes/BaraKitchen_Game.unity`. The project uses Unity's built-in renderer, C#, native UI Toolkit, local assets and local saves. The base game requires no paid Unity plugin or runtime AI service. Optional GPT-Live chat uses OpenAI through a local Python gateway.
 
 Open the entry scene and press Play. `Level_01`–`Level_04` are art review scenes; the entry scene loads generated playable kitchen prefabs. `Character_Studio` and `Animation_Studio` support asset review.
 
@@ -33,11 +33,53 @@ All paths below are relative to `Unity/BaraKitchen/Assets/BaraKitchen`.
 | `Gameplay/KitchenAudio.cs` | Music priorities/crossfades, one-shots, work loops, pause and gain controls |
 | `Gameplay/StationHighlight.cs` | Animated worktop/service outlines |
 | `Gameplay/GameCatalog.cs` | Level parameters, prefab/icon/audio references and save/settings definitions |
+| `Gameplay/KitchenVoiceGuide.cs` | Single chat button, live context heartbeat, idle tracking, transport lifecycle and temporary station markers |
+| `Gameplay/NativeLiveVoice.cs` | Desktop microphone/PCM streaming, bounded playback queue and immediate microphone shutdown |
+| `Gameplay/KitchenHelpContext.cs` | Read-only live state, legal immediate actions and collider-checked camera-relative walking routes |
 | `Gameplay/GameReviewTelemetry.cs` | Read-only test state exported to `window.baraState` in Web development builds |
 
 The session owns authoritative transitions. Orders emit delivery/expiry events; the game connects these to the relevant customer, score and plate lifecycle. Eating completion returns a dirty dish to a finite queue. Avoid separate subscribers independently creating plates or scoring a delivery twice. Round settlement runs once; a stopped session rejects further work. Pause suspends gameplay clocks and active audio.
 
 Items retain their root identity through preparation and transfer. Appearance is a view of state; replacing a mesh does not require replacing the logical ingredient. Plate portions are actual child items. Their references/progress survive adding, taking back and recipe invalidation. Reparenting restores a canonical world scale, avoiding the earlier pickup/drop size jump. A pot uses explicit loading/cooking/ready/warning/burning/extinguished states. The same visual root also owns a `KitchenItem` of kind `Pot` and retains its source station. Extinguished pots can be carried/staged; only the bin resets burnt contents. `PotDocked` prevents a missing pot from accepting ingredients, and redocking a burnt pot preserves the extinguished state. The bin retains the reusable pot; it must be returned before cooking. Recipe and timing parameters are documented in [Game design](GAME_DESIGN.md).
+
+## Optional GPT-Live conversation
+
+Follow the [README setup](../README.md#chat-with-bara-while-playing). Python 3.9+ and `aiohttp` from `scripts/voice/requirements.txt` are required. The environment or a private root `.env` supplies `OPENAI_API_KEY`. Key-free helper copies and instructions are included in both downloads.
+
+| Component | Responsibility |
+|---|---|
+| `scripts/voice/live_chef_server.py` | Local session gateway, client delegation, compact Live context, hint policy and session cleanup |
+| `scripts/voice/chef_brain.py` | Detailed read-only gameplay reasoning via Responses / `gpt-5.4-mini`, strict result schema and burnt-pot guard |
+| `art/production/gameplay-round-01/live-chat.js` | Browser WebRTC audio, data channel, permission and immediate track shutdown |
+| `Assets/Plugins/WebGL/BaraVoice.jslib` | Unity-to-browser start/context/stop bridge |
+| `Gameplay/NativeLiveVoice.cs` | Native 24 kHz mono PCM16 microphone stream through the gateway WebSocket and streaming AudioClip playback |
+
+**GPT-Live (`gpt-live-1`, Marin)** supplies continuous, interruptible conversation. The browser creates a WebRTC offer; the private server exchanges it at `/v1/live/sessions`, then attaches a server WebSocket to the opaque session ID. Only negotiated SDP and a random local session token go to the browser. Browser media flows directly to OpenAI. Native Unity uses the loopback WebSocket, which relays PCM to the primary Live WebSocket. Live manages speech timing; there is no record/submit/transcribe/synthesize turn loop.
+
+Gameplay questions delegate to the server. Input transcript fragments are accumulated in memory, and the backend receives the recent question, four recent question/answer pairs and a fresh full kitchen snapshot. Its answer returns through `session.commentary.append` with the matching delegation ID. Casual conversation stays with Live. Large station/action/route tables stay in the reasoning backend; only compact state changes enter Live through `session.thinking.append`. All sessions and Responses requests use `store: false`.
+
+`KitchenHelpContext` exports orders, inventory/portions, worktop and pot contents, heat/warning time, dish supply, unlocks, score/deliveries/misses/streak, idle duration and current phase. Capsule casts and station approach checks produce walkable routes; direction words follow the camera basis. Only reachable station IDs can become markers. Inventory, focus, camera-direction or kitchen changes can invalidate a pending directional answer; a discarded answer cannot trigger actions. Burnt/missing-pot advice uses an explicit recovery guard. Generated general advice can still be mistaken.
+
+Chat never changes phase/time scale, captures game controls or cancels work. Kitchen audio ducks to 32% while connected. The browser requests acoustic echo cancellation; native PCM has no dedicated echo canceller, so headphones are preferable for the native prototype. The client sends context every two seconds. General hints require quiet conversation and a 45-second cooldown; warning/fire reminders are deduplicated per cooking cycle. Idle hints require 18 seconds of inactivity with an unfinished order. Progress encouragement follows three more actual deliveries, at least 90 seconds apart. Voice requests can disable/enable reminders or end chat.
+
+The microphone starts only after Chat and permission. Ending chat stops capture/playback immediately, sends `session.close` and awaits `session.closed` for final usage; hangup is a fallback. Focus loss/page hiding stops chat. The server ends orphaned sessions after 25 seconds without a game heartbeat, and caps each chat at 15 minutes. Native generation checks reject late transport callbacks. Service remains playable if permission, helper, network, quota or API access fails.
+
+The gateway binds **127.0.0.1:54115 only**, checks Host/Origin and a custom client header, permits one chat at a time, limits request sizes and sanitizes upstream failures. Browser origins are localhost/127.0.0.1 on ports 54114, 54115 and 8000. It serves no static files. Unity's HTTP setting enables the fixed loopback endpoint; upstream API traffic uses TLS. A public release would need an authenticated hosted gateway, per-player quotas and abuse controls, with no shared key embedded in clients.
+
+The helper writes no audio, transcript or context logs. OpenAI receives continuous audio only during an explicitly enabled chat. `store: false` is not a promise of zero provider retention. The button/status identify AI voice and an active microphone. GPT-Live is billed by connected duration, including silence; reasoning usage is separate. Current API tests are outside the historical development token checkpoint.
+
+Validation:
+
+```sh
+.local/voice-venv/bin/python scripts/voice/test_live.py
+# Explicit paid smoke tests using only synthetic speech/state fixtures:
+.local/voice-venv/bin/python scripts/voice/check_native.py --live
+node scripts/voice/check_browser.cjs --live
+```
+
+The four-kitchen native suite passes **896 assertions**, including voice context/routes and unchanged service/pause state. Offline tests cover hints, cooldowns, burnt-pot recovery, stale replies, session close and localhost boundaries. [Voice QA](../art/production/gameplay-round-01/qa/voice/) records synthetic Live transport checks and real Unity browser interaction. Synthetic test transcripts may be saved as QA evidence; runtime conversations are not. Hardware microphone quality, acoustic echo and wider device/browser coverage remain user playtest work.
+
+Official contracts: [GPT-Live model and duration pricing](https://developers.openai.com/api/docs/models/gpt-live-1), [WebRTC](https://developers.openai.com/api/docs/guides/voice-webrtc?api=live), [WebSockets](https://developers.openai.com/api/docs/guides/voice-websockets?api=live), [client delegation](https://developers.openai.com/api/docs/guides/live-delegation), [context and lifecycle](https://developers.openai.com/api/docs/guides/live-conversations).
 
 ## Content and regeneration
 
@@ -124,7 +166,7 @@ Lilita One and Varela Round font license files are retained beside the fonts in 
 
 ## Handoff limits and next work
 
-The demo has English UI, desktop keyboard/mouse controls, local saves, approximate shared character skinning and a large Web download. There is no installer, notarization, Windows native build, Steam integration, backend, multiplayer or runtime AI. Keep the approved art direction and floor plans as baselines while tuning; see [prompt summary](PROMPT_SUMMARY.md) for the decisions behind them. Save-format migrations and separate Calm scores should be preserved when extending settings. Re-run a full service loop after changes to item ownership, customer return or action cancellation.
+The demo has English UI, desktop keyboard/mouse controls, local saves, approximate shared character skinning and a large Web download. There is no installer, notarization, Windows native build, Steam integration, public hosted backend or multiplayer. The optional live voice helper is a local development service, not autonomous chef control. Keep the approved art direction and floor plans as baselines while tuning; see [prompt summary](PROMPT_SUMMARY.md) for the decisions behind them. Save-format migrations and separate Calm scores should be preserved when extending settings. Re-run a full service loop after changes to item ownership, customer return or action cancellation.
 
 ## Development time accounting
 

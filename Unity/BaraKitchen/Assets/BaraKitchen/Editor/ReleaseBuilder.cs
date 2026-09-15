@@ -17,7 +17,10 @@ public static partial class ArtProductionBuilder {
         PlayerSettings.SetIcons(NamedBuildTarget.Unknown, new[] { AssetDatabase.LoadAssetAtPath<Texture2D>(iconPath) }, IconKind.Any);
         PlayerSettings.companyName = "Bara Kitchen";
         PlayerSettings.productName = "Bara Kitchen";
-        PlayerSettings.bundleVersion = "0.1.1";
+        PlayerSettings.bundleVersion = "0.2.0";
+        // Only the fixed loopback helper uses HTTP; upstream OpenAI requests use HTTPS.
+        PlayerSettings.insecureHttpOption = InsecureHttpOption.AlwaysAllowed;
+        PlayerSettings.iOS.microphoneUsageDescription = "Bara Kitchen streams microphone audio to OpenAI while AI chat is on, so you can talk with the chef while playing. End chat stops the microphone.";
         AssetDatabase.SaveAssets();
     }
 

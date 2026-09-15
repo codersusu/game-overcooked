@@ -44,6 +44,22 @@ public static class GameplayChecks {
         Soup();Require(game.chef.held.Recipe=="soup"&&p.PotDocked&&p.hazard.state==HeatState.Empty,"Cleaned and returned pot cooks a fresh batch successfully");Use("bin");Use("dishes");Require(game.rack.Count==pool,"Cleanup does not consume reusable plates");
     }
     static void AwaitGuest(){for(int i=0;i<800&&game.book.orders.Count==0;i++)game.Tick(.05f);Require(game.book.orders.Count>0,"L"+game.level.id+" guest walked in, sat and ordered");}
+    static void CheckVoiceContext(){
+        var context=KitchenHelpContext.Capture(game,game.phase);
+        Require(context.stations.Length==game.stations.Length,"L"+game.level.id+" voice context includes every station");
+        foreach(var station in context.stations)Require(station.reachable&&station.walkRoute.Length>0,"L"+game.level.id+" voice route respects colliders to "+station.id);
+        Require(context.holding==null&&context.cleanPlates==game.rack.Count,"Voice context reflects actual inventory and clean plates");
+        var original=game.chef.transform.position;float time=game.remaining;
+        game.voice.OnLiveEvent("{\"type\":\"connected\"}");
+        Require(game.voice.IsActive&&game.phase==SessionPhase.Service&&Time.timeScale==1,"Live chat does not pause service or capture player controls");
+        game.voice.OnLiveEvent("{\"type\":\"closed\"}");Require(!game.voice.IsActive&&game.phase==SessionPhase.Service,"Ending live chat leaves gameplay running");
+        game.Pause();game.voice.OnLiveEvent("{\"type\":\"connected\"}");game.voice.OnLiveEvent("{\"type\":\"closed\"}");Require(game.phase==SessionPhase.Paused&&Time.timeScale==0,"Chat connection does not change an existing pause");game.Resume();
+        Directory.CreateDirectory(Out+"/qa/voice");File.WriteAllText(Out+"/qa/voice/context-level-"+game.level.id+".json",JsonUtility.ToJson(context,true));
+        var supply=game.stations.First(s=>Recipes.Ingredient(s.kind)!=0);game.chef.Hold(game.NewItem(ItemKind.Ingredient,supply.kind));
+        Require(KitchenHelpContext.Actions(game,supply).Length==0,"Full paws cannot pick up another ingredient in voice guidance");
+        var empty=game.stations.First(s=>s.kind=="counter"&&!s.item);Require(KitchenHelpContext.Actions(game,empty).Any(a=>a.Contains("put down")),"Voice guidance offers an empty worktop for full paws");UnityEngine.Object.Destroy(game.chef.Release().gameObject);
+        Require(KitchenHelpContext.Direction(game.cam,game.cam.transform.right)=="right"&&KitchenHelpContext.Direction(game.cam,-game.cam.transform.right)=="left","Voice directions follow current camera basis");
+    }
     static void CheckRoutes(){
         int cols=game.level.cols,rows=game.level.rows;float m=game.level.module;
         Func<int,int,Vector3> point=(x,z)=>new Vector3(((cols-1)*.5f-x)*m,0,z*m);
@@ -102,7 +118,7 @@ public static class GameplayChecks {
         var b=new OrderBook();var a=b.Add("salad",100);var z=b.Add("soup",100);Require(b.Serve("salad")==a&&b.score==80&&b.streak==1,"Correct delivery scores base and patience tip");Require(b.Serve("salad")==null&&b.score==80,"Duplicate/wrong delivery cannot rescore");Require(b.Serve("soup")==z&&b.streak==2,"Oldest-order streak increases");b.Add("salad",1);b.Tick(2);Require(b.missed==1&&b.streak==0,"Expired order penalizes once and resets streak");int old=b.score;b.Tick(100);Require(b.score==old&&b.missed==1,"Expiry is idempotent");
         for(int level=1;level<=4;level++){
             game.Brief(level);yield return null;game.StartService();game.chef.enabled=false;Physics.SyncTransforms();
-            CheckCamera();ExplorePlate();CheckRoutes();foreach(var station in game.stations)Approach(station);Require(true,"L"+level+" every station has a valid physical approach");
+            CheckVoiceContext();CheckCamera();ExplorePlate();CheckRoutes();foreach(var station in game.stations)Approach(station);Require(true,"L"+level+" every station has a valid physical approach");
             Require(game.sound.DesiredMode()=="service","Normal service selects calm music");float time=game.remaining;game.Tick(2);Require(game.remaining==time,"L"+level+" tutorial freezes round clock");AwaitGuest();
             int pool=game.level.dishes; if(level==2)Soup();else Salad(level==3);Use("serve");Require(game.book.served==1&&!game.training,"L"+level+" first delivery starts timed service");Require(game.guests.Any(g=>g.phase==GuestPhase.Eating),"L"+level+" served customer begins eating");
             if(level==2)Require(game.DashAllowed,"Dash introduced after first soup");
