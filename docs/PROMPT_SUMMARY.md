@@ -75,3 +75,7 @@ Use GPT-Live for a more natural ongoing conversation. Remove writing because typ
 Make the assistant voice cuter to fit the animal café. Create a second trailer emphasizing in-game voice support: show different player questions and the chef’s replies, plus casual conversation. End by asking “What is the cutest animal in this kitchen?” with a playful answer along the lines of “Me, Bara.” Keep the original gameplay trailer.
 
 The closing “hee-hee” sounded strange/scary; remove it and keep “Me! Bara, the capybara.” Never distribute the developer’s key. Let players supply their own key through a popup.
+
+## Developer showcase contribution
+
+Prepare an extra submission page inspired by the OpenAI developer showcase's Void Explorer entry. Select representative screenshots and pair them with short prompts that guide the major build stages, rather than a comprehensive specification. Include reusable submission material based on this game's actual development and feedback. The resulting [showcase guide](SHOWCASE_SUBMISSION.md) labels the prompts as condensed reconstructions.

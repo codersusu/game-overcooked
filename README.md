@@ -6,6 +6,8 @@
 
 [Watch / download the trailer](https://github.com/codersusu/game-overcooked/releases/download/v0.1.0/Bara-Kitchen-Trailer.mp4) · [Download the demo](https://github.com/codersusu/game-overcooked/releases/tag/v0.2.0) · [Game design](docs/GAME_DESIGN.md) · [Implementation](docs/IMPLEMENTATION.md) · [Changelog](docs/CHANGELOG.md) · [Prompt summary](docs/PROMPT_SUMMARY.md)
 
+[Showcase submission](docs/SHOWCASE_SUBMISSION.md) — eight short build prompts with selected visuals, form-ready copy and a [downloadable image/prompt kit](art/showcase/round-01/Bara-Kitchen-Showcase-Kit.zip). Preview the illustrated page at `http://localhost:54114/showcase/round-01/` using the art server below. This is submission material prepared for review; it has not been submitted to OpenAI.
+
 [![Trailer — actual Unity gameplay](art/trailers/round-01/poster.jpg)](https://github.com/codersusu/game-overcooked/releases/download/v0.1.0/Bara-Kitchen-Trailer.mp4)
 
 ## Play the demo

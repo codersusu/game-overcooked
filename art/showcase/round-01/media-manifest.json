@@ -1,0 +1,131 @@
+{
+  "preparedDate": "2026-09-15",
+  "selection": [
+    {
+      "file": "images/cover.png",
+      "source": "art/trailers/round-02/qa/progress.png",
+      "sha256": "ea4673d7021e689cbead32af754c73b56dcc308f3640532072a65838afa5a1ce",
+      "modifications": "None; exact copy of existing artifact"
+    },
+    {
+      "file": "images/capybara-concept.png",
+      "source": "art/concepts/roster-round-02/capybara.png",
+      "sha256": "f84595bc2f4167217fabe6d243dedaf237c3e9e7965b112f6034158e0c20bb63",
+      "modifications": "None; exact copy of existing artifact"
+    },
+    {
+      "file": "images/cat-concept.png",
+      "source": "art/concepts/roster-round-02/cat.png",
+      "sha256": "90798ac06317a4e04a1c14ae5d084ad99596045fba949bd7b36dc8e1050de56c",
+      "modifications": "None; exact copy of existing artifact"
+    },
+    {
+      "file": "images/dog-concept.png",
+      "source": "art/concepts/roster-round-02/dog.png",
+      "sha256": "71b30213b19e266ca69ae3a58bff3a2fb1cae86c3773bf332bcff03622eedc0a",
+      "modifications": "None; exact copy of existing artifact"
+    },
+    {
+      "file": "images/food-models.png",
+      "source": "art/production/round-01/foods-unity.png",
+      "sha256": "97113a53bafe99ddb6bd0b73847a16cd50cd4919abc6d43522ec32c0f739b89d",
+      "modifications": "None; exact copy of existing artifact"
+    },
+    {
+      "file": "images/chopping-animation.png",
+      "source": "art/production/animations-round-01/chop.png",
+      "sha256": "543d07a3dcd1f242e7fdd866d4d783767ac79c99fe489e7a8a9370ad4b95fdb2",
+      "modifications": "None; exact copy of existing artifact"
+    },
+    {
+      "file": "images/first-service.png",
+      "source": "art/production/gameplay-round-01/qa/full-playthrough/level-1-served-1.png",
+      "sha256": "8d04a437e401ee1240674d412dacb9fd3ced2424ed967a26ae5fee87e8f2408f",
+      "modifications": "None; exact copy of existing artifact"
+    },
+    {
+      "file": "images/zigzag-kitchen.png",
+      "source": "art/production/gameplay-round-01/qa/full-playthrough/level-4-served-2.png",
+      "sha256": "a47bd5f8f1be96ad2e6f43a1c5a86a8bcbc3ebac371c79026ed0f4e287bb9ccc",
+      "modifications": "None; exact copy of existing artifact"
+    },
+    {
+      "file": "images/fire-rescue.png",
+      "source": "art/trailers/round-01/qa/pot-diagonal/level-2-spray-angle.png",
+      "sha256": "b6e115aadbcf3be4a8b9662d564659666be9749cd2ac18709b16602704b116fb",
+      "modifications": "None; exact copy of existing artifact"
+    },
+    {
+      "file": "images/picture-guide.png",
+      "source": "art/production/gameplay-round-01/qa/full-playthrough/level-1-guide.png",
+      "sha256": "f625e134858c7658f6ca18691e403adc272ecc9bc43ae2eb510407335337944b",
+      "modifications": "None; exact copy of existing artifact"
+    },
+    {
+      "file": "images/voice-guidance.jpg",
+      "source": "art/trailers/round-02/qa/progress-final.jpg",
+      "sha256": "8bdc54430a839d3f97699345ff7070abf0b4f979c9280a959cc47ae2924c75c3",
+      "modifications": "None; exact copy of existing artifact"
+    },
+    {
+      "file": "images/gameplay-trailer.jpg",
+      "source": "art/trailers/round-01/poster.jpg",
+      "sha256": "becf835b9c729a4810be37db9730c9eee32fc6302d0608dfa966cd3cf744db68",
+      "modifications": "None; exact copy of existing artifact"
+    },
+    {
+      "file": "images/voice-trailer.jpg",
+      "source": "art/trailers/round-02/poster.jpg",
+      "sha256": "71a4266329bb7fe3cedcddbe2534a9a27bef56901478dd01cd764a154304ad0e",
+      "modifications": "None; exact copy of existing artifact"
+    },
+    {
+      "file": "images/icon.png",
+      "source": "art/brand/round-01/bara-kitchen-icon.png",
+      "sha256": "40a4f32b1958a5a02ae7165bac4183d2c5f62605cd95b1b9b50cd300f329382e",
+      "modifications": "None; exact copy of existing artifact"
+    }
+  ],
+  "fieldLengths": {
+    "useCases": {
+      "count": 116,
+      "limit": 255
+    },
+    "capabilities": {
+      "count": 401,
+      "limit": 1000
+    },
+    "openai": {
+      "count": 344,
+      "limit": 500
+    },
+    "otherServices": {
+      "count": 205,
+      "limit": 255
+    },
+    "process": {
+      "count": 444,
+      "limit": 500
+    },
+    "setup": {
+      "count": 433,
+      "limit": 500
+    },
+    "title": {
+      "count": 12,
+      "limit": 255
+    },
+    "tagline": {
+      "count": 95,
+      "limit": 255
+    },
+    "description": {
+      "count": 670,
+      "limit": 1000
+    },
+    "author": {
+      "count": 9,
+      "limit": 500
+    }
+  }
+}

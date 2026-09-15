@@ -2,6 +2,13 @@
 
 This is a reconstructed development history from the conversation and saved artifacts. Earlier stages predate this repository's first commit; they are not invented Git revisions. Dates are calendar milestones, not continuous labor estimates.
 
+## Showcase submission package · 15 September 2026
+
+- Added an illustrated review page with eight concise, reconstructed build prompts, selected gameplay screenshots, concept/animation references and links to both trailers.
+- Prepared character-limited submission answers, a cover-image URL, media provenance and a portable page/image/prompt kit. Added `docs/SHOWCASE_SUBMISSION.md` alongside the existing project documentation.
+- Labeled concept art, production reviews and editorial trailer stills separately. The package uses the public repository and local setup instructions; v0.2.0 remains a draft release. No form was submitted or agreement accepted.
+
+
 ## 0.2.0 — GPT-Live kitchen companion · 15 September 2026
 
 - Added a masked, session-only player API-key popup, Forget key and keyless helper launcher. Supplied player credentials are isolated per chat; no developer credentials ship. Removed the closing laugh from trailer two and in-game voice direction.
