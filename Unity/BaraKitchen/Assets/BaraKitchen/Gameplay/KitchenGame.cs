@@ -43,7 +43,7 @@ namespace BaraKitchen.Gameplay {
         public void EndRound(){if(phase!=SessionPhase.Service||saved)return;saved=true;chef.CancelWork();phase=SessionPhase.Results;Time.timeScale=0;resultStars=level.stars.Count(t=>book.score>=t);int i=level.id-1+(Settings.calm?4:0);save.best[i]=Math.Max(save.best[i],book.score);save.stars[i]=Math.Max(save.stars[i],resultStars);Save();ui.ShowResults();}
         public void SetCamera(){if(view)view.Apply();}
         public void FitScene(){if(view)view.FitScene();}
-        void Update(){if(Input.GetKeyDown(KeyCode.Escape)){if(phase==SessionPhase.Service)Pause();else if(phase==SessionPhase.Paused)Resume();}if(phase==SessionPhase.Service)Tick(Time.deltaTime);if(feedbackTime>0)feedbackTime-=Time.unscaledDeltaTime;}
+        void Update(){if(voice&&voice.IsConfiguring)return;if(Input.GetKeyDown(KeyCode.Escape)){if(phase==SessionPhase.Service)Pause();else if(phase==SessionPhase.Paused)Resume();}if(phase==SessionPhase.Service)Tick(Time.deltaTime);if(feedbackTime>0)feedbackTime-=Time.unscaledDeltaTime;}
         public void Tick(float dt){if(phase!=SessionPhase.Service)return;elapsed+=dt;
             if(!training){remaining=Mathf.Max(0,remaining-dt);if(remaining<=0){EndRound();return;}book.Tick(dt);}
             foreach(var guest in guests.ToArray())if(guest)guest.Tick(dt);

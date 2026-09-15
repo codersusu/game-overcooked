@@ -19,12 +19,16 @@ subprocess.run(["ditto", "-c", "-k", "--sequesterRsrc", "--keepParent",
                 str(ROOT / ".local/release/Bara Kitchen.app"), str(mac)], check=True)
 # A helper is included separately; the application and Web build contain no secret.
 helper_start = """Optional GPT-Live conversation (Python 3.9+ and your own OpenAI key)
-Copy .env.example to .env here; set OPENAI_API_KEY in that private file.
-Run these commands in this folder:
+On Mac, open Start Voice Helper.command (Python 3.9+ required).
+Or run these commands in this folder:
   python3 -m venv .local/voice-venv
   .local/voice-venv/bin/pip install -r scripts/voice/requirements.txt
-  .local/voice-venv/bin/python scripts/voice/live_chef_server.py
+  .local/voice-venv/bin/python scripts/voice/live_chef_server.py --player-keys-only
 Keep the terminal open. Launch the game and click AI chat or press V.
+Paste YOUR OpenAI key into the masked popup, then choose Connect & chat.
+No key file is needed. Your key is kept only in memory for this play session.
+Settings > Voice setup > Forget key clears it; quitting also forgets it.
+No developer key is included. The supplied launcher ignores environment keys.
 Allow microphone access, then talk while playing. End chat / V stops capture.
 The game continues during chat; there is no typing interface.
 Bara can give contextual help, discuss progress and offer occasional reminders.
@@ -35,13 +39,21 @@ Each chat ends after 15 minutes or a lost game connection; reconnect if desired.
 The helper listens on 127.0.0.1:54115 only. Never distribute your .env file.
 Ordinary gameplay requires no helper, internet or API key.
 """
+def add_launcher(archive):
+    launcher = zipfile.ZipInfo("Bara-Kitchen-Voice-Helper/Start Voice Helper.command")
+    launcher.create_system = 3
+    launcher.external_attr = 0o100755 << 16
+    launcher.compress_type = zipfile.ZIP_DEFLATED
+    archive.writestr(launcher, '#!/bin/sh\nset -eu\ncd "$(dirname "$0")"\nexec /bin/sh scripts/voice/start_helper.command\n')
+
 helper_files = [(ROOT / ("scripts/voice/" + name), "scripts/voice/" + name)
-                for name in ("live_chef_server.py", "chef_brain.py", "requirements.txt")]
-helper_files.append((ROOT / ".env.example", ".env.example"))
+                for name in ("live_chef_server.py", "chef_brain.py", "requirements.txt", "start_helper.command")]
+
 with zipfile.ZipFile(mac, "a", zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
     for source, relative in helper_files:
         archive.write(source, "Bara-Kitchen-Voice-Helper/" + relative)
     archive.writestr("Bara-Kitchen-Voice-Helper/START.txt", helper_start)
+    add_launcher(archive)
 web = OUTPUT / f"Bara-Kitchen-v{version}-Web.zip"
 with zipfile.ZipFile(web, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
     prefix = "Bara-Kitchen-Web/"
@@ -56,6 +68,7 @@ with zipfile.ZipFile(web, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as archive
     for source, relative in helper_files:
         archive.write(source, "Bara-Kitchen-Voice-Helper/" + relative)
     archive.writestr("Bara-Kitchen-Voice-Helper/START.txt", helper_start)
+    add_launcher(archive)
     archive.writestr(prefix + "VOICE-HELP.txt", "Set up the separate sibling Bara-Kitchen-Voice-Helper folder.\nOpen a terminal there and follow START.txt.\nKeep .env outside the Bara-Kitchen-Web folder served by HTTP.\n")
     archive.writestr(prefix + "START.txt", f"""Bara Kitchen demo {version}
 Run python3 -m http.server 8000 inside this folder, then open http://localhost:8000

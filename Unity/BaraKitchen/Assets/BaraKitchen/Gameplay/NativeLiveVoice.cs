@@ -17,22 +17,24 @@ namespace BaraKitchen.Gameplay {
         ClientWebSocket socket;CancellationTokenSource cancel;readonly SemaphoreSlim sendGate=new SemaphoreSlim(1,1);readonly ConcurrentQueue<string> events=new ConcurrentQueue<string>();
         AudioClip microphone,playback;AudioSource speaker;int lastSample,generation;bool live,stopping;float sendAt;
         readonly float[] ring=new float[12000];int read,write,count;readonly object audioLock=new object();
+        [Serializable] class Credential {public string apiKey;}
         [Serializable] class Message {public string type,audio,delta,message,targetId;}
         void Awake(){speaker=gameObject.AddComponent<AudioSource>();speaker.spatialBlend=0;speaker.ignoreListenerPause=true;}
-        public void Connect(string context){if(socket!=null)return;generation++;stopping=false;live=false;StartCoroutine(PermissionAndConnect(context,generation));}
-        IEnumerator PermissionAndConnect(string context,int token){
+        public void Connect(string context,string apiKey){if(socket!=null)return;generation++;stopping=false;live=false;StartCoroutine(PermissionAndConnect(context,apiKey,generation));}
+        IEnumerator PermissionAndConnect(string context,string apiKey,int token){
             if(!Application.HasUserAuthorization(UserAuthorization.Microphone))yield return Application.RequestUserAuthorization(UserAuthorization.Microphone);
             if(token!=generation||stopping)yield break;
             if(!Application.HasUserAuthorization(UserAuthorization.Microphone)||Microphone.devices.Length==0){Error("Microphone unavailable. Allow access in System Settings, then tap Chat.");yield break;}
             try{microphone=Microphone.Start(null,true,1,24000);}catch{Error("Could not start the microphone.");yield break;}
             if(!microphone){Error("Could not start the microphone.");yield break;}lastSample=0;
-            playback=AudioClip.Create("Bara live voice",2400,1,24000,true,ReadAudio);speaker.clip=playback;speaker.loop=true;speaker.Play();cancel=new CancellationTokenSource();socket=new ClientWebSocket();socket.Options.SetRequestHeader("X-Bara-Help","1");_ = Run(context,token);
+            playback=AudioClip.Create("Bara live voice",2400,1,24000,true,ReadAudio);speaker.clip=playback;speaker.loop=true;speaker.Play();cancel=new CancellationTokenSource();socket=new ClientWebSocket();socket.Options.SetRequestHeader("X-Bara-Help","1");_ = Run(context,apiKey,token);
         }
-        async Task Run(string context,int token){
+        async Task Run(string context,string apiKey,int token){
             var connection=socket;var cancellation=cancel;
             try {
                 await connection.ConnectAsync(new Uri("ws://127.0.0.1:54115/api/live/native"),cancellation.Token);
-                await Send("{\"context\":"+context+"}");
+                string credential=JsonUtility.ToJson(new Credential{apiKey=apiKey});
+                await Send(credential.Substring(0,credential.Length-1)+",\"context\":"+context+"}");apiKey="";credential="";
                 var buffer=new byte[32768];
                 while(connection.State==WebSocketState.Open&&token==generation){
                     using(var data=new MemoryStream()){
@@ -42,7 +44,7 @@ namespace BaraKitchen.Gameplay {
                     }
                 }
             }catch(Exception){if(!stopping&&token==generation)events.Enqueue("{\"type\":\"bara.error\",\"message\":\"Start the local GPT-Live helper, then tap Chat again.\"}");}
-            finally{if(token==generation)events.Enqueue("{\"type\":\"bara.closed\"}");}
+            finally{apiKey="";if(token==generation)events.Enqueue("{\"type\":\"bara.closed\"}");}
         }
         async Task Send(string text){
             int token=generation;

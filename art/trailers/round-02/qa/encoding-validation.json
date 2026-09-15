@@ -3,6 +3,6 @@
   "matchingOpeningClosingFrames": 90,
   "bookendSeconds": 3,
   "audioPeakDbfs": -1.8,
-  "audioMeanDbfs": -20.6,
+  "audioMeanDbfs": -20.7,
   "note": "All opening/closing decoded frames match; AAC padding is tolerated. Whole-file duration, dimensions and playback are checked separately."
 }

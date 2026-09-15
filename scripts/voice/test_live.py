@@ -3,7 +3,7 @@ import copy,json,unittest
 from unittest.mock import AsyncMock
 from aiohttp.test_utils import TestClient,TestServer
 from chef_brain import HelpError,respond,burnt_pot_guidance
-from live_chef_server import HintPolicy,LiveSession,create_app
+from live_chef_server import HintPolicy,LiveSession,create_app,player_key
 
 BASE={'level':2,'phase':'Service','working':'','idleSeconds':0,'holding':{},'orders':[{'id':1,'recipe':'Woodland soup','secondsLeft':80}],'served':0,'streak':0,'missed':0,'stations':[{'id':'pot','kind':'pot','heat':'Cooking','potDocked':True,'reachable':True},{'id':'stand','kind':'extinguisher','reachable':True,'possibleActions':['E: put down Fire extinguisher']},{'id':'bin','kind':'bin','reachable':True},{'id':'serve','kind':'serve','reachable':True}]}
 class HintTests(unittest.TestCase):
@@ -51,12 +51,25 @@ class BrainTests(unittest.TestCase):
   c['holding']['burnt']=False;c['stations'][0].update(heat='Empty',potDocked=False);self.assertEqual(burnt_pot_guidance(c,'next_step',False)['targetId'],'pot')
   self.assertIsNone(burnt_pot_guidance(c,'controls',False))
 
+class PlayerKeyTests(unittest.IsolatedAsyncioTestCase):
+ def test_player_key_overrides_automation_key_without_mutating_app(self):
+  app={'key':'sk-'+('a'*30)};key='sk-'+('b'*30)
+  self.assertEqual(player_key(app,{'apiKey':key}),key)
+  self.assertNotEqual(app['key'],key)
+  self.assertEqual(player_key(app,{}),app['key'])
+ def test_supplied_empty_or_invalid_key_never_falls_back(self):
+  for key in ('',None,'short','sk-'+('x'*600),'sk-abc def'+('x'*30)):
+   with self.assertRaises(HelpError):player_key({'key':'sk-'+('a'*30)},{'apiKey':key})
+ async def test_session_config_and_context_do_not_include_player_key(self):
+  key='sk-'+('c'*30);s=LiveSession({'key':''},copy.deepcopy(BASE),key=key)
+  self.assertNotIn(key,json.dumps(s.config()));self.assertNotIn(key,json.dumps(s.context))
+
 class LifecycleTests(unittest.IsolatedAsyncioTestCase):
  async def test_close_waits_for_finalization_and_clears_session(self):
   app={'sessions':{},'http':None,'auth':{}};s=LiveSession(app,copy.deepcopy(BASE));app['sessions'][s.token]=s;s.upstream=AsyncMock();s.upstream.closed=False
   async def close_event(e):self.assertEqual(e['type'],'session.close');s.finalized=True;s.closed.set()
   s.upstream.send_json.side_effect=close_event
-  await s.close();self.assertTrue(s.finalized);self.assertFalse(app['sessions']);s.upstream.close.assert_awaited_once();await s.close()
+  await s.close();self.assertTrue(s.finalized);self.assertFalse(app['sessions']);self.assertEqual(s.key,'');s.upstream.close.assert_awaited_once();await s.close()
  async def test_late_response_cannot_target_a_new_level(self):
   s=LiveSession({'key':'fake'},copy.deepcopy(BASE));s.send=AsyncMock();s.user_text='Where do I go?';s.delegation_counter=1
   import live_chef_server
@@ -67,7 +80,7 @@ class LifecycleTests(unittest.IsolatedAsyncioTestCase):
  async def test_loopback_no_secrets_origin_header_and_missing_key(self):
   app=create_app('');server=TestServer(app);await server.start_server();app['port']=server.port;client=TestClient(server);await client.start_server()
   try:
-   self.assertFalse((await (await client.get('/health')).json())['ready'])
+   self.assertTrue((await (await client.get('/health')).json())['keyRequired'])
    self.assertEqual((await client.get('/health',headers={'Origin':'https://evil.example'})).status,403)
    self.assertEqual((await client.get('/health',headers={'Host':'evil.example'})).status,403)
    headers={'X-Bara-Help':'1','Origin':'http://127.0.0.1:54114'}

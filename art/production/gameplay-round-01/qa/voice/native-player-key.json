@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "keylessHelper": true,
+  "playerKeySupplied": true,
+  "syntheticSilenceOnly": true,
+  "sessionStarted": true,
+  "replyPcmBytes": 12480,
+  "finalized": true,
+  "errors": []
+}

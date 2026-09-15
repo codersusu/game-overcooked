@@ -40,7 +40,7 @@ namespace BaraKitchen.Gameplay {
         }
         public void ResetView(){SetAngle(DefaultTilt);SetYaw(DefaultYaw);}
         void Update(){
-            if(!game||game.phase!=SessionPhase.Service){dragButton=-1;return;}
+            if(!game||game.phase!=SessionPhase.Service||(game.voice&&game.voice.IsConfiguring)){dragButton=-1;return;}
             bool overScene=game.cam.pixelRect.Contains(Input.mousePosition);
             bool modified=Input.GetKey(KeyCode.LeftControl)||Input.GetKey(KeyCode.RightControl)||Input.GetKey(KeyCode.LeftCommand)||Input.GetKey(KeyCode.RightCommand);
             if(overScene&&!modified){float scroll=Input.mouseScrollDelta.y;if(Mathf.Abs(scroll)>.001f)SetAngle(game.Settings.cameraTilt+scroll*3f);}

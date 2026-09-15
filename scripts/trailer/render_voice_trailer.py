@@ -33,7 +33,7 @@ shots=[
  {'name':'progress','start':7.25,'end':15.8,'wide':True,'feature':'A little encouragement','captions':[(.1,5.9,'BARA',"Nice pace! You're at 80 points with one served,\nnone missed, and a one-hit streak."),(5.9,8.5,'BARA','Only 20 more points for the first star.')]},
  {'name':'pot-reminder','start':16.2,'end':22.5,'crop':[560,330,1024,480],'feature':'A timely nudge','captions':[(.7,6.2,'BARA','Ooh, quick one: the soup is ready. Scoop it with\na clean empty plate before it burns.')]},
  {'name':'casual','start':.35,'end':9.08,'crop':[530,325,1152,540],'feature':'Or just have a little chat','captions':[(.1,3.4,'YOU','This little café feels cozy, huh?'),(3.65,8.7,'BARA','Oh, super cozy! Like, tiny mug\nand warm soup energy.')]},
- {'name':'cutest','start':.35,'end':7.85,'crop':[570,145,896,420],'feature':'Your new kitchen companion','captions':[(.1,3.9,'YOU','What is the cutest animal in this kitchen?'),(4.1,7.5,'BARA','Hee-hee, me! Bara, the capybara.')]},
+ {'name':'cutest','start':.35,'end':7.85,'crop':[570,145,896,420],'feature':'Your new kitchen companion','muteSourceRange':[4.3,5.44],'captions':[(.1,3.9,'YOU','What is the cutest animal in this kitchen?'),(5.1,7.5,'BARA','Me! Bara, the capybara.')]},
 ]
 common=['-r','30','-c:v','libx264','-preset','fast','-crf','18','-maxrate','10M','-bufsize','20M','-pix_fmt','yuv420p','-color_primaries','bt709','-color_trc','bt709','-colorspace','bt709','-color_range','tv','-c:a','aac','-b:a','192k','-ar','48000','-ac','2','-movflags','+faststart']
 title=WORK/'title.mp4'
@@ -56,15 +56,17 @@ for i,s in enumerate(shots):
   if q:
    a=q['start']-s['start'];b=a+q['duration']
    if b>0:af += [f"volume='if(between(t,{max(0,a):.3f},{b:.3f}),0.45,1)':eval=frame"]
+  if s.get('muteSourceRange'):
+   a,b=s['muteSourceRange'];af += [f"volume=0:enable='between(t,{a-s['start']:.3f},{b-s['start']:.3f})'"]
   af+=['loudnorm=I=-17:TP=-2:LRA=8','aresample=48000','afade=t=in:d=0.025',f'afade=t=out:st={dur-.04}:d=0.04']
  dst=WORK/f'{i:02}.mp4';run(['-ss',s['start'],'-i',SRC/(s['name']+'.webm'),'-vf',','.join(filters),'-af',','.join(af),'-t',dur,*common,dst]);segments.append(dst)
- timeline.append({'start':round(cursor,3),'duration':dur,'sourceStart':s['start'],'sourceEnd':s['end'],'file':'source/'+s['name']+'.webm','crop':s.get('crop'),'feature':s['feature'],'captions':s['captions']});cursor+=dur
+ timeline.append({'start':round(cursor,3),'duration':dur,'sourceStart':s['start'],'sourceEnd':s['end'],'file':'source/'+s['name']+'.webm','crop':s.get('crop'),'feature':s['feature'],'captions':s['captions'],'mutedSourceRange':s.get('muteSourceRange')});cursor+=dur
 segments.append(title);timeline.append({'start':round(cursor,3),'duration':3,'kind':'title','file':'title-card.png'});cursor+=3
 concat=WORK/'concat.txt';concat.write_text(''.join("file '"+str(p).replace("'","'\\''")+"'\n" for p in segments))
 run(['-f','concat','-safe','0','-i',concat,'-c','copy',WORK/'dialogue-edit.mp4'])
 music=ROOT/'Unity/BaraKitchen/Assets/BaraKitchen/Gameplay/Audio/music-service.wav'
 filters=f'[0:a]aresample=48000[voice];[1:a]aresample=48000,volume=0.18,atrim=0:{cursor},afade=t=in:d=1,afade=t=out:st={cursor-1}:d=1[music];[voice][music]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.84:level=false[a]'
 run(['-i',WORK/'dialogue-edit.mp4','-stream_loop','-1','-i',music,'-filter_complex',filters,'-map','0:v','-map','[a]','-c:v','copy','-c:a','aac','-b:a','192k','-ar','48000','-ac','2','-t',cursor,'-movflags','+faststart',OUT/'Bara-Kitchen-Voice-Trailer.mp4'])
-(OUT/'edit.json').write_text(json.dumps({'duration':round(cursor,3),'resolution':[1920,1080],'fps':30,'openingClosingIdentical':True,'source':'Actual Unity keyboard gameplay and GPT-Live WebRTC replies. Player questions are synthetic. Pauses/backchannels shortened; crops, captions, loudness balancing and game music added in editing. Closing joke follows the authored Bara persona. No fabricated game scores or model replies.','model':'gpt-live-1','voice':'marin','timeline':timeline},indent=2)+'\n')
+(OUT/'edit.json').write_text(json.dumps({'duration':round(cursor,3),'resolution':[1920,1080],'fps':30,'openingClosingIdentical':True,'source':'Actual Unity keyboard gameplay and GPT-Live WebRTC replies. Player questions are synthetic. Pauses/backchannels shortened; crops, captions, loudness balancing and game music added in editing. Closing joke follows the authored Bara persona; its initial laugh is muted at user request. No fabricated game scores or model replies.','model':'gpt-live-1','voice':'marin','timeline':timeline},indent=2)+'\n')
 run(['-ss',cursor-7,'-i',OUT/'Bara-Kitchen-Voice-Trailer.mp4','-frames:v','1',OUT/'poster.jpg'])
 print('VOICE_TRAILER_RENDER_OK',round(cursor,3),'seconds',flush=True)

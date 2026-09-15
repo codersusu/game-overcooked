@@ -31,21 +31,21 @@ After extinguishing a fire, carry the burnt pot to the bin, empty it with E, the
 
 ## Chat with Bara while playing
 
-Click **AI chat** or press **V**, allow microphone access, and talk naturally with Bara’s soft, bright, playful voice. Click **End chat** or press V again to stop. The kitchen keeps running; you can move, cook and interrupt Bara while chatting. There is no typing or conversation panel.
+Click **AI chat** or press **V**. On first use, enter **your own OpenAI key** in the masked popup, choose **Connect & chat**, allow microphone access, and talk naturally with Bara’s soft, bright, playful voice. Click **End chat** or press V again to stop. The kitchen keeps running; you can move, cook and interrupt Bara while chatting. There is no typing or conversation panel.
 
 Bara can explain the next cooking step, give directions relative to your current camera, and discuss your actual score, deliveries, misses and streak. While chat is on, it gives occasional reminders for an unattended warning/burning pot, a nearly overdue dish in your paws, or a longer idle period. It offers brief encouragement after real progress. Say “no hints” to silence automatic reminders. A small blue marker can identify the suggested station. Bara gives advice and never performs game actions.
 
-For a repository checkout, copy `.env.example` to `.env`, set your own `OPENAI_API_KEY`, then run:
+Start the included **Voice Helper** first. On Mac, open **Start Voice Helper.command** in the downloaded helper folder (or `scripts/voice/start_helper.command` in a repository checkout). For a repository checkout or manual setup (Python 3.9+):
 
 ```sh
 python3 -m venv .local/voice-venv
 .local/voice-venv/bin/pip install -r scripts/voice/requirements.txt
-.local/voice-venv/bin/python scripts/voice/live_chef_server.py
+.local/voice-venv/bin/python scripts/voice/live_chef_server.py --player-keys-only
 ```
 
-Keep the helper open while playing. Both ZIPs include a separate `Bara-Kitchen-Voice-Helper` folder. Keep its private `.env` outside the Web folder served by HTTP. Python 3.9+ and access to **gpt-live-1** are required. The private helper listens on `127.0.0.1:54115`; the key stays out of the game.
+Keep the helper open while playing. Both ZIPs include a separate `Bara-Kitchen-Voice-Helper` folder; no key file or developer key is included. Enter the key in the game instead. It stays only in memory until quitting or **Settings → Voice setup → Forget key**. The popup briefly pauses gameplay while entering credentials; conversation itself does not pause it. The launcher ignores environment keys. Access to **gpt-live-1** is required. The private helper listens on `127.0.0.1:54115`; it forwards that player’s credential only to OpenAI.
 
-Microphone audio streams to OpenAI **only while chat is on**, alongside kitchen context for guidance. The helper does not save audio or conversations. Closing chat or leaving the game stops the microphone. Sessions also end after 15 minutes or a lost game heartbeat. API usage is billed to your key: GPT-Live currently costs $0.05 per connected minute, plus delegated reasoning. This is a local prototype; public distribution needs a hosted authenticated service. [Official GPT-Live model details](https://developers.openai.com/api/docs/models/gpt-live-1).
+Microphone audio streams to OpenAI **only while chat is on**, alongside kitchen context for guidance. The helper does not save audio or conversations. Closing chat or leaving the game stops the microphone. Sessions also end after 15 minutes or a lost game heartbeat. API usage is billed to your key: GPT-Live currently costs $0.05 per connected minute, plus delegated reasoning. This prototype runs voice through the player’s local helper; no hosted voice service is included. [Official GPT-Live model details](https://developers.openai.com/api/docs/models/gpt-live-1).
 
 [![Meet Bara — live voice support trailer](art/trailers/round-02/poster.jpg)](https://github.com/codersusu/game-overcooked/releases/download/v0.2.0/Bara-Kitchen-Voice-Trailer.mp4)
 
@@ -93,7 +93,7 @@ Open `http://localhost:54114/production/gameplay-round-01/`. Detailed build and 
 
 HTML galleries need the local server; GitHub displays their source. The trailer folder retains the captured clips, title composition and edit timeline for future recuts.
 
-**Validation:** the original 0.1.0 handoff passed all four full-round keyboard playthroughs, serving 10 meals in total and checking dish reuse, expiry, results and retry. The current native suite passed 896 assertions, including cleanup and pot reuse in kitchens 2–4. A focused 0.1.1 keyboard playtest also passed the bin trip, a fresh soup delivery and restart. [Saved validation](art/production/gameplay-round-01/release-validation.json).
+**Validation:** the original 0.1.0 handoff passed all four full-round keyboard playthroughs, serving 10 meals in total and checking dish reuse, expiry, results and retry. The current native suite passed 912 assertions, including cleanup and pot reuse in kitchens 2–4. A focused 0.1.1 keyboard playtest also passed the bin trip, a fresh soup delivery and restart. [Saved validation](art/production/gameplay-round-01/release-validation.json).
 
 ## Development record and usage
 

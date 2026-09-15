@@ -48,9 +48,9 @@ The round ends once at zero time, with score, deliveries, misses and stars. Star
 
 ## Optional live voice companion
 
-One small **AI chat** button (V) starts a GPT-Live conversation; **End chat** / V stops it. Microphone access is explicit. The player keeps moving and cooking, can interrupt naturally, and never has to type. Chat does not pause service or cancel work. The game UI remains English; Bara is instructed to follow the player's spoken language, including English and Chinese.
+One small **AI chat** button (V) starts a GPT-Live conversation; **End chat** / V stops it. First use asks for the player’s own OpenAI key in a masked popup, with session-only memory and a Forget key option. Entry briefly pauses service; cancel restores it. Microphone access is explicit. The player keeps moving and cooking, can interrupt naturally, and never has to type. Chat does not pause service or cancel work. The game UI remains English; Bara is instructed to follow the player's spoken language, including English and Chinese.
 
-Bara has a soft, bright, smiling delivery, light playful intonation and occasional small chuckles. Keep instructions clear and brief; avoid squeaking, baby talk and mechanical status announcements. Casual banter may playfully nominate Bara as the cutest capybara in the kitchen.
+Bara has a soft, bright, smiling delivery, light playful intonation without audible giggles. Keep instructions clear and brief; avoid squeaking, baby talk and mechanical status announcements. Casual banter may playfully nominate Bara as the cutest capybara in the kitchen.
 
 Bara answers questions using actual orders, held items, plate portions, station contents, cooking state and verified routes relative to the current camera. It can discuss score, served/missed orders and streak without inventing achievements. A temporary blue marker indicates a suggested station. Burnt-pot recovery preserves the required bin-and-return sequence. Gameplay advice is normally one short next step.
 

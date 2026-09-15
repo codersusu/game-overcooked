@@ -8,6 +8,7 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 using BaraKitchen;
 using BaraKitchen.Gameplay;
+using UnityEngine.UIElements;
 [InitializeOnLoad]
 public static class GameplayChecks {
     static readonly List<string> checks=new List<string>();static readonly Stack<IEnumerator> flow=new Stack<IEnumerator>();static bool started;static double began;static KitchenGame game;
@@ -49,6 +50,10 @@ public static class GameplayChecks {
         Require(context.stations.Length==game.stations.Length,"L"+game.level.id+" voice context includes every station");
         foreach(var station in context.stations)Require(station.reachable&&station.walkRoute.Length>0,"L"+game.level.id+" voice route respects colliders to "+station.id);
         Require(context.holding==null&&context.cleanPlates==game.rack.Count,"Voice context reflects actual inventory and clean plates");
+        game.voice.Open();Require(game.voice.IsConfiguring&&!game.voice.IsActive&&Time.timeScale==0,"First chat requests a player key before microphone or API use");
+        var keyField=game.GetComponent<UIDocument>().rootVisualElement.Q<TextField>("voice-api-key");Require(keyField!=null&&keyField.isPasswordField&&keyField.value=="","API key field is masked and starts empty");
+        game.voice.Close();Require(!game.voice.IsConfiguring&&Time.timeScale==1&&game.phase==SessionPhase.Service,"Cancel key entry restores service without connecting");
+        game.Pause();game.voice.Configure();game.voice.Close();Require(Time.timeScale==0&&game.phase==SessionPhase.Paused,"Key popup preserves an existing pause");game.Resume();
         var original=game.chef.transform.position;float time=game.remaining;
         game.voice.OnLiveEvent("{\"type\":\"connected\"}");
         Require(game.voice.IsActive&&game.phase==SessionPhase.Service&&Time.timeScale==1,"Live chat does not pause service or capture player controls");

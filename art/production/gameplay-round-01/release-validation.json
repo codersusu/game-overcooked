@@ -1,7 +1,7 @@
 {
   "native": {
     "passed": true,
-    "checks": 896
+    "checks": 912
   },
   "fullRounds": [
     {
@@ -76,8 +76,17 @@
     },
     "offlineGatewayAndHints": {
       "passed": true,
-      "tests": 14
+      "tests": 17
     },
-    "hardwareMicrophoneTested": false
+    "hardwareMicrophoneTested": false,
+    "playerKey": {
+      "passed": true,
+      "checks": 17,
+      "report": "qa/voice/player-key-validation.json"
+    },
+    "nativePlayerKey": {
+      "passed": true,
+      "report": "qa/voice/native-player-key.json"
+    }
   }
 }

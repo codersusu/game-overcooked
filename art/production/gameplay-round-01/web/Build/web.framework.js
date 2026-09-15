@@ -1209,16 +1209,26 @@ async function createWasm() {
     };
   function _BaraLiveContext(context,volume) {if(window.BaraLive){window.BaraLive.volume(volume);window.BaraLive.update(JSON.parse(UTF8ToString(context)));}}
 
-  var _BaraLiveStart = function(name, context, volume) {
+  var _BaraLiveStart = function(name, context, volume, key) {
       const objectName=UTF8ToString(name), snapshot=JSON.parse(UTF8ToString(context));
       const emit=data=>SendMessage(objectName,'OnLiveEvent',JSON.stringify(data));
       if(!window.BaraLive){emit({type:'error',message:'Open the game from its main index page to use live chat.'});return;}
-      window.BaraLive.start(snapshot,emit,volume);
+      window.BaraLive.start(snapshot,emit,volume,UTF8ToString(key));
     };
 
   function _BaraLiveStop() {if(window.BaraLive)window.BaraLive.stop();}
 
   function _BaraReviewState(text) { try { window.baraState = JSON.parse(UTF8ToString(text)); } catch (error) { console.warn("Bara review snapshot skipped", error.message); } }
+
+  function _BaraVoiceKeyClear() {window.BaraLive?.keyInput.clear();}
+
+  function _BaraVoiceKeyHide() {window.BaraLive?.keyInput.hide();}
+
+  function _BaraVoiceKeyLayout(x,y,w,h) {window.BaraLive?.keyInput.layout(x,y,w,h);}
+
+  function _BaraVoiceKeyShow(name,value) {window.BaraLive?.keyInput.show(UTF8ToString(name),UTF8ToString(value));}
+
+  function _BaraVoiceKeyValue() {const value=window.BaraLive?.keyInput.value()||'',n=lengthBytesUTF8(value)+1,p=_malloc(n);stringToUTF8(value,p,n);return p;}
 
   function _GetJSLoadTimeInfo(loadTimePtr) {
     loadTimePtr = (loadTimePtr >> 2);
@@ -16905,6 +16915,16 @@ var wasmImports = {
   BaraLiveStop: _BaraLiveStop,
   /** @export */
   BaraReviewState: _BaraReviewState,
+  /** @export */
+  BaraVoiceKeyClear: _BaraVoiceKeyClear,
+  /** @export */
+  BaraVoiceKeyHide: _BaraVoiceKeyHide,
+  /** @export */
+  BaraVoiceKeyLayout: _BaraVoiceKeyLayout,
+  /** @export */
+  BaraVoiceKeyShow: _BaraVoiceKeyShow,
+  /** @export */
+  BaraVoiceKeyValue: _BaraVoiceKeyValue,
   /** @export */
   GetJSLoadTimeInfo: _GetJSLoadTimeInfo,
   /** @export */

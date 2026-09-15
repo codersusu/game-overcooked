@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "model": "gpt-live-1",
+  "syntheticMicrophoneOnly": true,
+  "checks": [
+    "Helper starts with no environment or developer key",
+    "First Chat opens key setup",
+    "No microphone before key confirmation",
+    "Typing does not move chef, rotate camera, or advance timers",
+    "Invalid key stays in setup with a clear error",
+    "Cancel returns to ordinary gameplay",
+    "Password value excluded from game telemetry",
+    "Player-entered key connects to real GPT-Live through keyless helper",
+    "Connecting restores gameplay",
+    "Delegated cooking help uses the player key too",
+    "End chat stops microphone capture",
+    "Forget key clears the session credential",
+    "Forgotten key cannot reconnect",
+    "Settings setup preserves prior pause",
+    "Key not written to browser local storage",
+    "Reload starts with an empty key",
+    "No browser errors"
+  ],
+  "errors": []
+}

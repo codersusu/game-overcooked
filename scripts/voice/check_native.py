@@ -1,5 +1,5 @@
 """Opt-in paid GPT-Live native-transport test. Uses generated speech, never a hardware microphone."""
-import argparse,asyncio,base64,copy,json,time,wave
+import argparse,asyncio,base64,copy,json,time,wave,os
 from pathlib import Path
 from aiohttp import ClientSession,WSMsgType
 from chef_brain import ROOT,as_json,load_key,openai_call
@@ -25,8 +25,8 @@ async def main():
   if not ok:raise AssertionError(label)
   checks.append(label);print('PASS',label,flush=True)
  async with ClientSession() as http:
-  async with http.ws_connect('http://127.0.0.1:54115/api/live/native',headers={'X-Bara-Help':'1'}) as ws:
-   await ws.send_json({'context':c})
+  async with http.ws_connect('http://127.0.0.1:'+os.environ.get('BARA_VOICE_PORT','54115')+'/api/live/native',headers={'X-Bara-Help':'1'}) as ws:
+   await ws.send_json({'context':c,'apiKey':load_key(ROOT/'.env')})
    async def reader():
     async for message in ws:
      if message.type!=WSMsgType.TEXT:continue

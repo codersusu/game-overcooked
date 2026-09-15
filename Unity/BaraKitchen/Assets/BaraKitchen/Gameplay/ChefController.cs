@@ -10,7 +10,7 @@ foreach(var skin in v.GetComponentsInChildren<SkinnedMeshRenderer>())skin.qualit
             foreach(var c in v.GetComponentsInChildren<Collider>())c.enabled=false;motor=gameObject.AddComponent<CharacterController>();motor.height=1.12f;motor.radius=.22f;motor.center=new Vector3(0,.56f,0);motor.stepOffset=.04f;motor.slopeLimit=30;motor.skinWidth=.02f;trail=new GameObject("Dash afterimages").AddComponent<DashAfterimage>();trail.transform.SetParent(game.live.transform);}
         void LateUpdate(){if(game.phase==SessionPhase.Service&&trailTime<.71f){trailTime+=Time.deltaTime*2.4f;trail.Sample(motion.GetComponent<SkinnedMeshRenderer>(),trailTime);}}
         public void Animate(ChefAction a){if(lastAction==a)return;lastAction=a;motion.Play(a);}
-        void Update(){if(!game||game.phase!=SessionPhase.Service)return;float dt=Time.deltaTime;dashCooldown=Mathf.Max(0,dashCooldown-dt);
+        void Update(){if(!game||game.phase!=SessionPhase.Service||(game.voice&&game.voice.IsConfiguring))return;float dt=Time.deltaTime;dashCooldown=Mathf.Max(0,dashCooldown-dt);
             if(throwTime>0){TickThrow(dt);return;}
             Vector2 input=new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"));
             Vector3 right=game.cam.transform.right;right.y=0;right.Normalize();Vector3 forward=Vector3.ProjectOnPlane(game.cam.transform.forward,Vector3.up).normalized;

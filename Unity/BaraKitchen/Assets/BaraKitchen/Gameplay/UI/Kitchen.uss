@@ -162,3 +162,13 @@
 .live-chat-toggle { position: absolute; right: 126px; bottom: 15px; height: 36px; width: 138px; background-color: rgb(255,243,211); color: rgb(83,85,54); border-radius: 18px; border-width: 2px; border-color: rgb(167,140,91); font-size: 17px; -unity-font-style: bold; }
 .live-chat-toggle.live { background-color: rgb(64,119,101); color: rgb(255,245,220); border-color: rgb(228,216,150); }
 .live-chat-status { position: absolute; right: 125px; bottom: 57px; max-width: 350px; white-space: normal; background-color: rgba(255,248,226,.96); color: rgb(88,80,56); border-radius: 9px; padding: 5px 9px; font-size: 13px; -unity-text-align: middle-right; }
+.voice-key-overlay { position: absolute; left: 0; right: 0; top: 0; bottom: 0; background-color: rgba(24, 42, 34, 0.8); align-items: center; justify-content: center; }
+.voice-key-panel { width: 540px; padding: 24px 30px; background-color: rgb(255, 242, 208); border-radius: 26px; border-width: 4px; border-color: rgb(170, 132, 84); align-items: stretch; }
+.voice-key-portrait { width: 88px; height: 88px; align-self: center; -unity-background-scale-mode: scale-to-fit; }
+.voice-key-title { font-size: 34px; color: rgb(47, 73, 57); -unity-text-align: middle-center; margin-bottom: 10px; }
+.voice-key-copy { font-size: 17px; color: rgb(67, 83, 63); white-space: normal; -unity-text-align: middle-center; margin-bottom: 12px; }
+.voice-key-help { font-size: 14px; color: rgb(94, 92, 68); white-space: normal; -unity-text-align: middle-center; margin-bottom: 12px; }
+.voice-key-input { margin-top: 4px; margin-bottom: 18px; font-size: 18px; height: 44px; }
+.voice-key-input .unity-text-input { background-color: rgb(255, 251, 236); color: rgb(42, 70, 53); border-radius: 10px; padding: 10px; border-width: 2px; border-color: rgb(154, 174, 125); }
+.voice-key-input .unity-base-field__label { min-width: 70px; color: rgb(47, 73, 57); -unity-text-align: middle-left; }
+.voice-key-error { white-space: normal; color: rgb(159, 63, 44); font-size: 14px; margin-bottom: 8px; -unity-text-align: middle-center; }

@@ -6,7 +6,7 @@
   ],
   "fps": 30,
   "openingClosingIdentical": true,
-  "source": "Actual Unity keyboard gameplay and GPT-Live WebRTC replies. Player questions are synthetic. Pauses/backchannels shortened; crops, captions, loudness balancing and game music added in editing. Closing joke follows the authored Bara persona. No fabricated game scores or model replies.",
+  "source": "Actual Unity keyboard gameplay and GPT-Live WebRTC replies. Player questions are synthetic. Pauses/backchannels shortened; crops, captions, loudness balancing and game music added in editing. Closing joke follows the authored Bara persona; its initial laugh is muted at user request. No fabricated game scores or model replies.",
   "model": "gpt-live-1",
   "voice": "marin",
   "timeline": [
@@ -24,7 +24,8 @@
       "file": "source/chat-button.webm",
       "crop": null,
       "feature": "One tap. A little company.",
-      "captions": []
+      "captions": [],
+      "mutedSourceRange": null
     },
     {
       "start": 6.1,
@@ -46,7 +47,8 @@
           "YOU",
           "Bara, how do I chop this tomato?"
         ]
-      ]
+      ],
+      "mutedSourceRange": null
     },
     {
       "start": 10.2,
@@ -68,7 +70,8 @@
           "BARA",
           "Pop it onto the chopping board with E, then press\nSpace with empty paws to chop."
         ]
-      ]
+      ],
+      "mutedSourceRange": null
     },
     {
       "start": 18.8,
@@ -85,7 +88,8 @@
           "YOU",
           "How am I doing so far?"
         ]
-      ]
+      ],
+      "mutedSourceRange": null
     },
     {
       "start": 22.533,
@@ -108,7 +112,8 @@
           "BARA",
           "Only 20 more points for the first star."
         ]
-      ]
+      ],
+      "mutedSourceRange": null
     },
     {
       "start": 31.067,
@@ -130,7 +135,8 @@
           "BARA",
           "Ooh, quick one: the soup is ready. Scoop it with\na clean empty plate before it burns."
         ]
-      ]
+      ],
+      "mutedSourceRange": null
     },
     {
       "start": 37.367,
@@ -158,7 +164,8 @@
           "BARA",
           "Oh, super cozy! Like, tiny mug\nand warm soup energy."
         ]
-      ]
+      ],
+      "mutedSourceRange": null
     },
     {
       "start": 46.1,
@@ -181,11 +188,15 @@
           "What is the cutest animal in this kitchen?"
         ],
         [
-          4.1,
+          5.1,
           7.5,
           "BARA",
-          "Hee-hee, me! Bara, the capybara."
+          "Me! Bara, the capybara."
         ]
+      ],
+      "mutedSourceRange": [
+        4.3,
+        5.44
       ]
     },
     {

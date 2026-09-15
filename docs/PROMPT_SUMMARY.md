@@ -73,3 +73,5 @@ Use GPT-Live for a more natural ongoing conversation. Remove writing because typ
 ## Cuter voice and second trailer
 
 Make the assistant voice cuter to fit the animal café. Create a second trailer emphasizing in-game voice support: show different player questions and the chef’s replies, plus casual conversation. End by asking “What is the cutest animal in this kitchen?” with a playful answer along the lines of “Me, Bara.” Keep the original gameplay trailer.
+
+The closing “hee-hee” sounded strange/scary; remove it and keep “Me! Bara, the capybara.” Never distribute the developer’s key. Let players supply their own key through a popup.

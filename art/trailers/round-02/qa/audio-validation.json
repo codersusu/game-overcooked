@@ -1,13 +1,14 @@
 {
-  "source": "Transcription of final rendered trailer, with synthetic player questions and actual GPT-Live replies.",
+  "source": "Transcription of final rendered trailer. Synthetic player questions, real GPT-Live replies. Closing laugh muted at user request.",
   "model": "gpt-4o-mini-transcribe",
-  "transcript": "Bara, how do I chop this tomato? Pop it onto the chopping board with E, then press space with empty paws to chop. How am I doing so far? Nice pace. You're at 80 points with 1 served, none missed, and a one-hit streak. Only 20 more points for the first star. Ooh, quick one. The soup is ready, so scoop it with a clean, empty plate before it burns. This little cafe feels cozy, huh? Oh, super cozy. Like tiny mug and warm soup energy. What is the cutest animal in this kitchen? Me, Bara, the capybara.",
+  "transcript": "Bara, how do I chop this tomato? Pop it onto the chopping board with E, then press space with empty paws to chop. How am I doing so far? Nice pace. You're at 80 points with one served, none missed, and a one-hit streak. Only 20 more points for the first star. Ooh, quick one. The soup is ready, so scoop it with a clean empty plate before it burns. This little cafe feels cozy, huh? Oh, super cozy. Like tiny mug and warm soup energy. What is the cutest animal in this kitchen? Me, Bara, the capybara.",
   "checks": {
     "chop_help": true,
     "performance": true,
     "pot_warning": true,
     "casual_chat": true,
-    "closing_joke": true
+    "closing_joke": true,
+    "no_transcribed_giggle": true
   },
   "passed": true
 }

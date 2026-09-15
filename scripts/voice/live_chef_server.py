@@ -13,8 +13,8 @@ from aiohttp import web, ClientSession, ClientTimeout, WSMsgType
 from chef_brain import ROOT, ALLOWED_ORIGINS, HelpError, load_key, respond, validate, burnt_pot_guidance
 
 LIVE_PROMPT = """You are Bara, a warm little capybara chef chatting with a player in Bara Kitchen.
-Voice and personality: sound like a tiny, cuddly capybara chef with a bright, soft, smiling voice. Use a light, slightly higher register, gentle bouncy intonation and warm little bursts of delight. Keep consonants clear and the pace easy to follow. A small cheerful "ooh" or "hee-hee" can fit a playful moment; use these sparingly. Avoid a deep announcer voice, breathy ASMR, shouting, baby talk, exaggerated squeaking or long filler phrases.
-Be a relaxed, encouraging kitchen companion. Speak briefly so the player can keep playing. In casual chat, be charming and a little cheeky, usually in one short sentence. Use everyday kitchen language; avoid mechanical phrases like "checking game status". A quick "let me peek" is enough while waiting. If asked who is the cutest animal in this kitchen, playfully nominate yourself in one short line, such as "Hee-hee, me! Bara, the capybara!" Let the joke land without adding a follow-up question or a trailing "but". This is your character personality, not an objective ranking. Match the player's language, including English or Chinese. Be honest about mistakes and progress; do not flatter without evidence. You are an AI voice, not a person playing beside them.
+Voice and personality: sound like a tiny, cuddly capybara chef with a bright, soft, smiling voice. Use a light, slightly higher register, gentle bouncy intonation and warm little bursts of delight. Keep consonants clear and the pace easy to follow. A small cheerful "ooh" can fit a playful moment; use it sparingly. Do not vocalize giggles, chuckles, "hehe" or "hee-hee"; keep the smile in your tone. Avoid a deep announcer voice, breathy ASMR, shouting, baby talk, exaggerated squeaking or long filler phrases.
+Be a relaxed, encouraging kitchen companion. Speak briefly so the player can keep playing. In casual chat, be charming and a little cheeky, usually in one short sentence. Use everyday kitchen language; avoid mechanical phrases like "checking game status". A quick "let me peek" is enough while waiting. If asked who is the cutest animal in this kitchen, playfully nominate yourself in one short line, such as "Me! Bara, the capybara!" Let the joke land without adding a follow-up question or a trailing "but". This is your character personality, not an objective ranking. Match the player's language, including English or Chinese. Be honest about mistakes and progress; do not flatter without evidence. You are an AI voice, not a person playing beside them.
 Backchannel policy: Use light natural backchannels without competing with the player.
 Interruption policy: Stop your answer when the player interrupts and listen.
 Delegation policy:
@@ -98,7 +98,8 @@ class HintPolicy:
 
 
 class LiveSession:
-    def __init__(self,app,context,native=None):
+    def __init__(self,app,context,native=None,key=None):
+        self.key=app.get("key","") if key is None else key
         self.app=app;self.context=context;self.native=native;self.token=secrets.token_urlsafe(28)
         self.id="";self.upstream=None;self.reader=None;self.watcher=None;self.closed=asyncio.Event();self.ready=False;self.closing=False
         self.created=time.monotonic();self.touched=self.created;self.last_context_text="";self.last_quiet=0
@@ -143,7 +144,7 @@ class LiveSession:
                 elif kind=="session.usage.updated":self.usage_seconds=event.get("usage",{}).get("seconds",self.usage_seconds)
                 elif kind=="session.closed":
                     self.usage_seconds=event.get("usage",{}).get("seconds",self.usage_seconds);self.finalized=True;self.closed.set()
-                elif kind=="error":
+                elif kind=="error" and not self.closing:
                     # Error details stay out of the client; never echo upstream request bodies.
                     await self.notify({"type":"bara.error","message":"Live chat had a connection problem. Please reconnect."})
                 if self.native is not None and kind in ("session.started","session.output_audio.delta","session.input_transcript.delta","session.output_transcript.delta","session.closed"):
@@ -180,7 +181,7 @@ class LiveSession:
             await self.append("commentary","The kitchen connection is stale, so I can't reliably check your current position. Please reconnect chat.",delegation_id);return
         captured=copy.deepcopy(self.context)
         try:
-            result=await asyncio.to_thread(respond,{"question":question,"context":captured,"history":self.history[-4:],"speak":False},self.app["key"])
+            result=await asyncio.to_thread(respond,{"question":question,"context":captured,"history":self.history[-4:],"speak":False},self.key)
             if self.closing or sequence!=self.delegation_counter:return
             if self.context.get("level")!=captured.get("level"):
                 await self.append("commentary","The player has just changed kitchens. Ask what they need in the new kitchen rather than giving directions from the old one.",delegation_id);return
@@ -212,7 +213,7 @@ class LiveSession:
 
     async def idle_hint(self,context):
         try:
-            result=await asyncio.to_thread(respond,{"question":("给等待中的玩家一个简短的下一步提示。只说一个可以立即执行的步骤。" if self.chinese else "Give one gentle next-step hint for this idle player. Keep it under 30 words."),"context":context,"speak":False},self.app["key"])
+            result=await asyncio.to_thread(respond,{"question":("给等待中的玩家一个简短的下一步提示。只说一个可以立即执行的步骤。" if self.chinese else "Give one gentle next-step hint for this idle player. Keep it under 30 words."),"context":context,"speak":False},self.key)
             if not self.closing and self.context.get("idleSeconds",0)>=18 and self.context.get("level")==context.get("level") and time.monotonic()-self.last_user>12:
                 await self.set_target(result["targetId"]);await self.append("commentary",result["answer"])
         except HelpError:pass
@@ -235,13 +236,14 @@ class LiveSession:
             except (OSError,RuntimeError,asyncio.TimeoutError):pass
         if not self.finalized and self.id:
             try:
-                async with self.app["http"].post("https://api.openai.com/v1/live/sessions/"+quote(self.id,safe="")+"/hangup",headers=self.app["auth"],timeout=ClientTimeout(total=8)) as response:await response.read()
+                async with self.app["http"].post("https://api.openai.com/v1/live/sessions/"+quote(self.id,safe="")+"/hangup",headers={"Authorization":"Bearer "+self.key},timeout=ClientTimeout(total=8)) as response:await response.read()
             except (OSError,asyncio.TimeoutError):pass
         if self.upstream:await self.upstream.close()
         if self.native is not None and not self.native.closed:
             await self.notify({"type":"bara.closed","finalized":self.finalized});await self.native.close()
         if self.watcher and self.watcher!=asyncio.current_task():self.watcher.cancel()
         self.app["sessions"].pop(self.token,None)
+        self.key=""
         self.closed.set()
 
 
@@ -267,24 +269,35 @@ async def boundary(request,handler):
     return response
 
 
-def require_key(app):
-    if not app["key"]:raise HelpError("Configure OPENAI_API_KEY in the helper's private .env file.",503)
+def player_key(app,data):
+    # A supplied player key always takes precedence over the private automation key.
+    # Do not store it in app state, context, responses, logs or on disk.
+    key=data.get("apiKey",app["key"])
+    if not isinstance(key,str):raise HelpError("Enter a valid OpenAI API key.")
+    key=key.strip()
+    if not key:raise HelpError("Enter your own OpenAI key in Voice setup.",503)
+    if len(key)>512 or len(key)<20 or not key.startswith("sk-") or any(c.isspace() for c in key):
+        raise HelpError("Enter a valid OpenAI API key.")
+    return key
+
+
+def require_available(app):
     if app["runtime"]["starting"] or app["sessions"]:raise HelpError("A chat is already connected. End it before starting another.",409)
     if time.monotonic()-app["runtime"]["last_start"]<2:raise HelpError("Wait a moment before reconnecting.",429)
     app["runtime"]["last_start"]=time.monotonic()
 
 
 async def start_web(request):
-    app=request.app;require_key(app);data=await request.json();context=valid_context(data.get("context"));sdp=data.get("sdp","")
+    app=request.app;data=await request.json();key=player_key(app,data);require_available(app);context=valid_context(data.get("context"));sdp=data.get("sdp","")
     if not isinstance(sdp,str) or not sdp.startswith("v=0") or len(sdp)>60000:raise HelpError("Invalid browser audio connection.")
-    app["runtime"]["starting"]=True;s=LiveSession(app,context)
+    app["runtime"]["starting"]=True;s=LiveSession(app,context,key=key)
     try:
-        async with app["http"].post("https://api.openai.com/v1/live/sessions",headers=app["auth"],json={"session":s.config(),"transport":{"type":"webrtc","sdp":sdp}},timeout=ClientTimeout(total=25)) as response:
+        async with app["http"].post("https://api.openai.com/v1/live/sessions",headers={"Authorization":"Bearer "+s.key},json={"session":s.config(),"transport":{"type":"webrtc","sdp":sdp}},timeout=ClientTimeout(total=25)) as response:
             if response.status!=201:raise HelpError("GPT-Live could not start (HTTP "+str(response.status)+"). Check model access, quota and connection.",502)
             result=await response.json()
         s.id=result["session"]["id"];app["sessions"][s.token]=s
         if request.transport is None or request.transport.is_closing():raise HelpError("Connection cancelled.",499)
-        s.upstream=await app["http"].ws_connect("wss://api.openai.com/v1/live/sessions/"+quote(s.id,safe="")+"/attach",headers=app["auth"],max_msg_size=2_000_000,heartbeat=20)
+        s.upstream=await app["http"].ws_connect("wss://api.openai.com/v1/live/sessions/"+quote(s.id,safe="")+"/attach",headers={"Authorization":"Bearer "+s.key},max_msg_size=2_000_000,heartbeat=20)
         s.reader=asyncio.create_task(s.read_events());s.watcher=asyncio.create_task(s.watch())
         if request.transport is None or request.transport.is_closing():raise HelpError("Connection cancelled.",499)
         return web.json_response({"token":s.token,"session":{"id":s.id},"transport":result['transport']},status=201)
@@ -309,10 +322,10 @@ async def stop_web(request):
 
 
 async def native(request):
-    app=request.app;require_key(app);app["runtime"]["starting"]=True;client=web.WebSocketResponse(max_msg_size=240000,heartbeat=15);await client.prepare(request);s=None
+    app=request.app;require_available(app);app["runtime"]["starting"]=True;client=web.WebSocketResponse(max_msg_size=240000,heartbeat=15);await client.prepare(request);s=None
     try:
-        data=await asyncio.wait_for(client.receive_json(),15);context=valid_context(data.get("context"));s=LiveSession(app,context,client);app["sessions"][s.token]=s
-        s.upstream=await app["http"].ws_connect("wss://api.openai.com/v1/live/sessions",headers=app["auth"],max_msg_size=2_000_000,heartbeat=20)
+        data=await asyncio.wait_for(client.receive_json(),15);key=player_key(app,data);context=valid_context(data.get("context"));s=LiveSession(app,context,client,key);app["sessions"][s.token]=s
+        s.upstream=await app["http"].ws_connect("wss://api.openai.com/v1/live/sessions",headers={"Authorization":"Bearer "+s.key},max_msg_size=2_000_000,heartbeat=20)
         await s.send({"type":"session.start","session":s.config(True)})
         s.reader=asyncio.create_task(s.read_events());s.watcher=asyncio.create_task(s.watch());app["runtime"]["starting"]=False
         async for message in client:
@@ -334,8 +347,8 @@ async def native(request):
 
 def create_app(key,port=54115):
     app=web.Application(middlewares=[boundary],client_max_size=240000)
-    app.update(key=key,port=port,auth={"Authorization":"Bearer "+key},sessions={},runtime={"starting":False,"last_start":float('-inf')})
-    async def health(r):return web.json_response({"ready":bool(r.app["key"]),"service":"Bara GPT-Live chat","model":"gpt-live-1"})
+    app.update(key=key,port=port,sessions={},runtime={"starting":False,"last_start":float('-inf')})
+    async def health(r):return web.json_response({"ready":True,"keyRequired":not bool(r.app["key"]),"acceptsPlayerKey":True,"service":"Bara GPT-Live chat","model":"gpt-live-1"})
     app.router.add_get("/health",health)
     app.router.add_post('/api/live/start',start_web);app.router.add_post('/api/live/context',context_web);app.router.add_post('/api/live/stop',stop_web);app.router.add_get('/api/live/native',native)
     async def startup(a):a['http']=ClientSession(timeout=ClientTimeout(total=35))
@@ -346,8 +359,8 @@ def create_app(key,port=54115):
 
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--port',type=int,default=54115);p.add_argument('--env-file',type=Path,default=ROOT/'.env');args=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--port',type=int,default=54115);p.add_argument('--env-file',type=Path,default=ROOT/'.env');p.add_argument('--player-keys-only',action='store_true',help='Ignore environment/key files; accept only the key entered by the player.');args=p.parse_args()
     print("Bara GPT-Live helper. Microphone audio and context go to OpenAI only while chat is on.",flush=True)
-    web.run_app(create_app(load_key(args.env_file),args.port),host='127.0.0.1',port=args.port,access_log=None)
+    web.run_app(create_app('' if args.player_keys_only else load_key(args.env_file),args.port),host='127.0.0.1',port=args.port,access_log=None)
 
 if __name__=='__main__':main()

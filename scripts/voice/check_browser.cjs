@@ -1,5 +1,6 @@
 // Paid opt-in GPT-Live + real Unity UI, using synthetic microphone audio only.
 const fs=require('fs'),path=require('path'),deps=require('../browser-deps.cjs');const {chromium}=deps('playwright');
+const key=process.env.OPENAI_API_KEY||fs.readFileSync('.env','utf8').split('\n').find(l=>l.startsWith('OPENAI_API_KEY=')).split('=').slice(1).join('=').trim().replace(/^['"]|['"]$/g,'');
 if(!process.argv.includes('--live'))throw Error('Pass --live for synthetic paid API checks.');
 (async()=>{
  const out=path.resolve('art/production/gameplay-round-01/qa/voice');
@@ -18,9 +19,10 @@ if(!process.argv.includes('--live'))throw Error('Pass --live for synthetic paid 
   await page.waitForFunction(()=>window.baraState?.phase==='Menu',null,{timeout:120000});
   const state=()=>page.evaluate(()=>window.baraState);const check=(ok,label)=>{if(!ok)throw Error(label);checks.push(label);console.log('PASS '+label)};
   const click=async label=>{const b=(await state()).buttons.find(b=>b.label===label);if(!b)throw Error('Button not found '+label);const box=await page.locator('canvas').boundingBox();await page.mouse.click(box.x+(b.x+b.w/2)*box.width,box.y+(b.y+b.h/2)*box.height);await page.waitForTimeout(350)};
+  async function startChat(){await click('AI chat · V');if((await state()).helpState==='setup'){await page.locator('input[aria-label="OpenAI API key"]').fill(key);await click('Connect & chat');}}
   await click('Begin service');await click('Open the cafe');await page.waitForTimeout(3500);
   check(await page.evaluate(()=>qaLive.tracks.length===0),'No microphone requested before Chat');
-  await click('AI chat · V');
+  await startChat();
   await page.waitForFunction(()=>window.baraState.helpState==='connected'||window.baraState.visibleLabels.some(x=>x.includes('could not')||x.includes('denied')||x.includes('timed out')),null,{timeout:45000});
   console.log('Connect',JSON.stringify({help:(await state()).helpState,labels:(await state()).visibleLabels.slice(-8)}));
   check((await state()).helpState==='connected','Real GPT-Live WebRTC connects from the game button');
@@ -37,8 +39,8 @@ if(!process.argv.includes('--live'))throw Error('Pass --live for synthetic paid 
   await page.waitForFunction(()=>window.baraState.helpState==='off',null,{timeout:16000});check((await state()).phase==='Service','Ending chat leaves the kitchen playable');
   const stops=await page.evaluate(()=>qaLive.stops);check(stops.some(s=>s.finalized),'Live session closes with confirmed final usage');
   // Offline and denied permission are deliberate failures; neither may pause the game.
-  await page.route('**/health',r=>r.abort());await click('AI chat · V');await page.waitForTimeout(1200);check((await state()).helpState==='off'&&(await state()).phase==='Service','Offline helper fails gracefully without pausing');await page.unroute('**/health');
-  await context.clearPermissions();await click('AI chat · V');await page.waitForTimeout(1500);check((await state()).visibleLabels.some(x=>x.includes('permission denied')),'Denied microphone permission has a clear small status');check((await state()).phase==='Service','Denied permission leaves normal gameplay available');
+  await page.route('**/health',r=>r.abort());await startChat();await page.waitForTimeout(1200);check((await state()).helpState==='off'&&(await state()).phase==='Service','Offline helper fails gracefully without pausing');await page.unroute('**/health');
+  await context.clearPermissions();await startChat();await page.waitForTimeout(1500);check((await state()).visibleLabels.some(x=>x.includes('permission denied')),'Denied microphone permission has a clear small status');check((await state()).phase==='Service','Denied permission leaves normal gameplay available');
   check(errors.length===0,'No browser page errors');
   fs.writeFileSync(path.join(out,'browser-live.json'),JSON.stringify({passed:true,model:'gpt-live-1',syntheticAudioOnly:true,checks,transcripts,inboundAudioBytes:inbound,finalUsage:stops.filter(s=>s.finalized).map(s=>s.seconds),pageErrors:errors},null,2)+'\n');
  }finally{await browser.close()}

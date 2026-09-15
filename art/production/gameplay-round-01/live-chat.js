@@ -1,7 +1,27 @@
-/* WebRTC media stays between the browser and OpenAI. Project keys stay in the local helper. */
+/* Player keys exist only in session memory; the fixed loopback helper talks to OpenAI. */
 (() => {
   const endpoint = 'http://127.0.0.1:54115';
   let current = null;
+  // Native browser password input supports paste reliably; no local/session storage.
+  let passwordInput=null,keyTarget='';
+  // Installed before Unity: let the focused HTML password input handle native
+  // typing/paste, and keep those key/clipboard events out of the game runtime.
+  for(const type of ['keydown','keypress','keyup','paste','copy','cut'])window.addEventListener(type,e=>{
+    if(!passwordInput||e.target!==passwordInput)return;
+    e.stopImmediatePropagation();
+    if(type==='keydown'&&(e.key==='Escape'||e.key==='Enter')){e.preventDefault();window.unityInstance?.SendMessage(keyTarget,e.key==='Escape'?'CancelKeySetup':'ConfirmKeySetup');}
+  },true);
+  const keyInput={
+    show(name,value){
+      this.hide();keyTarget=name;passwordInput=document.createElement('input');passwordInput.type='password';passwordInput.maxLength=512;passwordInput.autocomplete='off';passwordInput.spellcheck=false;passwordInput.setAttribute('aria-label','OpenAI API key');passwordInput.value=value;
+      Object.assign(passwordInput.style,{position:'fixed',zIndex:'100',boxSizing:'border-box',font:'18px system-ui',padding:'8px 12px',border:'2px solid #9aae7d',borderRadius:'10px',color:'#2a4635',background:'#fffbed',outlineColor:'#658e70'});
+      document.body.append(passwordInput);passwordInput.focus();
+    },
+    layout(x,y,w,h){if(!passwordInput)return;const c=document.querySelector('canvas').getBoundingClientRect();Object.assign(passwordInput.style,{left:c.left+x*c.width+'px',top:c.top+y*c.height+'px',width:w*c.width+'px',height:h*c.height+'px'});},
+    value(){return passwordInput?.value||'';},
+    clear(){if(passwordInput)passwordInput.value='';},
+    hide(){if(passwordInput){passwordInput.value='';passwordInput.remove();passwordInput=null;keyTarget='';}}
+  };
   const post = async (path, data, signal, keepalive = false) => {
     const response = await fetch(endpoint + path, {method:'POST',headers:{'Content-Type':'application/json','X-Bara-Help':'1'},body:JSON.stringify(data),signal,keepalive});
     let body;try {body=await response.json();} catch (_) {throw Error('The local voice helper is unavailable.');}
@@ -26,7 +46,7 @@
       s.closeTimeout=setTimeout(finish,12000);
     } else {await finish();}
   }
-  async function start(context, emit, volume=.65) {
+  async function start(context, emit, volume=.65, apiKey='') {
     if (current) return;
     const s=current={emit,context,controller:new AbortController(),stream:null,pc:null,dc:null,audio:new Audio(),token:'',ready:false,closing:false,updating:false,targetVersion:0};
     s.audio.autoplay=true;s.audio.volume=Math.max(0,Math.min(1,volume));s.audio.style.display='none';document.body.append(s.audio);
@@ -34,6 +54,7 @@
     s.startTimeout=setTimeout(()=>{notify(s,{type:'error',message:'Chat connection timed out. Check microphone permission and the local helper.'});stop(s);},35000);
     try {
       if (!navigator.mediaDevices || !window.RTCPeerConnection) throw Error('Live chat needs a microphone and a browser on localhost or HTTPS.');
+      if(!apiKey.startsWith('sk-')||apiKey.length<20)throw Error('Enter your own OpenAI key in Voice setup.');
       const health=await fetch(endpoint+'/health',{signal:s.controller.signal}).then(r=>r.json());
       if(!health.ready||health.model!=='gpt-live-1')throw Error('Start the GPT-Live helper: scripts/voice/live_chef_server.py');
       const stream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true,autoGainControl:true,channelCount:1},video:false});
@@ -62,13 +83,14 @@
         pc.addEventListener('icegatheringstatechange',changed);changed();
       });
       if(s.closing)return;
-      const result=await post('/api/live/start',{sdp:pc.localDescription.sdp,context:s.context},s.controller.signal);
+      const result=await post('/api/live/start',{sdp:pc.localDescription.sdp,context:s.context,apiKey},s.controller.signal);
+      apiKey='';
       s.token=result.token;
       if(s.closing||s!==current) {await post('/api/live/stop',{token:s.token}).catch(()=>{});return;}
       await pc.setRemoteDescription({type:'answer',sdp:result.transport.sdp});
     } catch(error) {
       if(!s.closing){notify(s,{type:'error',message:error.name==='NotAllowedError'?'Microphone permission denied. Allow it, then tap Chat.':error.message||'Start the local voice helper, then try again.'});await stop(s);}
-    }
+    } finally {apiKey='';}
   }
   async function update(context) {
     const s=current;if(!s||s.closing)return;s.context=context;if(!s.ready||!s.token||s.updating)return;s.updating=true;
@@ -80,7 +102,7 @@
     } catch(error) {if(!s.closing){notify(s,{type:'error',message:'Kitchen voice connection lost. Tap Chat to reconnect.'});await stop(s);}}
     finally {s.updating=false;}
   }
-  window.BaraLive={start,update,stop:()=>stop(current),volume:value=>{if(current)current.audio.volume=Math.max(0,Math.min(1,value));},get connected(){return !!current?.ready&&!current.closing;}};
+  window.BaraLive={keyInput,start,update,stop:()=>stop(current),volume:value=>{if(current)current.audio.volume=Math.max(0,Math.min(1,value));},get connected(){return !!current?.ready&&!current.closing;}};
   document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')stop(current);});
-  window.addEventListener('pagehide',()=>stop(current));
+  window.addEventListener('pagehide',()=>{keyInput.hide();stop(current);});
 })();
