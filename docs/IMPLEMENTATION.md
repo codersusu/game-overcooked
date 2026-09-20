@@ -1,6 +1,6 @@
 # Bara Kitchen — implementation and handoff
 
-Version 0.2.0 · Unity 6000.6.0f1 · 15 September 2026
+Version 0.2.0 · Unity 6000.6.0f1 · Handoff reviewed 20 September 2026
 
 ## Open and run
 
@@ -15,6 +15,18 @@ python3 -m http.server 54114 --directory art
 ```
 
 Open `http://localhost:54114/production/gameplay-round-01/`. The page is a full-window Unity canvas, not a separate JavaScript gameplay implementation. Browser data/wasm files are large; first loading can take time.
+
+### Restore after local cleanup
+
+The GitHub repository is the continuation copy; version 0.2.0 is a published prerelease. Clone with Git LFS and run `git lfs pull` before opening Unity. The checked-in `Assets`, `Packages` and `ProjectSettings` directories, source GLB/FBX files, textures, prop data, audio, generated prefabs/scenes, Web export and downloadable ZIPs are sufficient to resume. Unity rebuilds its `Library`, `Logs`, IDE files and user settings. The standalone Mac application can be restored from its release ZIP or rebuilt with `ArtProductionBuilder.BuildMacDemo`.
+
+Create ignored scratch folders with `mkdir -p .local`. Install Python dependencies from the root `requirements.txt`, the voice dependencies from `scripts/voice/requirements.txt`, and browser dependencies with `npm install` / `npx playwright install chromium`. Install Unity 6000.6.0f1 with the required Web/Mac build modules. Trailer rendering needs FFmpeg on PATH or `FFMPEG_BIN`; the old machine-specific `.local/audio-tools` fallback is optional, not a retained dependency.
+
+Private credentials are excluded from Git and from downloadable packages. The creator requested removal of the original local credential files during cleanup. Supply your own key in the game for optional voice; create a private `.env` from `.env.example` only for explicit paid development scripts. Ordinary rebuilding uses saved asset sources and makes no generation calls. Original Meshy request/status records are stored beside the models; ignored paid-job caches and obsolete experiments are disposable and are not required to import the existing cast. Do not replay an old paid generation batch merely to restore assets.
+
+The two trailers retain final MP4s, source captures, player-question audio, title art, edit timelines and rendering scripts. Existing animation MP4s and posters are tracked. To regenerate animation previews on macOS, render fresh frames in Unity with `ArtAnimationBuilder.RenderAnimationPreviews`, compile `swiftc scripts/animation/encode.swift -o .local/encode-animation`, then run `python3 scripts/animation/encode_all.py`. The ignored frame sequences and compiled encoder can therefore be removed.
+
+The submission kit can be rebuilt with `python3 scripts/showcase/build_page.py`. The five main documents are indexed in the README; this supplementary kit retains its selected images and editable prompt JSON.
 
 ## Runtime responsibilities
 
@@ -78,6 +90,8 @@ node scripts/voice/check_browser.cjs --live
 ```
 
 The four-kitchen native suite passes **912 assertions**, including voice context/routes and unchanged service/pause state. Seventeen offline tests cover hints, cooldowns, burnt-pot recovery, stale replies, session close, player-key precedence/isolation and localhost boundaries. `check_player_key.cjs --live` verifies the actual masked popup and a real connection through a keyless helper, including cancellation, gameplay input isolation, Forget key and reload. `check_player_key_native.py --live` checks PCM output and confirmed finalization through the keyless helper; its synthetic stream includes silence, since Live advances with incoming audio frames. [Voice QA](../art/production/gameplay-round-01/qa/voice/) records synthetic Live transport checks and real Unity browser interaction. Synthetic test transcripts may be saved as QA evidence; runtime conversations are not. Hardware microphone quality, acoustic echo and wider device/browser coverage remain user playtest work.
+
+Saved synthetic microphone fixtures now live in `scripts/voice/fixtures/`, with text, generator and SHA256 provenance in `manifest.json`. Browser tests read that tracked input directly; native tests reuse the saved questions before considering new speech generation. These are generated adult-player test questions, not recordings of the creator. The standard browser voice check uses the helper on 54115; the player-key UI/native checks use a separate `--player-keys-only --port 54116` helper. All `--live` checks still make paid conversation calls and require an explicitly supplied private key.
 
 Official contracts: [GPT-Live model and duration pricing](https://developers.openai.com/api/docs/models/gpt-live-1), [WebRTC](https://developers.openai.com/api/docs/guides/voice-webrtc?api=live), [WebSockets](https://developers.openai.com/api/docs/guides/voice-websockets?api=live), [client delegation](https://developers.openai.com/api/docs/guides/live-delegation), [context and lifecycle](https://developers.openai.com/api/docs/guides/live-conversations).
 

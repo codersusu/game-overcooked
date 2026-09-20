@@ -3,7 +3,7 @@ const fs=require('fs'),path=require('path'),{chromium}=require('../browser-deps.
 if(!process.argv.includes('--live'))throw Error('Pass --live for the synthetic API check.');
 const key=process.env.OPENAI_API_KEY||fs.readFileSync('.env','utf8').split('\n').find(l=>l.startsWith('OPENAI_API_KEY=')).split('=').slice(1).join('=').trim().replace(/^['"]|['"]$/g,'');
 (async()=>{
- const browser=await chromium.launch({executablePath:process.env.BARA_CHROME,headless:true,args:['--enable-unsafe-swiftshader','--autoplay-policy=no-user-gesture-required','--use-fake-device-for-media-stream','--use-file-for-fake-audio-capture='+path.resolve('.local/voice/browser-question.wav')]});
+ const browser=await chromium.launch({executablePath:process.env.BARA_CHROME,headless:true,args:['--enable-unsafe-swiftshader','--autoplay-policy=no-user-gesture-required','--use-fake-device-for-media-stream','--use-file-for-fake-audio-capture='+path.resolve('scripts/voice/fixtures/browser-question.wav')]});
  const context=await browser.newContext({viewport:{width:1600,height:1000},permissions:['microphone']}),page=await context.newPage(),checks=[],errors=[];
  const out='art/production/gameplay-round-01/qa/voice';
  const check=(ok,label)=>{if(!ok)throw Error(label);checks.push(label);console.log('PASS '+label)};

@@ -1,0 +1,37 @@
+{
+  "source": "Synthetic test speech generated during the existing live-voice validation; no human microphone recordings.",
+  "model": "gpt-4o-mini-tts",
+  "voice": "coral",
+  "generator": "scripts/voice/check_native.py",
+  "preservedOn": "2026-09-20",
+  "clips": [
+    {
+      "file": "performance.wav",
+      "text": "How am I doing so far?",
+      "seconds": 89478.48529166667,
+      "sha256": "7bd1cfcf891f8b489360f2c252000718cc86318e6cb836c9ee67e98fc8ff8372",
+      "padding": null
+    },
+    {
+      "file": "recovery.wav",
+      "text": "The fire is out. What should I do next?",
+      "seconds": 89478.48529166667,
+      "sha256": "0a5619489d9db2f086980220ee4828e79f008b5de977b8265e44beb4197e3245",
+      "padding": null
+    },
+    {
+      "file": "question.wav",
+      "text": "What should I do first to make a salad?",
+      "seconds": 89478.48529166667,
+      "sha256": "34347369fd4ec412e0121361bc217b00b299d58007111d66fecfa7d28897e9a8",
+      "padding": null
+    },
+    {
+      "file": "browser-question.wav",
+      "text": "What should I do first to make a salad?",
+      "seconds": 91.65,
+      "sha256": "00dc58278acf6c1cd43f4da91aa9b1dd13275fe92d79dd215a0610b171ca5c99",
+      "padding": "8 seconds before and 80 seconds after"
+    }
+  ]
+}

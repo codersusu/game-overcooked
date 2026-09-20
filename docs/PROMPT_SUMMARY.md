@@ -79,3 +79,9 @@ The closing “hee-hee” sounded strange/scary; remove it and keep “Me! Bara,
 ## Developer showcase contribution
 
 Prepare an extra submission page inspired by the OpenAI developer showcase's Void Explorer entry. Select representative screenshots and pair them with short prompts that guide the major build stages, rather than a comprehensive specification. Include reusable submission material based on this game's actual development and feedback. The resulting [showcase guide](SHOWCASE_SUBMISSION.md) labels the prompts as condensed reconstructions.
+
+## Release links and final cleanup
+
+Check the broken v0.2.0 download links and publish the prepared release so the builds and voice trailer can be downloaded publicly. The creator explicitly approved publication.
+
+Review and update the game design, implementation, changelog, main-prompt summary and overview. Check that all source and assets needed to continue development are backed up in GitHub, push any missing material, then delete the local project and its related temporary/cache files and archive the local task. When asked about the private API-key files, the creator explicitly requested deleting those too; credentials must never be uploaded to the public repository.

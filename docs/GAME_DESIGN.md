@@ -1,6 +1,8 @@
 # Bara Kitchen — game design
 
-Version 0.2.0 · 15 September 2026 · Current four-kitchen demo
+Version 0.2.0 · Design reviewed 20 September 2026 · Current four-kitchen demo
+
+This describes the shipped demo, including the player-supplied voice key and burnt-pot cleanup. The public prerelease was published on 18 September. No gameplay rules changed during the final documentation and backup review.
 
 ## Intent
 

@@ -2,6 +2,17 @@
 
 This is a reconstructed development history from the conversation and saved artifacts. Earlier stages predate this repository's first commit; they are not invented Git revisions. Dates are calendar milestones, not continuous labor estimates.
 
+## Final documentation and continuation handoff · 20 September 2026
+
+- Reviewed the five main documents and added a clear overview index plus fresh-clone restoration, dependencies and media regeneration instructions. Historical time/token checkpoints remain scoped to the work they measured.
+- Preserved previously local-only synthetic voice-test fixtures in Git LFS and pointed browser checks at the tracked inputs. Native tests reuse the saved question clips. No gameplay or released binary changes.
+- Updated the showcase's current release status and regenerated its portable kit. Added the local `env` credential filename to ignore rules; credentials are not a backup artifact.
+- Prepared removal of the original workspace, project caches, discarded experiments and private key files after verifying the remote backup. The GitHub repository remains available for continued development; local task archival is separate from making the remote repository read-only.
+
+## Public release publication · 18 September 2026
+
+- Published v0.2.0 after the creator's approval. Confirmed unauthenticated HTTP 200 responses and expected file sizes for the Web ZIP, Apple silicon Mac ZIP and corrected voice trailer. Release assets retain their previously verified hashes.
+
 ## Showcase submission package · 15 September 2026
 
 - Added an illustrated review page with eight concise, reconstructed build prompts, selected gameplay screenshots, concept/animation references and links to both trailers.

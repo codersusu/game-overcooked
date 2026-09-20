@@ -8,6 +8,18 @@
 
 [Showcase submission](docs/SHOWCASE_SUBMISSION.md) — eight short build prompts with selected visuals, form-ready copy and a [downloadable image/prompt kit](art/showcase/round-01/Bara-Kitchen-Showcase-Kit.zip). Preview the illustrated page at `http://localhost:54114/showcase/round-01/` using the art server below. This is submission material prepared for review; it has not been submitted to OpenAI.
 
+**Handoff review: 20 September 2026.** Version 0.2.0 was published on 18 September as a public prerelease; the Web build, Apple silicon Mac build and voice trailer are downloadable. Development can resume from this repository after the original local workspace is removed. Use Git LFS to restore the assets; no local cache or private developer credential is required for ordinary gameplay or rebuilding from existing assets.
+
+| Main document | Contents |
+|---|---|
+| [Overview — this README](README.md) | Downloads, both trailers, screenshots, controls, setup, asset links and scoped development metrics |
+| [Game design](docs/GAME_DESIGN.md) | Recipes, four kitchens, systems, character style, voice behavior and deferred ideas |
+| [Implementation](docs/IMPLEMENTATION.md) | Architecture, source locations, restoration, dependencies, builds, checks and media regeneration |
+| [Changelog](docs/CHANGELOG.md) | Development milestones, feedback fixes and release history |
+| [Main prompts](docs/PROMPT_SUMMARY.md) | The original direction and significant review feedback, summarized by topic |
+
+The showcase submission is a supplementary publishing kit. Generation prompts, source references, audio credits, trailer timelines and test evidence remain beside their assets.
+
 [![Trailer — actual Unity gameplay](art/trailers/round-01/poster.jpg)](https://github.com/codersusu/game-overcooked/releases/download/v0.1.0/Bara-Kitchen-Trailer.mp4)
 
 ## Play the demo

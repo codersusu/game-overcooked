@@ -6,8 +6,10 @@ from chef_brain import ROOT,as_json,load_key,openai_call
 
 QA=ROOT/'art/production/gameplay-round-01/qa/voice'
 PRIVATE=ROOT/'.local/voice'
+FIXTURES=ROOT/'scripts/voice/fixtures'
 def speech(name,text):
- path=PRIVATE/(name+'.wav')
+ path=FIXTURES/(name+'.wav')
+ if not path.exists():path=PRIVATE/(name+'.wav')
  if not path.exists():path.write_bytes(openai_call(load_key(ROOT/'.env'),'audio/speech',as_json({'model':'gpt-4o-mini-tts','voice':'coral','input':text,'response_format':'wav'}),binary=True))
  with wave.open(str(path),'rb') as f:
   assert f.getframerate()==24000 and f.getnchannels()==1 and f.getsampwidth()==2
